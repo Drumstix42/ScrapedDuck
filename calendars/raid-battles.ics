@@ -1,0 +1,235 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ScrapedDuck//Scraped LeekDuck Events//EN
+NAME:Pokémon Go — Raid Battles
+X-WR-CALNAME:Pokémon Go — Raid Battles
+X-WR-CALDESC:Pokémon Go Raid Battles events.
+BEGIN:VEVENT
+UID:scraped-duck-shadow-latios-in-shadow-raids-november-december-2025
+SEQUENCE:0
+DTSTAMP:20251130T033451Z
+DTSTART:20251102T060000Z
+DTEND:20251202T220000Z
+SUMMARY:Raid Battles — Shadow Latios in Shadow Raids
+DESCRIPTION:<a href="https://leekduck.com/events/shadow-latios-in-shadow-r
+ aids-november-december-2025/">Shadow Latios in Shadow Raids</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Raid Battles
+URL;VALUE=URI:https://leekduck.com/events/shadow-latios-in-shadow-raids-no
+ vember-december-2025/
+IMAGE:https://cdn.leekduck.com/assets/img/events/events-default-img.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Raid Battles — Shadow Latios in Shadow R
+ aids
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/e
+ vents-default-img.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-cobalion-terrakion-virizion-in-5-star-raid-battles-novemb
+ er-december-2025
+SEQUENCE:0
+DTSTAMP:20251130T033451Z
+DTSTART:20251125T100000Z
+DTEND:20251204T100000Z
+SUMMARY:Raid Battles — Cobalion\, Terrakion\, and Virizion in 5-star Rai
+ d Battles
+DESCRIPTION:<a href="https://leekduck.com/events/cobalion-terrakion-virizi
+ on-in-5-star-raid-battles-november-december-2025/">Cobalion\, Terrakion\, 
+ and Virizion in 5-star Raid Battles</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Raid Battles
+URL;VALUE=URI:https://leekduck.com/events/cobalion-terrakion-virizion-in-5
+ -star-raid-battles-november-december-2025/
+IMAGE:https://cdn.leekduck.com/assets/img/events/swordsofjustice.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Raid Battles — Cobalion\, Terrakion\, an
+ d Virizion in 5-star Raid Battles
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/s
+ wordsofjustice.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-mega-aerodactyl-medicham-garchomp-in-mega-raids-november-
+ december-2025
+SEQUENCE:0
+DTSTAMP:20251130T033451Z
+DTSTART:20251125T100000Z
+DTEND:20251204T100000Z
+SUMMARY:Raid Battles — Mega Aerodactyl\, Mega Medicham\, and Mega Garcho
+ mp in Mega Raids
+DESCRIPTION:<a href="https://leekduck.com/events/mega-aerodactyl-medicham-
+ garchomp-in-mega-raids-november-december-2025/">Mega Aerodactyl\, Mega Med
+ icham\, and Mega Garchomp in Mega Raids</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Raid Battles
+URL;VALUE=URI:https://leekduck.com/events/mega-aerodactyl-medicham-garchom
+ p-in-mega-raids-november-december-2025/
+IMAGE:https://cdn.leekduck.com/assets/img/events/mega-default.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Raid Battles — Mega Aerodactyl\, Mega Me
+ dicham\, and Mega Garchomp in Mega Raids
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/m
+ ega-default.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-kyurem-in-5-star-raid-battles-december-2025
+SEQUENCE:0
+DTSTAMP:20251130T033451Z
+DTSTART:20251204T100000Z
+DTEND:20251213T100000Z
+SUMMARY:Raid Battles — Kyurem in 5-star Raid Battles
+DESCRIPTION:<a href="https://leekduck.com/events/kyurem-in-5-star-raid-bat
+ tles-december-2025/">Kyurem in 5-star Raid Battles</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Raid Battles
+URL;VALUE=URI:https://leekduck.com/events/kyurem-in-5-star-raid-battles-de
+ cember-2025/
+IMAGE:https://cdn.leekduck.com/assets/img/events/kyurem.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Raid Battles — Kyurem in 5-star Raid Bat
+ tles
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/k
+ yurem.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-mega-gyarados-in-mega-raids-december-2025
+SEQUENCE:0
+DTSTAMP:20251130T033451Z
+DTSTART:20251204T100000Z
+DTEND:20251213T100000Z
+SUMMARY:Raid Battles — Mega Gyarados in Mega Raids
+DESCRIPTION:<a href="https://leekduck.com/events/mega-gyarados-in-mega-rai
+ ds-december-2025/">Mega Gyarados in Mega Raids</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Raid Battles
+URL;VALUE=URI:https://leekduck.com/events/mega-gyarados-in-mega-raids-dece
+ mber-2025/
+IMAGE:https://cdn.leekduck.com/assets/img/events/mega-default.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Raid Battles — Mega Gyarados in Mega Rai
+ ds
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/m
+ ega-default.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-mega-abomasnow-in-mega-raids-december-2025
+SEQUENCE:0
+DTSTAMP:20251130T033451Z
+DTSTART:20251213T100000Z
+DTEND:20251222T100000Z
+SUMMARY:Raid Battles — Mega Abomasnow in Mega Raids
+DESCRIPTION:<a href="https://leekduck.com/events/mega-abomasnow-in-mega-ra
+ ids-december-2025/">Mega Abomasnow in Mega Raids</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Raid Battles
+URL;VALUE=URI:https://leekduck.com/events/mega-abomasnow-in-mega-raids-dec
+ ember-2025/
+IMAGE:https://cdn.leekduck.com/assets/img/events/mega-default.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Raid Battles — Mega Abomasnow in Mega Ra
+ ids
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/m
+ ega-default.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-reshiram-in-5-star-raid-battles-december-2025
+SEQUENCE:0
+DTSTAMP:20251130T033451Z
+DTSTART:20251213T100000Z
+DTEND:20251222T100000Z
+SUMMARY:Raid Battles — Reshiram in 5-star Raid Battles
+DESCRIPTION:<a href="https://leekduck.com/events/reshiram-in-5-star-raid-b
+ attles-december-2025/">Reshiram in 5-star Raid Battles</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Raid Battles
+URL;VALUE=URI:https://leekduck.com/events/reshiram-in-5-star-raid-battles-
+ december-2025/
+IMAGE:https://cdn.leekduck.com/assets/img/events/reshiram.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Raid Battles — Reshiram in 5-star Raid B
+ attles
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/r
+ eshiram.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-mega-glalie-in-mega-raids-december-2025
+SEQUENCE:0
+DTSTAMP:20251130T033451Z
+DTSTART:20251222T100000Z
+DTEND:20251231T100000Z
+SUMMARY:Raid Battles — Mega Glalie in Mega Raids
+DESCRIPTION:<a href="https://leekduck.com/events/mega-glalie-in-mega-raids
+ -december-2025/">Mega Glalie in Mega Raids</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Raid Battles
+URL;VALUE=URI:https://leekduck.com/events/mega-glalie-in-mega-raids-decemb
+ er-2025/
+IMAGE:https://cdn.leekduck.com/assets/img/events/mega-default.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Raid Battles — Mega Glalie in Mega Raids
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/m
+ ega-default.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-zekrom-in-5-star-raid-battles-december-2025
+SEQUENCE:0
+DTSTAMP:20251130T033451Z
+DTSTART:20251222T100000Z
+DTEND:20251231T100000Z
+SUMMARY:Raid Battles — Zekrom in 5-star Raid Battles
+DESCRIPTION:<a href="https://leekduck.com/events/zekrom-in-5-star-raid-bat
+ tles-december-2025/">Zekrom in 5-star Raid Battles</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Raid Battles
+URL;VALUE=URI:https://leekduck.com/events/zekrom-in-5-star-raid-battles-de
+ cember-2025/
+IMAGE:https://cdn.leekduck.com/assets/img/events/zekrom2.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Raid Battles — Zekrom in 5-star Raid Bat
+ tles
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/z
+ ekrom2.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-shadow-heatran-in-shadow-raids-december-january-2026
+SEQUENCE:0
+DTSTAMP:20251130T033451Z
+DTSTART:20251202T060000Z
+DTEND:20260101T220000Z
+SUMMARY:Raid Battles — Shadow Heatran in Shadow Raids
+DESCRIPTION:<a href="https://leekduck.com/events/shadow-heatran-in-shadow-
+ raids-december-january-2026/">Shadow Heatran in Shadow Raids</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Raid Battles
+URL;VALUE=URI:https://leekduck.com/events/shadow-heatran-in-shadow-raids-d
+ ecember-january-2026/
+IMAGE:https://cdn.leekduck.com/assets/img/events/events-default-img.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Raid Battles — Shadow Heatran in Shadow 
+ Raids
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/e
+ vents-default-img.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+X-ORIGIN:https://leekduck.com/events/
+X-GENERATOR:ScrapedDuck
+X-GENERATOR-URL:https://github.com/bigfoott/ScrapedDuck
+END:VCALENDAR

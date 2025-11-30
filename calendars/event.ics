@@ -1,0 +1,217 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ScrapedDuck//Scraped LeekDuck Events//EN
+NAME:Pokémon Go — Event
+X-WR-CALNAME:Pokémon Go — Event
+X-WR-CALDESC:Pokémon Go Event events.
+BEGIN:VEVENT
+UID:scraped-duck-final-justice-2025
+SEQUENCE:0
+DTSTAMP:20251130T033451Z
+DTSTART:20251125T100000Z
+DTEND:20251130T200000Z
+SUMMARY:Event — Final Justice
+DESCRIPTION:<a href="https://leekduck.com/events/final-justice-2025/">Fina
+ l Justice</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Event
+URL;VALUE=URI:https://leekduck.com/events/final-justice-2025/
+IMAGE:https://cdn.leekduck.com/assets/img/events/article-images/2025/2025-
+ 11-25-final-justice-2025/final-justice-2025.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Event — Final Justice
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/a
+ rticle-images/2025/2025-11-25-final-justice-2025/final-justice-2025.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-trade-days-tales-of-transformation
+SEQUENCE:0
+DTSTAMP:20251130T033451Z
+DTSTART:20250907T000000Z
+DTEND:20251130T235959Z
+SUMMARY:Event — Trade Days | Tales of Transformation
+DESCRIPTION:<a href="https://leekduck.com/events/trade-days-tales-of-trans
+ formation/">Trade Days | Tales of Transformation</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Event
+URL;VALUE=URI:https://leekduck.com/events/trade-days-tales-of-transformati
+ on/
+IMAGE:https://cdn.leekduck.com/assets/img/events/article-images/2025/2025-
+ 09-07-trade-days-tales-of-transformation/trade-days.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Event — Trade Days | Tales of Transforma
+ tion
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/a
+ rticle-images/2025/2025-09-07-trade-days-tales-of-transformation/trade-day
+ s.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-go-battle-week-precious-paths
+SEQUENCE:0
+DTSTAMP:20251130T033451Z
+DTSTART:20251204T000000Z
+DTEND:20251208T235900Z
+SUMMARY:Event — GO Battle Week: Precious Paths
+DESCRIPTION:<a href="https://leekduck.com/events/go-battle-week-precious-p
+ aths/">GO Battle Week: Precious Paths</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Event
+URL;VALUE=URI:https://leekduck.com/events/go-battle-week-precious-paths/
+IMAGE:https://cdn.leekduck.com/assets/img/events/go-battle-league-season-2
+ 5-precious-paths.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Event — GO Battle Week: Precious Paths
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/g
+ o-battle-league-season-25-precious-paths.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-journey-to-paldea
+SEQUENCE:0
+DTSTAMP:20251130T033451Z
+DTSTART:20251202T100000Z
+DTEND:20251209T200000Z
+SUMMARY:Event — Journey to Paldea
+DESCRIPTION:<a href="https://leekduck.com/events/journey-to-paldea/">Journ
+ ey to Paldea</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Event
+URL;VALUE=URI:https://leekduck.com/events/journey-to-paldea/
+IMAGE:https://cdn.leekduck.com/assets/img/events/article-images/2025/2025-
+ 12-02-journey-to-paldea/journey-to-paldea.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Event — Journey to Paldea
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/a
+ rticle-images/2025/2025-12-02-journey-to-paldea/journey-to-paldea.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-well-armed-2025
+SEQUENCE:0
+DTSTAMP:20251130T033451Z
+DTSTART:20251211T100000Z
+DTEND:20251216T200000Z
+SUMMARY:Event — Well Armed
+DESCRIPTION:<a href="https://leekduck.com/events/well-armed-2025/">Well Ar
+ med</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Event
+URL;VALUE=URI:https://leekduck.com/events/well-armed-2025/
+IMAGE:https://cdn.leekduck.com/assets/img/events/events-default-img.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Event — Well Armed
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/e
+ vents-default-img.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-winter-holiday-part-1-2025
+SEQUENCE:0
+DTSTAMP:20251130T033451Z
+DTSTART:20251218T100000Z
+DTEND:20251224T200000Z
+SUMMARY:Event — Winter Holiday Part 1
+DESCRIPTION:<a href="https://leekduck.com/events/winter-holiday-part-1-202
+ 5/">Winter Holiday Part 1</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Event
+URL;VALUE=URI:https://leekduck.com/events/winter-holiday-part-1-2025/
+IMAGE:https://cdn.leekduck.com/assets/img/events/events-default-img.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Event — Winter Holiday Part 1
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/e
+ vents-default-img.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-winter-weekend-2025
+SEQUENCE:0
+DTSTAMP:20251130T033451Z
+DTSTART:20251227T100000Z
+DTEND:20251228T200000Z
+SUMMARY:Event — Winter Weekend
+DESCRIPTION:<a href="https://leekduck.com/events/winter-weekend-2025/">Win
+ ter Weekend</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Event
+URL;VALUE=URI:https://leekduck.com/events/winter-weekend-2025/
+IMAGE:https://cdn.leekduck.com/assets/img/events/events-default-img.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Event — Winter Weekend
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/e
+ vents-default-img.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-winter-holiday-part-2-2025
+SEQUENCE:0
+DTSTAMP:20251130T033451Z
+DTSTART:20251224T100000Z
+DTEND:20251229T200000Z
+SUMMARY:Event — Winter Holiday Part 2
+DESCRIPTION:<a href="https://leekduck.com/events/winter-holiday-part-2-202
+ 5/">Winter Holiday Part 2</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Event
+URL;VALUE=URI:https://leekduck.com/events/winter-holiday-part-2-2025/
+IMAGE:https://cdn.leekduck.com/assets/img/events/events-default-img.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Event — Winter Holiday Part 2
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/e
+ vents-default-img.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-new-years-2026
+SEQUENCE:0
+DTSTAMP:20251130T033451Z
+DTSTART:20251231T100000Z
+DTEND:20260104T200000Z
+SUMMARY:Event — New Year's 2026
+DESCRIPTION:<a href="https://leekduck.com/events/new-years-2026/">New Year
+ 's 2026</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Event
+URL;VALUE=URI:https://leekduck.com/events/new-years-2026/
+IMAGE:https://cdn.leekduck.com/assets/img/events/events-default-img.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Event — New Year's 2026
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/e
+ vents-default-img.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-catch-mastery-day-february-2026
+SEQUENCE:0
+DTSTAMP:20251130T033451Z
+DTSTART:20260207T100000Z
+DTEND:20260207T200000Z
+SUMMARY:Event — Catch Mastery Day
+DESCRIPTION:<a href="https://leekduck.com/events/catch-mastery-day-februar
+ y-2026/">Catch Mastery Day</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Event
+URL;VALUE=URI:https://leekduck.com/events/catch-mastery-day-february-2026/
+IMAGE:https://cdn.leekduck.com/assets/img/events/events-default-img.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Event — Catch Mastery Day
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/e
+ vents-default-img.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+X-ORIGIN:https://leekduck.com/events/
+X-GENERATOR:ScrapedDuck
+X-GENERATOR-URL:https://github.com/bigfoott/ScrapedDuck
+END:VCALENDAR
