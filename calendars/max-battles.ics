@@ -1,0 +1,76 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ScrapedDuck//Scraped LeekDuck Events//EN
+NAME:Pokémon Go — Max Battles
+X-WR-CALNAME:Pokémon Go — Max Battles
+X-WR-CALDESC:Pokémon Go Max Battles events.
+BEGIN:VEVENT
+UID:scraped-duck-gigantamax-snorlax-max-battle-day-december-2025
+SEQUENCE:0
+DTSTAMP:20251206T032500Z
+DTSTART:20251214T140000Z
+DTEND:20251214T170000Z
+SUMMARY:Max Battles — Gigantamax Snorlax Max Battle Day
+DESCRIPTION:<a href="https://leekduck.com/events/gigantamax-snorlax-max-ba
+ ttle-day-december-2025/">Gigantamax Snorlax Max Battle Day</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Max Battles
+URL;VALUE=URI:https://leekduck.com/events/gigantamax-snorlax-max-battle-da
+ y-december-2025/
+IMAGE:https://cdn.leekduck.com/assets/img/events/article-images/2025/2025-
+ 12-14-gigantamax-snorlax-max-battle-day-december-2025/gigantamax-snorlax-d
+ ecember-2025.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Max Battles — Gigantamax Snorlax Max Bat
+ tle Day
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/a
+ rticle-images/2025/2025-12-14-gigantamax-snorlax-max-battle-day-december-2
+ 025/gigantamax-snorlax-december-2025.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-max-battle-weekend-february-2026
+SEQUENCE:0
+DTSTAMP:20251206T032500Z
+DTSTART:20260131T060000Z
+DTEND:20260201T210000Z
+SUMMARY:Max Battles — Max Battle Weekend
+DESCRIPTION:<a href="https://leekduck.com/events/max-battle-weekend-februa
+ ry-2026/">Max Battle Weekend</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Max Battles
+URL;VALUE=URI:https://leekduck.com/events/max-battle-weekend-february-2026
+ /
+IMAGE:https://cdn.leekduck.com/assets/img/events/events-default-img.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Max Battles — Max Battle Weekend
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/e
+ vents-default-img.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-max-battle-day-february-2026
+SEQUENCE:0
+DTSTAMP:20251206T032500Z
+DTSTART:20260215T140000Z
+DTEND:20260215T170000Z
+SUMMARY:Max Battles — Max Battle Day
+DESCRIPTION:<a href="https://leekduck.com/events/max-battle-day-february-2
+ 026/">Max Battle Day</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Max Battles
+URL;VALUE=URI:https://leekduck.com/events/max-battle-day-february-2026/
+IMAGE:https://cdn.leekduck.com/assets/img/events/events-default-img.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Max Battles — Max Battle Day
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/e
+ vents-default-img.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+X-ORIGIN:https://leekduck.com/events/
+X-GENERATOR:ScrapedDuck
+X-GENERATOR-URL:https://github.com/bigfoott/ScrapedDuck
+END:VCALENDAR

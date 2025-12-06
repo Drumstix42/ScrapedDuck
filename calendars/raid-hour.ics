@@ -1,0 +1,90 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ScrapedDuck//Scraped LeekDuck Events//EN
+NAME:Pokémon Go — Raid Hour
+X-WR-CALNAME:Pokémon Go — Raid Hour
+X-WR-CALDESC:Pokémon Go Raid Hour events.
+BEGIN:VEVENT
+UID:scraped-duck-raidhour20251210
+SEQUENCE:0
+DTSTAMP:20251206T032500Z
+DTSTART:20251210T180000Z
+DTEND:20251210T190000Z
+SUMMARY:Raid Hour — Kyurem Raid Hour
+DESCRIPTION:<a href="https://leekduck.com/events/raidhour20251210/">Kyurem
+  Raid Hour</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Raid Hour
+URL;VALUE=URI:https://leekduck.com/events/raidhour20251210/
+IMAGE:https://cdn.leekduck.com/assets/img/events/raidhour.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Raid Hour — Kyurem Raid Hour
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/r
+ aidhour.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-raidhour20251217
+SEQUENCE:0
+DTSTAMP:20251206T032500Z
+DTSTART:20251217T180000Z
+DTEND:20251217T190000Z
+SUMMARY:Raid Hour — Reshiram Raid Hour
+DESCRIPTION:<a href="https://leekduck.com/events/raidhour20251217/">Reshir
+ am Raid Hour</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Raid Hour
+URL;VALUE=URI:https://leekduck.com/events/raidhour20251217/
+IMAGE:https://cdn.leekduck.com/assets/img/events/raidhour.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Raid Hour — Reshiram Raid Hour
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/r
+ aidhour.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-raidhour20251224
+SEQUENCE:0
+DTSTAMP:20251206T032500Z
+DTSTART:20251224T180000Z
+DTEND:20251224T190000Z
+SUMMARY:Raid Hour — Zekrom Raid Hour
+DESCRIPTION:<a href="https://leekduck.com/events/raidhour20251224/">Zekrom
+  Raid Hour</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Raid Hour
+URL;VALUE=URI:https://leekduck.com/events/raidhour20251224/
+IMAGE:https://cdn.leekduck.com/assets/img/events/raidhour.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Raid Hour — Zekrom Raid Hour
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/r
+ aidhour.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-raidhour20251231
+SEQUENCE:0
+DTSTAMP:20251206T032500Z
+DTSTART:20251231T180000Z
+DTEND:20251231T190000Z
+SUMMARY:Raid Hour — Blacephalon Raid Hour
+DESCRIPTION:<a href="https://leekduck.com/events/raidhour20251231/">Blacep
+ halon Raid Hour</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Raid Hour
+URL;VALUE=URI:https://leekduck.com/events/raidhour20251231/
+IMAGE:https://cdn.leekduck.com/assets/img/events/raidhour.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Raid Hour — Blacephalon Raid Hour
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/r
+ aidhour.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+X-ORIGIN:https://leekduck.com/events/
+X-GENERATOR:ScrapedDuck
+X-GENERATOR-URL:https://github.com/bigfoott/ScrapedDuck
+END:VCALENDAR
