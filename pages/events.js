@@ -40,13 +40,13 @@ function get()
         
                     ["current","upcoming"].forEach(category => {
                         
-                        var events = dom.window.document.querySelectorAll(`div.events-list.${category}-events a.event-item-link`);
+                        var events = dom.window.document.querySelectorAll(`div.events-list.${category}-events span.event-header-item-wrapper a.event-item-link`);
         
                         events.forEach (e =>
                         {
                             var heading = e.querySelector(":scope > .event-item-wrapper > p").innerHTML;
                             var name = e.querySelector(":scope > .event-item-wrapper > .event-item > .event-text-container > .event-text > h2").innerHTML;
-                            var image = e.querySelector(":scope > .event-item-wrapper > .event-item > .event-img-wrapper > img").src;
+                            var image = e.querySelector(":scope > .event-item-wrapper > .event-item > span.event-img-wrapper > img").src;
                             if (image.includes("cdn-cgi"))
                             {
                                 image = "https://cdn.leekduck.com/assets/" + image.split("/assets/")[1];
@@ -61,7 +61,7 @@ function get()
                             }
                             
                             var eventItemWrapper = e.querySelector(":scope > .event-item-wrapper");
-                            var eventType = (eventItemWrapper.classList + "").replace("event-item-wrapper ", "");
+                            var eventType = (eventItemWrapper.classList + "").replace("event-item-wrapper ", "").replace(" skeleton-loading", "");
                             eventType = eventType.replace("é", "e");
 
                             var start = eventDates[eventID]?.start || null;
