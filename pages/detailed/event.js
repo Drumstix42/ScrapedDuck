@@ -42,29 +42,37 @@ function get(url, id, bkp) {
           processRaidsSection(fiveStarElements, 'appearing-in-5-star-raids', eventData, globalInfo);
         }
 
-        // Distribute raid hour info based on which section it was found in
-        if (globalInfo.raidHourTime) {
-          if (globalInfo.raidHourSectionId === 'appearing-in-5-star-raids') {
-            // If raid hour was in the dedicated 5-star section, apply to ALL scheduled days
-            eventData.raidSchedule.forEach(day => {
-              day.hasRaidHour = true;
-              day.raidHourTime = globalInfo.raidHourTime;
-            });
-          } else if (globalInfo.raidHourSectionId === 'raids' && globalInfo.raidTypesWithRaidHour.length > 0) {
-            // If raid hour was in general raids section, match by raid type keywords
-            eventData.raidSchedule.forEach(day => {
-              var dayTypeLower = day.raidType.toLowerCase();
-              // Check if any raid type keyword from raid hour text appears in this day's raid type
-              var matchesRaidHour = globalInfo.raidTypesWithRaidHour.some(keyword => {
-                return dayTypeLower.includes(keyword);
-              });
-
-              if (matchesRaidHour) {
-                day.hasRaidHour = true;
-                day.raidHourTime = globalInfo.raidHourTime;
-              }
-            });
+        // Also check for day-based raid sections (e.g., "Monday, February 23: Kanto")
+        // These events organize raids by day rather than in a single "raids" section
+        var allH2 = pageContent.querySelectorAll('h2');
+        allH2.forEach(h2 => {
+          // Look for H2 headers that match day patterns
+          var h2Text = h2.textContent.trim();
+          var dayPattern = /^(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday),\s+\w+\s+\d+/i;
+          if (dayPattern.test(h2Text)) {
+            var dayElements = collectSectionElements(h2);
+            processDayRaidSection(dayElements, h2Text, eventData, globalInfo);
           }
+        });
+
+        // Distribute raid hour info to scheduled days if found in appearing-in-5-star-raids section
+        if (globalInfo.raidHourTime && globalInfo.raidHourSectionId === 'appearing-in-5-star-raids') {
+          eventData.raidSchedule.forEach(day => {
+            if (day.raidHours.length === 0) {
+              // Apply to all 5-star bosses
+              var fiveStarBosses = day.bosses.filter(boss => {
+                var typeLower = boss.raidType ? boss.raidType.toLowerCase() : '';
+                return typeLower.includes('tier 5') || typeLower.includes('five');
+              });
+              
+              if (fiveStarBosses.length > 0) {
+                day.raidHours.push({
+                  time: globalInfo.raidHourTime,
+                  bosses: fiveStarBosses
+                });
+              }
+            }
+          });
         }
 
         // Distribute special bonuses to relevant raid days. Attach a bonus to a
@@ -152,6 +160,8 @@ function getTierFromRaidType(raidType) {
   if (raidTypeLower.includes('five-star') || raidTypeLower.includes('5-star')) return 'Tier 5';
   if (raidTypeLower.includes('six-star') || raidTypeLower.includes('6-star')) return 'Tier 6';
   if (raidTypeLower.includes('mega')) return 'Mega';
+  if (raidTypeLower.includes('primal')) return 'Primal';
+  if (raidTypeLower.includes('shadow') && !raidTypeLower.includes('star')) return 'Shadow';
 
   return null; // Unknown tier
 }
@@ -227,7 +237,7 @@ function parseBossFromElement(bossElement, raidType) {
     name: nameElement.innerHTML.trim(),
     image: imageElement.src,
     canBeShiny: bossElement.querySelector(':scope > .shiny-icon') !== null,
-    tier: getTierFromRaidType(raidType)
+    raidType: getTierFromRaidType(raidType)
   };
 }
 
@@ -247,12 +257,126 @@ function collectSectionElements(startH2) {
 }
 
 /**
+ * Process a day-based raid section (e.g., "Monday, February 23: Kanto")
+ * Creates one entry per date with all bosses and raid hour info
+ */
+function processDayRaidSection(elements, dayHeader, eventData, globalInfo) {
+  // Extract base date from headers like "Friday, February 27: Unova (Black Kyurem)" → "Friday, February 27"
+  var baseDate = dayHeader.split(':')[0].trim();
+  
+  var currentRaidType = null;
+  var allBosses = []; // Track all bosses for this section
+  var raidHourTime = null;
+  var raidHourBossNames = []; // Boss names mentioned in Raid Hour text
+  var inRaidHourSection = false;
+  
+  // Find or create entry for this date
+  var dateEntry = eventData.raidSchedule.find(entry => entry.date === baseDate);
+  if (!dateEntry) {
+    dateEntry = {
+      date: baseDate,
+      bosses: [],
+      raidHours: [],
+      bonuses: []
+    };
+    eventData.raidSchedule.push(dateEntry);
+  }
+  
+  elements.forEach(element => {
+    // Handle H3 headers for raid types
+    if (element.tagName === 'H3' && element.textContent) {
+      var h3Text = element.textContent.trim();
+      var h3Lower = h3Text.toLowerCase();
+      
+      // Check if it's a raid hours section
+      if (h3Lower.includes('raid hour')) {
+        inRaidHourSection = true;
+        currentRaidType = null;
+      }
+      // Check for raid type headers
+      else if (h3Lower.includes('star') && h3Lower.includes('raids')) {
+        currentRaidType = h3Text;
+        inRaidHourSection = false;
+      }
+      else if (h3Lower.includes('primal') && h3Lower.includes('raids')) {
+        currentRaidType = 'Primal Raids';
+        inRaidHourSection = false;
+      }
+      else if (h3Lower.includes('mega') && h3Lower.includes('raids')) {
+        currentRaidType = 'Mega Raids';
+        inRaidHourSection = false;
+      }
+      else if (h3Lower.includes('shadow') && h3Lower.includes('raids')) {
+        currentRaidType = 'Shadow Raids';
+        inRaidHourSection = false;
+      }
+    }
+    
+    // Handle Pokemon lists for scheduled raids
+    if (element.className === 'pkmn-list-flex' && currentRaidType && !inRaidHourSection) {
+      var bosses = parseBossesFromList(element, currentRaidType);
+      bosses.forEach(boss => {
+        // Add boss if not already in the date entry (avoid duplicates)
+        if (!dateEntry.bosses.some(existing => existing.name === boss.name)) {
+          dateEntry.bosses.push(boss);
+        }
+      });
+    }
+    
+    // Handle raid hour details - extract time and featured Pokemon from text
+    if (element.tagName === 'P' && inRaidHourSection) {
+      var text = element.textContent.trim();
+      var textLower = text.toLowerCase();
+      
+      if (textLower.includes('raid hour')) {
+        // Extract time
+        var timeMatch = text.match(/from ([\d:]+\s+[ap]\.?m\.?\s+to\s+[\d:]+\s+[ap]\.?m\.?)/i);
+        if (timeMatch) {
+          raidHourTime = timeMatch[1] + ' local time';
+        }
+        
+        // Extract Pokemon names from "featuring X, Y, and Z" pattern
+        var featuringMatch = text.match(/featuring\s+([^.]+?)(?:\s+from|\s*\.)/i);
+        if (featuringMatch) {
+          var pokemonText = featuringMatch[1];
+          // Split by commas and "and" to get individual Pokemon names
+          var pokemonNames = pokemonText
+            .split(/,|\s+and\s+/)
+            .map(name => name.trim())
+            .filter(name => name.length > 0);
+          
+          raidHourBossNames = pokemonNames;
+        }
+      }
+    }
+  });
+  
+  // Create raid hour entry if we have the data
+  if (raidHourTime && raidHourBossNames.length > 0) {
+    // Find matching bosses from the date's boss list
+    var raidHourBosses = dateEntry.bosses.filter(boss => {
+      return raidHourBossNames.some(raidHourName => {
+        return boss.name.toLowerCase().includes(raidHourName.toLowerCase());
+      });
+    });
+    
+    if (raidHourBosses.length > 0) {
+      dateEntry.raidHours.push({
+        time: raidHourTime,
+        bosses: raidHourBosses
+      });
+    }
+  }
+}
+
+/**
  * Process a raids section (either "raids" or "appearing-in-5-star-raids")
  */
 function processRaidsSection(elements, sectionId, eventData, globalInfo) {
   var contextRaidType = sectionId === 'appearing-in-5-star-raids' ? 'Five-Star Raids' : null;
   var currentDate = null;
   var currentRaidType = null;
+  var currentDateEntry = null;
   
   elements.forEach(element => {
     // Handle H3 headers
@@ -266,19 +390,22 @@ function processRaidsSection(elements, sectionId, eventData, globalInfo) {
         currentDate = parsedHeader.date;
         currentRaidType = parsedHeader.raidType;
         
-        var dayEntry = {
-          date: currentDate,
-          raidType: currentRaidType,
-          bosses: [],
-          hasRaidHour: false,
-          raidHourTime: null,
-          bonuses: []
-        };
-        eventData.raidSchedule.push(dayEntry);
+        // Find or create entry for this date
+        currentDateEntry = eventData.raidSchedule.find(entry => entry.date === currentDate);
+        if (!currentDateEntry) {
+          currentDateEntry = {
+            date: currentDate,
+            bosses: [],
+            raidHours: [],
+            bonuses: []
+          };
+          eventData.raidSchedule.push(currentDateEntry);
+        }
       } else {
         // Not a date header, might be a raid type header like "Appearing in 3-Star Raids" or "Three-Star Raids"
         currentDate = null;
         currentRaidType = null;
+        currentDateEntry = null;
         
         // Update context if it's a raid type header
         var h3Lower = h3Text.toLowerCase();
@@ -303,16 +430,32 @@ function processRaidsSection(elements, sectionId, eventData, globalInfo) {
             contextRaidType = directMatch[1].trim();
           }
         }
+        // Check for Primal Raids
+        else if (h3Lower.includes('primal') && h3Lower.includes('raids')) {
+          contextRaidType = 'Primal Raids';
+        }
+        // Check for Mega Raids
+        else if (h3Lower.includes('mega') && h3Lower.includes('raids')) {
+          contextRaidType = 'Mega Raids';
+        }
+        // Check for Shadow Raids (standalone, not "Five-Star Shadow Raids")
+        else if (h3Lower.includes('shadow') && h3Lower.includes('raids') && !h3Lower.includes('star')) {
+          contextRaidType = 'Shadow Raids';
+        }
       }
     }
     
     // Handle Pokemon lists
     if (element.className === 'pkmn-list-flex') {
-      if (currentDate) {
+      if (currentDate && currentDateEntry) {
         // This list is part of a daily schedule
-        var currentDayEntry = eventData.raidSchedule[eventData.raidSchedule.length - 1];
         var bossData = parseBossesFromList(element, currentRaidType);
-        currentDayEntry.bosses.push(...bossData);
+        bossData.forEach(boss => {
+          // Add boss if not already in the date entry (avoid duplicates)
+          if (!currentDateEntry.bosses.some(existing => existing.name === boss.name)) {
+            currentDateEntry.bosses.push(boss);
+          }
+        });
       } else {
         // This is a static raid list
         var bosses = parseBossesFromList(element, contextRaidType);
@@ -355,6 +498,11 @@ function processRaidsSection(elements, sectionId, eventData, globalInfo) {
           globalInfo.raidTypesWithRaidHour.push('mega');
         }
       }
+      if (raidHourLower.includes('primal')) {
+        if (!globalInfo.raidTypesWithRaidHour.includes('primal')) {
+          globalInfo.raidTypesWithRaidHour.push('primal');
+        }
+      }
       // Add more raid types as needed
     }
     
@@ -374,6 +522,28 @@ function processRaidsSection(elements, sectionId, eventData, globalInfo) {
       }
     }
   });
+  
+  // Create raid hour entries for scheduled days
+  if (globalInfo.raidHourTime) {
+    eventData.raidSchedule.forEach(entry => {
+      if (entry.raidHours.length === 0) {
+        // Find bosses that match raid hour criteria
+        var raidHourBosses = entry.bosses.filter(boss => {
+          var bossTypeLower = boss.raidType ? boss.raidType.toLowerCase() : '';
+          return globalInfo.raidTypesWithRaidHour.some(keyword => {
+            return bossTypeLower.includes(keyword);
+          });
+        });
+        
+        if (raidHourBosses.length > 0) {
+          entry.raidHours.push({
+            time: globalInfo.raidHourTime,
+            bosses: raidHourBosses
+          });
+        }
+      }
+    });
+  }
 }
 
 module.exports = { get };
