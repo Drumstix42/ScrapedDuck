@@ -531,6 +531,20 @@ function processRaidsSection(elements, sectionId, eventData, globalInfo) {
         var raidHourBosses = entry.bosses.filter(boss => {
           var bossTypeLower = boss.raidType ? boss.raidType.toLowerCase() : '';
           return globalInfo.raidTypesWithRaidHour.some(keyword => {
+            // Map keywords to tier patterns
+            // "five-star" or "5-star" should match "Tier 5"
+            if (keyword === 'five-star') {
+              return bossTypeLower.includes('tier 5') || bossTypeLower.includes('five');
+            }
+            if (keyword === 'shadow') {
+              return bossTypeLower.includes('shadow');
+            }
+            if (keyword === 'mega') {
+              return bossTypeLower.includes('mega');
+            }
+            if (keyword === 'primal') {
+              return bossTypeLower.includes('primal');
+            }
             return bossTypeLower.includes(keyword);
           });
         });
