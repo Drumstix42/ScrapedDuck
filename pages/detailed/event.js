@@ -263,6 +263,35 @@ function parseBossFromElement(bossElement, raidType) {
 }
 
 /**
+ * Match a boss name against a raid hour name, handling parenthetical qualifiers.
+ * e.g. "Kyurem (Black)" should match "Black Kyurem" from raid hour text.
+ */
+function bossNamesMatch(bossName, raidHourName) {
+  var bossLower = bossName.toLowerCase();
+  var hourLower = raidHourName.toLowerCase();
+
+  // Direct inclusion check (either string contains the other)
+  // e.g. "Shadow Lugia" (raid hour) contains "Lugia" (boss name stored without prefix)
+  if (bossLower.includes(hourLower) || hourLower.includes(bossLower)) {
+    return true;
+  }
+
+  // Handle parenthetical qualifiers: "Kyurem (Black)" vs "Black Kyurem"
+  // Extract base name and qualifier from boss name
+  var parenMatch = bossLower.match(/^(.+?)\s*\((.+?)\)$/);
+  if (parenMatch) {
+    var baseName = parenMatch[1].trim();
+    var qualifier = parenMatch[2].trim();
+    // Match if raid hour name contains both the base name and the qualifier
+    if (hourLower.includes(baseName) && hourLower.includes(qualifier)) {
+      return true;
+    }
+  }
+
+  return false;
+}
+
+/**
  * Collect all elements between an H2 and the next H2
  */
 function collectSectionElements(startH2) {
@@ -377,12 +406,7 @@ function processDayRaidSection(elements, dayHeader, eventData, globalInfo) {
     // Find matching bosses from the date's boss list
     var raidHourBosses = dateEntry.bosses.filter(boss => {
       return raidHourBossNames.some(raidHourName => {
-        // Strip raid type prefixes from featured Pokemon names for matching
-        // e.g., "Shadow Lugia" -> "Lugia", "Primal Kyogre" -> "Kyogre"
-        var cleanName = raidHourName
-          .replace(/^(Shadow|Primal|Mega)\s+/i, '')
-          .toLowerCase();
-        return boss.name.toLowerCase().includes(cleanName);
+        return bossNamesMatch(boss.name, raidHourName);
       });
     });
     
