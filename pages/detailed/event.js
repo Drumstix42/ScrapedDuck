@@ -233,12 +233,62 @@ function parseBossFromElement(bossElement, raidType) {
 
   if (!nameElement || !imageElement) return null;
 
+  var baseName = nameElement.innerHTML.trim();
+  var finalName = baseName;
+  
+  // Prepend Shadow/Mega/Primal prefix if the raid type indicates it but the name doesn't already have it
+  if (raidType) {
+    var raidTypeLower = raidType.toLowerCase();
+    
+    // Add "Shadow" prefix for Shadow raids if not already present
+    if (raidTypeLower.includes('shadow') && !baseName.toLowerCase().startsWith('shadow')) {
+      finalName = 'Shadow ' + baseName;
+    }
+    // Add "Mega" prefix for Mega raids if not already present
+    else if (raidTypeLower.includes('mega') && !baseName.toLowerCase().startsWith('mega')) {
+      finalName = 'Mega ' + baseName;
+    }
+    // Add "Primal" prefix for Primal raids if not already present
+    else if (raidTypeLower.includes('primal') && !baseName.toLowerCase().startsWith('primal')) {
+      finalName = 'Primal ' + baseName;
+    }
+  }
+
   return {
-    name: nameElement.innerHTML.trim(),
+    name: finalName,
     image: imageElement.src,
     canBeShiny: bossElement.querySelector(':scope > .shiny-icon') !== null,
     raidType: getTierFromRaidType(raidType)
   };
+}
+
+/**
+ * Match a boss name against a raid hour name, handling parenthetical qualifiers.
+ * e.g. "Kyurem (Black)" should match "Black Kyurem" from raid hour text.
+ */
+function bossNamesMatch(bossName, raidHourName) {
+  var bossLower = bossName.toLowerCase();
+  var hourLower = raidHourName.toLowerCase();
+
+  // Direct inclusion check (either string contains the other)
+  // e.g. "Shadow Lugia" (raid hour) contains "Lugia" (boss name stored without prefix)
+  if (bossLower.includes(hourLower) || hourLower.includes(bossLower)) {
+    return true;
+  }
+
+  // Handle parenthetical qualifiers: "Kyurem (Black)" vs "Black Kyurem"
+  // Extract base name and qualifier from boss name
+  var parenMatch = bossLower.match(/^(.+?)\s*\((.+?)\)$/);
+  if (parenMatch) {
+    var baseName = parenMatch[1].trim();
+    var qualifier = parenMatch[2].trim();
+    // Match if raid hour name contains both the base name and the qualifier
+    if (hourLower.includes(baseName) && hourLower.includes(qualifier)) {
+      return true;
+    }
+  }
+
+  return false;
 }
 
 /**
@@ -356,7 +406,7 @@ function processDayRaidSection(elements, dayHeader, eventData, globalInfo) {
     // Find matching bosses from the date's boss list
     var raidHourBosses = dateEntry.bosses.filter(boss => {
       return raidHourBossNames.some(raidHourName => {
-        return boss.name.toLowerCase().includes(raidHourName.toLowerCase());
+        return bossNamesMatch(boss.name, raidHourName);
       });
     });
     
