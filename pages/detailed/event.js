@@ -16,7 +16,7 @@ function get(url, id, bkp) {
       .then(dom => {
         var eventData = {
           raidSchedule: [],
-          raidbattles: []
+          raidbattles: { bosses: [], shinies: [] }
         };
 
         var pageContent = dom.window.document.querySelector('.page-content');
@@ -510,8 +510,8 @@ function processRaidsSection(elements, sectionId, eventData, globalInfo) {
         // This is a static raid list
         var bosses = parseBossesFromList(element, contextRaidType);
         bosses.forEach(bossData => {
-          if (!eventData.raidbattles.some(existing => existing.name === bossData.name)) {
-            eventData.raidbattles.push(bossData);
+          if (!eventData.raidbattles.bosses.some(existing => existing.name === bossData.name)) {
+            eventData.raidbattles.bosses.push(bossData);
           }
         });
       }
