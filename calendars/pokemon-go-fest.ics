@@ -1,0 +1,79 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ScrapedDuck//Scraped LeekDuck Events//EN
+NAME:Pokémon Go — Pokémon GO Fest
+X-WR-CALNAME:Pokémon Go — Pokémon GO Fest
+X-WR-CALDESC:Pokémon Go Pokémon GO Fest events.
+BEGIN:VEVENT
+UID:scraped-duck-pokemon-go-fest-2026-tokyo
+SEQUENCE:0
+DTSTAMP:20260308T034922Z
+DTSTART:20260529T010000Z
+DTEND:20260601T110000Z
+SUMMARY:Pokémon GO Fest — Pokémon GO Fest 2026: Tokyo
+DESCRIPTION:<a href="https://leekduck.com/events/pokemon-go-fest-2026-toky
+ o/">Pokémon GO Fest 2026: Tokyo</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Pokémon GO Fest
+URL;VALUE=URI:https://leekduck.com/events/pokemon-go-fest-2026-tokyo/
+IMAGE:https://cdn.leekduck.com/assets/img/events/article-images/2026/2026-
+ 05-29-pokemon-go-fest-2026-tokyo/pokemon-go-fest-tokyo.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Pokémon GO Fest — Pokémon GO Fest 2026
+ : Tokyo
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/a
+ rticle-images/2026/2026-05-29-pokemon-go-fest-2026-tokyo/pokemon-go-fest-t
+ okyo.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-pokemon-go-fest-2026-chicago
+SEQUENCE:0
+DTSTAMP:20260308T034922Z
+DTSTART:20260605T150000Z
+DTEND:20260608T010000Z
+SUMMARY:Pokémon GO Fest — Pokémon GO Fest 2026: Chicago
+DESCRIPTION:<a href="https://leekduck.com/events/pokemon-go-fest-2026-chic
+ ago/">Pokémon GO Fest 2026: Chicago</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Pokémon GO Fest
+URL;VALUE=URI:https://leekduck.com/events/pokemon-go-fest-2026-chicago/
+IMAGE:https://cdn.leekduck.com/assets/img/events/article-images/2026/2026-
+ 06-05-pokemon-go-fest-2026-chicago/pokemon-go-fest-chicago.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Pokémon GO Fest — Pokémon GO Fest 2026
+ : Chicago
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/a
+ rticle-images/2026/2026-06-05-pokemon-go-fest-2026-chicago/pokemon-go-fest
+ -chicago.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-pokemon-go-fest-2026-copenhagen
+SEQUENCE:0
+DTSTAMP:20260308T034922Z
+DTSTART:20260612T070000Z
+DTEND:20260614T160000Z
+SUMMARY:Pokémon GO Fest — Pokémon GO Fest 2026: Copenhagen
+DESCRIPTION:<a href="https://leekduck.com/events/pokemon-go-fest-2026-cope
+ nhagen/">Pokémon GO Fest 2026: Copenhagen</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Pokémon GO Fest
+URL;VALUE=URI:https://leekduck.com/events/pokemon-go-fest-2026-copenhagen/
+IMAGE:https://cdn.leekduck.com/assets/img/events/article-images/2026/2026-
+ 06-12-pokemon-go-fest-2026-copenhagen/pokemon-go-fest-copenhagen.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Pokémon GO Fest — Pokémon GO Fest 2026
+ : Copenhagen
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/a
+ rticle-images/2026/2026-06-12-pokemon-go-fest-2026-copenhagen/pokemon-go-f
+ est-copenhagen.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+X-ORIGIN:https://leekduck.com/events/
+X-GENERATOR:ScrapedDuck
+X-GENERATOR-URL:https://github.com/bigfoott/ScrapedDuck
+END:VCALENDAR

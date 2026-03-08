@@ -1,0 +1,33 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ScrapedDuck//Scraped LeekDuck Events//EN
+NAME:Pokémon Go — Research Day
+X-WR-CALNAME:Pokémon Go — Research Day
+X-WR-CALDESC:Pokémon Go Research Day events.
+BEGIN:VEVENT
+UID:scraped-duck-replay-water-research-day-2026
+SEQUENCE:0
+DTSTAMP:20260308T034922Z
+DTSTART:20260321T140000Z
+DTEND:20260321T170000Z
+SUMMARY:Research Day — Replay: Water Research Day
+DESCRIPTION:<a href="https://leekduck.com/events/replay-water-research-day
+ -2026/">Replay: Water Research Day</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Research Day
+URL;VALUE=URI:https://leekduck.com/events/replay-water-research-day-2026/
+IMAGE:https://cdn.leekduck.com/assets/img/events/article-images/2026/2026-
+ 03-21-replay-water-research-day-2026/replay-water-research-day.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Research Day — Replay: Water Research Da
+ y
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/a
+ rticle-images/2026/2026-03-21-replay-water-research-day-2026/replay-water-
+ research-day.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+X-ORIGIN:https://leekduck.com/events/
+X-GENERATOR:ScrapedDuck
+X-GENERATOR-URL:https://github.com/bigfoott/ScrapedDuck
+END:VCALENDAR
