@@ -1,0 +1,32 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ScrapedDuck//Scraped LeekDuck Events//EN
+NAME:Pokémon Go — Season
+X-WR-CALNAME:Pokémon Go — Season
+X-WR-CALDESC:Pokémon Go Season events.
+BEGIN:VEVENT
+UID:scraped-duck-season-22-memories-in-motion
+SEQUENCE:0
+DTSTAMP:20260315T040043Z
+DTSTART:20260303T100000Z
+DTEND:20260602T100000Z
+SUMMARY:Season — Memories in Motion
+DESCRIPTION:<a href="https://leekduck.com/events/season-22-memories-in-mot
+ ion/">Memories in Motion</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Season
+URL;VALUE=URI:https://leekduck.com/events/season-22-memories-in-motion/
+IMAGE:https://cdn.leekduck.com/assets/img/events/article-images/2026/2026-
+ 03-03-season-22-memories-in-motion/season-22-memories-in-motion.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Season — Memories in Motion
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/a
+ rticle-images/2026/2026-03-03-season-22-memories-in-motion/season-22-memor
+ ies-in-motion.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+X-ORIGIN:https://leekduck.com/events/
+X-GENERATOR:ScrapedDuck
+X-GENERATOR-URL:https://github.com/bigfoott/ScrapedDuck
+END:VCALENDAR

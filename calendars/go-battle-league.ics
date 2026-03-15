@@ -1,0 +1,323 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ScrapedDuck//Scraped LeekDuck Events//EN
+NAME:Pokémon Go — GO Battle League
+X-WR-CALNAME:Pokémon Go — GO Battle League
+X-WR-CALDESC:Pokémon Go GO Battle League events.
+BEGIN:VEVENT
+UID:scraped-duck-gbl-memories-in-motion_ultra-league_spring-cup-great-leag
+ ue-edition
+SEQUENCE:0
+DTSTAMP:20260315T040043Z
+DTSTART:20260310T200000Z
+DTEND:20260317T200000Z
+SUMMARY:GO Battle League — Ultra League and Spring Cup: Great League Edi
+ tion | Memories in Motion
+DESCRIPTION:<a href="https://leekduck.com/events/gbl-memories-in-motion_ul
+ tra-league_spring-cup-great-league-edition/">Ultra League and Spring Cup: 
+ Great League Edition | Memories in Motion</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:GO Battle League
+URL;VALUE=URI:https://leekduck.com/events/gbl-memories-in-motion_ultra-lea
+ gue_spring-cup-great-league-edition/
+IMAGE:https://cdn.leekduck.com/assets/img/events/go-battle-league-ultra-le
+ ague-machamp-swampert.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:GO Battle League — Ultra League and Spri
+ ng Cup: Great League Edition | Memories in Motion
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/g
+ o-battle-league-ultra-league-machamp-swampert.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-gbl-memories-in-motion_master-league_jungle-cup-great-lea
+ gue-edition
+SEQUENCE:0
+DTSTAMP:20260315T040043Z
+DTSTART:20260317T200000Z
+DTEND:20260324T200000Z
+SUMMARY:GO Battle League — Master League and Jungle Cup: Great League Ed
+ ition | Memories in Motion
+DESCRIPTION:<a href="https://leekduck.com/events/gbl-memories-in-motion_ma
+ ster-league_jungle-cup-great-league-edition/">Master League and Jungle Cup
+ : Great League Edition | Memories in Motion</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:GO Battle League
+URL;VALUE=URI:https://leekduck.com/events/gbl-memories-in-motion_master-le
+ ague_jungle-cup-great-league-edition/
+IMAGE:https://cdn.leekduck.com/assets/img/events/gobattleleague-master-key
+ .jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:GO Battle League — Master League and Jun
+ gle Cup: Great League Edition | Memories in Motion
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/g
+ obattleleague-master-key.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-gbl-memories-in-motion_great-league_ultra-league_master-l
+ eague-split-1
+SEQUENCE:0
+DTSTAMP:20260315T040043Z
+DTSTART:20260324T200000Z
+DTEND:20260331T200000Z
+SUMMARY:GO Battle League — Great League\, Ultra League\, and Master Leag
+ ue | Memories in Motion
+DESCRIPTION:<a href="https://leekduck.com/events/gbl-memories-in-motion_gr
+ eat-league_ultra-league_master-league-split-1/">Great League\, Ultra Leagu
+ e\, and Master League | Memories in Motion</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:GO Battle League
+URL;VALUE=URI:https://leekduck.com/events/gbl-memories-in-motion_great-lea
+ gue_ultra-league_master-league-split-1/
+IMAGE:https://cdn.leekduck.com/assets/img/events/go-battle-league-season-2
+ 6-memories-in-motion.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:GO Battle League — Great League\, Ultra 
+ League\, and Master League | Memories in Motion
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/g
+ o-battle-league-season-26-memories-in-motion.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-gbl-memories-in-motion_great-league_electric-cup-great-le
+ ague-edition
+SEQUENCE:0
+DTSTAMP:20260315T040043Z
+DTSTART:20260331T200000Z
+DTEND:20260407T200000Z
+SUMMARY:GO Battle League — Great League and Electric Cup: Great League E
+ dition | Memories in Motion
+DESCRIPTION:<a href="https://leekduck.com/events/gbl-memories-in-motion_gr
+ eat-league_electric-cup-great-league-edition/">Great League and Electric C
+ up: Great League Edition | Memories in Motion</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:GO Battle League
+URL;VALUE=URI:https://leekduck.com/events/gbl-memories-in-motion_great-lea
+ gue_electric-cup-great-league-edition/
+IMAGE:https://cdn.leekduck.com/assets/img/events/gobattle-greatleague-key.
+ jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:GO Battle League — Great League and Elec
+ tric Cup: Great League Edition | Memories in Motion
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/g
+ obattle-greatleague-key.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-gbl-memories-in-motion_ultra-league_fantasy-cup-great-lea
+ gue-edition
+SEQUENCE:0
+DTSTAMP:20260315T040043Z
+DTSTART:20260407T200000Z
+DTEND:20260414T200000Z
+SUMMARY:GO Battle League — Ultra League and Fantasy Cup: Great League Ed
+ ition | Memories in Motion
+DESCRIPTION:<a href="https://leekduck.com/events/gbl-memories-in-motion_ul
+ tra-league_fantasy-cup-great-league-edition/">Ultra League and Fantasy Cup
+ : Great League Edition | Memories in Motion</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:GO Battle League
+URL;VALUE=URI:https://leekduck.com/events/gbl-memories-in-motion_ultra-lea
+ gue_fantasy-cup-great-league-edition/
+IMAGE:https://cdn.leekduck.com/assets/img/events/go-battle-league-ultra-le
+ ague-machamp-swampert.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:GO Battle League — Ultra League and Fant
+ asy Cup: Great League Edition | Memories in Motion
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/g
+ o-battle-league-ultra-league-machamp-swampert.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-gbl-memories-in-motion_master-league_spring-cup-great-lea
+ gue-edition
+SEQUENCE:0
+DTSTAMP:20260315T040043Z
+DTSTART:20260414T200000Z
+DTEND:20260421T200000Z
+SUMMARY:GO Battle League — Master League and Spring Cup: Great League Ed
+ ition | Memories in Motion
+DESCRIPTION:<a href="https://leekduck.com/events/gbl-memories-in-motion_ma
+ ster-league_spring-cup-great-league-edition/">Master League and Spring Cup
+ : Great League Edition | Memories in Motion</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:GO Battle League
+URL;VALUE=URI:https://leekduck.com/events/gbl-memories-in-motion_master-le
+ ague_spring-cup-great-league-edition/
+IMAGE:https://cdn.leekduck.com/assets/img/events/gobattleleague-master-key
+ .jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:GO Battle League — Master League and Spr
+ ing Cup: Great League Edition | Memories in Motion
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/g
+ obattleleague-master-key.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-gbl-memories-in-motion_great-league_ultra-league_master-l
+ eague-split-2
+SEQUENCE:0
+DTSTAMP:20260315T040043Z
+DTSTART:20260421T200000Z
+DTEND:20260428T200000Z
+SUMMARY:GO Battle League — Great League\, Ultra League\, and Master Leag
+ ue | Memories in Motion
+DESCRIPTION:<a href="https://leekduck.com/events/gbl-memories-in-motion_gr
+ eat-league_ultra-league_master-league-split-2/">Great League\, Ultra Leagu
+ e\, and Master League | Memories in Motion</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:GO Battle League
+URL;VALUE=URI:https://leekduck.com/events/gbl-memories-in-motion_great-lea
+ gue_ultra-league_master-league-split-2/
+IMAGE:https://cdn.leekduck.com/assets/img/events/go-battle-league-season-2
+ 6-memories-in-motion.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:GO Battle League — Great League\, Ultra 
+ League\, and Master League | Memories in Motion
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/g
+ o-battle-league-season-26-memories-in-motion.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-gbl-memories-in-motion_great-league_fantasy-cup-great-lea
+ gue-edition
+SEQUENCE:0
+DTSTAMP:20260315T040043Z
+DTSTART:20260428T200000Z
+DTEND:20260505T200000Z
+SUMMARY:GO Battle League — Great League and Fantasy Cup: Great League Ed
+ ition | Memories in Motion
+DESCRIPTION:<a href="https://leekduck.com/events/gbl-memories-in-motion_gr
+ eat-league_fantasy-cup-great-league-edition/">Great League and Fantasy Cup
+ : Great League Edition | Memories in Motion</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:GO Battle League
+URL;VALUE=URI:https://leekduck.com/events/gbl-memories-in-motion_great-lea
+ gue_fantasy-cup-great-league-edition/
+IMAGE:https://cdn.leekduck.com/assets/img/events/gobattle-greatleague-key.
+ jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:GO Battle League — Great League and Fant
+ asy Cup: Great League Edition | Memories in Motion
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/g
+ obattle-greatleague-key.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-gbl-memories-in-motion_ultra-league_jungle-cup-great-leag
+ ue-edition
+SEQUENCE:0
+DTSTAMP:20260315T040043Z
+DTSTART:20260505T200000Z
+DTEND:20260512T200000Z
+SUMMARY:GO Battle League — Ultra League and Jungle Cup: Great League Edi
+ tion | Memories in Motion
+DESCRIPTION:<a href="https://leekduck.com/events/gbl-memories-in-motion_ul
+ tra-league_jungle-cup-great-league-edition/">Ultra League and Jungle Cup: 
+ Great League Edition | Memories in Motion</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:GO Battle League
+URL;VALUE=URI:https://leekduck.com/events/gbl-memories-in-motion_ultra-lea
+ gue_jungle-cup-great-league-edition/
+IMAGE:https://cdn.leekduck.com/assets/img/events/go-battle-league-ultra-le
+ ague-machamp-swampert.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:GO Battle League — Ultra League and Jung
+ le Cup: Great League Edition | Memories in Motion
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/g
+ o-battle-league-ultra-league-machamp-swampert.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-gbl-memories-in-motion_master-league_catch-cup-memories-i
+ n-motion-great-league-edition
+SEQUENCE:0
+DTSTAMP:20260315T040043Z
+DTSTART:20260512T200000Z
+DTEND:20260519T200000Z
+SUMMARY:GO Battle League — Master League and Catch Cup: Memories in Moti
+ on: Great League Edition | Memories in Motion
+DESCRIPTION:<a href="https://leekduck.com/events/gbl-memories-in-motion_ma
+ ster-league_catch-cup-memories-in-motion-great-league-edition/">Master Lea
+ gue and Catch Cup: Memories in Motion: Great League Edition | Memories in 
+ Motion</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:GO Battle League
+URL;VALUE=URI:https://leekduck.com/events/gbl-memories-in-motion_master-le
+ ague_catch-cup-memories-in-motion-great-league-edition/
+IMAGE:https://cdn.leekduck.com/assets/img/events/gobattleleague-master-key
+ .jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:GO Battle League — Master League and Cat
+ ch Cup: Memories in Motion: Great League Edition | Memories in Motion
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/g
+ obattleleague-master-key.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-gbl-memories-in-motion_great-league_ultra-league_master-l
+ eague-split-3
+SEQUENCE:0
+DTSTAMP:20260315T040043Z
+DTSTART:20260519T200000Z
+DTEND:20260526T200000Z
+SUMMARY:GO Battle League — Great League\, Ultra League\, and Master Leag
+ ue | Memories in Motion
+DESCRIPTION:<a href="https://leekduck.com/events/gbl-memories-in-motion_gr
+ eat-league_ultra-league_master-league-split-3/">Great League\, Ultra Leagu
+ e\, and Master League | Memories in Motion</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:GO Battle League
+URL;VALUE=URI:https://leekduck.com/events/gbl-memories-in-motion_great-lea
+ gue_ultra-league_master-league-split-3/
+IMAGE:https://cdn.leekduck.com/assets/img/events/go-battle-league-season-2
+ 6-memories-in-motion.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:GO Battle League — Great League\, Ultra 
+ League\, and Master League | Memories in Motion
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/g
+ o-battle-league-season-26-memories-in-motion.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-gbl-memories-in-motion_great-league_ultra-league_master-l
+ eague-split-4
+SEQUENCE:0
+DTSTAMP:20260315T040043Z
+DTSTART:20260526T200000Z
+DTEND:20260602T200000Z
+SUMMARY:GO Battle League — Great League\, Ultra League\, and Master Leag
+ ue | Memories in Motion
+DESCRIPTION:<a href="https://leekduck.com/events/gbl-memories-in-motion_gr
+ eat-league_ultra-league_master-league-split-4/">Great League\, Ultra Leagu
+ e\, and Master League | Memories in Motion</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:GO Battle League
+URL;VALUE=URI:https://leekduck.com/events/gbl-memories-in-motion_great-lea
+ gue_ultra-league_master-league-split-4/
+IMAGE:https://cdn.leekduck.com/assets/img/events/go-battle-league-season-2
+ 6-memories-in-motion.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:GO Battle League — Great League\, Ultra 
+ League\, and Master League | Memories in Motion
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/g
+ o-battle-league-season-26-memories-in-motion.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+X-ORIGIN:https://leekduck.com/events/
+X-GENERATOR:ScrapedDuck
+X-GENERATOR-URL:https://github.com/bigfoott/ScrapedDuck
+END:VCALENDAR

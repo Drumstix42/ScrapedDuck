@@ -1,0 +1,119 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ScrapedDuck//Scraped LeekDuck Events//EN
+NAME:Pokémon Go — Event
+X-WR-CALNAME:Pokémon Go — Event
+X-WR-CALDESC:Pokémon Go Event events.
+BEGIN:VEVENT
+UID:scraped-duck-pokemon-pokopia-celebration-event-2026
+SEQUENCE:0
+DTSTAMP:20260315T040043Z
+DTSTART:20260310T100000Z
+DTEND:20260316T200000Z
+SUMMARY:Event — Pokémon Pokopia Celebration Event
+DESCRIPTION:<a href="https://leekduck.com/events/pokemon-pokopia-celebrati
+ on-event-2026/">Pokémon Pokopia Celebration Event</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Event
+URL;VALUE=URI:https://leekduck.com/events/pokemon-pokopia-celebration-even
+ t-2026/
+IMAGE:https://cdn.leekduck.com/assets/img/events/article-images/2026/2026-
+ 03-10-pokemon-pokopia-celebration-event-2026/pokopia-celebration-event.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Event — Pokémon Pokopia Celebration Eve
+ nt
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/a
+ rticle-images/2026/2026-03-10-pokemon-pokopia-celebration-event-2026/pokop
+ ia-celebration-event.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-bug-out-2026
+SEQUENCE:0
+DTSTAMP:20260315T040043Z
+DTSTART:20260317T100000Z
+DTEND:20260323T200000Z
+SUMMARY:Event — Bug Out 2026
+DESCRIPTION:<a href="https://leekduck.com/events/bug-out-2026/">Bug Out 20
+ 26</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Event
+URL;VALUE=URI:https://leekduck.com/events/bug-out-2026/
+IMAGE:https://cdn.leekduck.com/assets/img/events/article-images/2026/2026-
+ 03-17-bug-out-2026/bug-out-2026.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Event — Bug Out 2026
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/a
+ rticle-images/2026/2026-03-17-bug-out-2026/bug-out-2026.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-a-shockingly-good-time-2026
+SEQUENCE:0
+DTSTAMP:20260315T040043Z
+DTSTART:20260331T100000Z
+DTEND:20260406T200000Z
+SUMMARY:Event — A Shockingly Good Time
+DESCRIPTION:<a href="https://leekduck.com/events/a-shockingly-good-time-20
+ 26/">A Shockingly Good Time</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Event
+URL;VALUE=URI:https://leekduck.com/events/a-shockingly-good-time-2026/
+IMAGE:https://cdn.leekduck.com/assets/img/events/article-images/2026/2026-
+ 03-31-a-shockingly-good-time-2026/a-shockingly-good-time.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Event — A Shockingly Good Time
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/a
+ rticle-images/2026/2026-03-31-a-shockingly-good-time-2026/a-shockingly-goo
+ d-time.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-hatch-day-april-2026
+SEQUENCE:0
+DTSTAMP:20260315T040043Z
+DTSTART:20260418T140000Z
+DTEND:20260418T170000Z
+SUMMARY:Event — Hatch Day
+DESCRIPTION:<a href="https://leekduck.com/events/hatch-day-april-2026/">Ha
+ tch Day</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Event
+URL;VALUE=URI:https://leekduck.com/events/hatch-day-april-2026/
+IMAGE:https://cdn.leekduck.com/assets/img/events/events-default-img.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Event — Hatch Day
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/e
+ vents-default-img.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-example_event
+SEQUENCE:0
+DTSTAMP:20260315T040043Z
+DTSTART:20261201T100000Z
+DTEND:20261202T200000Z
+SUMMARY:Event — Example Event Template (Auto ToC Demo)
+DESCRIPTION:<a href="https://leekduck.com/events/example_event/">Example E
+ vent Template (Auto ToC Demo)</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Event
+URL;VALUE=URI:https://leekduck.com/events/example_event/
+IMAGE:https://cdn.leekduck.com/assets/img/events/article-images/2026/examp
+ le_event/events-default-img.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Event — Example Event Template (Auto ToC
+  Demo)
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/a
+ rticle-images/2026/example_event/events-default-img.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+X-ORIGIN:https://leekduck.com/events/
+X-GENERATOR:ScrapedDuck
+X-GENERATOR-URL:https://github.com/bigfoott/ScrapedDuck
+END:VCALENDAR

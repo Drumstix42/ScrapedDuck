@@ -1,0 +1,73 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ScrapedDuck//Scraped LeekDuck Events//EN
+NAME:Pokémon Go — Max Mondays
+X-WR-CALNAME:Pokémon Go — Max Mondays
+X-WR-CALDESC:Pokémon Go Max Mondays events.
+BEGIN:VEVENT
+UID:scraped-duck-max-mondays-2026-03-16
+SEQUENCE:0
+DTSTAMP:20260315T040043Z
+DTSTART:20260316T060000Z
+DTEND:20260316T210000Z
+SUMMARY:Max Mondays — Dynamax Falinks during Max Monday
+DESCRIPTION:<a href="https://leekduck.com/events/max-mondays-2026-03-16/">
+ Dynamax Falinks during Max Monday</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Max Mondays
+URL;VALUE=URI:https://leekduck.com/events/max-mondays-2026-03-16/
+IMAGE:https://cdn.leekduck.com/assets/img/events/max-battles-kanto.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Max Mondays — Dynamax Falinks during Max
+  Monday
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/m
+ ax-battles-kanto.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-max-mondays-2026-03-23
+SEQUENCE:0
+DTSTAMP:20260315T040043Z
+DTSTART:20260323T060000Z
+DTEND:20260323T210000Z
+SUMMARY:Max Mondays — Dynamax Regice during Max Monday
+DESCRIPTION:<a href="https://leekduck.com/events/max-mondays-2026-03-23/">
+ Dynamax Regice during Max Monday</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Max Mondays
+URL;VALUE=URI:https://leekduck.com/events/max-mondays-2026-03-23/
+IMAGE:https://cdn.leekduck.com/assets/img/events/max-battles-kanto.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Max Mondays — Dynamax Regice during Max 
+ Monday
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/m
+ ax-battles-kanto.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-max-mondays-2026-03-30
+SEQUENCE:0
+DTSTAMP:20260315T040043Z
+DTSTART:20260330T060000Z
+DTEND:20260330T210000Z
+SUMMARY:Max Mondays — Dynamax Woobat during Max Monday
+DESCRIPTION:<a href="https://leekduck.com/events/max-mondays-2026-03-30/">
+ Dynamax Woobat during Max Monday</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Max Mondays
+URL;VALUE=URI:https://leekduck.com/events/max-mondays-2026-03-30/
+IMAGE:https://cdn.leekduck.com/assets/img/events/max-battles-kanto.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Max Mondays — Dynamax Woobat during Max 
+ Monday
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/m
+ ax-battles-kanto.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+X-ORIGIN:https://leekduck.com/events/
+X-GENERATOR:ScrapedDuck
+X-GENERATOR-URL:https://github.com/bigfoott/ScrapedDuck
+END:VCALENDAR
