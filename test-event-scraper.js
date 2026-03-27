@@ -47,6 +47,11 @@ const testEvents = [
         id: 'a-shockingly-good-time-2026',
         url: 'https://leekduck.com/events/a-shockingly-good-time-2026/',
         name: 'A Shockingly Good Time'
+    },
+    {
+        id: 'fashion-raid-day-2026',
+        url: 'https://leekduck.com/events/fashion-raid-day-2026/',
+        name: 'Fashion Raid Day'
     }
 ];
 
