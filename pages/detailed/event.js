@@ -16,6 +16,7 @@ function get(url, id, bkp) {
       .then(dom => {
         var eventData = {
           raidSchedule: [],
+          spotlightSchedule: [],
           raidbattles: { bosses: [], shinies: [] }
         };
 
@@ -40,6 +41,12 @@ function get(url, id, bkp) {
         if (fiveStarH2) {
           var fiveStarElements = collectSectionElements(fiveStarH2);
           processRaidsSection(fiveStarElements, 'appearing-in-5-star-raids', eventData, globalInfo);
+        }
+
+        var spotlightH2 = pageContent.querySelector('h2#spotlight-hours');
+        if (spotlightH2) {
+          var spotlightElements = collectSectionElements(spotlightH2);
+          processSpotlightSection(spotlightElements, eventData);
         }
 
         // Also check for day-based raid sections (e.g., "Monday, February 23: Kanto")
@@ -120,6 +127,9 @@ function get(url, id, bkp) {
               }
               if ('raidbattles' in bkp[i].extraData) {
                 fallbackData.raidbattles = bkp[i].extraData.raidbattles;
+              }
+              if ('spotlightSchedule' in bkp[i].extraData) {
+                fallbackData.spotlightSchedule = bkp[i].extraData.spotlightSchedule;
               }
             }
 
@@ -260,6 +270,123 @@ function parseBossFromElement(bossElement, raidType) {
     canBeShiny: bossElement.querySelector(':scope > .shiny-icon') !== null,
     raidType: getTierFromRaidType(raidType)
   };
+}
+
+/**
+ * Parse simple Pokemon data (used for Spotlight Hours sections in event pages)
+ */
+function parsePokemonFromElement(pokemonElement) {
+  var nameElement = pokemonElement.querySelector(':scope > .pkmn-name');
+  var imageElement = pokemonElement.querySelector(':scope > .pkmn-list-img > img');
+
+  if (!nameElement || !imageElement) return null;
+
+  return {
+    name: nameElement.textContent.trim(),
+    image: imageElement.src,
+    canBeShiny: pokemonElement.querySelector(':scope > .shiny-icon') !== null
+  };
+}
+
+function normalizeName(name) {
+  return name.toLowerCase().replace(/\s+/g, ' ').trim();
+}
+
+function parseSpotlightTimeFromText(text) {
+  var timeMatch = text.match(/from\s+([\d:]+\s+[ap]\.?(?:m\.?)?\s+to\s+[\d:]+\s+[ap]\.?(?:m\.?)?)\s+local time/i);
+  if (timeMatch) {
+    return timeMatch[1] + ' local time';
+  }
+
+  return null;
+}
+
+function parseSpotlightNameAfterDate(strongNode) {
+  var text = '';
+  var node = strongNode.nextSibling;
+
+  while (node) {
+    if (node.nodeType === 1 && node.tagName === 'STRONG') {
+      break;
+    }
+
+    if (node.nodeType === 3) {
+      text += node.textContent;
+    } else if (node.nodeType === 1 && node.tagName !== 'BR') {
+      text += node.textContent;
+    }
+
+    node = node.nextSibling;
+  }
+
+  return text
+    .replace(/[—–]/g, '-')
+    .replace(/^[\s:-]+/, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+/**
+ * Process event-specific Spotlight Hours schedules.
+ */
+function processSpotlightSection(elements, eventData) {
+  var spotlightTime = null;
+  var scheduleParagraph = null;
+  var pokemonLookup = {};
+
+  elements.forEach(element => {
+    if (element.tagName === 'P') {
+      var paragraphText = element.textContent.trim();
+
+      if (!spotlightTime) {
+        spotlightTime = parseSpotlightTimeFromText(paragraphText);
+      }
+
+      if (!scheduleParagraph && element.querySelector(':scope > strong')) {
+        scheduleParagraph = element;
+      }
+    }
+
+    if (element.className === 'pkmn-list-flex') {
+      var pokemonItems = element.querySelectorAll(':scope > .pkmn-list-item');
+      pokemonItems.forEach(item => {
+        var pokemon = parsePokemonFromElement(item);
+        if (pokemon) {
+          pokemonLookup[normalizeName(pokemon.name)] = pokemon;
+        }
+      });
+    }
+  });
+
+  if (!scheduleParagraph) {
+    return;
+  }
+
+  var dateNodes = scheduleParagraph.querySelectorAll(':scope > strong');
+  dateNodes.forEach(dateNode => {
+    var date = dateNode.textContent.trim();
+    var pokemonName = parseSpotlightNameAfterDate(dateNode);
+
+    if (!date || !pokemonName) {
+      return;
+    }
+
+    var details = pokemonLookup[normalizeName(pokemonName)] || {
+      name: pokemonName,
+      image: '',
+      canBeShiny: false
+    };
+
+    eventData.spotlightSchedule.push({
+      date: date,
+      time: spotlightTime,
+      pokemon: {
+        name: details.name,
+        image: details.image,
+        canBeShiny: details.canBeShiny
+      }
+    });
+  });
 }
 
 /**
