@@ -54,6 +54,12 @@ function main()
                     {
                         event.get(e.link, e.eventID, bkp);
                     }
+                    else if (e.eventType == "raid-day" || e.eventType == "raid-hour")
+                    {
+                        // Raid Day/Hour pages use event-style sections (e.g. H2#raids + H3 tiers),
+                        // so they must be parsed by the event scraper to extract raid boss lists.
+                        event.get(e.link, e.eventID, bkp);
+                    }
                 });
             }
             catch (error)
