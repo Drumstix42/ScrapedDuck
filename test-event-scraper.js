@@ -4,6 +4,11 @@ const event = require('./pages/detailed/event');
 // Test URLs to parse - test both types of events
 const testEvents = [
     {
+        id: 'pokemonspotlighthour2026-02-24',
+        url: 'https://leekduck.com/events/pokemonspotlighthour2026-02-24/',
+        name: 'Totodile Spotlight Hour'
+    },
+    {
         id: 'enchanted-hollow-2025',
         url: 'https://leekduck.com/events/enchanted-hollow-2025/',
         name: 'Enchanted Hollow 2025'
@@ -37,6 +42,11 @@ const testEvents = [
         id: 'road-to-kalos',
         url: 'https://leekduck.com/events/road-to-kalos/',
         name: 'Road to Kalos'
+    },
+    {
+        id: 'a-shockingly-good-time-2026',
+        url: 'https://leekduck.com/events/a-shockingly-good-time-2026/',
+        name: 'A Shockingly Good Time'
     }
 ];
 
@@ -115,6 +125,9 @@ async function runTests() {
                     }
                     if (data.data.raidbattles) {
                         mockEvent.extraData.raidbattles = data.data.raidbattles;
+                    }
+                    if (data.data.spotlightSchedule) {
+                        mockEvent.extraData.spotlightSchedule = data.data.spotlightSchedule;
                     }
                 } else if (data.type === "raid-battles") {
                     mockEvent.extraData.raidbattles = data.data;
