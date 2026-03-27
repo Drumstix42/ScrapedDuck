@@ -67,6 +67,9 @@ function main()
                         if (data.data.raidbattles) {
                             e.extraData.raidbattles = data.data.raidbattles;
                         }
+                        if (data.data.spotlightSchedule) {
+                            e.extraData.spotlightSchedule = data.data.spotlightSchedule;
+                        }
                     }
                     else if (data.type == "promo-codes")
                     {
