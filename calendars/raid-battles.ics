@@ -1,0 +1,120 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ScrapedDuck//Scraped LeekDuck Events//EN
+NAME:Pokémon Go — Raid Battles
+X-WR-CALNAME:Pokémon Go — Raid Battles
+X-WR-CALDESC:Pokémon Go Raid Battles events.
+BEGIN:VEVENT
+UID:scraped-duck-tapu-bulu-in-5-star-raid-battles-may-2026
+SEQUENCE:0
+DTSTAMP:20260521T043316Z
+DTSTART:20260520T060000Z
+DTEND:20260526T220000Z
+SUMMARY:Raid Battles — Tapu Bulu in 5-star Raid Battles
+DESCRIPTION:<a href="https://leekduck.com/events/tapu-bulu-in-5-star-raid-
+ battles-may-2026/">Tapu Bulu in 5-star Raid Battles</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Raid Battles
+URL;VALUE=URI:https://leekduck.com/events/tapu-bulu-in-5-star-raid-battles
+ -may-2026/
+IMAGE:https://cdn.leekduck.com/assets/img/events/events-default-img.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Raid Battles — Tapu Bulu in 5-star Raid 
+ Battles
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/e
+ vents-default-img.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-mega-altaria-in-mega-raids-may-2026
+SEQUENCE:0
+DTSTAMP:20260521T043316Z
+DTSTART:20260520T060000Z
+DTEND:20260527T060000Z
+SUMMARY:Raid Battles — Mega Altaria in Mega Raids
+DESCRIPTION:<a href="https://leekduck.com/events/mega-altaria-in-mega-raid
+ s-may-2026/">Mega Altaria in Mega Raids</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Raid Battles
+URL;VALUE=URI:https://leekduck.com/events/mega-altaria-in-mega-raids-may-2
+ 026/
+IMAGE:https://cdn.leekduck.com/assets/img/events/mega-default.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Raid Battles — Mega Altaria in Mega Raid
+ s
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/m
+ ega-default.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-tapu-fini-in-5-star-raid-battles-may-june-2026
+SEQUENCE:0
+DTSTAMP:20260521T043316Z
+DTSTART:20260527T060000Z
+DTEND:20260602T220000Z
+SUMMARY:Raid Battles — Tapu Fini in 5-star Raid Battles
+DESCRIPTION:<a href="https://leekduck.com/events/tapu-fini-in-5-star-raid-
+ battles-may-june-2026/">Tapu Fini in 5-star Raid Battles</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Raid Battles
+URL;VALUE=URI:https://leekduck.com/events/tapu-fini-in-5-star-raid-battles
+ -may-june-2026/
+IMAGE:https://cdn.leekduck.com/assets/img/events/events-default-img.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Raid Battles — Tapu Fini in 5-star Raid 
+ Battles
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/e
+ vents-default-img.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-shadow-cresselia-in-shadow-raids-may-june-2026
+SEQUENCE:0
+DTSTAMP:20260521T043316Z
+DTSTART:20260506T060000Z
+DTEND:20260603T060000Z
+SUMMARY:Raid Battles — Shadow Cresselia in Shadow Raids
+DESCRIPTION:<a href="https://leekduck.com/events/shadow-cresselia-in-shado
+ w-raids-may-june-2026/">Shadow Cresselia in Shadow Raids</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Raid Battles
+URL;VALUE=URI:https://leekduck.com/events/shadow-cresselia-in-shadow-raids
+ -may-june-2026/
+IMAGE:https://cdn.leekduck.com/assets/img/events/events-default-img.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Raid Battles — Shadow Cresselia in Shado
+ w Raids
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/e
+ vents-default-img.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-mega-medicham-in-mega-raids-may-june-2026
+SEQUENCE:0
+DTSTAMP:20260521T043316Z
+DTSTART:20260527T060000Z
+DTEND:20260603T060000Z
+SUMMARY:Raid Battles — Mega Medicham in Mega Raids
+DESCRIPTION:<a href="https://leekduck.com/events/mega-medicham-in-mega-rai
+ ds-may-june-2026/">Mega Medicham in Mega Raids</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Raid Battles
+URL;VALUE=URI:https://leekduck.com/events/mega-medicham-in-mega-raids-may-
+ june-2026/
+IMAGE:https://cdn.leekduck.com/assets/img/events/mega-default.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Raid Battles — Mega Medicham in Mega Rai
+ ds
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/m
+ ega-default.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+X-ORIGIN:https://leekduck.com/events/
+X-GENERATOR:ScrapedDuck
+X-GENERATOR-URL:https://github.com/bigfoott/ScrapedDuck
+END:VCALENDAR

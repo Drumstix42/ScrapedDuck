@@ -1,0 +1,62 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ScrapedDuck//Scraped LeekDuck Events//EN
+NAME:Pokémon Go — GO Battle League
+X-WR-CALNAME:Pokémon Go — GO Battle League
+X-WR-CALDESC:Pokémon Go GO Battle League events.
+BEGIN:VEVENT
+UID:scraped-duck-gbl-memories-in-motion_great-league_ultra-league_master-l
+ eague-split-3
+SEQUENCE:0
+DTSTAMP:20260521T043316Z
+DTSTART:20260519T200000Z
+DTEND:20260526T200000Z
+SUMMARY:GO Battle League — Great League\, Ultra League\, and Master Leag
+ ue | Memories in Motion
+DESCRIPTION:<a href="https://leekduck.com/events/gbl-memories-in-motion_gr
+ eat-league_ultra-league_master-league-split-3/">Great League\, Ultra Leagu
+ e\, and Master League | Memories in Motion</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:GO Battle League
+URL;VALUE=URI:https://leekduck.com/events/gbl-memories-in-motion_great-lea
+ gue_ultra-league_master-league-split-3/
+IMAGE:https://cdn.leekduck.com/assets/img/events/go-battle-league-season-2
+ 6-memories-in-motion.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:GO Battle League — Great League\, Ultra 
+ League\, and Master League | Memories in Motion
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/g
+ o-battle-league-season-26-memories-in-motion.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-gbl-memories-in-motion_great-league_ultra-league_master-l
+ eague-split-4
+SEQUENCE:0
+DTSTAMP:20260521T043316Z
+DTSTART:20260526T200000Z
+DTEND:20260602T200000Z
+SUMMARY:GO Battle League — Great League\, Ultra League\, and Master Leag
+ ue | Memories in Motion
+DESCRIPTION:<a href="https://leekduck.com/events/gbl-memories-in-motion_gr
+ eat-league_ultra-league_master-league-split-4/">Great League\, Ultra Leagu
+ e\, and Master League | Memories in Motion</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:GO Battle League
+URL;VALUE=URI:https://leekduck.com/events/gbl-memories-in-motion_great-lea
+ gue_ultra-league_master-league-split-4/
+IMAGE:https://cdn.leekduck.com/assets/img/events/go-battle-league-season-2
+ 6-memories-in-motion.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:GO Battle League — Great League\, Ultra 
+ League\, and Master League | Memories in Motion
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/g
+ o-battle-league-season-26-memories-in-motion.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+X-ORIGIN:https://leekduck.com/events/
+X-GENERATOR:ScrapedDuck
+X-GENERATOR-URL:https://github.com/bigfoott/ScrapedDuck
+END:VCALENDAR
