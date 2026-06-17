@@ -1,7 +1,6 @@
 const fs = require('fs');
 const jsd = require('jsdom');
 const { JSDOM } = jsd;
-const https = require('https');
 
 function get(url, id, bkp)
 {
@@ -10,31 +9,37 @@ function get(url, id, bkp)
         })
         .then((dom) => {
 
-            var content = dom.window.document.querySelectorAll('.pkmn-list-flex');
-
             var spotlight = {
                 name: "",
-                canBeShiny: false,
+                canBeShiny: null,
                 image: "",
                 bonus: "",
                 list: []
             };
 
-            spotlight.name = content[0].querySelector(":scope > .pkmn-list-item > .pkmn-name").innerHTML;
-            spotlight.canBeShiny = content[0].querySelector(":scope > .pkmn-list-item > .shiny-icon") != null;
-            spotlight.image = content[0].querySelector(":scope > .pkmn-list-item > .pkmn-list-img > img").src;
+            // New page format: the featured Pokémon and bonus are embedded in
+            // plain text paragraphs inside .event-description:
+            // <p><strong>June 18</strong>: The featured Pokémon is <strong>Swinub</strong>
+            //    and the special bonus is <strong>2× Transfer Candy</strong>.</p>
+            const paragraphs = dom.window.document.querySelectorAll('.event-description p');
+            paragraphs.forEach(p => {
+                const text = p.textContent;
+                if (!text.includes('featured Pok')) return;
 
-            var temp = dom.window.document.querySelectorAll('.event-description')[0].innerHTML;
-            var split = temp.split("<strong>");
-            spotlight.bonus = split[split.length - 1].split("</strong>")[0];
-
-            dom.window.document.querySelectorAll(".pkmn-list-item").forEach(p => {
-                var pokemon = {
-                    name: p.querySelector(":scope > .pkmn-name").innerHTML,
-                    canBeShiny: p.querySelector(":scope > .shiny-icon") != null,
-                    image: p.querySelector(":scope > .pkmn-list-img > img").src
+                const strongs = p.querySelectorAll('strong');
+                // strongs[0] = date, strongs[1] = pokemon name, strongs[2] = bonus
+                // If no date strong, strongs[0] = pokemon name, strongs[1] = bonus
+                if (strongs.length >= 3) {
+                    spotlight.name = strongs[1].textContent.trim();
+                    spotlight.bonus = strongs[2].textContent.trim();
+                } else if (strongs.length === 2) {
+                    spotlight.name = strongs[0].textContent.trim();
+                    spotlight.bonus = strongs[1].textContent.trim();
                 }
-                spotlight.list.push(pokemon);
+
+                if (spotlight.name) {
+                    spotlight.list.push({ name: spotlight.name, canBeShiny: null, image: "" });
+                }
             });
 
             fs.writeFile(`files/temp/${id}.json`, JSON.stringify({ id: id, type: "pokemon-spotlight-hour", data: spotlight }), err => {
@@ -49,7 +54,7 @@ function get(url, id, bkp)
             {
                 if (bkp[i].eventID == id)
                 {
-                    fs.writeFile(`files/temp/${id}.json`, JSON.stringify({ id: id, type: "pokemon-spotlight-hour", data: bkp[i].extraData.spotlight.data }), err => {
+                    fs.writeFile(`files/temp/${id}.json`, JSON.stringify({ id: id, type: "pokemon-spotlight-hour", data: bkp[i].extraData.spotlight }), err => {
                         if (err) {
                             console.error(err); 
                             return;
