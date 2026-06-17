@@ -61,3 +61,11 @@ Scrape Pokémon GO event data from LeekDuck.com, generate JSON/iCal outputs. For
 ## Local Execution
 
 Full pipeline: `npm run scrape && npm run detailedscrape && npm run combinedetails`
+
+## Commit Messages
+
+- Use a conventional prefix such as `fix:`, `feat:`, `chore:`, `refactor:`, or `docs:`
+- Keep the subject line under 50 characters and write it in the imperative mood
+- Use bullet points in the body for high-level functional changes and why they matter
+- When the change scope is small, prefer a single concise bullet in the body
+- Avoid low-level implementation details in the commit body
