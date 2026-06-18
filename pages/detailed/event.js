@@ -831,8 +831,10 @@ function processRaidsSection(elements, sectionId, eventData, globalInfo) {
   var currentDateEntry = null;
   
   elements.forEach(element => {
-    // Handle H3 headers
-    if (element.tagName === 'H3' && element.textContent) {
+    // Handle raid sub-section headers. LeekDuck uses H3 on some pages and H2 on
+    // others (e.g. <h2 id="one-star-raids">). Top-level section H2s are filtered
+    // out by collectSectionElementsThroughSubheadings, so any H2 here is a subheader.
+    if ((element.tagName === 'H3' || element.tagName === 'H2') && element.textContent) {
       var h3Text = element.textContent.trim();
       
       // Try to parse as a date header first

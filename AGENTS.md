@@ -96,3 +96,4 @@ to the orphan `data` branch. Do not depend on the `data` branch having normal re
 - Keep the subject under 50 characters, imperative mood.
 - Body: bullet points covering high-level functional changes and why they matter; a single concise
   bullet is fine for small changes. Avoid low-level implementation detail in the body.
+- Do not add a `Co-Authored-By` trailer or any AI attribution footer to commit messages.

@@ -79,3 +79,4 @@ Full pipeline (in order): `npm run scrape:all` (runs scrape â†’ detailedscrape â
 - Use bullet points in the body for high-level functional changes and why they matter
 - When the change scope is small, prefer a single concise bullet in the body
 - Avoid low-level implementation details in the commit body
+- Do not add a `Co-Authored-By` trailer or any AI attribution footer to commit messages
