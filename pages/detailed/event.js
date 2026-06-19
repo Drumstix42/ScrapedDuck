@@ -677,11 +677,14 @@ function processDayRaidSection(elements, dayHeader, eventData, globalInfo) {
 function processHabitatRaidSection(elements, dayName, eventData) {
   var currentRaidType = null;
   var currentTimeWindow = null;
+  var currentHabitatLabel = null;
 
   elements.forEach(element => {
     // H3 defines each habitat slot and contains the time window in parentheses
     if (element.tagName === 'H3') {
       var h3Text = element.textContent.trim();
+      var labelMatch = h3Text.match(/^(.+?)\s*\(/);
+      currentHabitatLabel = labelMatch ? labelMatch[1].trim() : null;
       var timeMatch = h3Text.match(/\((?:[^,]+,\s*)?([\d:]+\s+[ap]\.m\.\s+to\s+[\d:]+\s+[ap]\.m\.)\)/i);
       currentTimeWindow = timeMatch ? timeMatch[1] : null;
       currentRaidType = null;
@@ -708,11 +711,15 @@ function processHabitatRaidSection(elements, dayName, eventData) {
           timeSlotEntry = {
             date: dayName,
             time: currentTimeWindow,
+            label: currentHabitatLabel,
             bosses: [],
             raidHours: [],
             bonuses: []
           };
           eventData.raidSchedule.push(timeSlotEntry);
+        } else if (!timeSlotEntry.label && currentHabitatLabel) {
+          // Keep label optional, but populate it when available.
+          timeSlotEntry.label = currentHabitatLabel;
         }
 
         bosses.forEach(boss => {
