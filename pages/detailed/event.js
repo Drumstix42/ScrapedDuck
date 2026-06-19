@@ -44,6 +44,18 @@ function get(url, id, bkp) {
           processRaidsSection(fiveStarElements, 'appearing-in-5-star-raids', eventData, globalInfo);
         }
 
+        var saturdayHabitatH2 = pageContent.querySelector('h2#saturday-habitat-raids');
+        if (saturdayHabitatH2) {
+          var saturdayHabitatElements = collectSectionElements(saturdayHabitatH2);
+          processHabitatRaidSection(saturdayHabitatElements, 'Saturday', eventData);
+        }
+
+        var sundayHabitatH2 = pageContent.querySelector('h2#sunday-habitat-raids');
+        if (sundayHabitatH2) {
+          var sundayHabitatElements = collectSectionElements(sundayHabitatH2);
+          processHabitatRaidSection(sundayHabitatElements, 'Sunday', eventData);
+        }
+
         var spotlightH2 = pageContent.querySelector('h2#spotlight-hours');
         if (spotlightH2) {
           var spotlightElements = collectSectionElements(spotlightH2);
@@ -186,6 +198,7 @@ function getTierFromRaidType(raidType) {
   if (raidTypeLower.includes('three-star') || raidTypeLower.includes('3-star')) return 'Tier 3';
   if (raidTypeLower.includes('five-star') || raidTypeLower.includes('5-star')) return 'Tier 5';
   if (raidTypeLower.includes('six-star') || raidTypeLower.includes('6-star')) return 'Tier 6';
+  if (raidTypeLower.includes('super mega')) return 'Super Mega';
   if (raidTypeLower.includes('mega')) return 'Mega';
   if (raidTypeLower.includes('primal')) return 'Primal';
   if (raidTypeLower.includes('shadow') && !raidTypeLower.includes('star')) return 'Shadow';
@@ -234,6 +247,17 @@ function parseRaidHeader(headerText, contextRaidType) {
     return {
       raidType: dayInParensMatch[1].trim(),
       date: dayInParensMatch[2].trim() // Just the day name, no full date
+    };
+  }
+
+  // Try "Day RaidType" format
+  // Example: "Saturday Super Mega Raids", "Sunday Five-Star Raids"
+  var dayFirstRegex = new RegExp('^' + dayPattern + '\\s+(.+?raids?)$', 'i');
+  var dayFirstMatch = headerText.match(dayFirstRegex);
+  if (dayFirstMatch) {
+    return {
+      raidType: dayFirstMatch[2].trim(),
+      date: dayFirstMatch[1].trim()
     };
   }
   
@@ -489,7 +513,7 @@ function bossMatchesRaidHourType(boss, raidHourType) {
     return bossTypeLower.includes('tier 5') || bossTypeLower.includes('five');
   }
   if (raidHourTypeLower === 'mega') {
-    return bossTypeLower.includes('mega');
+    return bossTypeLower.includes('mega') || bossTypeLower.includes('super mega');
   }
   if (raidHourTypeLower === 'primal') {
     return bossTypeLower.includes('primal');
@@ -647,6 +671,65 @@ function processDayRaidSection(elements, dayHeader, eventData, globalInfo) {
 }
 
 /**
+ * Process habitat raid sections that are grouped by day and time windows.
+ * Example headers: "Stormfire Peaks (Saturday, 10:00 a.m. to 1:00 p.m.)"
+ */
+function processHabitatRaidSection(elements, dayName, eventData) {
+  var currentRaidType = null;
+  var currentTimeWindow = null;
+
+  elements.forEach(element => {
+    // H3 defines each habitat slot and contains the time window in parentheses
+    if (element.tagName === 'H3') {
+      var h3Text = element.textContent.trim();
+      var timeMatch = h3Text.match(/\((?:[^,]+,\s*)?([\d:]+\s+[ap]\.m\.\s+to\s+[\d:]+\s+[ap]\.m\.)\)/i);
+      currentTimeWindow = timeMatch ? timeMatch[1] : null;
+      currentRaidType = null;
+      return;
+    }
+
+    // H4 sets raid tier context for the next boss list (Mega Raids / Five-Star Raids)
+    if (element.tagName === 'H4') {
+      currentRaidType = element.textContent.trim();
+      return;
+    }
+
+    // Parse habitat boss lists and attach them to both the day and specific time window
+    if (element.className === 'pkmn-list-flex' && currentRaidType) {
+      var bosses = parseBossesFromList(element, currentRaidType);
+
+      if (currentTimeWindow && bosses.length > 0) {
+        // Habitat raids belong to schedule slots, not one-hour raidHours.
+        // Keep one raidSchedule entry per day + time window.
+        var timeSlotEntry = eventData.raidSchedule.find(entry =>
+          entry.date === dayName && entry.time === currentTimeWindow
+        );
+        if (!timeSlotEntry) {
+          timeSlotEntry = {
+            date: dayName,
+            time: currentTimeWindow,
+            bosses: [],
+            raidHours: [],
+            bonuses: []
+          };
+          eventData.raidSchedule.push(timeSlotEntry);
+        }
+
+        bosses.forEach(boss => {
+          if (!timeSlotEntry.bosses.some(existing => existing.name === boss.name)) {
+            timeSlotEntry.bosses.push(boss);
+          }
+
+          if (!eventData.raidbattles.bosses.some(existing => existing.name === boss.name)) {
+            eventData.raidbattles.bosses.push(boss);
+          }
+        });
+      }
+    }
+  });
+}
+
+/**
  * Process a raids section (either "raids" or "appearing-in-5-star-raids")
  */
 function processRaidsSection(elements, sectionId, eventData, globalInfo) {
@@ -731,6 +814,11 @@ function processRaidsSection(elements, sectionId, eventData, globalInfo) {
           // Add boss if not already in the date entry (avoid duplicates)
           if (!currentDateEntry.bosses.some(existing => existing.name === boss.name)) {
             currentDateEntry.bosses.push(boss);
+          }
+
+          // Also keep an aggregate list for consumers that read raidbattles.
+          if (!eventData.raidbattles.bosses.some(existing => existing.name === boss.name)) {
+            eventData.raidbattles.bosses.push(boss);
           }
         });
       } else {
