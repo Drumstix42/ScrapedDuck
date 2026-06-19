@@ -418,6 +418,28 @@ function bossNamesMatch(bossName, raidHourName) {
   return false;
 }
 
+function bossMatchesRaidHourType(boss, raidHourType) {
+  if (!raidHourType || !boss.raidType) return false;
+
+  var bossTypeLower = boss.raidType.toLowerCase();
+  var raidHourTypeLower = raidHourType.toLowerCase();
+
+  if (raidHourTypeLower === 'five-star' || raidHourTypeLower === '5-star') {
+    return bossTypeLower.includes('tier 5') || bossTypeLower.includes('five');
+  }
+  if (raidHourTypeLower === 'mega') {
+    return bossTypeLower.includes('mega');
+  }
+  if (raidHourTypeLower === 'primal') {
+    return bossTypeLower.includes('primal');
+  }
+  if (raidHourTypeLower === 'shadow') {
+    return bossTypeLower.includes('shadow');
+  }
+
+  return false;
+}
+
 /**
  * Collect all elements between an H2 and the next H2
  */
@@ -442,9 +464,7 @@ function processDayRaidSection(elements, dayHeader, eventData, globalInfo) {
   var baseDate = dayHeader.split(':')[0].trim();
   
   var currentRaidType = null;
-  var allBosses = []; // Track all bosses for this section
-  var raidHourTime = null;
-  var raidHourBossNames = []; // Boss names mentioned in Raid Hour text
+  var pendingRaidHours = [];
   var inRaidHourSection = false;
   
   // Find or create entry for this date
@@ -506,15 +526,26 @@ function processDayRaidSection(elements, dayHeader, eventData, globalInfo) {
       var textLower = text.toLowerCase();
       
       if (textLower.includes('raid hour')) {
+        var pendingRaidHour = {
+          time: null,
+          bossNames: [],
+          bossType: null
+        };
+
         // Extract time
         var timeMatch = text.match(/from ([\d:]+\s+[ap]\.?m\.?\s+to\s+[\d:]+\s+[ap]\.?m\.?)/i);
         if (timeMatch) {
-          raidHourTime = timeMatch[1] + ' local time';
+          pendingRaidHour.time = timeMatch[1] + ' local time';
+        }
+
+        var allBossesMatch = text.match(/featuring\s+all\s+.+?\b(five-star|5-star|mega|primal|shadow)\s+raid bosses/i);
+        if (allBossesMatch) {
+          pendingRaidHour.bossType = allBossesMatch[1];
         }
         
         // Extract Pokemon names from "featuring X, Y, and Z" pattern
         var featuringMatch = text.match(/featuring\s+([^.]+?)(?:\s+from|\s*\.)/i);
-        if (featuringMatch) {
+        if (featuringMatch && !pendingRaidHour.bossType) {
           var pokemonText = featuringMatch[1];
           // Split by commas and "and" to get individual Pokemon names
           var pokemonNames = pokemonText
@@ -522,28 +553,36 @@ function processDayRaidSection(elements, dayHeader, eventData, globalInfo) {
             .map(name => name.trim())
             .filter(name => name.length > 0);
           
-          raidHourBossNames = pokemonNames;
+          pendingRaidHour.bossNames = pokemonNames;
+        }
+
+        if (pendingRaidHour.time && (pendingRaidHour.bossType || pendingRaidHour.bossNames.length > 0)) {
+          pendingRaidHours.push(pendingRaidHour);
         }
       }
     }
   });
   
-  // Create raid hour entry if we have the data
-  if (raidHourTime && raidHourBossNames.length > 0) {
-    // Find matching bosses from the date's boss list
-    var raidHourBosses = dateEntry.bosses.filter(boss => {
-      return raidHourBossNames.some(raidHourName => {
-        return bossNamesMatch(boss.name, raidHourName);
+  pendingRaidHours.forEach(raidHour => {
+    var raidHourBosses = [];
+
+    if (raidHour.bossType) {
+      raidHourBosses = dateEntry.bosses.filter(boss => bossMatchesRaidHourType(boss, raidHour.bossType));
+    } else {
+      raidHourBosses = dateEntry.bosses.filter(boss => {
+        return raidHour.bossNames.some(raidHourName => {
+          return bossNamesMatch(boss.name, raidHourName);
+        });
       });
-    });
-    
+    }
+
     if (raidHourBosses.length > 0) {
       dateEntry.raidHours.push({
-        time: raidHourTime,
+        time: raidHour.time,
         bosses: raidHourBosses
       });
     }
-  }
+  });
 }
 
 /**
