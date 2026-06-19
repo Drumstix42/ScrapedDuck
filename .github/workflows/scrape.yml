@@ -3,6 +3,9 @@ name: Scrape LeekDuck
 on:
   schedule:
     - cron: '0 3 * * *'
+  push:
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
@@ -10,14 +13,14 @@ jobs:
     name: Main Job
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
             persist-credentials: false
             fetch-depth: 0
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
-          node-version: 20
+          node-version: 24
 
       - name: Install dependencies
         run: npm install
@@ -49,7 +52,7 @@ jobs:
           git commit -m 'Data updated'
 
       - name: Push
-        uses: ad-m/github-push-action@v0.8.0
+        uses: ad-m/github-push-action@v1.1.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: data
