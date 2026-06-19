@@ -70,6 +70,9 @@ function main()
                         if (data.data.spotlightSchedule) {
                             e.extraData.spotlightSchedule = data.data.spotlightSchedule;
                         }
+                        if (data.data.bonuses) {
+                            e.extraData.bonuses = data.data.bonuses;
+                        }
                     }
                     else if (data.type == "promo-codes")
                     {

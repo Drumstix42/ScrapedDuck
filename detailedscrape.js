@@ -60,6 +60,11 @@ function main()
                         // so they must be parsed by the event scraper to extract raid boss lists.
                         event.get(e.link, e.eventID, bkp);
                     }
+                    else if (e.eventType == "pokemon-go-fest")
+                    {
+                        // Pokemon GO Fest events have bonus sections that need to be parsed
+                        event.get(e.link, e.eventID, bkp);
+                    }
                 });
             }
             catch (error)

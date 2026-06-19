@@ -17,6 +17,7 @@ function get(url, id, bkp) {
         var eventData = {
           raidSchedule: [],
           spotlightSchedule: [],
+          bonuses: [],
           raidbattles: { bosses: [], shinies: [] }
         };
 
@@ -47,6 +48,19 @@ function get(url, id, bkp) {
         if (spotlightH2) {
           var spotlightElements = collectSectionElements(spotlightH2);
           processSpotlightSection(spotlightElements, eventData);
+        }
+
+        var bonusesH2 = pageContent.querySelector('h2#bonuses');
+        if (bonusesH2) {
+          var bonusElements = collectSectionElements(bonusesH2);
+          processBonusSection(bonusElements, eventData);
+        }
+
+        // Also try to find in-game bonuses section
+        var inGameBonusesH2 = pageContent.querySelector('h2#in-game-bonuses-for-all-trainers');
+        if (inGameBonusesH2) {
+          var inGameBonusElements = collectSectionElements(inGameBonusesH2);
+          processBonusSection(inGameBonusElements, eventData);
         }
 
         // Also check for day-based raid sections (e.g., "Monday, February 23: Kanto")
@@ -130,6 +144,9 @@ function get(url, id, bkp) {
               }
               if ('spotlightSchedule' in bkp[i].extraData) {
                 fallbackData.spotlightSchedule = bkp[i].extraData.spotlightSchedule;
+              }
+              if ('bonuses' in bkp[i].extraData) {
+                fallbackData.bonuses = bkp[i].extraData.bonuses;
               }
             }
 
@@ -386,6 +403,50 @@ function processSpotlightSection(elements, eventData) {
         canBeShiny: details.canBeShiny
       }
     });
+  });
+}
+
+/**
+ * Process event-specific bonus sections with time windows.
+ * Groups bonuses by their start/end time windows.
+ */
+function processBonusSection(elements, eventData) {
+  var currentBonusGroup = null;
+
+  elements.forEach(element => {
+    // Look for time window descriptions: "The following bonuses are active from X to Y"
+    if (element.tagName === 'P') {
+      var text = element.textContent.trim();
+      var timeMatch = text.match(/from\s+([\d:]+\s+[ap]\.m\.)\s+to\s+([\d:]+\s+[ap]\.m\.)/i);
+      
+      if (timeMatch) {
+        // Start a new bonus group with time window
+        currentBonusGroup = {
+          startTime: timeMatch[1],
+          endTime: timeMatch[2],
+          description: text,
+          items: []
+        };
+        eventData.bonuses.push(currentBonusGroup);
+      }
+    }
+
+    // Process bonus-list divs that contain bonus items
+    if (element.className === 'bonus-list' && currentBonusGroup) {
+      var bonusItems = element.querySelectorAll(':scope > .bonus-item');
+      
+      bonusItems.forEach(bonusItem => {
+        var bonusText = bonusItem.querySelector(':scope > .bonus-text');
+        var bonusImage = bonusItem.querySelector(':scope > .item-circle > img');
+        
+        if (bonusText && bonusImage) {
+          currentBonusGroup.items.push({
+            text: bonusText.textContent.trim(),
+            image: bonusImage.src
+          });
+        }
+      });
+    }
   });
 }
 
