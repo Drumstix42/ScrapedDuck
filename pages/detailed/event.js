@@ -359,9 +359,17 @@ function parseBossesFromSimpleList(listElement, raidType) {
         return alt !== 'shiny' && !src.includes('shiny');
       });
 
+      // Guard against context bullets (region notes, schedule notes, etc.)
+      // that may appear in UL/OL elements but are not actual boss entries.
+      if (!imageElement) return null;
+
+      var imageSrc = imageElement.src || '';
+      var looksLikePokemonImage = /pokemon_icons|poke_capture|pm\d+/i.test(imageSrc);
+      if (!looksLikePokemonImage) return null;
+
       return {
         name: name,
-        image: imageElement ? imageElement.src : '',
+        image: imageSrc,
         canBeShiny: listItem.querySelector('.shiny-icon, img[alt="shiny" i], img[title="shiny" i]') !== null,
         raidType: getTierFromRaidType(raidType)
       };
