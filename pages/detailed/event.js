@@ -34,13 +34,13 @@ function get(url, id, bkp) {
         // Process raid sections using DOM structure
         var raidsH2 = pageContent.querySelector('h2#raids');
         if (raidsH2) {
-          var raidElements = collectSectionElements(raidsH2);
+          var raidElements = collectSectionElementsThroughSubheadings(raidsH2);
           processRaidsSection(raidElements, 'raids', eventData, globalInfo);
         }
 
         var fiveStarH2 = pageContent.querySelector('h2#appearing-in-5-star-raids');
         if (fiveStarH2) {
-          var fiveStarElements = collectSectionElements(fiveStarH2);
+          var fiveStarElements = collectSectionElementsThroughSubheadings(fiveStarH2);
           processRaidsSection(fiveStarElements, 'appearing-in-5-star-raids', eventData, globalInfo);
         }
 
@@ -329,6 +329,58 @@ function parsePokemonFromElement(pokemonElement) {
   };
 }
 
+/**
+ * Parse boss data from simple list markup used by some event pages.
+ * Expected structure: UL/OL with LI items containing image(s) + text label.
+ */
+function parseBossesFromSimpleList(listElement, raidType) {
+  var listItems = listElement.querySelectorAll(':scope > li');
+
+  return Array.from(listItems)
+    .map(listItem => {
+      var name = '';
+      var nameElement = listItem.querySelector('.pkmn-name');
+
+      if (nameElement) {
+        name = nameElement.textContent.trim();
+      } else {
+        // Remove media before extracting text to avoid noisy labels.
+        var textNode = listItem.cloneNode(true);
+        textNode.querySelectorAll('img, svg').forEach(node => node.remove());
+        name = textNode.textContent.replace(/\s+/g, ' ').trim();
+      }
+
+      if (!name) return null;
+
+      var imageCandidates = Array.from(listItem.querySelectorAll('img'));
+      var imageElement = imageCandidates.find(img => {
+        var alt = (img.getAttribute('alt') || '').toLowerCase();
+        var src = (img.getAttribute('src') || '').toLowerCase();
+        return alt !== 'shiny' && !src.includes('shiny');
+      });
+
+      return {
+        name: name,
+        image: imageElement ? imageElement.src : '',
+        canBeShiny: listItem.querySelector('.shiny-icon, img[alt="shiny" i], img[title="shiny" i]') !== null,
+        raidType: getTierFromRaidType(raidType)
+      };
+    })
+    .filter(boss => boss !== null);
+}
+
+function inferRaidTypeFromText(text) {
+  var textLower = (text || '').toLowerCase();
+
+  if (textLower.includes('super mega raids')) return 'Super Mega Raids';
+  if (textLower.includes('mega raids')) return 'Mega Raids';
+  if (textLower.includes('primal raids')) return 'Primal Raids';
+  if (textLower.includes('five-star raids') || textLower.includes('5-star raids')) return 'Five-Star Raids';
+  if (textLower.includes('shadow raids')) return 'Shadow Raids';
+
+  return null;
+}
+
 function normalizeName(name) {
   return name.toLowerCase().replace(/\s+/g, ' ').trim();
 }
@@ -537,6 +589,31 @@ function collectSectionElements(startH2) {
     current = current.nextElementSibling;
   }
   
+  return elements;
+}
+
+/**
+ * Collect elements until next top-level section header.
+ * Some event pages use additional H2 subheadings inside a section (e.g.,
+ * Raids -> Featured Pokemon), so stopping at any H2 can skip valid data.
+ */
+function collectSectionElementsThroughSubheadings(startH2) {
+  var elements = [];
+  var current = startH2.nextElementSibling;
+
+  while (current) {
+    if (current.tagName === 'H2') {
+      var classes = current.className || '';
+      var isTopLevelSection = current.id && classes.includes('event-section-header');
+      if (isTopLevelSection) {
+        break;
+      }
+    }
+
+    elements.push(current);
+    current = current.nextElementSibling;
+  }
+
   return elements;
 }
 
@@ -876,6 +953,37 @@ function processRaidsSection(elements, sectionId, eventData, globalInfo) {
         }
       }
       // Add more raid types as needed
+    }
+
+    // Learn raid type context from paragraph text for list-based layouts.
+    if (element.tagName === 'P' && !currentRaidType) {
+      var inferredRaidType = inferRaidTypeFromText(element.textContent);
+      if (inferredRaidType) {
+        contextRaidType = inferredRaidType;
+      }
+    }
+
+    // Handle simple list-based raid layouts (UL/OL) used by some Raid Day pages.
+    if ((element.tagName === 'UL' || element.tagName === 'OL') && element.className !== 'bonus-list') {
+      var listBosses = parseBossesFromSimpleList(element, currentRaidType || contextRaidType);
+      if (listBosses.length > 0) {
+        if (currentDate && currentDateEntry) {
+          listBosses.forEach(boss => {
+            if (!currentDateEntry.bosses.some(existing => existing.name === boss.name)) {
+              currentDateEntry.bosses.push(boss);
+            }
+            if (!eventData.raidbattles.bosses.some(existing => existing.name === boss.name)) {
+              eventData.raidbattles.bosses.push(boss);
+            }
+          });
+        } else {
+          listBosses.forEach(boss => {
+            if (!eventData.raidbattles.bosses.some(existing => existing.name === boss.name)) {
+              eventData.raidbattles.bosses.push(boss);
+            }
+          });
+        }
+      }
     }
     
     // Handle special bonus notes
