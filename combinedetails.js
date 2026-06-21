@@ -116,35 +116,33 @@ function main()
 }
 
 /**
- * Write a standalone, self-contained season bonuses file from the season
- * event's parsed extraData, lifting the season's identifying metadata so
- * external consumers don't have to cross-reference events.json.
+ * Write a standalone season bonuses file containing every season-type event
+ * (self-contained, with identifying metadata), sorted by start date. Emitting
+ * all seasons lets consumers pick the active one using the viewer's own local
+ * time — the only timezone the season's start/end timestamps are meaningful in.
  */
 function writeSeasonFile(events) {
-    var seasonEvent = events.find(e => e.eventType == "season" && e.extraData != null && e.extraData.season);
-    if (!seasonEvent) {
-        return;
-    }
+    var seasons = events
+        .filter(e => e.eventType == "season" && e.extraData != null && e.extraData.season)
+        .sort((a, b) => (Date.parse(a.start) || 0) - (Date.parse(b.start) || 0))
+        .map(e => ({
+            name: e.name,
+            eventID: e.eventID,
+            link: e.link,
+            start: e.start,
+            end: e.end,
+            note: e.extraData.season.note,
+            dailyBonuses: e.extraData.season.dailyBonuses,
+            seasonBonuses: e.extraData.season.seasonBonuses
+        }));
 
-    var season = seasonEvent.extraData.season;
-    var seasonFile = {
-        name: seasonEvent.name,
-        eventID: seasonEvent.eventID,
-        link: seasonEvent.link,
-        start: seasonEvent.start,
-        end: seasonEvent.end,
-        note: season.note,
-        dailyBonuses: season.dailyBonuses,
-        seasonBonuses: season.seasonBonuses
-    };
-
-    fs.writeFile('files/season.json', JSON.stringify(seasonFile, null, 4), err => {
+    fs.writeFile('files/season.json', JSON.stringify(seasons, null, 4), err => {
         if (err) {
             console.error(err);
             return;
         }
     });
-    fs.writeFile('files/season.min.json', JSON.stringify(seasonFile), err => {
+    fs.writeFile('files/season.min.json', JSON.stringify(seasons), err => {
         if (err) {
             console.error(err);
             return;
