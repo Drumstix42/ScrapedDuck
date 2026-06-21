@@ -6,7 +6,8 @@
   "scripts": {
     "scrape": "node ./scrape.js",
     "detailedscrape": "node ./detailedscrape.js",
-    "combinedetails": "node ./combinedetails.js"
+    "combinedetails": "node ./combinedetails.js",
+    "scrape:all": "npm run scrape && npm run detailedscrape && npm run combinedetails"
   },
   "author": "bigfoott",
   "license": "MIT",

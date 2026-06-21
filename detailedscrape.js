@@ -7,6 +7,7 @@ const communityday = require('./pages/detailed/communityday')
 const raidbattles = require('./pages/detailed/raidbattles')
 const research = require('./pages/detailed/research')
 const event = require('./pages/detailed/event')
+const season = require('./pages/detailed/season')
 const generic = require('./pages/detailed/generic')
 
 function main()
@@ -64,6 +65,11 @@ function main()
                     {
                         // Pokemon GO Fest events have bonus sections that need to be parsed
                         event.get(e.link, e.eventID, bkp);
+                    }
+                    else if (e.eventType == "season")
+                    {
+                        // Seasons carry Daily Discovery bonuses and season-long bonuses
+                        season.get(e.link, e.eventID, bkp);
                     }
                 });
             }

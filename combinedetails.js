@@ -81,6 +81,13 @@ function main()
                         }
                         e.extraData.promocodes = data.data
                     }
+                    else if (data.type == "season")
+                    {
+                        if (e.extraData === null) {
+                            e.extraData = {};
+                        }
+                        e.extraData.season = data.data
+                    }
                 }
             });
         });
@@ -98,11 +105,50 @@ function main()
             }
         });
 
+        writeSeasonFile(events);
+
         generateCalendars(events);
 
         fs.rm("files/temp", { recursive: true }, (err) => {
             if (err) { throw err; }
         });
+    });
+}
+
+/**
+ * Write a standalone, self-contained season bonuses file from the season
+ * event's parsed extraData, lifting the season's identifying metadata so
+ * external consumers don't have to cross-reference events.json.
+ */
+function writeSeasonFile(events) {
+    var seasonEvent = events.find(e => e.eventType == "season" && e.extraData != null && e.extraData.season);
+    if (!seasonEvent) {
+        return;
+    }
+
+    var season = seasonEvent.extraData.season;
+    var seasonFile = {
+        name: seasonEvent.name,
+        eventID: seasonEvent.eventID,
+        link: seasonEvent.link,
+        start: seasonEvent.start,
+        end: seasonEvent.end,
+        note: season.note,
+        dailyBonuses: season.dailyBonuses,
+        seasonBonuses: season.seasonBonuses
+    };
+
+    fs.writeFile('files/season.json', JSON.stringify(seasonFile, null, 4), err => {
+        if (err) {
+            console.error(err);
+            return;
+        }
+    });
+    fs.writeFile('files/season.min.json', JSON.stringify(seasonFile), err => {
+        if (err) {
+            console.error(err);
+            return;
+        }
     });
 }
 

@@ -1,5 +1,15 @@
 # ScrapedDuck - Copilot Context
 
+> Companion to [../AGENTS.md](../AGENTS.md) (used by Claude Code and other agents). Keep the two in sync.
+
+## Keep these docs current
+
+While working, if you notice anything in this file or [../AGENTS.md](../AGENTS.md) that is outdated,
+inaccurate, or incomplete (renamed/removed file, changed pipeline step, new event type, different CI
+schedule, stale command, etc.), proactively flag it and suggest the fix. When a code change alters
+behavior these docs describe, propose the matching doc update in the same change, and update **both**
+files so they stay in sync.
+
 ## Purpose
 
 Scrape Pokémon GO event data from LeekDuck.com, generate JSON/iCal outputs. Fork of [bigfoott/ScrapedDuck](https://github.com/bigfoott/ScrapedDuck).
@@ -14,7 +24,7 @@ Scrape Pokémon GO event data from LeekDuck.com, generate JSON/iCal outputs. For
    - Saves temp files to `files/temp/`
 3. **combinedetails.js** → Merge and generate finals
    - Merges temp files into `extraData` object
-   - Outputs `files/events.json`, `files/events.min.json`
+   - Outputs the merged JSON files to `files/`
    - Generates `files/calendars/*.ics`
 
 ## Event Structure
@@ -56,11 +66,11 @@ Scrape Pokémon GO event data from LeekDuck.com, generate JSON/iCal outputs. For
 ## Tech Stack
 
 - jsdom (DOM parsing), moment (dates), ical-generator (calendars)
-- Runs via GitHub Actions every 10 min → pushes to `data` branch
+- Runs via GitHub Actions (daily cron `0 3 * * *` + on push to `master` + manual dispatch) → force-pushes to orphan `data` branch
 
 ## Local Execution
 
-Full pipeline: `npm run scrape && npm run detailedscrape && npm run combinedetails`
+Full pipeline (in order): `npm run scrape:all` (runs scrape → detailedscrape → combinedetails)
 
 ## Commit Messages
 
