@@ -1,0 +1,79 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ScrapedDuck//Scraped LeekDuck Events//EN
+NAME:Pokémon Go — Choose Your Path
+X-WR-CALNAME:Pokémon Go — Choose Your Path
+X-WR-CALDESC:Pokémon Go Choose Your Path events.
+BEGIN:VEVENT
+UID:scraped-duck-choose-your-path-charged-embers-2026
+SEQUENCE:0
+DTSTAMP:20260702T042738Z
+DTSTART:20260630T100000Z
+DTEND:20260703T200000Z
+SUMMARY:Choose Your Path — Choose Your Path: Charged Embers
+DESCRIPTION:<a href="https://leekduck.com/events/choose-your-path-charged-
+ embers-2026/">Choose Your Path: Charged Embers</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Choose Your Path
+URL;VALUE=URI:https://leekduck.com/events/choose-your-path-charged-embers-
+ 2026/
+IMAGE:https://cdn.leekduck.com/assets/img/events/choose-your-path-evergree
+ n.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Choose Your Path — Choose Your Path: Cha
+ rged Embers
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/c
+ hoose-your-path-evergreen.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-choose-your-path-fairy-trail-2026
+SEQUENCE:0
+DTSTAMP:20260702T042738Z
+DTSTART:20260728T100000Z
+DTEND:20260803T200000Z
+SUMMARY:Choose Your Path — Choose Your Path: Fairy Trail
+DESCRIPTION:<a href="https://leekduck.com/events/choose-your-path-fairy-tr
+ ail-2026/">Choose Your Path: Fairy Trail</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Choose Your Path
+URL;VALUE=URI:https://leekduck.com/events/choose-your-path-fairy-trail-202
+ 6/
+IMAGE:https://cdn.leekduck.com/assets/img/events/choose-your-path-evergree
+ n.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Choose Your Path — Choose Your Path: Fai
+ ry Trail
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/c
+ hoose-your-path-evergreen.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-choose-your-path-venom-and-vines-2026
+SEQUENCE:0
+DTSTAMP:20260702T042738Z
+DTSTART:20260811T100000Z
+DTEND:20260817T200000Z
+SUMMARY:Choose Your Path — Choose Your Path: Venom and Vines
+DESCRIPTION:<a href="https://leekduck.com/events/choose-your-path-venom-an
+ d-vines-2026/">Choose Your Path: Venom and Vines</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Choose Your Path
+URL;VALUE=URI:https://leekduck.com/events/choose-your-path-venom-and-vines
+ -2026/
+IMAGE:https://cdn.leekduck.com/assets/img/events/choose-your-path-evergree
+ n.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Choose Your Path — Choose Your Path: Ven
+ om and Vines
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/c
+ hoose-your-path-evergreen.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+X-ORIGIN:https://leekduck.com/events/
+X-GENERATOR:ScrapedDuck
+X-GENERATOR-URL:https://github.com/bigfoott/ScrapedDuck
+END:VCALENDAR

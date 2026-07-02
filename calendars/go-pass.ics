@@ -1,0 +1,52 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ScrapedDuck//Scraped LeekDuck Events//EN
+NAME:Pokémon Go — GO Pass
+X-WR-CALNAME:Pokémon Go — GO Pass
+X-WR-CALDESC:Pokémon Go GO Pass events.
+BEGIN:VEVENT
+UID:scraped-duck-go-pass-june-2026
+SEQUENCE:0
+DTSTAMP:20260702T042738Z
+DTSTART:20260602T100000Z
+DTEND:20260707T100000Z
+SUMMARY:GO Pass — GO Pass: June
+DESCRIPTION:<a href="https://leekduck.com/events/go-pass-june-2026/">GO Pa
+ ss: June</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:GO Pass
+URL;VALUE=URI:https://leekduck.com/events/go-pass-june-2026/
+IMAGE:https://cdn.leekduck.com/assets/img/events/article-images/2026/2026-
+ 06-02-go-pass-june-2026/go-pass-june-2026.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:GO Pass — GO Pass: June
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/a
+ rticle-images/2026/2026-06-02-go-pass-june-2026/go-pass-june-2026.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-go-pass-july-2026
+SEQUENCE:0
+DTSTAMP:20260702T042738Z
+DTSTART:20260707T100000Z
+DTEND:20260804T100000Z
+SUMMARY:GO Pass — GO Pass: July
+DESCRIPTION:<a href="https://leekduck.com/events/go-pass-july-2026/">GO Pa
+ ss: July</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:GO Pass
+URL;VALUE=URI:https://leekduck.com/events/go-pass-july-2026/
+IMAGE:https://cdn.leekduck.com/assets/img/events/article-images/2026/2026-
+ 07-07-go-pass-july-2026/go-pass-july-2026.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:GO Pass — GO Pass: July
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/a
+ rticle-images/2026/2026-07-07-go-pass-july-2026/go-pass-july-2026.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+X-ORIGIN:https://leekduck.com/events/
+X-GENERATOR:ScrapedDuck
+X-GENERATOR-URL:https://github.com/bigfoott/ScrapedDuck
+END:VCALENDAR

@@ -1,0 +1,167 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ScrapedDuck//Scraped LeekDuck Events//EN
+NAME:Pokémon Go — Event
+X-WR-CALNAME:Pokémon Go — Event
+X-WR-CALDESC:Pokémon Go Event events.
+BEGIN:VEVENT
+UID:scraped-duck-10th-anniversary-party
+SEQUENCE:0
+DTSTAMP:20260702T042738Z
+DTSTART:20260704T100000Z
+DTEND:20260706T200000Z
+SUMMARY:Event — 10th Anniversary Party
+DESCRIPTION:<a href="https://leekduck.com/events/10th-anniversary-party/">
+ 10th Anniversary Party</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Event
+URL;VALUE=URI:https://leekduck.com/events/10th-anniversary-party/
+IMAGE:https://cdn.leekduck.com/assets/img/events/article-images/2026/2026-
+ 07-04-10th-anniversary-party/10th-anniversary-party-2026.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Event — 10th Anniversary Party
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/a
+ rticle-images/2026/2026-07-04-10th-anniversary-party/10th-anniversary-part
+ y-2026.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-road-of-legends-2026
+SEQUENCE:0
+DTSTAMP:20260702T042738Z
+DTSTART:20260706T000100Z
+DTEND:20260710T235900Z
+SUMMARY:Event — Road of Legends
+DESCRIPTION:<a href="https://leekduck.com/events/road-of-legends-2026/">Ro
+ ad of Legends</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Event
+URL;VALUE=URI:https://leekduck.com/events/road-of-legends-2026/
+IMAGE:https://cdn.leekduck.com/assets/img/events/article-images/2026/2026-
+ 07-06-road-of-legends-2026/road-of-legends-2026.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Event — Road of Legends
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/a
+ rticle-images/2026/2026-07-06-road-of-legends-2026/road-of-legends-2026.jp
+ g
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-special-anniversary-pikachu-celebration-2026
+SEQUENCE:0
+DTSTAMP:20260702T042738Z
+DTSTART:20260713T100000Z
+DTEND:20260720T200000Z
+SUMMARY:Event — Special Anniversary Pikachu Celebration
+DESCRIPTION:<a href="https://leekduck.com/events/special-anniversary-pikac
+ hu-celebration-2026/">Special Anniversary Pikachu Celebration</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Event
+URL;VALUE=URI:https://leekduck.com/events/special-anniversary-pikachu-cele
+ bration-2026/
+IMAGE:https://cdn.leekduck.com/assets/img/events/article-images/2026/2026-
+ 07-13-special-anniversary-pikachu-celebration-2026/special-anniversary-pik
+ achu-celebration-2026.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Event — Special Anniversary Pikachu Cele
+ bration
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/a
+ rticle-images/2026/2026-07-13-special-anniversary-pikachu-celebration-2026
+ /special-anniversary-pikachu-celebration-2026.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-happy-birthday-professor-willow-2026
+SEQUENCE:0
+DTSTAMP:20260702T042738Z
+DTSTART:20260721T100000Z
+DTEND:20260721T200000Z
+SUMMARY:Event — Happy Birthday\, Professor Willow!
+DESCRIPTION:<a href="https://leekduck.com/events/happy-birthday-professor-
+ willow-2026/">Happy Birthday\, Professor Willow!</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Event
+URL;VALUE=URI:https://leekduck.com/events/happy-birthday-professor-willow-
+ 2026/
+IMAGE:https://cdn.leekduck.com/assets/img/events/article-images/2026/2026-
+ 07-21-happy-birthday-professor-willow-2026/happy-birthday-professor-willow
+ -2026.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Event — Happy Birthday\, Professor Willo
+ w!
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/a
+ rticle-images/2026/2026-07-21-happy-birthday-professor-willow-2026/happy-b
+ irthday-professor-willow-2026.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-ozone-ascent-2026
+SEQUENCE:0
+DTSTAMP:20260702T042738Z
+DTSTART:20260725T100000Z
+DTEND:20260726T200000Z
+SUMMARY:Event — Ozone Ascent
+DESCRIPTION:<a href="https://leekduck.com/events/ozone-ascent-2026/">Ozone
+  Ascent</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Event
+URL;VALUE=URI:https://leekduck.com/events/ozone-ascent-2026/
+IMAGE:https://cdn.leekduck.com/assets/img/events/article-images/2026/2026-
+ 07-25-ozone-ascent-2026/ozone-ascent-2026.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Event — Ozone Ascent
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/a
+ rticle-images/2026/2026-07-25-ozone-ascent-2026/ozone-ascent-2026.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-hatch-day-august-2026
+SEQUENCE:0
+DTSTAMP:20260702T042738Z
+DTSTART:20260808T110000Z
+DTEND:20260808T170000Z
+SUMMARY:Event — Hatch Day
+DESCRIPTION:<a href="https://leekduck.com/events/hatch-day-august-2026/">H
+ atch Day</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Event
+URL;VALUE=URI:https://leekduck.com/events/hatch-day-august-2026/
+IMAGE:https://cdn.leekduck.com/assets/img/events/events-default-img.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Event — Hatch Day
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/e
+ vents-default-img.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-example_event
+SEQUENCE:0
+DTSTAMP:20260702T042738Z
+DTSTART:20261201T100000Z
+DTEND:20261202T200000Z
+SUMMARY:Event — Example Event Template (Auto ToC Demo)
+DESCRIPTION:<a href="https://leekduck.com/events/example_event/">Example E
+ vent Template (Auto ToC Demo)</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Event
+URL;VALUE=URI:https://leekduck.com/events/example_event/
+IMAGE:https://cdn.leekduck.com/assets/img/events/article-images/2026/examp
+ le_event/events-default-img.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Event — Example Event Template (Auto ToC
+  Demo)
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/a
+ rticle-images/2026/example_event/events-default-img.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+X-ORIGIN:https://leekduck.com/events/
+X-GENERATOR:ScrapedDuck
+X-GENERATOR-URL:https://github.com/bigfoott/ScrapedDuck
+END:VCALENDAR
