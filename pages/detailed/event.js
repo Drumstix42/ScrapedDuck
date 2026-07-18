@@ -31,17 +31,23 @@ function get(url, id, bkp) {
           specialNotes: []
         };
 
+        // On single-day events, raid-type headers like "Super Mega Raids" or "1-Star Raids"
+        // have no day prefix (there's only one day to begin with), so they'd otherwise never
+        // get their own raidSchedule entry the way "Saturday Super Mega Raids" does on
+        // multi-day events. Give processRaidsSection a day to fall back to in that case.
+        var fallbackScheduleDay = isSingleDayEvent(dom) ? getEventStartDayName(dom) : null;
+
         // Process raid sections using DOM structure
         var raidsH2 = pageContent.querySelector('h2#raids');
         if (raidsH2) {
           var raidElements = collectSectionElementsThroughSubheadings(raidsH2);
-          processRaidsSection(raidElements, 'raids', eventData, globalInfo);
+          processRaidsSection(raidElements, 'raids', eventData, globalInfo, fallbackScheduleDay);
         }
 
         var fiveStarH2 = pageContent.querySelector('h2#appearing-in-5-star-raids');
         if (fiveStarH2) {
           var fiveStarElements = collectSectionElementsThroughSubheadings(fiveStarH2);
-          processRaidsSection(fiveStarElements, 'appearing-in-5-star-raids', eventData, globalInfo);
+          processRaidsSection(fiveStarElements, 'appearing-in-5-star-raids', eventData, globalInfo, fallbackScheduleDay);
         }
 
         // Habitat raid sections are usually day-prefixed (e.g. "Saturday Habitat Raids",
@@ -196,6 +202,17 @@ function getEventStartDayName(dom) {
 
   var match = startEl.textContent.match(/(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)/i);
   return match ? match[1] : null;
+}
+
+/**
+ * Determine whether the event's start and end dates are the same calendar day.
+ */
+function isSingleDayEvent(dom) {
+  var startEl = dom.window.document.querySelector('#event-date-start');
+  var endEl = dom.window.document.querySelector('#event-date-end');
+  if (!startEl || !endEl) return false;
+
+  return startEl.textContent.trim() === endEl.textContent.trim();
 }
 
 /**
@@ -842,7 +859,7 @@ function processHabitatRaidSection(elements, dayName, eventData) {
 /**
  * Process a raids section (either "raids" or "appearing-in-5-star-raids")
  */
-function processRaidsSection(elements, sectionId, eventData, globalInfo) {
+function processRaidsSection(elements, sectionId, eventData, globalInfo, fallbackScheduleDay) {
   var contextRaidType = sectionId === 'appearing-in-5-star-raids' ? 'Five-Star Raids' : null;
   var currentDate = null;
   var currentRaidType = null;
@@ -878,10 +895,11 @@ function processRaidsSection(elements, sectionId, eventData, globalInfo) {
         currentDate = null;
         currentRaidType = null;
         currentDateEntry = null;
-        
+
         // Update context if it's a raid type header
         var h3Lower = h3Text.toLowerCase();
-        
+        var matchedRaidType = null;
+
         // Check for "Appearing in X-Star Raids" format
         if (h3Lower.includes('appearing in') && h3Lower.includes('raids')) {
           var typeMatch = h3Text.match(/appearing in\s+([\w-]+)[\s-]*raids?/i);
@@ -891,7 +909,7 @@ function processRaidsSection(elements, sectionId, eventData, globalInfo) {
               .replace(/-star$/i, '')
               .replace(/\s+star$/i, '')
               .trim();
-            contextRaidType = base.charAt(0).toUpperCase() + base.slice(1) + '-Star Raids';
+            matchedRaidType = base.charAt(0).toUpperCase() + base.slice(1) + '-Star Raids';
           }
         }
         // Check for direct "X-Star Raids" format (e.g., "One-Star Raids", "Three-Star Raids")
@@ -899,25 +917,48 @@ function processRaidsSection(elements, sectionId, eventData, globalInfo) {
           // Match patterns like "One-Star Raids", "3-Star Raids", "Five-Star Shadow Raids"
           var directMatch = h3Text.match(/([\w-]+[\s-]*star[\s-]*(?:shadow\s+)?raids?)/i);
           if (directMatch) {
-            contextRaidType = directMatch[1].trim();
+            matchedRaidType = directMatch[1].trim();
           }
         }
         // Check for Primal Raids
         else if (h3Lower.includes('primal') && h3Lower.includes('raids')) {
-          contextRaidType = 'Primal Raids';
+          matchedRaidType = 'Primal Raids';
         }
         // Check for Super Mega Raids (before the generic Mega check below, which
         // would otherwise collapse this to plain "Mega Raids" and lose the tier)
         else if (h3Lower.includes('super mega') && h3Lower.includes('raids')) {
-          contextRaidType = 'Super Mega Raids';
+          matchedRaidType = 'Super Mega Raids';
         }
         // Check for Mega Raids
         else if (h3Lower.includes('mega') && h3Lower.includes('raids')) {
-          contextRaidType = 'Mega Raids';
+          matchedRaidType = 'Mega Raids';
         }
         // Check for Shadow Raids (standalone, not "Five-Star Shadow Raids")
         else if (h3Lower.includes('shadow') && h3Lower.includes('raids') && !h3Lower.includes('star')) {
-          contextRaidType = 'Shadow Raids';
+          matchedRaidType = 'Shadow Raids';
+        }
+
+        if (matchedRaidType) {
+          contextRaidType = matchedRaidType;
+
+          // On single-day events this header has no day prefix to parse a date
+          // from, but it still describes that one day's schedule -- mirror what
+          // "Saturday Super Mega Raids" would have produced on a multi-day event.
+          if (fallbackScheduleDay) {
+            currentDate = fallbackScheduleDay;
+            currentRaidType = matchedRaidType;
+
+            currentDateEntry = eventData.raidSchedule.find(entry => entry.date === currentDate);
+            if (!currentDateEntry) {
+              currentDateEntry = {
+                date: currentDate,
+                bosses: [],
+                raidHours: [],
+                bonuses: []
+              };
+              eventData.raidSchedule.push(currentDateEntry);
+            }
+          }
         }
       }
     }
