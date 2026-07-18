@@ -44,17 +44,18 @@ function get(url, id, bkp) {
           processRaidsSection(fiveStarElements, 'appearing-in-5-star-raids', eventData, globalInfo);
         }
 
-        var saturdayHabitatH2 = pageContent.querySelector('h2#saturday-habitat-raids');
-        if (saturdayHabitatH2) {
-          var saturdayHabitatElements = collectSectionElements(saturdayHabitatH2);
-          processHabitatRaidSection(saturdayHabitatElements, 'Saturday', eventData);
-        }
-
-        var sundayHabitatH2 = pageContent.querySelector('h2#sunday-habitat-raids');
-        if (sundayHabitatH2) {
-          var sundayHabitatElements = collectSectionElements(sundayHabitatH2);
-          processHabitatRaidSection(sundayHabitatElements, 'Sunday', eventData);
-        }
+        // Habitat raid sections are usually day-prefixed (e.g. "Saturday Habitat Raids",
+        // "Sunday Habitat Raids") on multi-day events, but single-day makeup events use a
+        // plain "Habitat Raids" header instead. Handle any number of these generically and
+        // fall back to the event's own start day when the header doesn't name one.
+        var habitatH2s = pageContent.querySelectorAll('h2[id*="habitat-raids"]');
+        habitatH2s.forEach(habitatH2 => {
+          var habitatHeaderText = habitatH2.textContent.trim();
+          var habitatDayMatch = habitatHeaderText.match(/^(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)/i);
+          var habitatDayName = habitatDayMatch ? habitatDayMatch[1] : getEventStartDayName(dom);
+          var habitatElements = collectSectionElements(habitatH2);
+          processHabitatRaidSection(habitatElements, habitatDayName, eventData);
+        });
 
         var spotlightH2 = pageContent.querySelector('h2#spotlight-hours');
         if (spotlightH2) {
@@ -183,6 +184,18 @@ function get(url, id, bkp) {
         resolve();
       });
   });
+}
+
+/**
+ * Determine the event's start-day name (e.g. "Sunday") from the page's date box,
+ * used as a fallback when a habitat raid header doesn't name a day itself.
+ */
+function getEventStartDayName(dom) {
+  var startEl = dom.window.document.querySelector('#event-date-start');
+  if (!startEl) return null;
+
+  var match = startEl.textContent.match(/(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)/i);
+  return match ? match[1] : null;
 }
 
 /**
@@ -612,8 +625,13 @@ function collectSectionElementsThroughSubheadings(startH2) {
   while (current) {
     if (current.tagName === 'H2') {
       var classes = current.className || '';
+      // Habitat raid sections are handled by their own dedicated processor (see
+      // habitatH2s in get()), so treat them as a section boundary here too --
+      // otherwise their H3/H4 sub-headers leak into processRaidsSection, which
+      // doesn't understand them and mis-tags their bosses with a stale raid tier.
+      var isHabitatSection = current.id && current.id.includes('habitat-raids');
       var isTopLevelSection = current.id && classes.includes('event-section-header');
-      if (isTopLevelSection) {
+      if (isTopLevelSection || isHabitatSection) {
         break;
       }
     }
@@ -887,6 +905,11 @@ function processRaidsSection(elements, sectionId, eventData, globalInfo) {
         // Check for Primal Raids
         else if (h3Lower.includes('primal') && h3Lower.includes('raids')) {
           contextRaidType = 'Primal Raids';
+        }
+        // Check for Super Mega Raids (before the generic Mega check below, which
+        // would otherwise collapse this to plain "Mega Raids" and lose the tier)
+        else if (h3Lower.includes('super mega') && h3Lower.includes('raids')) {
+          contextRaidType = 'Super Mega Raids';
         }
         // Check for Mega Raids
         else if (h3Lower.includes('mega') && h3Lower.includes('raids')) {
