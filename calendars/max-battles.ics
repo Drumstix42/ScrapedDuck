@@ -1,0 +1,35 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ScrapedDuck//Scraped LeekDuck Events//EN
+NAME:Pokémon Go — Max Battles
+X-WR-CALNAME:Pokémon Go — Max Battles
+X-WR-CALDESC:Pokémon Go Max Battles events.
+BEGIN:VEVENT
+UID:scraped-duck-gigantamax-rillaboom-max-battle-day-2026
+SEQUENCE:0
+DTSTAMP:20260724T040457Z
+DTSTART:20260801T140000Z
+DTEND:20260801T170000Z
+SUMMARY:Max Battles — Gigantamax Rillaboom Max Battle Day
+DESCRIPTION:<a href="https://leekduck.com/events/gigantamax-rillaboom-max-
+ battle-day-2026/">Gigantamax Rillaboom Max Battle Day</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Max Battles
+URL;VALUE=URI:https://leekduck.com/events/gigantamax-rillaboom-max-battle-
+ day-2026/
+IMAGE:https://cdn.leekduck.com/assets/img/events/article-images/2026/2026-
+ 08-01-gigantamax-rillaboom-max-battle-day-2026/gigantamax-rillaboom-max-ba
+ ttle-day.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Max Battles — Gigantamax Rillaboom Max B
+ attle Day
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/a
+ rticle-images/2026/2026-08-01-gigantamax-rillaboom-max-battle-day-2026/gig
+ antamax-rillaboom-max-battle-day.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+X-ORIGIN:https://leekduck.com/events/
+X-GENERATOR:ScrapedDuck
+X-GENERATOR-URL:https://github.com/bigfoott/ScrapedDuck
+END:VCALENDAR

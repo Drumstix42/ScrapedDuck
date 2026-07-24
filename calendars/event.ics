@@ -1,0 +1,142 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ScrapedDuck//Scraped LeekDuck Events//EN
+NAME:Pokémon Go — Event
+X-WR-CALNAME:Pokémon Go — Event
+X-WR-CALDESC:Pokémon Go Event events.
+BEGIN:VEVENT
+UID:scraped-duck-ozone-ascent-2026
+SEQUENCE:0
+DTSTAMP:20260724T040457Z
+DTSTART:20260725T100000Z
+DTEND:20260726T200000Z
+SUMMARY:Event — Ozone Ascent
+DESCRIPTION:<a href="https://leekduck.com/events/ozone-ascent-2026/">Ozone
+  Ascent</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Event
+URL;VALUE=URI:https://leekduck.com/events/ozone-ascent-2026/
+IMAGE:https://cdn.leekduck.com/assets/img/events/article-images/2026/2026-
+ 07-25-ozone-ascent-2026/ozone-ascent-2026.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Event — Ozone Ascent
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/a
+ rticle-images/2026/2026-07-25-ozone-ascent-2026/ozone-ascent-2026.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-ultra-unlock-10th-anniversary-edition
+SEQUENCE:0
+DTSTAMP:20260724T040457Z
+DTSTART:20260721T100000Z
+DTEND:20260727T200000Z
+SUMMARY:Event — Ultra Unlock: 10th Anniversary Edition
+DESCRIPTION:<a href="https://leekduck.com/events/ultra-unlock-10th-anniver
+ sary-edition/">Ultra Unlock: 10th Anniversary Edition</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Event
+URL;VALUE=URI:https://leekduck.com/events/ultra-unlock-10th-anniversary-ed
+ ition/
+IMAGE:https://cdn.leekduck.com/assets/img/events/article-images/2026/2026-
+ 07-21-ultra-unlock-10th-anniversary-edition/ultra-unlock-10th-anniversary-
+ edition.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Event — Ultra Unlock: 10th Anniversary E
+ dition
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/a
+ rticle-images/2026/2026-07-21-ultra-unlock-10th-anniversary-edition/ultra-
+ unlock-10th-anniversary-edition.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-fire-and-ice-hatch-day-2026
+SEQUENCE:0
+DTSTAMP:20260724T040457Z
+DTSTART:20260808T110000Z
+DTEND:20260808T170000Z
+SUMMARY:Event — Fire and Ice Hatch Day
+DESCRIPTION:<a href="https://leekduck.com/events/fire-and-ice-hatch-day-20
+ 26/">Fire and Ice Hatch Day</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Event
+URL;VALUE=URI:https://leekduck.com/events/fire-and-ice-hatch-day-2026/
+IMAGE:https://cdn.leekduck.com/assets/img/events/article-images/2026/2026-
+ 08-08-fire-and-ice-hatch-day-2026/fire-and-ice-hatch-day-2026.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Event — Fire and Ice Hatch Day
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/a
+ rticle-images/2026/2026-08-08-fire-and-ice-hatch-day-2026/fire-and-ice-hat
+ ch-day-2026.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-summer-marathon-2026
+SEQUENCE:0
+DTSTAMP:20260724T040457Z
+DTSTART:20260804T100000Z
+DTEND:20260810T200000Z
+SUMMARY:Event — Summer Marathon: Arctic Embers
+DESCRIPTION:<a href="https://leekduck.com/events/summer-marathon-2026/">Su
+ mmer Marathon: Arctic Embers</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Event
+URL;VALUE=URI:https://leekduck.com/events/summer-marathon-2026/
+IMAGE:https://cdn.leekduck.com/assets/img/events/article-images/2026/2026-
+ 08-04-summer-marathon-2026/summer-marathon-2026.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Event — Summer Marathon: Arctic Embers
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/a
+ rticle-images/2026/2026-08-04-summer-marathon-2026/summer-marathon-2026.jp
+ g
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-water-festival-2026
+SEQUENCE:0
+DTSTAMP:20260724T040457Z
+DTSTART:20260818T100000Z
+DTEND:20260824T200000Z
+SUMMARY:Event — Ultra Unlock: Water Festival
+DESCRIPTION:<a href="https://leekduck.com/events/water-festival-2026/">Ult
+ ra Unlock: Water Festival</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Event
+URL;VALUE=URI:https://leekduck.com/events/water-festival-2026/
+IMAGE:https://cdn.leekduck.com/assets/img/events/article-images/2026/2026-
+ 08-18-water-festival-2026/water-festival-2026.jpg?v2
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Event — Ultra Unlock: Water Festival
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/a
+ rticle-images/2026/2026-08-18-water-festival-2026/water-festival-2026.jpg?
+ v2
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-pokemon-xp-2026-worlds
+SEQUENCE:0
+DTSTAMP:20260724T040457Z
+DTSTART:20260825T100000Z
+DTEND:20260830T200000Z
+SUMMARY:Event — Pokémon XP &amp\; 2026 Worlds
+DESCRIPTION:<a href="https://leekduck.com/events/pokemon-xp-2026-worlds/">
+ Pokémon XP &amp\; 2026 Worlds</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Event
+URL;VALUE=URI:https://leekduck.com/events/pokemon-xp-2026-worlds/
+IMAGE:https://cdn.leekduck.com/assets/img/events/events-default-img.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Event — Pokémon XP &amp\; 2026 Worlds
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/e
+ vents-default-img.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+X-ORIGIN:https://leekduck.com/events/
+X-GENERATOR:ScrapedDuck
+X-GENERATOR-URL:https://github.com/bigfoott/ScrapedDuck
+END:VCALENDAR

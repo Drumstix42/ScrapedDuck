@@ -1,0 +1,322 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ScrapedDuck//Scraped LeekDuck Events//EN
+NAME:Pokémon Go — Raid Battles
+X-WR-CALNAME:Pokémon Go — Raid Battles
+X-WR-CALDESC:Pokémon Go Raid Battles events.
+BEGIN:VEVENT
+UID:scraped-duck-mega-salamence-in-mega-raids-july-2026
+SEQUENCE:0
+DTSTAMP:20260724T040457Z
+DTSTART:20260722T060000Z
+DTEND:20260728T220000Z
+SUMMARY:Raid Battles — Mega Salamence in Mega Raids
+DESCRIPTION:<a href="https://leekduck.com/events/mega-salamence-in-mega-ra
+ ids-july-2026/">Mega Salamence in Mega Raids</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Raid Battles
+URL;VALUE=URI:https://leekduck.com/events/mega-salamence-in-mega-raids-jul
+ y-2026/
+IMAGE:https://cdn.leekduck.com/assets/img/events/mega-default.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Raid Battles — Mega Salamence in Mega Ra
+ ids
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/m
+ ega-default.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-solgaleo-in-5-star-raid-battles-july-2026
+SEQUENCE:0
+DTSTAMP:20260724T040457Z
+DTSTART:20260722T060000Z
+DTEND:20260728T220000Z
+SUMMARY:Raid Battles — Solgaleo in 5-star Raid Battles
+DESCRIPTION:<a href="https://leekduck.com/events/solgaleo-in-5-star-raid-b
+ attles-july-2026/">Solgaleo in 5-star Raid Battles</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Raid Battles
+URL;VALUE=URI:https://leekduck.com/events/solgaleo-in-5-star-raid-battles-
+ july-2026/
+IMAGE:https://cdn.leekduck.com/assets/img/events/solgaleo.jpg?v2
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Raid Battles — Solgaleo in 5-star Raid B
+ attles
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/s
+ olgaleo.jpg?v2
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-shadow-palkia-in-shadow-raids-july-2026
+SEQUENCE:0
+DTSTAMP:20260724T040457Z
+DTSTART:20260701T060000Z
+DTEND:20260804T220000Z
+SUMMARY:Raid Battles — Shadow Palkia in Shadow Raids
+DESCRIPTION:<a href="https://leekduck.com/events/shadow-palkia-in-shadow-r
+ aids-july-2026/">Shadow Palkia in Shadow Raids</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Raid Battles
+URL;VALUE=URI:https://leekduck.com/events/shadow-palkia-in-shadow-raids-ju
+ ly-2026/
+IMAGE:https://cdn.leekduck.com/assets/img/events/events-default-img.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Raid Battles — Shadow Palkia in Shadow R
+ aids
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/e
+ vents-default-img.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-kyurem-in-5-star-raid-battles-july-2026
+SEQUENCE:0
+DTSTAMP:20260724T040457Z
+DTSTART:20260729T060000Z
+DTEND:20260804T220000Z
+SUMMARY:Raid Battles — Kyurem in 5-star Raid Battles
+DESCRIPTION:<a href="https://leekduck.com/events/kyurem-in-5-star-raid-bat
+ tles-july-2026/">Kyurem in 5-star Raid Battles</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Raid Battles
+URL;VALUE=URI:https://leekduck.com/events/kyurem-in-5-star-raid-battles-ju
+ ly-2026/
+IMAGE:https://cdn.leekduck.com/assets/img/events/kyurem.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Raid Battles — Kyurem in 5-star Raid Bat
+ tles
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/k
+ yurem.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-mega-aggron-in-mega-raids-july-2026
+SEQUENCE:0
+DTSTAMP:20260724T040457Z
+DTSTART:20260729T060000Z
+DTEND:20260804T220000Z
+SUMMARY:Raid Battles — Mega Aggron in Mega Raids
+DESCRIPTION:<a href="https://leekduck.com/events/mega-aggron-in-mega-raids
+ -july-2026/">Mega Aggron in Mega Raids</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Raid Battles
+URL;VALUE=URI:https://leekduck.com/events/mega-aggron-in-mega-raids-july-2
+ 026/
+IMAGE:https://cdn.leekduck.com/assets/img/events/mega-default.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Raid Battles — Mega Aggron in Mega Raids
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/m
+ ega-default.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-mega-blaziken-in-mega-raids-august-2026
+SEQUENCE:0
+DTSTAMP:20260724T040457Z
+DTSTART:20260805T060000Z
+DTEND:20260811T220000Z
+SUMMARY:Raid Battles — Mega Blaziken in Mega Raids
+DESCRIPTION:<a href="https://leekduck.com/events/mega-blaziken-in-mega-rai
+ ds-august-2026/">Mega Blaziken in Mega Raids</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Raid Battles
+URL;VALUE=URI:https://leekduck.com/events/mega-blaziken-in-mega-raids-augu
+ st-2026/
+IMAGE:https://cdn.leekduck.com/assets/img/events/mega-default.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Raid Battles — Mega Blaziken in Mega Rai
+ ds
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/m
+ ega-default.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-uxie-mesprit-azelf-in-5-star-raid-battles-august-2026
+SEQUENCE:0
+DTSTAMP:20260724T040457Z
+DTSTART:20260805T060000Z
+DTEND:20260811T220000Z
+SUMMARY:Raid Battles — Uxie\, Mesprit\, and Azelf in 5-star Raid Battles
+DESCRIPTION:<a href="https://leekduck.com/events/uxie-mesprit-azelf-in-5-s
+ tar-raid-battles-august-2026/">Uxie\, Mesprit\, and Azelf in 5-star Raid B
+ attles</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Raid Battles
+URL;VALUE=URI:https://leekduck.com/events/uxie-mesprit-azelf-in-5-star-rai
+ d-battles-august-2026/
+IMAGE:https://cdn.leekduck.com/assets/img/events/events-default-img.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Raid Battles — Uxie\, Mesprit\, and Azel
+ f in 5-star Raid Battles
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/e
+ vents-default-img.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-groudon-in-5-star-raid-battles-august-2026
+SEQUENCE:0
+DTSTAMP:20260724T040457Z
+DTSTART:20260812T060000Z
+DTEND:20260818T220000Z
+SUMMARY:Raid Battles — Groudon in 5-star Raid Battles
+DESCRIPTION:<a href="https://leekduck.com/events/groudon-in-5-star-raid-ba
+ ttles-august-2026/">Groudon in 5-star Raid Battles</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Raid Battles
+URL;VALUE=URI:https://leekduck.com/events/groudon-in-5-star-raid-battles-a
+ ugust-2026/
+IMAGE:https://cdn.leekduck.com/assets/img/events/events-default-img.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Raid Battles — Groudon in 5-star Raid Ba
+ ttles
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/e
+ vents-default-img.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-mega-garchomp-in-mega-raids-august-2026
+SEQUENCE:0
+DTSTAMP:20260724T040457Z
+DTSTART:20260812T060000Z
+DTEND:20260818T220000Z
+SUMMARY:Raid Battles — Mega Garchomp in Mega Raids
+DESCRIPTION:<a href="https://leekduck.com/events/mega-garchomp-in-mega-rai
+ ds-august-2026/">Mega Garchomp in Mega Raids</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Raid Battles
+URL;VALUE=URI:https://leekduck.com/events/mega-garchomp-in-mega-raids-augu
+ st-2026/
+IMAGE:https://cdn.leekduck.com/assets/img/events/mega-default.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Raid Battles — Mega Garchomp in Mega Rai
+ ds
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/m
+ ega-default.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-lunala-in-5-star-raid-battles-august-2026
+SEQUENCE:0
+DTSTAMP:20260724T040457Z
+DTSTART:20260819T060000Z
+DTEND:20260825T220000Z
+SUMMARY:Raid Battles — Lunala in 5-star Raid Battles
+DESCRIPTION:<a href="https://leekduck.com/events/lunala-in-5-star-raid-bat
+ tles-august-2026/">Lunala in 5-star Raid Battles</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Raid Battles
+URL;VALUE=URI:https://leekduck.com/events/lunala-in-5-star-raid-battles-au
+ gust-2026/
+IMAGE:https://cdn.leekduck.com/assets/img/events/events-default-img.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Raid Battles — Lunala in 5-star Raid Bat
+ tles
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/e
+ vents-default-img.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-mega-swampert-in-mega-raids-august-2026
+SEQUENCE:0
+DTSTAMP:20260724T040457Z
+DTSTART:20260819T060000Z
+DTEND:20260825T220000Z
+SUMMARY:Raid Battles — Mega Swampert in Mega Raids
+DESCRIPTION:<a href="https://leekduck.com/events/mega-swampert-in-mega-rai
+ ds-august-2026/">Mega Swampert in Mega Raids</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Raid Battles
+URL;VALUE=URI:https://leekduck.com/events/mega-swampert-in-mega-raids-augu
+ st-2026/
+IMAGE:https://cdn.leekduck.com/assets/img/events/mega-default.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Raid Battles — Mega Swampert in Mega Rai
+ ds
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/m
+ ega-default.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-shadow-giratina-altered-in-shadow-raids-august-2026
+SEQUENCE:0
+DTSTAMP:20260724T040457Z
+DTSTART:20260805T060000Z
+DTEND:20260908T220000Z
+SUMMARY:Raid Battles — Shadow Giratina (Altered Forme) in Shadow Raids
+DESCRIPTION:<a href="https://leekduck.com/events/shadow-giratina-altered-i
+ n-shadow-raids-august-2026/">Shadow Giratina (Altered Forme) in Shadow Rai
+ ds</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Raid Battles
+URL;VALUE=URI:https://leekduck.com/events/shadow-giratina-altered-in-shado
+ w-raids-august-2026/
+IMAGE:https://cdn.leekduck.com/assets/img/events/events-default-img.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Raid Battles — Shadow Giratina (Altered 
+ Forme) in Shadow Raids
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/e
+ vents-default-img.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-mega-gyarados-in-mega-raids-august-2026
+SEQUENCE:0
+DTSTAMP:20260724T040457Z
+DTSTART:20260826T060000Z
+DTEND:20260908T220000Z
+SUMMARY:Raid Battles — Mega Gyarados in Mega Raids
+DESCRIPTION:<a href="https://leekduck.com/events/mega-gyarados-in-mega-rai
+ ds-august-2026/">Mega Gyarados in Mega Raids</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Raid Battles
+URL;VALUE=URI:https://leekduck.com/events/mega-gyarados-in-mega-raids-augu
+ st-2026/
+IMAGE:https://cdn.leekduck.com/assets/img/events/mega-default.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Raid Battles — Mega Gyarados in Mega Rai
+ ds
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/m
+ ega-default.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-regirock-regice-registeel-in-5-star-raid-battles-august-2
+ 026
+SEQUENCE:0
+DTSTAMP:20260724T040457Z
+DTSTART:20260826T060000Z
+DTEND:20260908T220000Z
+SUMMARY:Raid Battles — Regirock\, Regice\, and Registeel in 5-star Raid 
+ Battles
+DESCRIPTION:<a href="https://leekduck.com/events/regirock-regice-registeel
+ -in-5-star-raid-battles-august-2026/">Regirock\, Regice\, and Registeel in
+  5-star Raid Battles</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Raid Battles
+URL;VALUE=URI:https://leekduck.com/events/regirock-regice-registeel-in-5-s
+ tar-raid-battles-august-2026/
+IMAGE:https://cdn.leekduck.com/assets/img/events/events-default-img.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Raid Battles — Regirock\, Regice\, and R
+ egisteel in 5-star Raid Battles
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/e
+ vents-default-img.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+X-ORIGIN:https://leekduck.com/events/
+X-GENERATOR:ScrapedDuck
+X-GENERATOR-URL:https://github.com/bigfoott/ScrapedDuck
+END:VCALENDAR

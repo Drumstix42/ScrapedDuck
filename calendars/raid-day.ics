@@ -1,0 +1,34 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ScrapedDuck//Scraped LeekDuck Events//EN
+NAME:Pokémon Go — Raid Day
+X-WR-CALNAME:Pokémon Go — Raid Day
+X-WR-CALDESC:Pokémon Go Raid Day events.
+BEGIN:VEVENT
+UID:scraped-duck-starmie-super-mega-raid-day-2026
+SEQUENCE:0
+DTSTAMP:20260724T040457Z
+DTSTART:20260822T110000Z
+DTEND:20260822T170000Z
+SUMMARY:Raid Day — Starmie Super Mega Raid Day
+DESCRIPTION:<a href="https://leekduck.com/events/starmie-super-mega-raid-d
+ ay-2026/">Starmie Super Mega Raid Day</a>
+ORGANIZER;CN="LeekDuck c/o ScrapedDuck":
+CATEGORIES:Raid Day
+URL;VALUE=URI:https://leekduck.com/events/starmie-super-mega-raid-day-2026
+ /
+IMAGE:https://cdn.leekduck.com/assets/img/events/article-images/2026/2026-
+ 08-22-starmie-super-mega-raid-day-2026/starmie-super-mega-raid-day-2026.jp
+ g
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Raid Day — Starmie Super Mega Raid Day
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/a
+ rticle-images/2026/2026-08-22-starmie-super-mega-raid-day-2026/starmie-sup
+ er-mega-raid-day-2026.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+X-ORIGIN:https://leekduck.com/events/
+X-GENERATOR:ScrapedDuck
+X-GENERATOR-URL:https://github.com/bigfoott/ScrapedDuck
+END:VCALENDAR
