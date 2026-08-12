@@ -51,16 +51,21 @@ function get(url, id, bkp) {
         }
 
         // Habitat raid sections are usually day-prefixed (e.g. "Saturday Habitat Raids",
-        // "Sunday Habitat Raids") on multi-day events, but single-day makeup events use a
-        // plain "Habitat Raids" header instead. Handle any number of these generically and
-        // fall back to the event's own start day when the header doesn't name one.
-        var habitatH2s = pageContent.querySelectorAll('h2[id*="habitat-raids"]');
+        // "Sunday Habitat Raids", "Saturday Habitat Mega Raids") on multi-day events, but
+        // single-day makeup events use a plain "Habitat Raids" header instead. Handle any
+        // number of these generically and fall back to the event's own start day when the
+        // header doesn't name one.
+        var habitatH2s = Array.from(pageContent.querySelectorAll('h2')).filter(h2 => isHabitatRaidSectionId(h2.id));
         habitatH2s.forEach(habitatH2 => {
           var habitatHeaderText = habitatH2.textContent.trim();
           var habitatDayMatch = habitatHeaderText.match(/^(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)/i);
           var habitatDayName = habitatDayMatch ? habitatDayMatch[1] : getEventStartDayName(dom);
           var habitatElements = collectSectionElements(habitatH2);
-          processHabitatRaidSection(habitatElements, habitatDayName, eventData);
+          // Some habitat sections (e.g. "Habitat Mega Raids") cover a single raid tier for
+          // the whole section instead of an H4 per habitat -- infer it from the header text
+          // so processHabitatRaidSection has a tier to fall back to.
+          var sectionRaidType = inferRaidTypeFromText(habitatHeaderText);
+          processHabitatRaidSection(habitatElements, habitatDayName, eventData, sectionRaidType);
         });
 
         var spotlightH2 = pageContent.querySelector('h2#spotlight-hours');
@@ -269,6 +274,17 @@ function parseRaidHeader(headerText, contextRaidType) {
     };
   }
   
+  // Try bare day name when we have context from section headers, e.g. a lone
+  // "Saturday" H3 (no date, no raid-type suffix) under a section whose intro
+  // paragraph already named the raid type (contextRaidType).
+  var bareDayRegex = new RegExp('^' + dayPattern + '$', 'i');
+  if (bareDayRegex.test(headerText.trim()) && contextRaidType) {
+    return {
+      raidType: contextRaidType,
+      date: headerText.trim()
+    };
+  }
+
   // Try "Appearing in X-Star Raids (DayName)" format
   // Examples: "Appearing in 5-Star Raids (Saturday)", "Appearing in 3-Star Raids (Sunday)"
   var dayInParensRegex = new RegExp('appearing in\\s+([\\w-]+[\\s-]*star[\\s-]*(?:shadow\\s+)?raids?)\\s*\\((' + dayPattern + ')\\)', 'i');
@@ -405,6 +421,15 @@ function parseBossesFromSimpleList(listElement, raidType) {
       };
     })
     .filter(boss => boss !== null);
+}
+
+/**
+ * Match habitat raid section ids like "habitat-raids", "saturday-habitat-raids",
+ * or "saturday-habitat-mega-raids" -- the tier word (if any) sits between
+ * "habitat" and "raids", so a literal "habitat-raids" substring check misses it.
+ */
+function isHabitatRaidSectionId(id) {
+  return !!id && /habitat.*raids/i.test(id);
 }
 
 function inferRaidTypeFromText(text) {
@@ -646,7 +671,7 @@ function collectSectionElementsThroughSubheadings(startH2) {
       // habitatH2s in get()), so treat them as a section boundary here too --
       // otherwise their H3/H4 sub-headers leak into processRaidsSection, which
       // doesn't understand them and mis-tags their bosses with a stale raid tier.
-      var isHabitatSection = current.id && current.id.includes('habitat-raids');
+      var isHabitatSection = isHabitatRaidSectionId(current.id);
       var isTopLevelSection = current.id && classes.includes('event-section-header');
       if (isTopLevelSection || isHabitatSection) {
         break;
@@ -671,19 +696,27 @@ function processDayRaidSection(elements, dayHeader, eventData, globalInfo) {
   var currentRaidType = null;
   var pendingRaidHours = [];
   var inRaidHourSection = false;
-  
-  // Find or create entry for this date
-  var dateEntry = eventData.raidSchedule.find(entry => entry.date === baseDate);
-  if (!dateEntry) {
-    dateEntry = {
-      date: baseDate,
-      bosses: [],
-      raidHours: [],
-      bonuses: []
-    };
-    eventData.raidSchedule.push(dateEntry);
+
+  // Created lazily -- day-pattern H2 headers of this shape also appear on
+  // non-raid sections (e.g. a Spawns "Saturday, September 5" sub-heading), so
+  // don't add a raidSchedule entry unless this section actually named bosses.
+  var dateEntry = null;
+  function getOrCreateDateEntry() {
+    if (!dateEntry) {
+      dateEntry = eventData.raidSchedule.find(entry => entry.date === baseDate);
+      if (!dateEntry) {
+        dateEntry = {
+          date: baseDate,
+          bosses: [],
+          raidHours: [],
+          bonuses: []
+        };
+        eventData.raidSchedule.push(dateEntry);
+      }
+    }
+    return dateEntry;
   }
-  
+
   elements.forEach(element => {
     // Handle H3 headers for raid types
     if (element.tagName === 'H3' && element.textContent) {
@@ -717,12 +750,15 @@ function processDayRaidSection(elements, dayHeader, eventData, globalInfo) {
     // Handle Pokemon lists for scheduled raids
     if (element.className === 'pkmn-list-flex' && currentRaidType && !inRaidHourSection) {
       var bosses = parseBossesFromList(element, currentRaidType);
-      bosses.forEach(boss => {
-        // Add boss if not already in the date entry (avoid duplicates)
-        if (!dateEntry.bosses.some(existing => existing.name === boss.name)) {
-          dateEntry.bosses.push(boss);
-        }
-      });
+      if (bosses.length > 0) {
+        var entry = getOrCreateDateEntry();
+        bosses.forEach(boss => {
+          // Add boss if not already in the date entry (avoid duplicates)
+          if (!entry.bosses.some(existing => existing.name === boss.name)) {
+            entry.bosses.push(boss);
+          }
+        });
+      }
     }
     
     // Handle raid hour details - extract time and featured Pokemon from text
@@ -767,7 +803,11 @@ function processDayRaidSection(elements, dayHeader, eventData, globalInfo) {
       }
     }
   });
-  
+
+  if (!dateEntry) {
+    return; // Section had no raid bosses -- not actually a raid schedule day.
+  }
+
   pendingRaidHours.forEach(raidHour => {
     var raidHourBosses = [];
 
@@ -791,22 +831,49 @@ function processDayRaidSection(elements, dayHeader, eventData, globalInfo) {
 }
 
 /**
- * Process habitat raid sections that are grouped by day and time windows.
- * Example headers: "Stormfire Peaks (Saturday, 10:00 a.m. to 1:00 p.m.)"
+ * Extract one or more "X to Y" time windows out of a block of text. Habitat
+ * sections sometimes list multiple appearance windows for the same habitat in
+ * a single <p>, separated by <br> (e.g. "10:00 a.m. to 11:00 a.m." and
+ * "2:00 p.m. to 3:00 p.m."). <br> leaves no separator in textContent, but the
+ * regex still finds each window correctly since matches don't need
+ * surrounding whitespace.
  */
-function processHabitatRaidSection(elements, dayName, eventData) {
+function parseTimeWindowsFromText(text) {
+  var windowRegex = /([\d:]+\s+[ap]\.m\.\s+to\s+[\d:]+\s+[ap]\.m\.)/gi;
+  return Array.from((text || '').matchAll(windowRegex)).map(match => match[1]);
+}
+
+/**
+ * Process habitat raid sections that are grouped by day and time windows.
+ * Two header layouts are supported:
+ *  - Inline: "Stormfire Peaks (Saturday, 10:00 a.m. to 1:00 p.m.)", with an H4
+ *    tier header (Mega Raids / Five-Star Raids) before the boss list.
+ *  - Split: a bare habitat label H3 (e.g. "Verdant Overgrowth") followed by a
+ *    <p> listing one or more time windows, then the boss list directly --
+ *    there's no H4 because the whole section (e.g. "Habitat Mega Raids")
+ *    covers a single tier, passed in as sectionRaidType.
+ */
+function processHabitatRaidSection(elements, dayName, eventData, sectionRaidType) {
   var currentRaidType = null;
-  var currentTimeWindow = null;
+  var currentTimeWindows = [];
   var currentHabitatLabel = null;
 
   elements.forEach(element => {
-    // H3 defines each habitat slot and contains the time window in parentheses
     if (element.tagName === 'H3') {
       var h3Text = element.textContent.trim();
       var labelMatch = h3Text.match(/^(.+?)\s*\(/);
-      currentHabitatLabel = labelMatch ? labelMatch[1].trim() : null;
       var timeMatch = h3Text.match(/\((?:[^,]+,\s*)?([\d:]+\s+[ap]\.m\.\s+to\s+[\d:]+\s+[ap]\.m\.)\)/i);
-      currentTimeWindow = timeMatch ? timeMatch[1] : null;
+
+      if (labelMatch && timeMatch) {
+        // Inline layout: label and time window are both in the H3 itself.
+        currentHabitatLabel = labelMatch[1].trim();
+        currentTimeWindows = [timeMatch[1]];
+      } else {
+        // Split layout: bare label; time window(s) come from the next <p>.
+        currentHabitatLabel = h3Text || null;
+        currentTimeWindows = [];
+      }
+
       currentRaidType = null;
       return;
     }
@@ -817,36 +884,50 @@ function processHabitatRaidSection(elements, dayName, eventData) {
       return;
     }
 
-    // Parse habitat boss lists and attach them to both the day and specific time window
-    if (element.className === 'pkmn-list-flex' && currentRaidType) {
-      var bosses = parseBossesFromList(element, currentRaidType);
+    // Split layout: pick up the time window(s) that follow a bare habitat label.
+    if (element.tagName === 'P' && currentHabitatLabel && currentTimeWindows.length === 0) {
+      var parsedWindows = parseTimeWindowsFromText(element.textContent);
+      if (parsedWindows.length > 0) {
+        currentTimeWindows = parsedWindows;
+      }
+      return;
+    }
 
-      if (currentTimeWindow && bosses.length > 0) {
-        // Habitat raids belong to schedule slots, not one-hour raidHours.
-        // Keep one raidSchedule entry per day + time window.
-        var timeSlotEntry = eventData.raidSchedule.find(entry =>
-          entry.date === dayName && entry.time === currentTimeWindow
-        );
-        if (!timeSlotEntry) {
-          timeSlotEntry = {
-            date: dayName,
-            time: currentTimeWindow,
-            label: currentHabitatLabel,
-            bosses: [],
-            raidHours: [],
-            bonuses: []
-          };
-          eventData.raidSchedule.push(timeSlotEntry);
-        } else if (!timeSlotEntry.label && currentHabitatLabel) {
-          // Keep label optional, but populate it when available.
-          timeSlotEntry.label = currentHabitatLabel;
-        }
+    // Parse habitat boss lists and attach them to both the day and each time window
+    if (element.className === 'pkmn-list-flex' && currentTimeWindows.length > 0) {
+      var effectiveRaidType = currentRaidType || sectionRaidType;
+      var bosses = parseBossesFromList(element, effectiveRaidType);
 
-        bosses.forEach(boss => {
-          if (!timeSlotEntry.bosses.some(existing => existing.name === boss.name)) {
-            timeSlotEntry.bosses.push(boss);
+      if (bosses.length > 0) {
+        currentTimeWindows.forEach(timeWindow => {
+          // Habitat raids belong to schedule slots, not one-hour raidHours.
+          // Keep one raidSchedule entry per day + time window.
+          var timeSlotEntry = eventData.raidSchedule.find(entry =>
+            entry.date === dayName && entry.time === timeWindow
+          );
+          if (!timeSlotEntry) {
+            timeSlotEntry = {
+              date: dayName,
+              time: timeWindow,
+              label: currentHabitatLabel,
+              bosses: [],
+              raidHours: [],
+              bonuses: []
+            };
+            eventData.raidSchedule.push(timeSlotEntry);
+          } else if (!timeSlotEntry.label && currentHabitatLabel) {
+            // Keep label optional, but populate it when available.
+            timeSlotEntry.label = currentHabitatLabel;
           }
 
+          bosses.forEach(boss => {
+            if (!timeSlotEntry.bosses.some(existing => existing.name === boss.name)) {
+              timeSlotEntry.bosses.push(boss);
+            }
+          });
+        });
+
+        bosses.forEach(boss => {
           if (!eventData.raidbattles.bosses.some(existing => existing.name === boss.name)) {
             eventData.raidbattles.bosses.push(boss);
           }
