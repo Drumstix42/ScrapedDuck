@@ -1110,8 +1110,12 @@ function processRaidsSection(elements, sectionId, eventData, globalInfo, fallbac
       // Add more raid types as needed
     }
 
-    // Learn raid type context from paragraph text for list-based layouts.
-    if (element.tagName === 'P' && !currentRaidType) {
+    // Learn raid type context from paragraph text for list-based layouts. Skip the
+    // recurring catch-bonus boilerplate ("Pokémon caught from Mega Raids ... may have
+    // a Special Background") -- it mentions a raid type only in passing and can
+    // clobber a more specific tier context (e.g. "Super Mega Raids") that a preceding
+    // paragraph already established for the boss list that follows.
+    if (element.tagName === 'P' && !currentRaidType && !/caught from/i.test(element.textContent)) {
       var inferredRaidType = inferRaidTypeFromText(element.textContent);
       if (inferredRaidType) {
         contextRaidType = inferredRaidType;
