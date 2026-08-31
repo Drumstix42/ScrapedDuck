@@ -432,6 +432,22 @@ function isHabitatRaidSectionId(id) {
   return !!id && /habitat.*raids/i.test(id);
 }
 
+/**
+ * Extract the day names mentioned in a tier-announcement paragraph, e.g.
+ * "will appear in five-star raids on both Saturday and Sunday" -> ["Saturday", "Sunday"].
+ */
+function extractDayNamesFromText(text) {
+  var dayRegex = /\b(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)\b/gi;
+  var seen = [];
+  Array.from((text || '').matchAll(dayRegex)).forEach(match => {
+    var dayName = match[1].charAt(0).toUpperCase() + match[1].slice(1).toLowerCase();
+    if (!seen.includes(dayName)) {
+      seen.push(dayName);
+    }
+  });
+  return seen;
+}
+
 function inferRaidTypeFromText(text) {
   var textLower = (text || '').toLowerCase();
 
@@ -945,7 +961,12 @@ function processRaidsSection(elements, sectionId, eventData, globalInfo, fallbac
   var currentDate = null;
   var currentRaidType = null;
   var currentDateEntry = null;
-  
+  // Days named by a tier-announcement paragraph for a boss list that has no day
+  // headers of its own (e.g. "Armored Mewtwo will appear in five-star raids on both
+  // Saturday and Sunday" followed directly by a single static boss list) -- lets that
+  // static list still land in raidSchedule instead of only the raidbattles aggregate.
+  var pendingStaticDays = [];
+
   elements.forEach(element => {
     // Handle raid sub-section headers. LeekDuck uses H3 on some pages and H2 on
     // others (e.g. <h2 id="one-star-raids">). Top-level section H2s are filtered
@@ -1068,6 +1089,25 @@ function processRaidsSection(elements, sectionId, eventData, globalInfo, fallbac
             eventData.raidbattles.bosses.push(bossData);
           }
         });
+
+        // A preceding paragraph named specific days for this list (no day headers
+        // of its own) -- give it a raidSchedule entry per day too, e.g. Armored
+        // Mewtwo appearing in five-star raids "on both Saturday and Sunday".
+        if (pendingStaticDays.length > 0) {
+          pendingStaticDays.forEach(day => {
+            var dayEntry = eventData.raidSchedule.find(entry => entry.date === day);
+            if (!dayEntry) {
+              dayEntry = { date: day, bosses: [], raidHours: [], bonuses: [] };
+              eventData.raidSchedule.push(dayEntry);
+            }
+            bosses.forEach(bossData => {
+              if (!dayEntry.bosses.some(existing => existing.name === bossData.name)) {
+                dayEntry.bosses.push(bossData);
+              }
+            });
+          });
+          pendingStaticDays = [];
+        }
       }
     }
     
@@ -1119,6 +1159,9 @@ function processRaidsSection(elements, sectionId, eventData, globalInfo, fallbac
       var inferredRaidType = inferRaidTypeFromText(element.textContent);
       if (inferredRaidType) {
         contextRaidType = inferredRaidType;
+        // Remember any days this same sentence named, so a static boss list with no
+        // day headers of its own (see pendingStaticDays above) still gets scheduled.
+        pendingStaticDays = extractDayNamesFromText(element.textContent);
       }
     }
 
