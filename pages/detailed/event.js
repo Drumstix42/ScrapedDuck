@@ -1162,6 +1162,18 @@ function processRaidsSection(elements, sectionId, eventData, globalInfo, fallbac
         // Remember any days this same sentence named, so a static boss list with no
         // day headers of its own (see pendingStaticDays above) still gets scheduled.
         pendingStaticDays = extractDayNamesFromText(element.textContent);
+
+        // No specific days named, but the sentence says the boss appears the whole
+        // event through (e.g. "Mega Latias and Mega Latios may also appear in Mega
+        // Raids throughout the Mega Ascension event") -- schedule it onto every day
+        // already known from the day-by-day list above it, instead of dropping it
+        // into the raidbattles aggregate only. Require "throughout" to land near a
+        // word like "event"/"weekend" in the same clause, not just anywhere in the
+        // sentence -- otherwise an unrelated mention (e.g. "bosses rotate hourly
+        // throughout the day") would wrongly trigger this too.
+        if (pendingStaticDays.length === 0 && /\bthroughout\b[^.]{0,40}\b(event|weekend|celebration)\b/i.test(element.textContent)) {
+          pendingStaticDays = eventData.raidSchedule.map(entry => entry.date);
+        }
       }
     }
 
