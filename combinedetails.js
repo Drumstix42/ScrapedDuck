@@ -177,7 +177,6 @@ function generateCalendars(events) {
             description: `<a href="${e.link}">${e.name}</a>`,
             categories: [{ name: e.heading }],
             url: e.link,
-            organizer: { name: "LeekDuck c/o ScrapedDuck" },
             x: [
                 ["IMAGE", e.image],
                 ["X-GOOGLE-CALENDAR-CONTENT-TITLE", calEventTitle],
