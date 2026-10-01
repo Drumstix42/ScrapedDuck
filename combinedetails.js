@@ -152,13 +152,17 @@ function generateCalendars(events) {
         ["x-generator-url", generatorUrl],
     ];
 
+    const calDescription = "All PogoCalendar.com events sourced from LeekDuck.com.";
+    const calContact = "PogoCalendar.com c/o LeekDuck";
+    const escapeHtml = s => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+
     const icals = new Map();
-    icals.set("all", ical.default({ name: "Pokémon Go — All Events", description: "All Pokémon Go events.", x: icalMeta }));
+    icals.set("all", ical.default({ name: "Pokémon Go — All Events", description: calDescription, x: icalMeta }));
 
     events.forEach(e => {
 
         if (!icals.has(e.eventType)) {
-            icals.set(e.eventType, ical.default({ name: `Pokémon Go — ${e.heading}`, description: `Pokémon Go ${e.heading} events.`, x: icalMeta }));
+            icals.set(e.eventType, ical.default({ name: `Pokémon Go — ${e.heading}`, description: calDescription, x: icalMeta }));
         }
 
         const calAll = icals.get("all");
@@ -179,10 +183,16 @@ function generateCalendars(events) {
             floating,
             id: `scraped-duck-${e.eventID}`,
             summary: calEventTitle,
-            description: `<a href="${e.link}">${e.name}</a>`,
+            // plain text for most clients (they auto-link bare URLs); HTML via X-ALT-DESC
+            // as a full document, the form Outlook itself emits
+            description: {
+                plain: `Event: ${e.name}\n${e.link}`,
+                html: `<!DOCTYPE html><html><body>Event: <a href="${escapeHtml(e.link)}">${escapeHtml(e.name)}</a></body></html>`,
+            },
             categories: [{ name: e.heading }],
             url: e.link,
             x: [
+                ["CONTACT", calContact],
                 ["IMAGE", e.image],
                 ["X-GOOGLE-CALENDAR-CONTENT-TITLE", calEventTitle],
                 ["X-GOOGLE-CALENDAR-CONTENT-ICON", leekDuckFavIconUrl],
