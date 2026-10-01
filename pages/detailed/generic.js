@@ -2,6 +2,7 @@ const fs = require('fs');
 const jsd = require('jsdom');
 const { JSDOM } = jsd;
 const https = require('https');
+const eventtype = require('../eventtype');
 
 /**
  * Create temporary json file (<event-id>_generic.json) for each event with generic event data.
@@ -32,7 +33,7 @@ function get(url, id, bkp)
             // The event page tags every type the event belongs to (e.g. "event" + "location-specific"),
             // whereas the events list only shows the primary one
             var eventTypes = [...dom.window.document.querySelectorAll(".page-tags .tag")]
-                .map(tag => [...tag.classList].filter(c => c != "tag").join(" ").replace(/é/g, "e"))
+                .map(tag => eventtype.normalize([...tag.classList].filter(c => c != "tag").join(" ")))
                 .filter(type => type);
 
             writeTempFile(id, generic, eventTypes);

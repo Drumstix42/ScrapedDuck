@@ -68,6 +68,8 @@ Scrape Pokémon GO event data from LeekDuck.com, generate JSON/iCal outputs. For
 - Temp files: `{eventID}_generic.json` or `{eventID}.json`
 - Always provide backup fallback in `.catch()` using backup from `data` branch
 - Normalize CDN images: `cdn.leekduck.com/assets/`
+- Run every event type slug through `pages/eventtype.js` (`é`→`e`, and maps slugs LeekDuck has
+  renamed, e.g. `ticketed`→`ticketed-event`). Add new aliases there.
 - Match `eventID` from event URL: `.split("/events/")[1]`
 
 ## Tech Stack

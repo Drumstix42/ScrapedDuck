@@ -1,5 +1,6 @@
 const fs = require('fs');
 const ical = require('ical-generator');
+const eventtype = require('./pages/eventtype');
 
 function main()
 {
@@ -76,9 +77,11 @@ function main()
             }
         });
 
-        // eventTypes always leads with the primary eventType, without duplicates
+        // eventTypes always leads with the primary eventType, without duplicates. Normalizing again
+        // here also covers events that came from backup data scraped before an alias was added.
         events.forEach(e => {
-            e.eventTypes = [...new Set([e.eventType, ...(e.eventTypes || [])])];
+            e.eventType = eventtype.normalize(e.eventType);
+            e.eventTypes = [...new Set([e.eventType, ...(e.eventTypes || [])].map(eventtype.normalize))];
         });
 
         fs.writeFile('files/events.json', JSON.stringify(events, null, 4), err => {

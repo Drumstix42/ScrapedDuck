@@ -78,6 +78,8 @@ to the orphan `data` branch, which external apps consume. Fork of
 - Temp file naming: `{eventID}_generic.json` or `{eventID}.json`.
 - Always fall back to backup data in `.catch()` so a single failed page doesn't drop existing data.
 - Normalize CDN image URLs to `cdn.leekduck.com/assets/`.
+- Run every event type slug through [pages/eventtype.js](pages/eventtype.js) (`é`→`e`, and maps
+  slugs LeekDuck has renamed, e.g. `ticketed`→`ticketed-event`). Add new aliases there.
 - Derive `eventID` from the event URL: `.split("/events/")[1]`.
 
 ## Local execution
