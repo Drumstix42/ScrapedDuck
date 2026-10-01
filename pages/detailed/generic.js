@@ -29,32 +29,33 @@ function get(url, id, bkp)
             if (dom.window.document.getElementById('field-research-tasks') !== null)
                 generic.hasFieldResearchTasks = true;
 
-            fs.writeFile(`files/temp/${id}_generic.json`, JSON.stringify({ id: id, type: "generic", data: generic }), err => {
-                if (err) {
-                    console.error(err);
-                    return;
-                }
-            });
+            // The event page tags every type the event belongs to (e.g. "event" + "location-specific"),
+            // whereas the events list only shows the primary one
+            var eventTypes = [...dom.window.document.querySelectorAll(".page-tags .tag")]
+                .map(tag => [...tag.classList].filter(c => c != "tag").join(" ").replace(/é/g, "e"))
+                .filter(type => type);
+
+            writeTempFile(id, generic, eventTypes);
         }).catch(_err =>
         {
-            // on error, go through backup data and search for matching event to use backup data as fallback
-            for (var i = 0; i < bkp.length; i++)
+            // on error, use the matching event from the backup data as fallback
+            var backup = bkp.find(e => e.eventID == id);
+            if (backup?.extraData?.generic || backup?.eventTypes)
             {
-                if (bkp[i].eventID == id && bkp[i].extraData != null)
-                {
-                    // if there are generic data in backup data -> use these data instead for temporary json file
-                    if ('generic' in bkp[i].extraData){
-                        fs.writeFile(`files/temp/${id}_generic.json`, JSON.stringify({ id: id, type: "generic", data: bkp[i].extraData.generic.data }), err => {
-                            if (err) {
-                                console.error(err);
-                                return;
-                            }
-                        });
-                    }
-                }
+                writeTempFile(id, backup.extraData?.generic, backup.eventTypes);
             }
         });
     })
+}
+
+function writeTempFile(id, generic, eventTypes)
+{
+    fs.writeFile(`files/temp/${id}_generic.json`, JSON.stringify({ id: id, type: "generic", data: generic, eventTypes: eventTypes }), err => {
+        if (err) {
+            console.error(err);
+            return;
+        }
+    });
 }
 
 module.exports = { get }

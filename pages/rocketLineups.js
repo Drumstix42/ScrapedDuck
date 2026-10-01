@@ -95,7 +95,7 @@ function get() {
             });
         }).catch(_err => {
             console.log(_err);
-            https.get("https://raw.githubusercontent.com/bigfoott/ScrapedDuck/data/rocketLineups.min.json", (res) => {
+            https.get("https://raw.githubusercontent.com/Drumstix42/ScrapedDuck/data/rocketLineups.min.json", (res) => {
                 let body = "";
                 res.on("data", (chunk) => { body += chunk; });
 

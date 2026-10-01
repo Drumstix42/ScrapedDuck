@@ -63,9 +63,9 @@ function get(url, id, bkp)
         {
             for (var i = 0; i < bkp.length; i++)
             {
-                if (bkp[i].eventID == id)
+                if (bkp[i].eventID == id && bkp[i].extraData?.raidbattles)
                 {
-                    fs.writeFile(`files/temp/${id}.json`, JSON.stringify({ id: id, type: "raid-battles", data: bkp[i].extraData.raidbattles.data }), err => {
+                    fs.writeFile(`files/temp/${id}.json`, JSON.stringify({ id: id, type: "raid-battles", data: bkp[i].extraData.raidbattles }), err => {
                         if (err) {
                             console.error(err); 
                             return;

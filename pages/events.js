@@ -61,8 +61,10 @@ function get()
                             }
                             
                             var eventItemWrapper = e.querySelector(":scope > .event-item-wrapper");
-                            var eventType = (eventItemWrapper.classList + "").replace("event-item-wrapper ", "").replace(" skeleton-loading", "");
-                            eventType = eventType.replace("é", "e");
+                            var eventType = [...eventItemWrapper.classList]
+                                .filter(c => c != "event-item-wrapper" && c != "skeleton-loading")
+                                .join(" ")
+                                .replace(/é/g, "e");
 
                             var start = eventDates[eventID]?.start || null;
                             var end = eventDates[eventID]?.end || null;
@@ -76,7 +78,8 @@ function get()
                                 end = "" + new Date(Date.parse(end)).toISOString();
                             }
         
-                            allEvents.push({ "eventID": eventID, "name": name, "eventType": eventType, "heading": heading, "link": link, "image": image, "start": start, "end": end, "extraData": null });
+                            // The listing only shows the primary type; detailed scraping fills in the rest of eventTypes
+                            allEvents.push({ "eventID": eventID, "name": name, "eventType": eventType, "eventTypes": [eventType], "heading": heading, "link": link, "image": image, "start": start, "end": end, "extraData": null });
                         });
                     });
         
@@ -120,7 +123,7 @@ function get()
                 }).catch(_err =>
                 {
                     console.log(_err);
-                    https.get("https://raw.githubusercontent.com/bigfoott/ScrapedDuck/data/events.min.json", (res) =>
+                    https.get("https://raw.githubusercontent.com/Drumstix42/ScrapedDuck/data/events.min.json", (res) =>
                     {
                         let body = "";
                         res.on("data", (chunk) => { body += chunk; });

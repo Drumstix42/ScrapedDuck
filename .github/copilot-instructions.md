@@ -31,22 +31,29 @@ Scrape Pokémon GO event data from LeekDuck.com, generate JSON/iCal outputs. For
 
 ```javascript
 {
-  eventID, name, eventType, heading, link, image, start, end,
+  eventID, name, eventType, eventTypes, heading, link, image, start, end,
   extraData: {
     generic: { hasSpawns, hasFieldResearchTasks },  // ALL events
-    spotlight: {...},      // pokemon-spotlight-hour only
-    communityday: {...},   // community-day only
-    raidbattles: {...},    // raid-battles only
-    breakthrough: {...},   // research-breakthrough only
-    research: {...}        // research only
+    spotlight: {...},      // pokemon-spotlight-hour
+    communityday: {...},   // community-day
+    raidbattles: {...},    // raid-battles (and event-style pages with raids)
+    breakthrough: {...},   // research-breakthrough
+    promocodes: [...],     // research (only when the page has codes)
+    season: {...},         // season
+    raidSchedule, spotlightSchedule, bonuses  // event-style pages, flattened in
   }
 }
 ```
 
 ## Event Types Handled
 
-- `research-breakthrough`, `pokemon-spotlight-hour`, `community-day`, `raid-battles`, `research`
-- All other types still get `generic` extraData
+- `eventType` is the primary type, as shown on the events list. It drives detail-scraper dispatch
+  and per-type calendars.
+- `eventTypes` is every type tagged on the event page (e.g. `["event", "location-specific"]`), scraped
+  by `pages/detailed/generic.js`. It always starts with `eventType` and has no duplicates.
+- Dedicated detail scrapers: `research-breakthrough`, `pokemon-spotlight-hour`, `community-day`,
+  `raid-battles`, `research`, `season`. `event`, `raid-day`, `raid-hour` and `pokemon-go-fest` use
+  the event-style scraper `pages/detailed/event.js`. All other types still receive `generic` extraData.
 
 ## Adding New Event Type Scraper
 

@@ -10,86 +10,75 @@ function main()
             return console.log('Unable to scan directory: ' + err);
         }
 
+        var eventsByID = new Map(events.map(e => [e.eventID, e]));
+
         files.forEach(f =>
         {
             var data = JSON.parse(fs.readFileSync("./files/temp/" + f));
+            var e = eventsByID.get(data.id);
+            if (!e)
+                return;
 
-            events.forEach(e =>
+            if (e.extraData === null) {
+                e.extraData = {};
+            }
+
+            // add always generic data as 'generic' block in 'extraData' (available for all possible events)
+            if (data.type == "generic")
             {
-                if (e.eventID == data.id)
-                {
-                    // add always generic data as 'generic' block in 'extraData' (available for all possible events)
-                    if (data.type == "generic")
-                    {
-                        if (e.extraData === null) {
-                            e.extraData = {};
-                        }
-                        e.extraData.generic = data.data;
-                    }
-                    // add event specific extra data. Block named as event type name
-                    if (data.type == "research-breakthrough")
-                    {
-                        if (e.extraData === null) {
-                            e.extraData = {};
-                        }
-                        e.extraData.breakthrough = data.data;
-                    }
-                    else if (data.type == "pokemon-spotlight-hour")
-                    {
-                        if (e.extraData === null) {
-                            e.extraData = {};
-                        }
-                        e.extraData.spotlight = data.data
-                    }
-                    else if (data.type == "community-day")
-                    {
-                        if (e.extraData === null) {
-                            e.extraData = {};
-                        }
-                        e.extraData.communityday = data.data
-                    }
-                    else if (data.type == "raid-battles")
-                    {
-                        if (e.extraData === null) {
-                            e.extraData = {};
-                        }
-                        e.extraData.raidbattles = data.data
-                    }
-                    else if (data.type == "event")
-                    {
-                        if (e.extraData === null) {
-                            e.extraData = {};
-                        }
-                        // Merge event data directly into extraData (flattened structure)
-                        if (data.data.raidSchedule) {
-                            e.extraData.raidSchedule = data.data.raidSchedule;
-                        }
-                        if (data.data.raidbattles) {
-                            e.extraData.raidbattles = data.data.raidbattles;
-                        }
-                        if (data.data.spotlightSchedule) {
-                            e.extraData.spotlightSchedule = data.data.spotlightSchedule;
-                        }
-                        if (data.data.bonuses) {
-                            e.extraData.bonuses = data.data.bonuses;
-                        }
-                    }
-                    else if (data.type == "promo-codes")
-                    {
-                        if (e.extraData === null) {
-                            e.extraData = {};
-                        }
-                        e.extraData.promocodes = data.data
-                    }
-                    else if (data.type == "season")
-                    {
-                        if (e.extraData === null) {
-                            e.extraData = {};
-                        }
-                        e.extraData.season = data.data
-                    }
+                if (data.data) {
+                    e.extraData.generic = data.data;
                 }
-            });
+                if (data.eventTypes) {
+                    e.eventTypes = (e.eventTypes || []).concat(data.eventTypes);
+                }
+            }
+            // add event specific extra data. Block named as event type name
+            else if (data.type == "research-breakthrough")
+            {
+                e.extraData.breakthrough = data.data;
+            }
+            else if (data.type == "pokemon-spotlight-hour")
+            {
+                e.extraData.spotlight = data.data
+            }
+            else if (data.type == "community-day")
+            {
+                e.extraData.communityday = data.data
+            }
+            else if (data.type == "raid-battles")
+            {
+                e.extraData.raidbattles = data.data
+            }
+            else if (data.type == "event")
+            {
+                // Merge event data directly into extraData (flattened structure)
+                if (data.data.raidSchedule) {
+                    e.extraData.raidSchedule = data.data.raidSchedule;
+                }
+                if (data.data.raidbattles) {
+                    e.extraData.raidbattles = data.data.raidbattles;
+                }
+                if (data.data.spotlightSchedule) {
+                    e.extraData.spotlightSchedule = data.data.spotlightSchedule;
+                }
+                if (data.data.bonuses) {
+                    e.extraData.bonuses = data.data.bonuses;
+                }
+            }
+            else if (data.type == "promo-codes")
+            {
+                e.extraData.promocodes = data.data
+            }
+            else if (data.type == "season")
+            {
+                e.extraData.season = data.data
+            }
+        });
+
+        // eventTypes always leads with the primary eventType, without duplicates
+        events.forEach(e => {
+            e.eventTypes = [...new Set([e.eventType, ...(e.eventTypes || [])])];
         });
 
         fs.writeFile('files/events.json', JSON.stringify(events, null, 4), err => {

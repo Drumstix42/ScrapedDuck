@@ -42,9 +42,9 @@ function get(url, id, bkp)
         {
             for (var i = 0; i < bkp.length; i++)
             {
-                if (bkp[i].eventID == id)
+                if (bkp[i].eventID == id && bkp[i].extraData?.breakthrough)
                 {
-                    fs.writeFile(`files/temp/${id}.json`, JSON.stringify({ id: id, type: "research-breakthrough", data: bkp[i].extraData.breakthrough.data }), err => {
+                    fs.writeFile(`files/temp/${id}.json`, JSON.stringify({ id: id, type: "research-breakthrough", data: bkp[i].extraData.breakthrough }), err => {
                         if (err) {
                             console.error(err);
                             return;

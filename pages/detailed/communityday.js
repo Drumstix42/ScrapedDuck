@@ -165,9 +165,9 @@ function get(url, id, bkp)
         {
             for (var i = 0; i < bkp.length; i++)
             {
-                if (bkp[i].eventID == id && bkp[i].extraData != null)
+                if (bkp[i].eventID == id && bkp[i].extraData?.communityday)
                 {
-                    fs.writeFile(`files/temp/${id}.json`, JSON.stringify({ id: id, type: "community-day", data: bkp[i].extraData.communityday.data }), err => {
+                    fs.writeFile(`files/temp/${id}.json`, JSON.stringify({ id: id, type: "community-day", data: bkp[i].extraData.communityday }), err => {
                         if (err) {
                             console.error(err); 
                             return;
