@@ -1,5 +1,6 @@
 const fs = require('fs');
 const ical = require('ical-generator');
+const eventtype = require('./pages/eventtype');
 
 function main()
 {
@@ -76,9 +77,11 @@ function main()
             }
         });
 
-        // eventTypes always leads with the primary eventType, without duplicates
+        // eventTypes always leads with the primary eventType, without duplicates. Normalizing again
+        // here also covers events that came from backup data scraped before an alias was added.
         events.forEach(e => {
-            e.eventTypes = [...new Set([e.eventType, ...(e.eventTypes || [])])];
+            e.eventType = eventtype.normalize(e.eventType);
+            e.eventTypes = [...new Set([e.eventType, ...(e.eventTypes || [])].map(eventtype.normalize))];
         });
 
         fs.writeFile('files/events.json', JSON.stringify(events, null, 4), err => {
@@ -149,33 +152,47 @@ function generateCalendars(events) {
         ["x-generator-url", generatorUrl],
     ];
 
+    const calDescription = "All PogoCalendar.com events sourced from LeekDuck.com.";
+    const calContact = "PogoCalendar.com c/o LeekDuck";
+    const escapeHtml = s => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+
     const icals = new Map();
-    icals.set("all", ical.default({ name: "Pokémon Go — All Events", description: "All Pokémon Go events.", x: icalMeta }));
+    icals.set("all", ical.default({ name: "Pokémon Go — All Events", description: calDescription, x: icalMeta }));
 
     events.forEach(e => {
 
         if (!icals.has(e.eventType)) {
-            icals.set(e.eventType, ical.default({ name: `Pokémon Go — ${e.heading}`, description: `Pokémon Go ${e.heading} events.`, x: icalMeta }));
+            icals.set(e.eventType, ical.default({ name: `Pokémon Go — ${e.heading}`, description: calDescription, x: icalMeta }));
         }
 
         const calAll = icals.get("all");
         const calType = icals.get(e.eventType);
 
-        // ensure the timestamps are all in zulu time
-        const startZulu = new Date(e.start).toISOString();
-        const endZulu = new Date(e.end).toISOString();
+        // LeekDuck gives local-time events (same wall clock in every timezone) without a "Z",
+        // and fixed-instant events (e.g. GBL, Wild Area) in UTC with a "Z". Emit local-time
+        // events as floating times so they don't shift by the runner's timezone.
+        const isLocalTime = v => typeof v == "string" && !v.endsWith("Z");
+        const floating = isLocalTime(e.start) && isLocalTime(e.end);
+        // ical-generator writes a floating Date's UTC fields, so read the wall clock as UTC
+        const toDate = v => floating ? new Date(v + "Z") : new Date(v);
         const calEventTitle = `${e.heading} — ${e.name}`
 
         const calEvent = {
-            start: startZulu,
-            end: endZulu,
+            start: toDate(e.start),
+            end: toDate(e.end),
+            floating,
             id: `scraped-duck-${e.eventID}`,
             summary: calEventTitle,
-            description: `<a href="${e.link}">${e.name}</a>`,
+            // plain text for most clients (they auto-link bare URLs); HTML via X-ALT-DESC
+            // as a full document, the form Outlook itself emits
+            description: {
+                plain: `Event: ${e.name}\n${e.link}`,
+                html: `<!DOCTYPE html><html><body>Event: <a href="${escapeHtml(e.link)}">${escapeHtml(e.name)}</a></body></html>`,
+            },
             categories: [{ name: e.heading }],
             url: e.link,
-            organizer: { name: "LeekDuck c/o ScrapedDuck" },
             x: [
+                ["CONTACT", calContact],
                 ["IMAGE", e.image],
                 ["X-GOOGLE-CALENDAR-CONTENT-TITLE", calEventTitle],
                 ["X-GOOGLE-CALENDAR-CONTENT-ICON", leekDuckFavIconUrl],

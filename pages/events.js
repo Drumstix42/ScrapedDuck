@@ -3,6 +3,7 @@ const moment = require('moment');
 const jsd = require('jsdom');
 const { JSDOM } = jsd;
 const https = require('https');
+const eventtype = require('./eventtype');
 
 function get()
 {
@@ -61,10 +62,9 @@ function get()
                             }
                             
                             var eventItemWrapper = e.querySelector(":scope > .event-item-wrapper");
-                            var eventType = [...eventItemWrapper.classList]
+                            var eventType = eventtype.normalize([...eventItemWrapper.classList]
                                 .filter(c => c != "event-item-wrapper" && c != "skeleton-loading")
-                                .join(" ")
-                                .replace(/é/g, "e");
+                                .join(" "));
 
                             var start = eventDates[eventID]?.start || null;
                             var end = eventDates[eventID]?.end || null;

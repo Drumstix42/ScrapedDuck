@@ -68,16 +68,19 @@ Scrape Pokémon GO event data from LeekDuck.com, generate JSON/iCal outputs. For
 - Temp files: `{eventID}_generic.json` or `{eventID}.json`
 - Always provide backup fallback in `.catch()` using backup from `data` branch
 - Normalize CDN images: `cdn.leekduck.com/assets/`
+- Run every event type slug through `pages/eventtype.js` (`é`→`e`, and maps slugs LeekDuck has
+  renamed, e.g. `ticketed`→`ticketed-event`). Add new aliases there.
 - Match `eventID` from event URL: `.split("/events/")[1]`
 
 ## Tech Stack
 
+- Node version pinned in `.nvmrc` (current LTS); CI reads it via `node-version-file`. jsdom 30 needs Node `^22.22.2 || ^24.15.0 || >=26`
 - jsdom (DOM parsing), moment (dates), ical-generator (calendars)
 - Runs via GitHub Actions (daily cron `0 3 * * *` + on push to `master` + manual dispatch) → force-pushes to orphan `data` branch
 
 ## Local Execution
 
-Full pipeline (in order): `npm run scrape:all` (runs scrape → detailedscrape → combinedetails)
+Switch to the `.nvmrc` Node version (`nvm use` / `fnm use`), `npm install`, then run the full pipeline (in order): `npm run scrape:all` (runs scrape → detailedscrape → combinedetails)
 
 ## Commit Messages
 

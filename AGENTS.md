@@ -23,6 +23,8 @@ to the orphan `data` branch, which external apps consume. Fork of
 ## Tech stack
 
 - Plain Node.js (no build step, no framework, no TypeScript).
+- Node version is pinned in [.nvmrc](.nvmrc) (current LTS); CI reads it too. jsdom 30 needs Node
+  `^22.22.2 || ^24.15.0 || >=26`.
 - `jsdom` for DOM parsing (`JSDOM.fromURL()`), `moment` for dates, `ical-generator` for calendars.
 - No test suite and no linter are configured — verify changes by running the pipeline locally.
 
@@ -78,11 +80,14 @@ to the orphan `data` branch, which external apps consume. Fork of
 - Temp file naming: `{eventID}_generic.json` or `{eventID}.json`.
 - Always fall back to backup data in `.catch()` so a single failed page doesn't drop existing data.
 - Normalize CDN image URLs to `cdn.leekduck.com/assets/`.
+- Run every event type slug through [pages/eventtype.js](pages/eventtype.js) (`é`→`e`, and maps
+  slugs LeekDuck has renamed, e.g. `ticketed`→`ticketed-event`). Add new aliases there.
 - Derive `eventID` from the event URL: `.split("/events/")[1]`.
 
 ## Local execution
 
 ```bash
+nvm use              # or `fnm use`; picks up .nvmrc
 npm install
 npm run scrape:all   # runs scrape → detailedscrape → combinedetails in order
 ```
@@ -94,7 +99,7 @@ branch, which the Actions job force-pushes. The `.catch()` fallbacks fetch backu
 ## CI
 
 [.github/workflows/scrape.yml](.github/workflows/scrape.yml) runs daily (cron `0 3 * * *`), on push to
-`master`, and via manual dispatch. It runs all three scripts, then force-pushes only the generated files
+`master`, and via manual dispatch. It uses the Node version from [.nvmrc](.nvmrc), runs all three scripts, then force-pushes only the generated files
 to the orphan `data` branch. Do not depend on the `data` branch having normal repo history.
 
 ## Commit messages
