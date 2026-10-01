@@ -164,14 +164,19 @@ function generateCalendars(events) {
         const calAll = icals.get("all");
         const calType = icals.get(e.eventType);
 
-        // ensure the timestamps are all in zulu time
-        const startZulu = new Date(e.start).toISOString();
-        const endZulu = new Date(e.end).toISOString();
+        // LeekDuck gives local-time events (same wall clock in every timezone) without a "Z",
+        // and fixed-instant events (e.g. GBL, Wild Area) in UTC with a "Z". Emit local-time
+        // events as floating times so they don't shift by the runner's timezone.
+        const isLocalTime = v => typeof v == "string" && !v.endsWith("Z");
+        const floating = isLocalTime(e.start) && isLocalTime(e.end);
+        // ical-generator writes a floating Date's UTC fields, so read the wall clock as UTC
+        const toDate = v => floating ? new Date(v + "Z") : new Date(v);
         const calEventTitle = `${e.heading} — ${e.name}`
 
         const calEvent = {
-            start: startZulu,
-            end: endZulu,
+            start: toDate(e.start),
+            end: toDate(e.end),
+            floating,
             id: `scraped-duck-${e.eventID}`,
             summary: calEventTitle,
             description: `<a href="${e.link}">${e.name}</a>`,
