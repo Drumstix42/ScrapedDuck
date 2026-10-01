@@ -48,13 +48,14 @@ to the orphan `data` branch, which external apps consume. Fork of
   eventID, name, eventType, eventTypes, heading, link, image, start, end,
   extraData: {
     generic: { hasSpawns, hasFieldResearchTasks },  // ALL events
+    bonuses: [{ title, description, startTime, endTime, items: [{ text, image }], notes }],  // ALL events
     spotlight: {...},      // pokemon-spotlight-hour
     communityday: {...},   // community-day
     raidbattles: {...},    // raid-battles (and event-style pages with raids)
     breakthrough: {...},   // research-breakthrough
     promocodes: [...],     // research (only when the page has codes)
     season: {...},         // season
-    raidSchedule, spotlightSchedule, bonuses  // event-style pages, flattened in
+    raidSchedule, spotlightSchedule  // event-style pages, flattened in
   }
 }
 ```
@@ -63,6 +64,11 @@ to the orphan `data` branch, which external apps consume. Fork of
   and per-type calendars.
 - `eventTypes` is every type tagged on the event page (e.g. `["event", "location-specific"]`), scraped
   by [pages/detailed/generic.js](pages/detailed/generic.js). It always starts with `eventType` and has no duplicates.
+- `bonuses` is parsed for every event by [pages/detailed/generic.js](pages/detailed/generic.js) via
+  [pages/bonuses.js](pages/bonuses.js), from the page's "Bonuses" section only (one group per
+  `.bonus-list`; `[]` when there is none). Spotlight Hours have no such section, so
+  [combinedetails.js](combinedetails.js) mirrors `spotlight.bonus` into it as a single item (empty
+  `image`). `spotlight.bonus` and `communityday.bonuses` / `bonusDisclaimers` are kept as-is for compatibility.
 - Dedicated detail scrapers: `research-breakthrough`, `pokemon-spotlight-hour`, `community-day`,
   `raid-battles`, `research`, `season`. `event`, `raid-day`, `raid-hour` and `pokemon-go-fest` use
   the event-style scraper [pages/detailed/event.js](pages/detailed/event.js). All other types still receive `generic` extraData.

@@ -3,6 +3,7 @@ const jsd = require('jsdom');
 const { JSDOM } = jsd;
 const https = require('https');
 const eventtype = require('../eventtype');
+const bonuses = require('../bonuses');
 
 /**
  * Create temporary json file (<event-id>_generic.json) for each event with generic event data.
@@ -36,22 +37,23 @@ function get(url, id, bkp)
                 .map(tag => eventtype.normalize([...tag.classList].filter(c => c != "tag").join(" ")))
                 .filter(type => type);
 
-            writeTempFile(id, generic, eventTypes);
+            // The "Bonuses" section is shared by all event types, so it's parsed here rather than per type
+            writeTempFile(id, generic, eventTypes, bonuses.parse(dom.window.document));
         }).catch(_err =>
         {
             // on error, use the matching event from the backup data as fallback
             var backup = bkp.find(e => e.eventID == id);
-            if (backup?.extraData?.generic || backup?.eventTypes)
+            if (backup?.extraData?.generic || backup?.eventTypes || backup?.extraData?.bonuses)
             {
-                writeTempFile(id, backup.extraData?.generic, backup.eventTypes);
+                writeTempFile(id, backup.extraData?.generic, backup.eventTypes, backup.extraData?.bonuses);
             }
         });
     })
 }
 
-function writeTempFile(id, generic, eventTypes)
+function writeTempFile(id, generic, eventTypes, bonuses)
 {
-    fs.writeFile(`files/temp/${id}_generic.json`, JSON.stringify({ id: id, type: "generic", data: generic, eventTypes: eventTypes }), err => {
+    fs.writeFile(`files/temp/${id}_generic.json`, JSON.stringify({ id: id, type: "generic", data: generic, eventTypes: eventTypes, bonuses: bonuses }), err => {
         if (err) {
             console.error(err);
             return;

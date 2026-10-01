@@ -33,6 +33,8 @@ function main()
                 if (data.eventTypes) {
                     e.eventTypes = (e.eventTypes || []).concat(data.eventTypes);
                 }
+                // bonus groups from the page's "Bonuses" section, for every event type
+                e.extraData.bonuses = data.bonuses || [];
             }
             // add event specific extra data. Block named as event type name
             else if (data.type == "research-breakthrough")
@@ -63,9 +65,6 @@ function main()
                 if (data.data.spotlightSchedule) {
                     e.extraData.spotlightSchedule = data.data.spotlightSchedule;
                 }
-                if (data.data.bonuses) {
-                    e.extraData.bonuses = data.data.bonuses;
-                }
             }
             else if (data.type == "promo-codes")
             {
@@ -82,6 +81,19 @@ function main()
         events.forEach(e => {
             e.eventType = eventtype.normalize(e.eventType);
             e.eventTypes = [...new Set([e.eventType, ...(e.eventTypes || [])].map(eventtype.normalize))];
+
+            // Spotlight Hour pages state their bonus in the description rather than a "Bonuses"
+            // section, so mirror it into the shared bonuses format (no icon available)
+            if (e.extraData?.spotlight?.bonus && !e.extraData.bonuses?.length) {
+                e.extraData.bonuses = [{
+                    title: null,
+                    description: null,
+                    startTime: null,
+                    endTime: null,
+                    items: [{ text: e.extraData.spotlight.bonus, image: "" }],
+                    notes: []
+                }];
+            }
         });
 
         fs.writeFile('files/events.json', JSON.stringify(events, null, 4), err => {
