@@ -61,9 +61,10 @@ function main()
                         // so they must be parsed by the event scraper to extract raid boss lists.
                         event.get(e.link, e.eventID, bkp);
                     }
-                    else if (e.eventType == "pokemon-go-fest")
+                    else if (e.eventType == "pokemon-go-fest" || e.eventType == "pokemon-go-tour" || e.eventType == "wild-area")
                     {
-                        // Pokemon GO Fest events have bonus sections that need to be parsed
+                        // Large ticketed events (GO Fest, GO Tour, GO Wild Area) use the same
+                        // event-style raid / Max Battle / Spotlight sections as regular events
                         event.get(e.link, e.eventID, bkp);
                     }
                     else if (e.eventType == "season")

@@ -70,8 +70,11 @@ to the orphan `data` branch, which external apps consume. Fork of
   [combinedetails.js](combinedetails.js) mirrors `spotlight.bonus` into it as a single item (empty
   `image`). `spotlight.bonus` and `communityday.bonuses` / `bonusDisclaimers` are kept as-is for compatibility.
 - Dedicated detail scrapers: `research-breakthrough`, `pokemon-spotlight-hour`, `community-day`,
-  `raid-battles`, `research`, `season`. `event`, `raid-day`, `raid-hour` and `pokemon-go-fest` use
-  the event-style scraper [pages/detailed/event.js](pages/detailed/event.js). All other types still receive `generic` extraData.
+  `raid-battles`, `research`, `season`. `event`, `raid-day`, `raid-hour`, `pokemon-go-fest`,
+  `pokemon-go-tour` and `wild-area` use the event-style scraper
+  [pages/detailed/event.js](pages/detailed/event.js). Max Battles on those pages land in
+  `raidSchedule` / `raidbattles` with `raidType` `"Max Battle"` (or `"Gigantamax"`) and a
+  `Dynamax` / `Gigantamax` name prefix. All other types still receive `generic` extraData.
 
 ## Adding a new event-type scraper
 

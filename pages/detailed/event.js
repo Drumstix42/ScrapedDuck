@@ -182,11 +182,39 @@ function get(url, id, bkp) {
   });
 }
 
+var DAY_NAMES = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+/**
+ * Read the event's overall start/end as local "YYYY-MM-DD" date strings from the
+ * schedule JSON embedded in the page header (<script data-event-schedule-json>).
+ */
+function getEventScheduleDates(dom) {
+  var scriptEl = dom.window.document.querySelector('script[data-event-schedule-json]');
+  if (!scriptEl) return null;
+
+  try {
+    var envelope = JSON.parse(scriptEl.textContent).envelope || {};
+    var start = envelope.start_local || envelope.start;
+    var end = envelope.end_local || envelope.end;
+    if (!start || !end) return null;
+    return { start: start.slice(0, 10), end: end.slice(0, 10) };
+  } catch (err) {
+    return null;
+  }
+}
+
 /**
  * Determine the event's start-day name (e.g. "Sunday") from the page's date box,
  * used as a fallback when a habitat raid header doesn't name a day itself.
  */
 function getEventStartDayName(dom) {
+  var scheduleDates = getEventScheduleDates(dom);
+  if (scheduleDates) {
+    var parts = scheduleDates.start.split('-').map(Number);
+    return DAY_NAMES[new Date(Date.UTC(parts[0], parts[1] - 1, parts[2])).getUTCDay()];
+  }
+
+  // Older page layout
   var startEl = dom.window.document.querySelector('#event-date-start');
   if (!startEl) return null;
 
@@ -198,6 +226,12 @@ function getEventStartDayName(dom) {
  * Determine whether the event's start and end dates are the same calendar day.
  */
 function isSingleDayEvent(dom) {
+  var scheduleDates = getEventScheduleDates(dom);
+  if (scheduleDates) {
+    return scheduleDates.start === scheduleDates.end;
+  }
+
+  // Older page layout
   var startEl = dom.window.document.querySelector('#event-date-start');
   var endEl = dom.window.document.querySelector('#event-date-end');
   if (!startEl || !endEl) return false;
@@ -212,6 +246,10 @@ function getTierFromRaidType(raidType) {
   if (!raidType) return null;
 
   var raidTypeLower = raidType.toLowerCase();
+
+  // Max Battles are their own battle mode, not a raid tier
+  if (raidTypeLower.includes('gigantamax')) return 'Gigantamax';
+  if (raidTypeLower.includes('max battle') || raidTypeLower.includes('dynamax')) return 'Max Battle';
 
   // Extract tier regardless of shadow/regular
   if (raidTypeLower.includes('one-star') || raidTypeLower.includes('1-star')) return 'Tier 1';
@@ -334,6 +372,14 @@ function parseBossFromElement(bossElement, raidType) {
     else if (raidTypeLower.includes('primal') && !baseName.toLowerCase().startsWith('primal')) {
       finalName = 'Primal ' + baseName;
     }
+    // Add "Gigantamax" / "Dynamax" prefix for Max Battles if not already present
+    else if (raidTypeLower.includes('gigantamax') && !baseName.toLowerCase().startsWith('gigantamax')) {
+      finalName = 'Gigantamax ' + baseName;
+    }
+    else if ((raidTypeLower.includes('max battle') || raidTypeLower.includes('dynamax')) &&
+             !/^(dynamax|gigantamax)\b/i.test(baseName)) {
+      finalName = 'Dynamax ' + baseName;
+    }
   }
 
   return {
@@ -441,6 +487,8 @@ function inferRaidTypeFromText(text) {
   if (textLower.includes('primal raids')) return 'Primal Raids';
   if (textLower.includes('five-star raids') || textLower.includes('5-star raids')) return 'Five-Star Raids';
   if (textLower.includes('shadow raids')) return 'Shadow Raids';
+  if (textLower.includes('gigantamax battles')) return 'Gigantamax Battles';
+  if (textLower.includes('max battles')) return 'Max Battles';
 
   return null;
 }
@@ -980,6 +1028,13 @@ function processRaidsSection(elements, sectionId, eventData, globalInfo, fallbac
         else if (h3Lower.includes('shadow') && h3Lower.includes('raids') && !h3Lower.includes('star')) {
           matchedRaidType = 'Shadow Raids';
         }
+        // Check for Max Battles (e.g. "Max Battles", "Gigantamax Battles")
+        else if (h3Lower.includes('gigantamax') && h3Lower.includes('battles')) {
+          matchedRaidType = 'Gigantamax Battles';
+        }
+        else if (h3Lower.includes('max battles')) {
+          matchedRaidType = 'Max Battles';
+        }
 
         if (matchedRaidType) {
           contextRaidType = matchedRaidType;
@@ -1119,7 +1174,9 @@ function processRaidsSection(elements, sectionId, eventData, globalInfo, fallbac
     }
 
     // Handle simple list-based raid layouts (UL/OL) used by some Raid Day pages.
-    if ((element.tagName === 'UL' || element.tagName === 'OL') && element.className !== 'bonus-list') {
+    // pkmn-list-flex lists can be ULs too, but they're already handled above.
+    if ((element.tagName === 'UL' || element.tagName === 'OL') &&
+        element.className !== 'bonus-list' && element.className !== 'pkmn-list-flex') {
       var listBosses = parseBossesFromSimpleList(element, currentRaidType || contextRaidType);
       if (listBosses.length > 0) {
         if (currentDate && currentDateEntry) {
