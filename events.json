@@ -1,0 +1,3027 @@
+[
+    {
+        "eventID": "patterns-of-the-wild-2026",
+        "name": "Patterns of the Wild",
+        "eventType": "event",
+        "eventTypes": [
+            "event",
+            "location-specific"
+        ],
+        "heading": "Event",
+        "link": "https://leekduck.com/events/patterns-of-the-wild-2026/",
+        "image": "https://cdn.leekduck.com/assets/img/events/article-images/2026/2026-10-02-patterns-of-the-wild-2026/patterns-of-the-wild-2026.jpg",
+        "start": "2026-10-02T10:00:00.000",
+        "end": "2026-10-02T20:00:00.000",
+        "extraData": {
+            "raidSchedule": [],
+            "raidbattles": {
+                "bosses": [],
+                "shinies": []
+            },
+            "spotlightSchedule": [],
+            "generic": {
+                "hasSpawns": true,
+                "hasFieldResearchTasks": false
+            },
+            "bonuses": [
+                {
+                    "title": null,
+                    "description": null,
+                    "startTime": null,
+                    "endTime": null,
+                    "items": [
+                        {
+                            "text": "Incense will last for two hours",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/incense.png"
+                        },
+                        {
+                            "text": "Increased chance to encounter Pikachu wearing a batik shirt and other event-themed Pokémon while using Incense",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/incense.png"
+                        },
+                        {
+                            "text": "Increased chance to encounter Shiny featured wild Pokémon",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/none.png"
+                        }
+                    ],
+                    "notes": []
+                }
+            ]
+        }
+    },
+    {
+        "eventID": "gigantamax-cinderace-max-battle-day-2026",
+        "name": "Gigantamax Cinderace Max Battle Day",
+        "eventType": "max-battles",
+        "eventTypes": [
+            "max-battles"
+        ],
+        "heading": "Max Battles",
+        "link": "https://leekduck.com/events/gigantamax-cinderace-max-battle-day-2026/",
+        "image": "https://cdn.leekduck.com/assets/img/events/article-images/2026/2026-10-03-gigantamax-cinderace-max-battle-day-2026/gigantamax-cinderace-max-battle-day.jpg",
+        "start": "2026-10-03T14:00:00.000",
+        "end": "2026-10-03T17:00:00.000",
+        "extraData": {
+            "generic": {
+                "hasSpawns": false,
+                "hasFieldResearchTasks": false
+            },
+            "bonuses": [
+                {
+                    "title": null,
+                    "description": "The following bonuses will be active during the event.",
+                    "startTime": null,
+                    "endTime": null,
+                    "items": [
+                        {
+                            "text": "Max Particle collection limit increased to 1,600",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/maxparticles.png"
+                        },
+                        {
+                            "text": "All Power Spots will host Gigantamax Battles",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/powerspot.png"
+                        },
+                        {
+                            "text": "Power Spots will refresh more frequently",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/powerspot.png"
+                        },
+                        {
+                            "text": "Additional Power Spots will be active",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/powerspot.png"
+                        },
+                        {
+                            "text": "8× Max Particles from Power Spots",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/maxparticle.png"
+                        },
+                        {
+                            "text": "Up to three Special Trades for the day",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/trade.png"
+                        },
+                        {
+                            "text": "From October 2 at 5:00 p.m. to October 3 at 8:00 p.m. PDT (GMT −7), the daily Remote Raid limit will increase from 10 to 20",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/remoteraidpass.png"
+                        }
+                    ],
+                    "notes": []
+                },
+                {
+                    "title": null,
+                    "description": "The following bonuses will be active on October 3, 2026, from 12:00 a.m. to 5:00 p.m. local time.",
+                    "startTime": "12:00 a.m.",
+                    "endTime": "5:00 p.m.",
+                    "items": [
+                        {
+                            "text": "2× Max Particles from exploring*",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/maxparticle.png"
+                        },
+                        {
+                            "text": "1/4 Adventuring distance to receive Max Particles**",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/maxparticle.png"
+                        }
+                    ],
+                    "notes": [
+                        "*Trainers can collect Max Particles via the Nearby menu each day by exploring. Adventure Sync can help make sure your distance counts! Keep an eye on the Nearby menu for the icon that shows when Max Particles are ready to collect.",
+                        "**For these bonuses to apply, Trainers must first collect all Max Particles available in the Nearby menu."
+                    ]
+                },
+                {
+                    "title": "Event Ticket",
+                    "description": "For US$4.99 (or the equivalent pricing tier in your local currency), you’ll be able to access event-exclusive Timed Research.\nTimed Research rewards include the following.\nYou’ll also receive the following bonus.",
+                    "startTime": "2:00 p.m.",
+                    "endTime": "5:00 p.m.",
+                    "items": [
+                        {
+                            "text": "2× XP from Max Battles",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/xp.png"
+                        }
+                    ],
+                    "notes": [
+                        "This Timed Research will be effective on Saturday, October 3, 2026, from 2:00 p.m. to 5:00 p.m. local time.",
+                        "Trainers will be able to purchase and gift tickets to any of their Pokémon GO friends that they have achieved a Friendship level of Great Friends or higher with. Please note that purchases—including those made for other Trainers—are non-refundable (subject to applicable law and the exceptions set forth in the Terms of Service). Tickets cannot be purchased with PokéCoins.",
+                        "Please note that this ticket will only be available in the in-game shop until Saturday, October 3, 2026, at 5:00 p.m. local time."
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "eventID": "harvest-festival-2026",
+        "name": "Harvest Festival 2026: Applin Picking",
+        "eventType": "event",
+        "eventTypes": [
+            "event"
+        ],
+        "heading": "Event",
+        "link": "https://leekduck.com/events/harvest-festival-2026/",
+        "image": "https://cdn.leekduck.com/assets/img/events/article-images/2026/2026-09-29-harvest-festival-2026/harvest-festival-2026.jpg",
+        "start": "2026-09-29T10:00:00.000",
+        "end": "2026-10-05T20:00:00.000",
+        "extraData": {
+            "raidSchedule": [],
+            "raidbattles": {
+                "bosses": [],
+                "shinies": []
+            },
+            "spotlightSchedule": [],
+            "generic": {
+                "hasSpawns": true,
+                "hasFieldResearchTasks": false
+            },
+            "bonuses": [
+                {
+                    "title": null,
+                    "description": null,
+                    "startTime": null,
+                    "endTime": null,
+                    "items": [
+                        {
+                            "text": "Increased chance to encounter Shiny Smoliv",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/none.png"
+                        }
+                    ],
+                    "notes": []
+                },
+                {
+                    "title": "Tier 1 Bonus – Starting at Rank 1",
+                    "description": "Unlock the following bonuses by reaching Major Milestones on the event GO Pass.",
+                    "startTime": null,
+                    "endTime": null,
+                    "items": [
+                        {
+                            "text": "Applin will have an increased chance of holding Tart Apples, Sweet Apples, or Syrupy Apples when caught",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/none.png"
+                        }
+                    ],
+                    "notes": []
+                },
+                {
+                    "title": "Tier 2 Bonus – Starting at Rank 10",
+                    "description": null,
+                    "startTime": null,
+                    "endTime": null,
+                    "items": [
+                        {
+                            "text": "Mossy Lure Modules activated during the event will last for one hour",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/mossylure.png"
+                        }
+                    ],
+                    "notes": []
+                },
+                {
+                    "title": "Tier 3 Bonus – Starting at Rank 20",
+                    "description": null,
+                    "startTime": null,
+                    "endTime": null,
+                    "items": [
+                        {
+                            "text": "More Stardust from defeating Team GO Rocket Grunts and Leaders",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/stardust.png"
+                        }
+                    ],
+                    "notes": [
+                        "Additional bonus tasks for this GO Pass will be available during the event."
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "eventID": "harvest-festival-taken-over-2026",
+        "name": "Harvest Festival: Taken Over",
+        "eventType": "event",
+        "eventTypes": [
+            "event",
+            "team-go-rocket"
+        ],
+        "heading": "Event",
+        "link": "https://leekduck.com/events/harvest-festival-taken-over-2026/",
+        "image": "https://cdn.leekduck.com/assets/img/events/article-images/2026/2026-10-02-harvest-festival-taken-over-2026/harvest-festival-taken-over-2026.jpg",
+        "start": "2026-10-02T00:00:00.000",
+        "end": "2026-10-05T20:00:00.000",
+        "extraData": {
+            "raidSchedule": [],
+            "raidbattles": {
+                "bosses": [],
+                "shinies": []
+            },
+            "spotlightSchedule": [],
+            "generic": {
+                "hasSpawns": true,
+                "hasFieldResearchTasks": true
+            },
+            "bonuses": [
+                {
+                    "title": null,
+                    "description": null,
+                    "startTime": null,
+                    "endTime": null,
+                    "items": [
+                        {
+                            "text": "Increased chance to encounter Shiny Slugma",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/none.png"
+                        },
+                        {
+                            "text": "More Team GO Rocket appearances at PokéStops and balloons appearing every 2 hours",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/rocketlogo.png"
+                        },
+                        {
+                            "text": "Use a Charged TM to remove Frustration from Shadow Pokémon",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/chargetm.png"
+                        },
+                        {
+                            "text": "Wider Attack, Defense, and HP variance for Pokémon caught in one-star and three-star Shadow Raids during the event",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/none.png"
+                        }
+                    ],
+                    "notes": []
+                }
+            ]
+        }
+    },
+    {
+        "eventID": "max-mondays-2026-10-05",
+        "name": "Dynamax Sizzlipede during Max Monday",
+        "eventType": "max-mondays",
+        "eventTypes": [
+            "max-mondays"
+        ],
+        "heading": "Max Mondays",
+        "link": "https://leekduck.com/events/max-mondays-2026-10-05/",
+        "image": "https://cdn.leekduck.com/assets/img/events/max-battles-kanto.jpg",
+        "start": "2026-10-05T06:00:00.000",
+        "end": "2026-10-05T21:00:00.000",
+        "extraData": {
+            "generic": {
+                "hasSpawns": false,
+                "hasFieldResearchTasks": false
+            },
+            "bonuses": []
+        }
+    },
+    {
+        "eventID": "go-pass-september-2026",
+        "name": "GO Pass: September",
+        "eventType": "go-pass",
+        "eventTypes": [
+            "go-pass"
+        ],
+        "heading": "GO Pass",
+        "link": "https://leekduck.com/events/go-pass-september-2026/",
+        "image": "https://cdn.leekduck.com/assets/img/events/article-images/2026/2026-09-08-go-pass-september-2026/go-pass-september-2026.jpg",
+        "start": "2026-09-08T10:00:00.000",
+        "end": "2026-10-06T10:00:00.000",
+        "extraData": {
+            "generic": {
+                "hasSpawns": false,
+                "hasFieldResearchTasks": false
+            },
+            "bonuses": []
+        }
+    },
+    {
+        "eventID": "gbl-twilight-trails_master-league_mega-color-cup-great-league-edition",
+        "name": "Master League and Mega Color Cup: Great League Edition | Twilight Trails",
+        "eventType": "go-battle-league",
+        "eventTypes": [
+            "go-battle-league"
+        ],
+        "heading": "GO Battle League",
+        "link": "https://leekduck.com/events/gbl-twilight-trails_master-league_mega-color-cup-great-league-edition/",
+        "image": "https://cdn.leekduck.com/assets/img/events/gobattleleague-master-key.jpg",
+        "start": "2026-09-29T20:00:00.000Z",
+        "end": "2026-10-06T20:00:00.000Z",
+        "extraData": {
+            "generic": {
+                "hasSpawns": false,
+                "hasFieldResearchTasks": false
+            },
+            "bonuses": []
+        }
+    },
+    {
+        "eventID": "shadow-thundurus-incarnate-forme-in-shadow-raids-september-2026",
+        "name": "Shadow Thundurus (Incarnate Forme) in Shadow Raids",
+        "eventType": "raid-battles",
+        "eventTypes": [
+            "raid-battles"
+        ],
+        "heading": "Raid Battles",
+        "link": "https://leekduck.com/events/shadow-thundurus-incarnate-forme-in-shadow-raids-september-2026/",
+        "image": "https://cdn.leekduck.com/assets/img/events/events-default-img.jpg",
+        "start": "2026-09-09T06:00:00.000",
+        "end": "2026-10-06T22:00:00.000",
+        "extraData": {
+            "raidbattles": {
+                "bosses": [
+                    {
+                        "name": "Thundurus (Incarnate)",
+                        "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_642_11.png",
+                        "canBeShiny": true
+                    }
+                ],
+                "shinies": [
+                    {
+                        "name": "Thundurus (Incarnate)",
+                        "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_642_11_shiny.png"
+                    }
+                ]
+            },
+            "generic": {
+                "hasSpawns": false,
+                "hasFieldResearchTasks": false
+            },
+            "bonuses": []
+        }
+    },
+    {
+        "eventID": "mega-victreebel-in-mega-raids-september-2026",
+        "name": "Mega Victreebel in Mega Raids",
+        "eventType": "raid-battles",
+        "eventTypes": [
+            "raid-battles"
+        ],
+        "heading": "Raid Battles",
+        "link": "https://leekduck.com/events/mega-victreebel-in-mega-raids-september-2026/",
+        "image": "https://cdn.leekduck.com/assets/img/events/mega-default.jpg",
+        "start": "2026-09-30T06:00:00.000",
+        "end": "2026-10-06T22:00:00.000",
+        "extraData": {
+            "raidbattles": {
+                "bosses": [
+                    {
+                        "name": "Mega Victreebel",
+                        "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm71.fMEGA.icon.png",
+                        "canBeShiny": true
+                    }
+                ],
+                "shinies": [
+                    {
+                        "name": "Victreebel",
+                        "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_071_00_shiny.png"
+                    },
+                    {
+                        "name": "Mega Victreebel",
+                        "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm71.fMEGA.s.icon.png"
+                    }
+                ]
+            },
+            "generic": {
+                "hasSpawns": false,
+                "hasFieldResearchTasks": false
+            },
+            "bonuses": []
+        }
+    },
+    {
+        "eventID": "xerneas-in-5-star-raid-battles-september-2026",
+        "name": "Xerneas in 5-star Raid Battles",
+        "eventType": "raid-battles",
+        "eventTypes": [
+            "raid-battles"
+        ],
+        "heading": "Raid Battles",
+        "link": "https://leekduck.com/events/xerneas-in-5-star-raid-battles-september-2026/",
+        "image": "https://cdn.leekduck.com/assets/img/events/xerneas-woods.jpg",
+        "start": "2026-09-30T06:00:00.000",
+        "end": "2026-10-06T22:00:00.000",
+        "extraData": {
+            "raidbattles": {
+                "bosses": [
+                    {
+                        "name": "Xerneas",
+                        "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_716_00.png",
+                        "canBeShiny": true
+                    }
+                ],
+                "shinies": [
+                    {
+                        "name": "Xerneas",
+                        "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_716_00_shiny.png"
+                    }
+                ]
+            },
+            "generic": {
+                "hasSpawns": false,
+                "hasFieldResearchTasks": false
+            },
+            "bonuses": []
+        }
+    },
+    {
+        "eventID": "raidhour20261007",
+        "name": "Yveltal Raid Hour",
+        "eventType": "raid-hour",
+        "eventTypes": [
+            "raid-hour"
+        ],
+        "heading": "Raid Hour",
+        "link": "https://leekduck.com/events/raidhour20261007/",
+        "image": "https://cdn.leekduck.com/assets/img/events/raidhour.jpg",
+        "start": "2026-10-07T18:00:00.000",
+        "end": "2026-10-07T19:00:00.000",
+        "extraData": {
+            "raidSchedule": [],
+            "raidbattles": {
+                "bosses": [],
+                "shinies": []
+            },
+            "spotlightSchedule": [],
+            "generic": {
+                "hasSpawns": false,
+                "hasFieldResearchTasks": false
+            },
+            "bonuses": []
+        }
+    },
+    {
+        "eventID": "pokemonspotlighthour2026-10-08",
+        "name": "Elgyem Spotlight Hour",
+        "eventType": "pokemon-spotlight-hour",
+        "eventTypes": [
+            "pokemon-spotlight-hour"
+        ],
+        "heading": "Pokémon Spotlight Hour",
+        "link": "https://leekduck.com/events/pokemonspotlighthour2026-10-08/",
+        "image": "https://cdn.leekduck.com/assets/img/events/pokemonspotlighthour.jpg",
+        "start": "2026-10-08T18:00:00.000",
+        "end": "2026-10-08T19:00:00.000",
+        "extraData": {
+            "spotlight": {
+                "name": "Elgyem",
+                "canBeShiny": true,
+                "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_605_00.png",
+                "bonus": "2× Catch Candy",
+                "list": [
+                    {
+                        "name": "Elgyem",
+                        "canBeShiny": true,
+                        "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_605_00.png"
+                    }
+                ]
+            },
+            "generic": {
+                "hasSpawns": true,
+                "hasFieldResearchTasks": false
+            },
+            "bonuses": [
+                {
+                    "title": null,
+                    "description": null,
+                    "startTime": null,
+                    "endTime": null,
+                    "items": [
+                        {
+                            "text": "2× Catch Candy",
+                            "image": ""
+                        }
+                    ],
+                    "notes": []
+                }
+            ]
+        }
+    },
+    {
+        "eventID": "october-communityday2026",
+        "name": "Zorua Community Day",
+        "eventType": "community-day",
+        "eventTypes": [
+            "community-day"
+        ],
+        "heading": "Community Day",
+        "link": "https://leekduck.com/events/october-communityday2026/",
+        "image": "https://cdn.leekduck.com/assets/img/events/article-images/2026/2026-10-10-october-communityday2026/zorua-october-cd-2026.png",
+        "start": "2026-10-10T14:00:00.000",
+        "end": "2026-10-10T17:00:00.000",
+        "extraData": {
+            "communityday": {
+                "spawns": [
+                    {
+                        "name": "Zorua",
+                        "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm570.icon.png"
+                    }
+                ],
+                "bonuses": [
+                    {
+                        "text": "Increased Spawns",
+                        "image": "https://cdn.leekduck.com/assets/img/events/bonuses/wildgrass.png"
+                    },
+                    {
+                        "text": "3x Catch XP",
+                        "image": "https://cdn.leekduck.com/assets/img/events/bonuses/xp.png"
+                    },
+                    {
+                        "text": "3-hour Incense",
+                        "image": "https://cdn.leekduck.com/assets/img/events/bonuses/incense.png"
+                    },
+                    {
+                        "text": "1-hour Lures*",
+                        "image": "https://cdn.leekduck.com/assets/img/events/bonuses/lure.png"
+                    },
+                    {
+                        "text": "2x Catch Candy",
+                        "image": "https://cdn.leekduck.com/assets/img/events/bonuses/candy.png"
+                    },
+                    {
+                        "text": "2x Chance for Trainers level 31 and up to receive Candy XL from catching Pokémon",
+                        "image": "https://cdn.leekduck.com/assets/img/events/bonuses/candyxl.png"
+                    },
+                    {
+                        "text": "One additional Special Trade can be made for a maximum of two for the day*",
+                        "image": "https://cdn.leekduck.com/assets/img/events/bonuses/trade.png"
+                    },
+                    {
+                        "text": "Trades made will require 50% less Stardust*",
+                        "image": "https://cdn.leekduck.com/assets/img/events/bonuses/stardust2x.png"
+                    }
+                ],
+                "bonusDisclaimers": [
+                    "* While most bonuses are only active during the three hours of the event (2:00 p.m. to 5:00 p.m. local time), these bonuses will be active from 2:00 p.m. to 9:00 p.m. local time.",
+                    "The three-hour Incense bonus excludes Daily Adventure Incense and the one-hour Lure bonus excludes Golden Lure Modules."
+                ],
+                "shinies": [
+                    {
+                        "name": "Zorua",
+                        "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm570.s.icon.png"
+                    },
+                    {
+                        "name": "Zoroark",
+                        "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm571.s.icon.png"
+                    }
+                ],
+                "specialresearch": [
+                    {
+                        "name": "Zorua Community Day (1/3)",
+                        "step": 1,
+                        "tasks": [
+                            {
+                                "text": "Catch 3 Pokemon",
+                                "reward": {
+                                    "text": "Zorua",
+                                    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm570.icon.png"
+                                }
+                            },
+                            {
+                                "text": "Catch 5 Pokemon",
+                                "reward": {
+                                    "text": "Zorua",
+                                    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm570.icon.png"
+                                }
+                            },
+                            {
+                                "text": "Catch 10 Pokemon",
+                                "reward": {
+                                    "text": "Zorua",
+                                    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm570.icon.png"
+                                }
+                            },
+                            {
+                                "text": "Make 7 Nice Throws",
+                                "reward": {
+                                    "text": "Ultra Ball ×20",
+                                    "image": "https://cdn.leekduck.com/assets/img/items/Ultra%20Ball.png"
+                                }
+                            },
+                            {
+                                "text": "Make 5 Great Throws",
+                                "reward": {
+                                    "text": "Lucky Egg ×1",
+                                    "image": "https://cdn.leekduck.com/assets/img/items/Lucky%20Egg.png"
+                                }
+                            },
+                            {
+                                "text": "Make 5 Curveball Throws",
+                                "reward": {
+                                    "text": "Incense ×1",
+                                    "image": "https://cdn.leekduck.com/assets/img/items/Incense.png"
+                                }
+                            }
+                        ],
+                        "rewards": [
+                            {
+                                "text": "Zorua",
+                                "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm570.icon.png"
+                            },
+                            {
+                                "text": "×50",
+                                "image": "https://cdn.leekduck.com/assets/img/candy/regular/570.png"
+                            },
+                            {
+                                "text": "×5",
+                                "image": "https://cdn.leekduck.com/assets/img/candy/xl/570.png"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Zorua Community Day (2/3)",
+                        "step": 2,
+                        "tasks": [
+                            {
+                                "text": "Catch 3 Pokemon",
+                                "reward": {
+                                    "text": "Zorua",
+                                    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm570.icon.png"
+                                }
+                            },
+                            {
+                                "text": "Catch 5 Pokemon",
+                                "reward": {
+                                    "text": "Zorua",
+                                    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm570.icon.png"
+                                }
+                            },
+                            {
+                                "text": "Catch 10 Pokemon",
+                                "reward": {
+                                    "text": "Zoroark",
+                                    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm571.icon.png"
+                                }
+                            },
+                            {
+                                "text": "Use 3 Berries to help catch Pokemon",
+                                "reward": {
+                                    "text": "Ultra Ball ×20",
+                                    "image": "https://cdn.leekduck.com/assets/img/items/Ultra%20Ball.png"
+                                }
+                            },
+                            {
+                                "text": "Use 5 Berries to help catch Pokemon",
+                                "reward": {
+                                    "text": "Charged TM ×1",
+                                    "image": "https://cdn.leekduck.com/assets/img/items/Charged%20TM.png"
+                                }
+                            },
+                            {
+                                "text": "Use 7 Berries to help catch Pokemon",
+                                "reward": {
+                                    "text": "Silver Pinap Berry ×3",
+                                    "image": "https://cdn.leekduck.com/assets/img/items/Silver%20Pinap%20Berry.png"
+                                }
+                            }
+                        ],
+                        "rewards": [
+                            {
+                                "text": "Zorua",
+                                "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm570.icon.png"
+                            },
+                            {
+                                "text": "×7500",
+                                "image": "https://cdn.leekduck.com/assets/img/items/Stardust.png"
+                            },
+                            {
+                                "text": "×3",
+                                "image": "https://cdn.leekduck.com/assets/img/items/Rare%20Candy.png"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Zorua Community Day (3/3)",
+                        "step": 3,
+                        "tasks": [
+                            {
+                                "text": "Catch 3 Pokemon",
+                                "reward": {
+                                    "text": "Zorua",
+                                    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm570.icon.png"
+                                }
+                            },
+                            {
+                                "text": "Catch 5 Pokemon",
+                                "reward": {
+                                    "text": "Zorua",
+                                    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm570.icon.png"
+                                }
+                            },
+                            {
+                                "text": "Catch 10 Pokemon",
+                                "reward": {
+                                    "text": "Zoroark",
+                                    "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm571.icon.png"
+                                }
+                            },
+                            {
+                                "text": "Spin 3 PokeStops or Gyms",
+                                "reward": {
+                                    "text": "Ultra Ball ×20",
+                                    "image": "https://cdn.leekduck.com/assets/img/items/Ultra%20Ball.png"
+                                }
+                            },
+                            {
+                                "text": "Spin 5 PokeStops or Gyms",
+                                "reward": {
+                                    "text": "Rocket Radar ×1",
+                                    "image": "https://cdn.leekduck.com/assets/img/items/Rocket%20Radar.png"
+                                }
+                            },
+                            {
+                                "text": "Explore 1 km",
+                                "reward": {
+                                    "text": "Premium Battle Pass ×1",
+                                    "image": "https://cdn.leekduck.com/assets/img/items/Premium%20Battle%20Pass.png"
+                                }
+                            }
+                        ],
+                        "rewards": [
+                            {
+                                "text": "Zorua",
+                                "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm570.icon.png"
+                            },
+                            {
+                                "text": "10000 XP",
+                                "image": "https://cdn.leekduck.com/assets/img/icons/xp.png"
+                            },
+                            {
+                                "text": "×1",
+                                "image": "https://cdn.leekduck.com/assets/img/items/Rare%20Candy%20XL.png"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "generic": {
+                "hasSpawns": true,
+                "hasFieldResearchTasks": true
+            },
+            "bonuses": [
+                {
+                    "title": null,
+                    "description": null,
+                    "startTime": null,
+                    "endTime": null,
+                    "items": [
+                        {
+                            "text": "Increased Spawns",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/wildgrass.png"
+                        },
+                        {
+                            "text": "3x Catch XP",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/xp.png"
+                        },
+                        {
+                            "text": "3-hour Incense",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/incense.png"
+                        },
+                        {
+                            "text": "1-hour Lures*",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/lure.png"
+                        },
+                        {
+                            "text": "2x Catch Candy",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/candy.png"
+                        },
+                        {
+                            "text": "2x Chance for Trainers level 31 and up to receive Candy XL from catching Pokémon",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/candyxl.png"
+                        },
+                        {
+                            "text": "One additional Special Trade can be made for a maximum of two for the day*",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/trade.png"
+                        },
+                        {
+                            "text": "Trades made will require 50% less Stardust*",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/stardust2x.png"
+                        }
+                    ],
+                    "notes": [
+                        "* While most bonuses are only active during the three hours of the event (2:00 p.m. to 5:00 p.m. local time), these bonuses will be active from 2:00 p.m. to 9:00 p.m. local time.",
+                        "The three-hour Incense bonus excludes Daily Adventure Incense and the one-hour Lure bonus excludes Golden Lure Modules."
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "eventID": "world-space-week-2026",
+        "name": "World Space Week 2026",
+        "eventType": "event",
+        "eventTypes": [
+            "event"
+        ],
+        "heading": "Event",
+        "link": "https://leekduck.com/events/world-space-week-2026/",
+        "image": "https://cdn.leekduck.com/assets/img/events/article-images/2026/2026-10-04-world-space-week-2026/world-space-week-2026.jpg",
+        "start": "2026-10-04T00:00:00.000",
+        "end": "2026-10-10T23:59:00.000",
+        "extraData": {
+            "raidSchedule": [],
+            "raidbattles": {
+                "bosses": [],
+                "shinies": []
+            },
+            "spotlightSchedule": [],
+            "generic": {
+                "hasSpawns": false,
+                "hasFieldResearchTasks": false
+            },
+            "bonuses": []
+        }
+    },
+    {
+        "eventID": "max-mondays-2026-10-12",
+        "name": "Dynamax Rookidee during Max Monday",
+        "eventType": "max-mondays",
+        "eventTypes": [
+            "max-mondays"
+        ],
+        "heading": "Max Mondays",
+        "link": "https://leekduck.com/events/max-mondays-2026-10-12/",
+        "image": "https://cdn.leekduck.com/assets/img/events/max-battles-kanto.jpg",
+        "start": "2026-10-12T06:00:00.000",
+        "end": "2026-10-12T21:00:00.000",
+        "extraData": {
+            "generic": {
+                "hasSpawns": false,
+                "hasFieldResearchTasks": false
+            },
+            "bonuses": []
+        }
+    },
+    {
+        "eventID": "gbl-twilight-trails_great-league-mega-edition_ultra-league-mega-edition_master-league-mega-edition-split-2",
+        "name": "Great League: Mega Edition, Ultra League: Mega Edition, and Master League: Mega Edition | Twilight Trails",
+        "eventType": "go-battle-league",
+        "eventTypes": [
+            "go-battle-league"
+        ],
+        "heading": "GO Battle League",
+        "link": "https://leekduck.com/events/gbl-twilight-trails_great-league-mega-edition_ultra-league-mega-edition_master-league-mega-edition-split-2/",
+        "image": "https://cdn.leekduck.com/assets/img/events/go-battle-league-season-28-twilight-trails.png",
+        "start": "2026-10-06T20:00:00.000Z",
+        "end": "2026-10-13T20:00:00.000Z",
+        "extraData": {
+            "generic": {
+                "hasSpawns": false,
+                "hasFieldResearchTasks": false
+            },
+            "bonuses": []
+        }
+    },
+    {
+        "eventID": "mega-blastoise-in-mega-raids-october-2026",
+        "name": "Mega Blastoise in Mega Raids",
+        "eventType": "raid-battles",
+        "eventTypes": [
+            "raid-battles"
+        ],
+        "heading": "Raid Battles",
+        "link": "https://leekduck.com/events/mega-blastoise-in-mega-raids-october-2026/",
+        "image": "https://cdn.leekduck.com/assets/img/events/mega-default.jpg",
+        "start": "2026-10-07T06:00:00.000",
+        "end": "2026-10-13T22:00:00.000",
+        "extraData": {
+            "raidbattles": {
+                "bosses": [
+                    {
+                        "name": "Mega Blastoise",
+                        "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_009_51.png",
+                        "canBeShiny": true
+                    }
+                ],
+                "shinies": [
+                    {
+                        "name": "Blastoise",
+                        "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_009_00_shiny.png"
+                    },
+                    {
+                        "name": "Mega Blastoise",
+                        "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_009_51_shiny.png"
+                    }
+                ]
+            },
+            "generic": {
+                "hasSpawns": false,
+                "hasFieldResearchTasks": false
+            },
+            "bonuses": []
+        }
+    },
+    {
+        "eventID": "yveltal-in-5-star-raid-battles-october-2026",
+        "name": "Yveltal in 5-star Raid Battles",
+        "eventType": "raid-battles",
+        "eventTypes": [
+            "raid-battles"
+        ],
+        "heading": "Raid Battles",
+        "link": "https://leekduck.com/events/yveltal-in-5-star-raid-battles-october-2026/",
+        "image": "https://cdn.leekduck.com/assets/img/events/yveltal-2.jpg",
+        "start": "2026-10-07T06:00:00.000",
+        "end": "2026-10-13T22:00:00.000",
+        "extraData": {
+            "raidbattles": {
+                "bosses": [
+                    {
+                        "name": "Yveltal",
+                        "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_717_00.png",
+                        "canBeShiny": true
+                    }
+                ],
+                "shinies": [
+                    {
+                        "name": "Yveltal",
+                        "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_717_00_shiny.png"
+                    }
+                ]
+            },
+            "generic": {
+                "hasSpawns": false,
+                "hasFieldResearchTasks": false
+            },
+            "bonuses": []
+        }
+    },
+    {
+        "eventID": "raidhour20261014",
+        "name": "Dialga Raid Hour",
+        "eventType": "raid-hour",
+        "eventTypes": [
+            "raid-hour"
+        ],
+        "heading": "Raid Hour",
+        "link": "https://leekduck.com/events/raidhour20261014/",
+        "image": "https://cdn.leekduck.com/assets/img/events/raidhour.jpg",
+        "start": "2026-10-14T18:00:00.000",
+        "end": "2026-10-14T19:00:00.000",
+        "extraData": {
+            "raidSchedule": [],
+            "raidbattles": {
+                "bosses": [],
+                "shinies": []
+            },
+            "spotlightSchedule": [],
+            "generic": {
+                "hasSpawns": false,
+                "hasFieldResearchTasks": false
+            },
+            "bonuses": []
+        }
+    },
+    {
+        "eventID": "pokemonspotlighthour2026-10-15",
+        "name": "Stufful Spotlight Hour",
+        "eventType": "pokemon-spotlight-hour",
+        "eventTypes": [
+            "pokemon-spotlight-hour"
+        ],
+        "heading": "Pokémon Spotlight Hour",
+        "link": "https://leekduck.com/events/pokemonspotlighthour2026-10-15/",
+        "image": "https://cdn.leekduck.com/assets/img/events/pokemonspotlighthour.jpg",
+        "start": "2026-10-15T18:00:00.000",
+        "end": "2026-10-15T19:00:00.000",
+        "extraData": {
+            "spotlight": {
+                "name": "Stufful",
+                "canBeShiny": true,
+                "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm759.icon.png",
+                "bonus": "2× Transfer Candy",
+                "list": [
+                    {
+                        "name": "Stufful",
+                        "canBeShiny": true,
+                        "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm759.icon.png"
+                    }
+                ]
+            },
+            "generic": {
+                "hasSpawns": true,
+                "hasFieldResearchTasks": false
+            },
+            "bonuses": [
+                {
+                    "title": null,
+                    "description": null,
+                    "startTime": null,
+                    "endTime": null,
+                    "items": [
+                        {
+                            "text": "2× Transfer Candy",
+                            "image": ""
+                        }
+                    ],
+                    "notes": []
+                }
+            ]
+        }
+    },
+    {
+        "eventID": "sandile-hatch-day-2026",
+        "name": "Sandile Hatch Day",
+        "eventType": "event",
+        "eventTypes": [
+            "event"
+        ],
+        "heading": "Event",
+        "link": "https://leekduck.com/events/sandile-hatch-day-2026/",
+        "image": "https://cdn.leekduck.com/assets/img/events/article-images/2026/2026-10-17-sandile-hatch-day-2026/sandile-hatch-day-2026.jpg",
+        "start": "2026-10-17T11:00:00.000",
+        "end": "2026-10-17T17:00:00.000",
+        "extraData": {
+            "raidSchedule": [],
+            "raidbattles": {
+                "bosses": [],
+                "shinies": []
+            },
+            "spotlightSchedule": [],
+            "generic": {
+                "hasSpawns": false,
+                "hasFieldResearchTasks": false
+            },
+            "bonuses": [
+                {
+                    "title": null,
+                    "description": null,
+                    "startTime": null,
+                    "endTime": null,
+                    "items": [
+                        {
+                            "text": "2× Candy from hatching Eggs*",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/candy.png"
+                        },
+                        {
+                            "text": "1/2 Egg Hatch Distance*",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/eggdistance.png"
+                        },
+                        {
+                            "text": "Increased chance of hatching Shiny Sandile",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/none.png"
+                        },
+                        {
+                            "text": "Increased chance of receiving 2 km Eggs from spinning PokéStops",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/egg2km.png"
+                        }
+                    ],
+                    "notes": [
+                        "*These bonuses do not stack with bonuses from other Pokémon GO events or GO Passes."
+                    ]
+                },
+                {
+                    "title": "Ticketed Bonus",
+                    "description": "The optional paid Timed Research ticket grants the following bonus during the event.",
+                    "startTime": null,
+                    "endTime": null,
+                    "items": [
+                        {
+                            "text": "1/4 Egg Hatch Distance*",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/eggdistance.png"
+                        }
+                    ],
+                    "notes": [
+                        "*This bonus does not stack with bonuses from other Pokémon GO events or GO Passes."
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "eventID": "fall-marathon-buddy-trek-2026",
+        "name": "Fall Marathon: Buddy Trek",
+        "eventType": "event",
+        "eventTypes": [
+            "event"
+        ],
+        "heading": "Event",
+        "link": "https://leekduck.com/events/fall-marathon-buddy-trek-2026/",
+        "image": "https://cdn.leekduck.com/assets/img/events/article-images/2026/2026-10-13-fall-marathon-buddy-trek-2026/fall-marathon-buddy-trek-2026.jpg",
+        "start": "2026-10-13T10:00:00.000",
+        "end": "2026-10-19T20:00:00.000",
+        "extraData": {
+            "raidSchedule": [],
+            "raidbattles": {
+                "bosses": [],
+                "shinies": []
+            },
+            "spotlightSchedule": [],
+            "generic": {
+                "hasSpawns": true,
+                "hasFieldResearchTasks": false
+            },
+            "bonuses": []
+        }
+    },
+    {
+        "eventID": "max-mondays-2026-10-19",
+        "name": "Dynamax Sneasel during Max Monday",
+        "eventType": "max-mondays",
+        "eventTypes": [
+            "max-mondays"
+        ],
+        "heading": "Max Mondays",
+        "link": "https://leekduck.com/events/max-mondays-2026-10-19/",
+        "image": "https://cdn.leekduck.com/assets/img/events/max-battles-kanto.jpg",
+        "start": "2026-10-19T06:00:00.000",
+        "end": "2026-10-19T21:00:00.000",
+        "extraData": {
+            "generic": {
+                "hasSpawns": false,
+                "hasFieldResearchTasks": false
+            },
+            "bonuses": []
+        }
+    },
+    {
+        "eventID": "gbl-twilight-trails_great-league_ultra-league-mega-edition_little-cup",
+        "name": "Great League, Ultra League: Mega Edition, and Little Cup | Twilight Trails",
+        "eventType": "go-battle-league",
+        "eventTypes": [
+            "go-battle-league"
+        ],
+        "heading": "GO Battle League",
+        "link": "https://leekduck.com/events/gbl-twilight-trails_great-league_ultra-league-mega-edition_little-cup/",
+        "image": "https://cdn.leekduck.com/assets/img/events/gobattle-greatleague-key.jpg",
+        "start": "2026-10-13T20:00:00.000Z",
+        "end": "2026-10-20T20:00:00.000Z",
+        "extraData": {
+            "generic": {
+                "hasSpawns": false,
+                "hasFieldResearchTasks": false
+            },
+            "bonuses": []
+        }
+    },
+    {
+        "eventID": "pokemon-tcg-30th-celebration",
+        "name": "Pokémon TCG: 30th Celebration",
+        "eventType": "event",
+        "eventTypes": [
+            "event"
+        ],
+        "heading": "Event",
+        "link": "https://leekduck.com/events/pokemon-tcg-30th-celebration/",
+        "image": "https://cdn.leekduck.com/assets/img/events/article-images/2026/2026-09-27-pokemon-tcg-30th-celebration/pokemon-tcg-30th-celebration.jpg",
+        "start": "2026-09-27T10:00:00.000",
+        "end": "2026-10-20T22:00:00.000",
+        "extraData": {
+            "raidSchedule": [],
+            "raidbattles": {
+                "bosses": [
+                    {
+                        "name": "Mega Gengar",
+                        "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_094_51.png",
+                        "canBeShiny": true,
+                        "raidType": "Mega"
+                    }
+                ],
+                "shinies": []
+            },
+            "spotlightSchedule": [],
+            "generic": {
+                "hasSpawns": false,
+                "hasFieldResearchTasks": false
+            },
+            "bonuses": []
+        }
+    },
+    {
+        "eventID": "dialga-in-5-star-raid-battles-october-2026",
+        "name": "Dialga in 5-star Raid Battles",
+        "eventType": "raid-battles",
+        "eventTypes": [
+            "raid-battles"
+        ],
+        "heading": "Raid Battles",
+        "link": "https://leekduck.com/events/dialga-in-5-star-raid-battles-october-2026/",
+        "image": "https://cdn.leekduck.com/assets/img/events/dialgaraids.jpg",
+        "start": "2026-10-14T06:00:00.000",
+        "end": "2026-10-20T22:00:00.000",
+        "extraData": {
+            "raidbattles": {
+                "bosses": [
+                    {
+                        "name": "Dialga",
+                        "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_483_00.png",
+                        "canBeShiny": true
+                    }
+                ],
+                "shinies": [
+                    {
+                        "name": "Dialga",
+                        "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_483_00_shiny.png"
+                    }
+                ]
+            },
+            "generic": {
+                "hasSpawns": false,
+                "hasFieldResearchTasks": false
+            },
+            "bonuses": []
+        }
+    },
+    {
+        "eventID": "mega-dragonite-in-mega-raids-october-2026",
+        "name": "Mega Dragonite in Mega Raids",
+        "eventType": "raid-battles",
+        "eventTypes": [
+            "raid-battles"
+        ],
+        "heading": "Raid Battles",
+        "link": "https://leekduck.com/events/mega-dragonite-in-mega-raids-october-2026/",
+        "image": "https://cdn.leekduck.com/assets/img/events/mega-default.jpg",
+        "start": "2026-10-14T06:00:00.000",
+        "end": "2026-10-20T22:00:00.000",
+        "extraData": {
+            "raidbattles": {
+                "bosses": [
+                    {
+                        "name": "Mega Dragonite",
+                        "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm149.fMEGA.icon.png",
+                        "canBeShiny": true
+                    }
+                ],
+                "shinies": [
+                    {
+                        "name": "Dragonite",
+                        "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_149_00_shiny.png"
+                    },
+                    {
+                        "name": "Mega Dragonite",
+                        "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm149.fMEGA.s.icon.png"
+                    }
+                ]
+            },
+            "generic": {
+                "hasSpawns": false,
+                "hasFieldResearchTasks": false
+            },
+            "bonuses": []
+        }
+    },
+    {
+        "eventID": "raidhour20261021",
+        "name": "Palkia Raid Hour",
+        "eventType": "raid-hour",
+        "eventTypes": [
+            "raid-hour"
+        ],
+        "heading": "Raid Hour",
+        "link": "https://leekduck.com/events/raidhour20261021/",
+        "image": "https://cdn.leekduck.com/assets/img/events/raidhour.jpg",
+        "start": "2026-10-21T18:00:00.000",
+        "end": "2026-10-21T19:00:00.000",
+        "extraData": {
+            "raidSchedule": [],
+            "raidbattles": {
+                "bosses": [],
+                "shinies": []
+            },
+            "spotlightSchedule": [],
+            "generic": {
+                "hasSpawns": false,
+                "hasFieldResearchTasks": false
+            },
+            "bonuses": []
+        }
+    },
+    {
+        "eventID": "pokemonspotlighthour2026-10-22",
+        "name": "Morelull Spotlight Hour",
+        "eventType": "pokemon-spotlight-hour",
+        "eventTypes": [
+            "pokemon-spotlight-hour"
+        ],
+        "heading": "Pokémon Spotlight Hour",
+        "link": "https://leekduck.com/events/pokemonspotlighthour2026-10-22/",
+        "image": "https://cdn.leekduck.com/assets/img/events/pokemonspotlighthour.jpg",
+        "start": "2026-10-22T18:00:00.000",
+        "end": "2026-10-22T19:00:00.000",
+        "extraData": {
+            "spotlight": {
+                "name": "Morelull",
+                "canBeShiny": true,
+                "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm755.icon.png",
+                "bonus": "2× Catch Stardust",
+                "list": [
+                    {
+                        "name": "Morelull",
+                        "canBeShiny": true,
+                        "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm755.icon.png"
+                    }
+                ]
+            },
+            "generic": {
+                "hasSpawns": true,
+                "hasFieldResearchTasks": false
+            },
+            "bonuses": [
+                {
+                    "title": null,
+                    "description": null,
+                    "startTime": null,
+                    "endTime": null,
+                    "items": [
+                        {
+                            "text": "2× Catch Stardust",
+                            "image": ""
+                        }
+                    ],
+                    "notes": []
+                }
+            ]
+        }
+    },
+    {
+        "eventID": "dynamax-uxie-mesprit-azelf-max-battle-day-2026",
+        "name": "Dynamax Uxie, Mesprit, and Azelf Max Battle Day",
+        "eventType": "max-battles",
+        "eventTypes": [
+            "max-battles"
+        ],
+        "heading": "Max Battles",
+        "link": "https://leekduck.com/events/dynamax-uxie-mesprit-azelf-max-battle-day-2026/",
+        "image": "https://cdn.leekduck.com/assets/img/events/article-images/2026/2026-10-24-dynamax-uxie-mesprit-azelf-max-battle-day-2026/dynamax-uxie-mesprit-azelf-max-battle-day.jpg",
+        "start": "2026-10-24T14:00:00.000",
+        "end": "2026-10-24T17:00:00.000",
+        "extraData": {
+            "generic": {
+                "hasSpawns": false,
+                "hasFieldResearchTasks": false
+            },
+            "bonuses": [
+                {
+                    "title": null,
+                    "description": "The following bonuses will be active during the event.",
+                    "startTime": null,
+                    "endTime": null,
+                    "items": [
+                        {
+                            "text": "Max Particle collection limit increased to 1,600",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/maxparticles.png"
+                        },
+                        {
+                            "text": "All Power Spots will host Dynamax Battles",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/powerspot.png"
+                        },
+                        {
+                            "text": "Power Spots will refresh more frequently",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/powerspot.png"
+                        },
+                        {
+                            "text": "Additional Power Spots will be active",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/powerspot.png"
+                        },
+                        {
+                            "text": "8× Max Particles from Power Spots",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/maxparticle.png"
+                        },
+                        {
+                            "text": "Up to three Special Trades for the day",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/trade.png"
+                        },
+                        {
+                            "text": "From October 23 at 5:00 p.m. to October 24 at 8:00 p.m. PDT (GMT −7), the daily Remote Raid limit will increase from 10 to 20",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/remoteraidpass.png"
+                        }
+                    ],
+                    "notes": []
+                },
+                {
+                    "title": null,
+                    "description": "The following bonuses will be active on October 24, 2026, from 12:00 a.m. to 5:00 p.m. local time.",
+                    "startTime": "12:00 a.m.",
+                    "endTime": "5:00 p.m.",
+                    "items": [
+                        {
+                            "text": "2× Max Particles from exploring*",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/maxparticle.png"
+                        },
+                        {
+                            "text": "1/4 Adventuring distance to receive Max Particles**",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/maxparticle.png"
+                        }
+                    ],
+                    "notes": [
+                        "*Trainers can collect Max Particles via the Nearby menu each day by exploring. Adventure Sync can help make sure your distance counts! Keep an eye on the Nearby menu for the icon that shows when Max Particles are ready to collect.",
+                        "**For these bonuses to apply, Trainers must first collect all Max Particles available in the Nearby menu."
+                    ]
+                },
+                {
+                    "title": "Event Ticket",
+                    "description": "For US$4.99 (or the equivalent pricing tier in your local currency), you’ll be able to access event-exclusive Timed Research.\nTimed Research rewards include the following.\nYou’ll also receive the following bonus.",
+                    "startTime": "2:00 p.m.",
+                    "endTime": "5:00 p.m.",
+                    "items": [
+                        {
+                            "text": "2× XP from Max Battles",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/xp.png"
+                        }
+                    ],
+                    "notes": [
+                        "This Timed Research will be effective on Saturday, October 24, 2026, from 2:00 p.m. to 5:00 p.m. local time.",
+                        "Trainers will be able to purchase and gift tickets to any of their Pokémon GO friends that they have achieved a Friendship level of Great Friends or higher with. Please note that purchases—including those made for other Trainers—are non-refundable (subject to applicable law and the exceptions set forth in the Terms of Service). Tickets cannot be purchased with PokéCoins.",
+                        "Please note that this ticket will only be available in the in-game shop until Saturday, October 24, 2026, at 5:00 p.m. local time."
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "eventID": "pokemon-night-out-2026-twitch-drops",
+        "name": "Twitch Drops for Pokémon Night Out 2026",
+        "eventType": "twitch-drops",
+        "eventTypes": [
+            "twitch-drops",
+            "research"
+        ],
+        "heading": "Twitch Drops",
+        "link": "https://leekduck.com/events/pokemon-night-out-2026-twitch-drops/",
+        "image": "https://cdn.leekduck.com/assets/img/events/article-images/2026/2026-10-24-pokemon-night-out-2026-twitch-drops/pokemon-night-out.jpg",
+        "start": "2026-10-25T02:30:00.000Z",
+        "end": "2026-10-25T06:59:00.000Z",
+        "extraData": {
+            "generic": {
+                "hasSpawns": false,
+                "hasFieldResearchTasks": false
+            },
+            "bonuses": []
+        }
+    },
+    {
+        "eventID": "minior-showers-orionids-2026",
+        "name": "Minior Showers: Orionids 2026",
+        "eventType": "event",
+        "eventTypes": [
+            "event"
+        ],
+        "heading": "Event",
+        "link": "https://leekduck.com/events/minior-showers-orionids-2026/",
+        "image": "https://cdn.leekduck.com/assets/img/events/minior-showers-2026.jpg",
+        "start": "2026-10-19T17:00:00.000",
+        "end": "2026-10-24T23:59:00.000",
+        "extraData": {
+            "raidSchedule": [],
+            "raidbattles": {
+                "bosses": [],
+                "shinies": []
+            },
+            "spotlightSchedule": [],
+            "generic": {
+                "hasSpawns": true,
+                "hasFieldResearchTasks": false
+            },
+            "bonuses": [
+                {
+                    "title": null,
+                    "description": null,
+                    "startTime": null,
+                    "endTime": null,
+                    "items": [
+                        {
+                            "text": "Increased Stardust for catching Minior",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/stardust.png"
+                        },
+                        {
+                            "text": "Increased chance to encounter Minior from 5:00 p.m. to 9:00 p.m. local time each day",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/wildgrass.png"
+                        }
+                    ],
+                    "notes": []
+                }
+            ]
+        }
+    },
+    {
+        "eventID": "max-mondays-2026-10-26",
+        "name": "Dynamax Sableye during Max Monday",
+        "eventType": "max-mondays",
+        "eventTypes": [
+            "max-mondays"
+        ],
+        "heading": "Max Mondays",
+        "link": "https://leekduck.com/events/max-mondays-2026-10-26/",
+        "image": "https://cdn.leekduck.com/assets/img/events/max-battles-kanto.jpg",
+        "start": "2026-10-26T06:00:00.000",
+        "end": "2026-10-26T21:00:00.000",
+        "extraData": {
+            "generic": {
+                "hasSpawns": false,
+                "hasFieldResearchTasks": false
+            },
+            "bonuses": []
+        }
+    },
+    {
+        "eventID": "gbl-twilight-trails_ultra-league_master-league-mega-edition_fantasy-cup-great-league-edition",
+        "name": "Ultra League, Master League: Mega Edition, and Fantasy Cup: Great League Edition | Twilight Trails",
+        "eventType": "go-battle-league",
+        "eventTypes": [
+            "go-battle-league"
+        ],
+        "heading": "GO Battle League",
+        "link": "https://leekduck.com/events/gbl-twilight-trails_ultra-league_master-league-mega-edition_fantasy-cup-great-league-edition/",
+        "image": "https://cdn.leekduck.com/assets/img/events/go-battle-league-ultra-league-machamp-swampert.jpg",
+        "start": "2026-10-20T20:00:00.000Z",
+        "end": "2026-10-27T20:00:00.000Z",
+        "extraData": {
+            "generic": {
+                "hasSpawns": false,
+                "hasFieldResearchTasks": false
+            },
+            "bonuses": []
+        }
+    },
+    {
+        "eventID": "mega-charizard-x-mega-charizard-y-in-mega-raids-october-2026",
+        "name": "Mega Charizard X and Mega Charizard Y in Mega Raids",
+        "eventType": "raid-battles",
+        "eventTypes": [
+            "raid-battles"
+        ],
+        "heading": "Raid Battles",
+        "link": "https://leekduck.com/events/mega-charizard-x-mega-charizard-y-in-mega-raids-october-2026/",
+        "image": "https://cdn.leekduck.com/assets/img/events/mega-default.jpg",
+        "start": "2026-10-21T06:00:00.000",
+        "end": "2026-10-27T22:00:00.000",
+        "extraData": {
+            "raidbattles": {
+                "bosses": [
+                    {
+                        "name": "Mega Charizard X",
+                        "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_006_51.png",
+                        "canBeShiny": true
+                    },
+                    {
+                        "name": "Mega Charizard Y",
+                        "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_006_52.png",
+                        "canBeShiny": true
+                    }
+                ],
+                "shinies": [
+                    {
+                        "name": "Charizard",
+                        "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_006_00_shiny.png"
+                    },
+                    {
+                        "name": "Mega Charizard X",
+                        "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_006_51_shiny.png"
+                    },
+                    {
+                        "name": "Mega Charizard Y",
+                        "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_006_52_shiny.png"
+                    }
+                ]
+            },
+            "generic": {
+                "hasSpawns": false,
+                "hasFieldResearchTasks": false
+            },
+            "bonuses": []
+        }
+    },
+    {
+        "eventID": "palkia-in-5-star-raid-battles-october-2026",
+        "name": "Palkia in 5-star Raid Battles",
+        "eventType": "raid-battles",
+        "eventTypes": [
+            "raid-battles"
+        ],
+        "heading": "Raid Battles",
+        "link": "https://leekduck.com/events/palkia-in-5-star-raid-battles-october-2026/",
+        "image": "https://cdn.leekduck.com/assets/img/events/palkiaraid.jpg",
+        "start": "2026-10-21T06:00:00.000",
+        "end": "2026-10-27T22:00:00.000",
+        "extraData": {
+            "raidbattles": {
+                "bosses": [
+                    {
+                        "name": "Palkia",
+                        "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_484_00.png",
+                        "canBeShiny": true
+                    }
+                ],
+                "shinies": [
+                    {
+                        "name": "Palkia",
+                        "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_484_00_shiny.png"
+                    }
+                ]
+            },
+            "generic": {
+                "hasSpawns": false,
+                "hasFieldResearchTasks": false
+            },
+            "bonuses": []
+        }
+    },
+    {
+        "eventID": "raidhour20261028",
+        "name": "Giratina (Origin Forme) Raid Hour",
+        "eventType": "raid-hour",
+        "eventTypes": [
+            "raid-hour"
+        ],
+        "heading": "Raid Hour",
+        "link": "https://leekduck.com/events/raidhour20261028/",
+        "image": "https://cdn.leekduck.com/assets/img/events/raidhour.jpg",
+        "start": "2026-10-28T18:00:00.000",
+        "end": "2026-10-28T19:00:00.000",
+        "extraData": {
+            "raidSchedule": [],
+            "raidbattles": {
+                "bosses": [],
+                "shinies": []
+            },
+            "spotlightSchedule": [],
+            "generic": {
+                "hasSpawns": false,
+                "hasFieldResearchTasks": false
+            },
+            "bonuses": []
+        }
+    },
+    {
+        "eventID": "pokemonspotlighthour2026-10-29",
+        "name": "Gastly Spotlight Hour",
+        "eventType": "pokemon-spotlight-hour",
+        "eventTypes": [
+            "pokemon-spotlight-hour"
+        ],
+        "heading": "Pokémon Spotlight Hour",
+        "link": "https://leekduck.com/events/pokemonspotlighthour2026-10-29/",
+        "image": "https://cdn.leekduck.com/assets/img/events/pokemonspotlighthour.jpg",
+        "start": "2026-10-29T18:00:00.000",
+        "end": "2026-10-29T19:00:00.000",
+        "extraData": {
+            "spotlight": {
+                "name": "Gastly",
+                "canBeShiny": true,
+                "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_092_00.png",
+                "bonus": "2× Evolution XP",
+                "list": [
+                    {
+                        "name": "Gastly",
+                        "canBeShiny": true,
+                        "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_092_00.png"
+                    }
+                ]
+            },
+            "generic": {
+                "hasSpawns": true,
+                "hasFieldResearchTasks": false
+            },
+            "bonuses": [
+                {
+                    "title": null,
+                    "description": null,
+                    "startTime": null,
+                    "endTime": null,
+                    "items": [
+                        {
+                            "text": "2× Evolution XP",
+                            "image": ""
+                        }
+                    ],
+                    "notes": []
+                }
+            ]
+        }
+    },
+    {
+        "eventID": "super-mega-raid-day-october-2026",
+        "name": "Super Mega Raid Day",
+        "eventType": "raid-day",
+        "eventTypes": [
+            "raid-day"
+        ],
+        "heading": "Raid Day",
+        "link": "https://leekduck.com/events/super-mega-raid-day-october-2026/",
+        "image": "https://cdn.leekduck.com/assets/img/events/events-default-img.jpg",
+        "start": "2026-10-31T14:00:00.000",
+        "end": "2026-10-31T17:00:00.000",
+        "extraData": {
+            "raidSchedule": [],
+            "raidbattles": {
+                "bosses": [],
+                "shinies": []
+            },
+            "spotlightSchedule": [],
+            "generic": {
+                "hasSpawns": false,
+                "hasFieldResearchTasks": false
+            },
+            "bonuses": []
+        }
+    },
+    {
+        "eventID": "halloween-2026-part-1",
+        "name": "Halloween 2026 Part I",
+        "eventType": "event",
+        "eventTypes": [
+            "event"
+        ],
+        "heading": "Event",
+        "link": "https://leekduck.com/events/halloween-2026-part-1/",
+        "image": "https://cdn.leekduck.com/assets/img/events/events-default-img.jpg",
+        "start": "2026-10-27T10:00:00.000",
+        "end": "2026-10-31T20:00:00.000",
+        "extraData": {
+            "raidSchedule": [],
+            "raidbattles": {
+                "bosses": [],
+                "shinies": []
+            },
+            "spotlightSchedule": [],
+            "generic": {
+                "hasSpawns": false,
+                "hasFieldResearchTasks": false
+            },
+            "bonuses": []
+        }
+    },
+    {
+        "eventID": "go-pass-october-2026",
+        "name": "GO Pass: October",
+        "eventType": "go-pass",
+        "eventTypes": [
+            "go-pass"
+        ],
+        "heading": "GO Pass",
+        "link": "https://leekduck.com/events/go-pass-october-2026/",
+        "image": "https://cdn.leekduck.com/assets/img/events/article-images/2026/2026-10-06-go-pass-october-2026/go-pass-october-2026.jpg",
+        "start": "2026-10-06T10:00:00.000",
+        "end": "2026-11-03T10:00:00.000",
+        "extraData": {
+            "generic": {
+                "hasSpawns": false,
+                "hasFieldResearchTasks": false
+            },
+            "bonuses": []
+        }
+    },
+    {
+        "eventID": "gbl-twilight-trails_master-league_mega-halloween-cup-great-league-edition",
+        "name": "Master League and Mega Halloween Cup: Great League Edition | Twilight Trails",
+        "eventType": "go-battle-league",
+        "eventTypes": [
+            "go-battle-league"
+        ],
+        "heading": "GO Battle League",
+        "link": "https://leekduck.com/events/gbl-twilight-trails_master-league_mega-halloween-cup-great-league-edition/",
+        "image": "https://cdn.leekduck.com/assets/img/events/gobattleleague-master-key.jpg",
+        "start": "2026-10-27T21:00:00.000Z",
+        "end": "2026-11-03T21:00:00.000Z",
+        "extraData": {
+            "generic": {
+                "hasSpawns": false,
+                "hasFieldResearchTasks": false
+            },
+            "bonuses": []
+        }
+    },
+    {
+        "eventID": "shadow-landorus-incarnate-forme-in-shadow-raids-october-2026",
+        "name": "Shadow Landorus (Incarnate Forme) in Shadow Raids",
+        "eventType": "raid-battles",
+        "eventTypes": [
+            "raid-battles"
+        ],
+        "heading": "Raid Battles",
+        "link": "https://leekduck.com/events/shadow-landorus-incarnate-forme-in-shadow-raids-october-2026/",
+        "image": "https://cdn.leekduck.com/assets/img/events/events-default-img.jpg",
+        "start": "2026-10-07T06:00:00.000",
+        "end": "2026-11-03T22:00:00.000",
+        "extraData": {
+            "raidbattles": {
+                "bosses": [
+                    {
+                        "name": "Landorus (Incarnate)",
+                        "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_645_11.png",
+                        "canBeShiny": true
+                    }
+                ],
+                "shinies": [
+                    {
+                        "name": "Landorus (Incarnate)",
+                        "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_645_11_shiny.png"
+                    }
+                ]
+            },
+            "generic": {
+                "hasSpawns": false,
+                "hasFieldResearchTasks": false
+            },
+            "bonuses": []
+        }
+    },
+    {
+        "eventID": "giratina-origin-forme-in-5-star-raid-battles-october-2026",
+        "name": "Giratina (Origin Forme) in 5-star Raid Battles",
+        "eventType": "raid-battles",
+        "eventTypes": [
+            "raid-battles"
+        ],
+        "heading": "Raid Battles",
+        "link": "https://leekduck.com/events/giratina-origin-forme-in-5-star-raid-battles-october-2026/",
+        "image": "https://cdn.leekduck.com/assets/img/events/giratinaoriginforme.jpg",
+        "start": "2026-10-28T06:00:00.000",
+        "end": "2026-11-03T22:00:00.000",
+        "extraData": {
+            "raidbattles": {
+                "bosses": [
+                    {
+                        "name": "Giratina (Origin)",
+                        "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_487_12.png",
+                        "canBeShiny": true
+                    }
+                ],
+                "shinies": [
+                    {
+                        "name": "Giratina (Origin)",
+                        "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_487_12_shiny.png"
+                    }
+                ]
+            },
+            "generic": {
+                "hasSpawns": false,
+                "hasFieldResearchTasks": false
+            },
+            "bonuses": []
+        }
+    },
+    {
+        "eventID": "mega-sableye-in-mega-raids-october-2026",
+        "name": "Mega Sableye in Mega Raids",
+        "eventType": "raid-battles",
+        "eventTypes": [
+            "raid-battles"
+        ],
+        "heading": "Raid Battles",
+        "link": "https://leekduck.com/events/mega-sableye-in-mega-raids-october-2026/",
+        "image": "https://cdn.leekduck.com/assets/img/events/mega-default.jpg",
+        "start": "2026-10-28T06:00:00.000",
+        "end": "2026-11-03T22:00:00.000",
+        "extraData": {
+            "raidbattles": {
+                "bosses": [
+                    {
+                        "name": "Mega Sableye",
+                        "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_302_51.png",
+                        "canBeShiny": true
+                    }
+                ],
+                "shinies": [
+                    {
+                        "name": "Sableye",
+                        "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_302_00_shiny.png"
+                    },
+                    {
+                        "name": "Mega Sableye",
+                        "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_302_51_shiny.png"
+                    }
+                ]
+            },
+            "generic": {
+                "hasSpawns": false,
+                "hasFieldResearchTasks": false
+            },
+            "bonuses": []
+        }
+    },
+    {
+        "eventID": "halloween-2026-part-2",
+        "name": "Halloween 2026 Part II",
+        "eventType": "event",
+        "eventTypes": [
+            "event"
+        ],
+        "heading": "Event",
+        "link": "https://leekduck.com/events/halloween-2026-part-2/",
+        "image": "https://cdn.leekduck.com/assets/img/events/events-default-img.jpg",
+        "start": "2026-11-01T10:00:00.000",
+        "end": "2026-11-05T20:00:00.000",
+        "extraData": {
+            "raidSchedule": [],
+            "raidbattles": {
+                "bosses": [],
+                "shinies": []
+            },
+            "spotlightSchedule": [],
+            "generic": {
+                "hasSpawns": false,
+                "hasFieldResearchTasks": false
+            },
+            "bonuses": []
+        }
+    },
+    {
+        "eventID": "pokemon-go-wild-area-2026-sendai-japan",
+        "name": "Pokémon GO Wild Area 2026: Sendai • Tohoku",
+        "eventType": "wild-area",
+        "eventTypes": [
+            "wild-area",
+            "location-specific",
+            "ticketed-event"
+        ],
+        "heading": "Wild Area",
+        "link": "https://leekduck.com/events/pokemon-go-wild-area-2026-sendai-japan/",
+        "image": "https://cdn.leekduck.com/assets/img/events/article-images/2026/2026-11-06-pokemon-go-wild-area-2026-sendai-japan/key-art.jpg",
+        "start": "2026-11-06T01:00:00.000Z",
+        "end": "2026-11-08T09:00:00.000Z",
+        "extraData": {
+            "raidSchedule": [],
+            "raidbattles": {
+                "bosses": [
+                    {
+                        "name": "Modern Jacket Machamp",
+                        "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_068_00.png",
+                        "canBeShiny": true,
+                        "raidType": "Tier 3"
+                    },
+                    {
+                        "name": "Dynamax Dialga",
+                        "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_483_00.png",
+                        "canBeShiny": true,
+                        "raidType": "Max Battle"
+                    },
+                    {
+                        "name": "Dynamax Palkia",
+                        "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_484_00.png",
+                        "canBeShiny": true,
+                        "raidType": "Max Battle"
+                    }
+                ],
+                "shinies": []
+            },
+            "spotlightSchedule": [],
+            "generic": {
+                "hasSpawns": true,
+                "hasFieldResearchTasks": false
+            },
+            "bonuses": [
+                {
+                    "title": "Ticket Holder Bonuses",
+                    "description": "The following bonuses apply from 10:00 a.m. to 6:00 p.m. local time on your ticketed event day.",
+                    "startTime": "10:00 a.m.",
+                    "endTime": "6:00 p.m.",
+                    "items": [
+                        {
+                            "text": "Increased chance to encounter Shiny Pokémon",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/none.png"
+                        },
+                        {
+                            "text": "1/2 Hatch Distance for Eggs placed in Incubators during the event",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/eggdistance.png"
+                        },
+                        {
+                            "text": "Up to 10 free Raid Passes per day from Gyms",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/freeraidpass.png"
+                        },
+                        {
+                            "text": "3/4 Max Particle cost for unlocking and powering up Max Moves",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/maxparticle.png"
+                        },
+                        {
+                            "text": "Daily Max Particle collection limit increased to 8,000",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/maxparticle.png"
+                        },
+                        {
+                            "text": "Increased Max Particles from Power Spots and exploration",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/maxparticle.png"
+                        },
+                        {
+                            "text": "Increased chance of 10 km Eggs from PokéStops and Gyms",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/egg10km.png"
+                        },
+                        {
+                            "text": "Lure Modules last for 2 hours",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/luresall.png"
+                        },
+                        {
+                            "text": "Incense, excluding Daily Adventure Incense, lasts for 2 hours",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/incense.png"
+                        },
+                        {
+                            "text": "2× Candy for catching Pokémon",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/candy.png"
+                        },
+                        {
+                            "text": "Party Play lasts for 8 hours",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/none.png"
+                        },
+                        {
+                            "text": "Chance to encounter mighty Pokémon on Routes",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/none.png"
+                        },
+                        {
+                            "text": "3 GO Snapshot surprise encounters per day",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/camera.png"
+                        },
+                        {
+                            "text": "Chance to get GO Safari Balls from PokéStops and Gyms",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/gosafariball.png"
+                        }
+                    ],
+                    "notes": []
+                },
+                {
+                    "title": "Trading Bonuses",
+                    "description": "Ticket holders receive these benefits from 12:00 a.m. to 11:59 p.m. local time on their ticketed event day.",
+                    "startTime": "12:00 a.m.",
+                    "endTime": "11:59 p.m.",
+                    "items": [
+                        {
+                            "text": "Up to 6 Special Trades per day",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/trade.png"
+                        },
+                        {
+                            "text": "1/2 Stardust cost for trades",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/stardust.png"
+                        }
+                    ],
+                    "notes": [
+                        "Shiny encounters are not guaranteed. To use the increased exploration Max Particle bonus, first collect all available Max Particles in the Nearby menu. Adventure Sync can help track exploration distance."
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "eventID": "pokemon-go-wild-area-2026-mexico-city",
+        "name": "Pokémon GO Wild Area 2026: Mexico City",
+        "eventType": "wild-area",
+        "eventTypes": [
+            "wild-area",
+            "location-specific",
+            "ticketed-event"
+        ],
+        "heading": "Wild Area",
+        "link": "https://leekduck.com/events/pokemon-go-wild-area-2026-mexico-city/",
+        "image": "https://cdn.leekduck.com/assets/img/events/article-images/2026/2026-11-06-pokemon-go-wild-area-2026-mexico-city/key-art.jpg",
+        "start": "2026-11-06T16:00:00.000Z",
+        "end": "2026-11-09T00:00:00.000Z",
+        "extraData": {
+            "raidSchedule": [],
+            "raidbattles": {
+                "bosses": [
+                    {
+                        "name": "Modern Jacket Machamp",
+                        "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_068_00.png",
+                        "canBeShiny": true,
+                        "raidType": "Tier 3"
+                    },
+                    {
+                        "name": "Dynamax Dialga",
+                        "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_483_00.png",
+                        "canBeShiny": true,
+                        "raidType": "Max Battle"
+                    },
+                    {
+                        "name": "Dynamax Palkia",
+                        "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_484_00.png",
+                        "canBeShiny": true,
+                        "raidType": "Max Battle"
+                    }
+                ],
+                "shinies": []
+            },
+            "spotlightSchedule": [],
+            "generic": {
+                "hasSpawns": true,
+                "hasFieldResearchTasks": false
+            },
+            "bonuses": [
+                {
+                    "title": "Ticket Holder Bonuses",
+                    "description": "The following bonuses apply from 10:00 a.m. to 6:00 p.m. local time on your ticketed event day.",
+                    "startTime": "10:00 a.m.",
+                    "endTime": "6:00 p.m.",
+                    "items": [
+                        {
+                            "text": "Increased chance to encounter Shiny Pokémon",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/none.png"
+                        },
+                        {
+                            "text": "1/2 Hatch Distance for Eggs placed in Incubators during the event",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/eggdistance.png"
+                        },
+                        {
+                            "text": "Up to 10 free Raid Passes per day from Gyms",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/freeraidpass.png"
+                        },
+                        {
+                            "text": "3/4 Max Particle cost for unlocking and powering up Max Moves",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/maxparticle.png"
+                        },
+                        {
+                            "text": "Daily Max Particle collection limit increased to 8,000",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/maxparticle.png"
+                        },
+                        {
+                            "text": "Increased Max Particles from Power Spots and exploration",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/maxparticle.png"
+                        },
+                        {
+                            "text": "Increased chance of 10 km Eggs from PokéStops and Gyms",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/egg10km.png"
+                        },
+                        {
+                            "text": "Lure Modules last for 2 hours",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/luresall.png"
+                        },
+                        {
+                            "text": "Incense, excluding Daily Adventure Incense, lasts for 2 hours",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/incense.png"
+                        },
+                        {
+                            "text": "2× Candy for catching Pokémon",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/candy.png"
+                        },
+                        {
+                            "text": "Party Play lasts for 8 hours",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/none.png"
+                        },
+                        {
+                            "text": "Chance to encounter mighty Pokémon on Routes",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/none.png"
+                        },
+                        {
+                            "text": "3 GO Snapshot surprise encounters per day",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/camera.png"
+                        },
+                        {
+                            "text": "Chance to get GO Safari Balls from PokéStops and Gyms",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/gosafariball.png"
+                        }
+                    ],
+                    "notes": []
+                },
+                {
+                    "title": "Trading Bonuses",
+                    "description": "Ticket holders receive these benefits from 12:00 a.m. to 11:59 p.m. local time on their ticketed event day.",
+                    "startTime": "12:00 a.m.",
+                    "endTime": "11:59 p.m.",
+                    "items": [
+                        {
+                            "text": "Up to 6 Special Trades per day",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/trade.png"
+                        },
+                        {
+                            "text": "1/2 Stardust cost for trades",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/stardust.png"
+                        }
+                    ],
+                    "notes": [
+                        "Shiny encounters are not guaranteed. To use the increased exploration Max Particle bonus, first collect all available Max Particles in the Nearby menu. Adventure Sync can help track exploration distance."
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "eventID": "gbl-twilight-trails_great-league-mega-edition_ultra-league-mega-edition_master-league-mega-edition-split-3",
+        "name": "Great League: Mega Edition, Ultra League: Mega Edition, and Master League: Mega Edition | Twilight Trails",
+        "eventType": "go-battle-league",
+        "eventTypes": [
+            "go-battle-league"
+        ],
+        "heading": "GO Battle League",
+        "link": "https://leekduck.com/events/gbl-twilight-trails_great-league-mega-edition_ultra-league-mega-edition_master-league-mega-edition-split-3/",
+        "image": "https://cdn.leekduck.com/assets/img/events/go-battle-league-season-28-twilight-trails.png",
+        "start": "2026-11-03T21:00:00.000Z",
+        "end": "2026-11-10T21:00:00.000Z",
+        "extraData": {
+            "generic": {
+                "hasSpawns": false,
+                "hasFieldResearchTasks": false
+            },
+            "bonuses": []
+        }
+    },
+    {
+        "eventID": "pokemon-go-wild-area-2026-global",
+        "name": "Pokémon GO Wild Area 2026: Global",
+        "eventType": "wild-area",
+        "eventTypes": [
+            "wild-area",
+            "ticketed-event"
+        ],
+        "heading": "Wild Area",
+        "link": "https://leekduck.com/events/pokemon-go-wild-area-2026-global/",
+        "image": "https://cdn.leekduck.com/assets/img/events/article-images/2026/2026-11-14-pokemon-go-wild-area-2026-global/key-art.jpg",
+        "start": "2026-11-14T10:00:00.000",
+        "end": "2026-11-15T18:00:00.000",
+        "extraData": {
+            "raidSchedule": [
+                {
+                    "date": "Saturday, November 14",
+                    "bosses": [
+                        {
+                            "name": "Dynamax Dialga",
+                            "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_483_00.png",
+                            "canBeShiny": true,
+                            "raidType": "Max Battle"
+                        }
+                    ],
+                    "raidHours": [],
+                    "bonuses": []
+                },
+                {
+                    "date": "Sunday, November 15",
+                    "bosses": [
+                        {
+                            "name": "Dynamax Palkia",
+                            "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_484_00.png",
+                            "canBeShiny": true,
+                            "raidType": "Max Battle"
+                        }
+                    ],
+                    "raidHours": [],
+                    "bonuses": []
+                }
+            ],
+            "raidbattles": {
+                "bosses": [
+                    {
+                        "name": "Modern Jacket Machamp",
+                        "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_068_00.png",
+                        "canBeShiny": true,
+                        "raidType": "Tier 3"
+                    },
+                    {
+                        "name": "Dynamax Dialga",
+                        "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_483_00.png",
+                        "canBeShiny": true,
+                        "raidType": "Max Battle"
+                    },
+                    {
+                        "name": "Dynamax Palkia",
+                        "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_484_00.png",
+                        "canBeShiny": true,
+                        "raidType": "Max Battle"
+                    }
+                ],
+                "shinies": []
+            },
+            "spotlightSchedule": [],
+            "generic": {
+                "hasSpawns": true,
+                "hasFieldResearchTasks": false
+            },
+            "bonuses": [
+                {
+                    "title": "Bonuses for All Trainers",
+                    "description": "The following bonuses apply from 10:00 a.m. to 6:00 p.m. local time on both event days.",
+                    "startTime": "10:00 a.m.",
+                    "endTime": "6:00 p.m.",
+                    "items": [
+                        {
+                            "text": "Chance to get GO Safari Balls from PokéStops and Gyms",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/gosafariball.png"
+                        },
+                        {
+                            "text": "Up to 3 free Raid Passes per day from Gyms",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/freeraidpass.png"
+                        },
+                        {
+                            "text": "Daily Max Particle collection limit increased to 1,600",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/maxparticle.png"
+                        },
+                        {
+                            "text": "3 GO Snapshot surprise encounters per day",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/camera.png"
+                        },
+                        {
+                            "text": "Party Play lasts for 8 hours",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/none.png"
+                        },
+                        {
+                            "text": "Chance to encounter mighty Pokémon on Routes",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/none.png"
+                        }
+                    ],
+                    "notes": [
+                        "Daily Discoveries will be paused from November 9 at 12:01 a.m. through November 15, 2026, at 11:59 p.m. local time."
+                    ]
+                },
+                {
+                    "title": "Additional Ticket Holder Bonuses",
+                    "description": "These benefits apply from 10:00 a.m. to 6:00 p.m. local time on both event days. The ticketed Raid Pass and Max Particle limits replace the free limits.",
+                    "startTime": "10:00 a.m.",
+                    "endTime": "6:00 p.m.",
+                    "items": [
+                        {
+                            "text": "Increased chance to encounter Shiny Pokémon",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/none.png"
+                        },
+                        {
+                            "text": "Daily Max Particle collection limit increased to 3,200",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/maxparticle.png"
+                        },
+                        {
+                            "text": "Increased Max Particles from Power Spots and exploration",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/maxparticle.png"
+                        },
+                        {
+                            "text": "Up to 6 free Raid Passes per day from Gyms",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/freeraidpass.png"
+                        },
+                        {
+                            "text": "2× Candy for catching Pokémon",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/candy.png"
+                        },
+                        {
+                            "text": "2× Incense duration",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/incense.png"
+                        },
+                        {
+                            "text": "Increased chance of 10 km Eggs from PokéStops and Gyms",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/egg10km.png"
+                        },
+                        {
+                            "text": "6 GO Snapshot surprise encounters per day",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/camera.png"
+                        },
+                        {
+                            "text": "Lure Modules last for 2 hours",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/luresall.png"
+                        }
+                    ],
+                    "notes": []
+                },
+                {
+                    "title": "Trading Bonuses",
+                    "description": "Ticket holders receive these benefits from 12:00 a.m. to 11:59 p.m. local time on both event days.",
+                    "startTime": "12:00 a.m.",
+                    "endTime": "11:59 p.m.",
+                    "items": [
+                        {
+                            "text": "Up to 6 Special Trades per day",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/trade.png"
+                        },
+                        {
+                            "text": "1/2 Stardust cost for trades",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/stardust.png"
+                        }
+                    ],
+                    "notes": [
+                        "Shiny encounters are not guaranteed. To use the increased exploration Max Particle bonus, first collect all available Max Particles in the Nearby menu. Adventure Sync can help track exploration distance."
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "eventID": "gbl-twilight-trails_great-league_ultra-league-mega-edition_2026-go-laic-cup",
+        "name": "Great League, Ultra League: Mega Edition, and 2026 GO LAIC Cup | Twilight Trails",
+        "eventType": "go-battle-league",
+        "eventTypes": [
+            "go-battle-league"
+        ],
+        "heading": "GO Battle League",
+        "link": "https://leekduck.com/events/gbl-twilight-trails_great-league_ultra-league-mega-edition_2026-go-laic-cup/",
+        "image": "https://cdn.leekduck.com/assets/img/events/gobattle-greatleague-key.jpg",
+        "start": "2026-11-10T21:00:00.000Z",
+        "end": "2026-11-17T21:00:00.000Z",
+        "extraData": {
+            "generic": {
+                "hasSpawns": false,
+                "hasFieldResearchTasks": false
+            },
+            "bonuses": []
+        }
+    },
+    {
+        "eventID": "minior-showers-leonids-2026",
+        "name": "Minior Showers: Leonids 2026",
+        "eventType": "event",
+        "eventTypes": [
+            "event"
+        ],
+        "heading": "Event",
+        "link": "https://leekduck.com/events/minior-showers-leonids-2026/",
+        "image": "https://cdn.leekduck.com/assets/img/events/minior-showers-2026.jpg",
+        "start": "2026-11-14T17:00:00.000",
+        "end": "2026-11-19T23:59:00.000",
+        "extraData": {
+            "raidSchedule": [],
+            "raidbattles": {
+                "bosses": [],
+                "shinies": []
+            },
+            "spotlightSchedule": [],
+            "generic": {
+                "hasSpawns": true,
+                "hasFieldResearchTasks": false
+            },
+            "bonuses": [
+                {
+                    "title": null,
+                    "description": null,
+                    "startTime": null,
+                    "endTime": null,
+                    "items": [
+                        {
+                            "text": "Increased Stardust for catching Minior",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/stardust.png"
+                        },
+                        {
+                            "text": "Increased chance to encounter Minior from 5:00 p.m. to 9:00 p.m. local time each day",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/wildgrass.png"
+                        }
+                    ],
+                    "notes": []
+                }
+            ]
+        }
+    },
+    {
+        "eventID": "november-communityday2026",
+        "name": "November Community Day",
+        "eventType": "community-day",
+        "eventTypes": [
+            "community-day"
+        ],
+        "heading": "Community Day",
+        "link": "https://leekduck.com/events/november-communityday2026/",
+        "image": "https://cdn.leekduck.com/assets/img/events/cd-default.jpg",
+        "start": "2026-11-21T14:00:00.000",
+        "end": "2026-11-21T17:00:00.000",
+        "extraData": {
+            "generic": {
+                "hasSpawns": false,
+                "hasFieldResearchTasks": false
+            },
+            "bonuses": []
+        }
+    },
+    {
+        "eventID": "gbl-twilight-trails_ultra-league_master-league-mega-edition_2026-go-laic-cup",
+        "name": "Ultra League, Master League: Mega Edition, and 2026 GO LAIC Cup | Twilight Trails",
+        "eventType": "go-battle-league",
+        "eventTypes": [
+            "go-battle-league"
+        ],
+        "heading": "GO Battle League",
+        "link": "https://leekduck.com/events/gbl-twilight-trails_ultra-league_master-league-mega-edition_2026-go-laic-cup/",
+        "image": "https://cdn.leekduck.com/assets/img/events/go-battle-league-ultra-league-machamp-swampert.jpg",
+        "start": "2026-11-18T21:00:00.000Z",
+        "end": "2026-11-25T21:00:00.000Z",
+        "extraData": {
+            "generic": {
+                "hasSpawns": false,
+                "hasFieldResearchTasks": false
+            },
+            "bonuses": []
+        }
+    },
+    {
+        "eventID": "super-mega-raid-day-november-2026",
+        "name": "Super Mega Raid Day",
+        "eventType": "raid-day",
+        "eventTypes": [
+            "raid-day"
+        ],
+        "heading": "Raid Day",
+        "link": "https://leekduck.com/events/super-mega-raid-day-november-2026/",
+        "image": "https://cdn.leekduck.com/assets/img/events/events-default-img.jpg",
+        "start": "2026-11-28T14:00:00.000",
+        "end": "2026-11-28T17:00:00.000",
+        "extraData": {
+            "raidSchedule": [],
+            "raidbattles": {
+                "bosses": [],
+                "shinies": []
+            },
+            "spotlightSchedule": [],
+            "generic": {
+                "hasSpawns": false,
+                "hasFieldResearchTasks": false
+            },
+            "bonuses": []
+        }
+    },
+    {
+        "eventID": "season-24-twilight-trails",
+        "name": "Twilight Trails",
+        "eventType": "season",
+        "eventTypes": [
+            "season"
+        ],
+        "heading": "Season",
+        "link": "https://leekduck.com/events/season-24-twilight-trails/",
+        "image": "https://cdn.leekduck.com/assets/img/events/article-images/2026/2026-09-08-season-24-twilight-trails/season-24-twilight-trails.jpg",
+        "start": "2026-09-08T10:00:00.000",
+        "end": "2026-12-01T10:00:00.000",
+        "extraData": {
+            "generic": {
+                "hasSpawns": true,
+                "hasFieldResearchTasks": false
+            },
+            "bonuses": [
+                {
+                    "title": "Rank 1",
+                    "description": "Reach Major Milestones on your GO Pass to unlock the following bonuses. Once unlocked, these bonuses will last until the current GO Pass ends!",
+                    "startTime": null,
+                    "endTime": null,
+                    "items": [
+                        {
+                            "text": "One guaranteed Candy XL when trading Pokémon for Trainers level 31 and above",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/candyxl.png"
+                        },
+                        {
+                            "text": "One additional Candy for trading Pokémon",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/candy.png"
+                        }
+                    ],
+                    "notes": []
+                },
+                {
+                    "title": "Rank 25",
+                    "description": null,
+                    "startTime": null,
+                    "endTime": null,
+                    "items": [
+                        {
+                            "text": "Increased limits on opening Gifts, receiving Gifts from PokéStop and Gym Photo Discs, and storing Gifts",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/friendgift.png"
+                        }
+                    ],
+                    "notes": []
+                },
+                {
+                    "title": "Rank 50",
+                    "description": null,
+                    "startTime": null,
+                    "endTime": null,
+                    "items": [
+                        {
+                            "text": "2× Daily Adventure Incense duration",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/dailyincense.png"
+                        }
+                    ],
+                    "notes": []
+                },
+                {
+                    "title": "Rank 75",
+                    "description": null,
+                    "startTime": null,
+                    "endTime": null,
+                    "items": [
+                        {
+                            "text": "Increased XP and Stardust from hatching Eggs",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/stardust2xhatch.png"
+                        }
+                    ],
+                    "notes": []
+                }
+            ],
+            "season": {
+                "note": "Throughout Twilight Trails, different days of the week will include a Daily Discovery experience. These will be active between 12:00 a.m. and 11:59 p.m. local time unless otherwise stated. Daily Discoveries may change as Scopely Explore experiments with how to make the best experience. Please note: Daily Discoveries will not be available during the week of global GO Fest, GO Wild Area, and GO Tour events.",
+                "dailyBonuses": [
+                    {
+                        "day": "Sunday",
+                        "dayOfWeek": 0,
+                        "bonuses": [
+                            {
+                                "title": "Scenic Sunday",
+                                "items": [
+                                    "More Pokémon will appear in the wild!",
+                                    "More Pokémon will appear while following a Route. Incense will attract even more Pokémon on Routes.",
+                                    "Reduced distance to earn Buddy Candy while exploring Routes with your Buddy Pokémon.",
+                                    "Encounter Mateo up to three times each day while on a Route."
+                                ]
+                            }
+                        ],
+                        "footnote": null
+                    },
+                    {
+                        "day": "Monday",
+                        "dayOfWeek": 1,
+                        "bonuses": [
+                            {
+                                "title": "Max Monday",
+                                "items": [
+                                    "One guaranteed Rare Candy XL for winning in-person Max Battles.",
+                                    "Power Spots will refresh more frequently.",
+                                    "Additional Power Spots will be active on Mondays compared to the rest of the week.",
+                                    "Max Battles will rotate to feature different Dynamax Pokémon."
+                                ]
+                            }
+                        ],
+                        "footnote": "Max Battles will be available between 6:00 a.m. and 9:00 p.m. local time. Power Spot availability will be limited outside of Max Mondays and Max Battle Days."
+                    },
+                    {
+                        "day": "Tuesday",
+                        "dayOfWeek": 2,
+                        "bonuses": [
+                            {
+                                "title": "Showcase Tuesday",
+                                "items": [
+                                    "Trainers can enter up to five PokéStop Showcases.",
+                                    "More PokéStops may have PokéStop Showcases."
+                                ]
+                            }
+                        ],
+                        "footnote": null
+                    },
+                    {
+                        "day": "Wednesday",
+                        "dayOfWeek": 3,
+                        "bonuses": [
+                            {
+                                "title": "Raid Hour",
+                                "items": [
+                                    "One Rare Candy XL for completing in-person Raid Battles.",
+                                    "Raid Bosses for five-star raids and Mega Raids will rotate at the start of the day each week.",
+                                    "Raid Hours will continue to feature the five-star Raid Boss between 6:00 p.m. and 7:00 p.m. local time."
+                                ]
+                            }
+                        ],
+                        "footnote": null
+                    },
+                    {
+                        "day": "Thursday",
+                        "dayOfWeek": 4,
+                        "bonuses": [
+                            {
+                                "title": "GO Battle Thursdays and Spotlight Hour",
+                                "items": [
+                                    "Spotlight Hour will return from 6:00 p.m. to 7:00 p.m. local time."
+                                ]
+                            }
+                        ],
+                        "footnote": null
+                    },
+                    {
+                        "day": "Friday",
+                        "dayOfWeek": 5,
+                        "bonuses": [
+                            {
+                                "title": "Friendship Friday",
+                                "items": [
+                                    "Up to two additional Special Trades.",
+                                    "Increased chance of Lucky Trade for any trade.",
+                                    "Trades will require 20% less Stardust.",
+                                    "Two guaranteed Candy XL from trades (Trainers level 31+)."
+                                ]
+                            }
+                        ],
+                        "footnote": "These bonuses only apply to in-person trades."
+                    }
+                ],
+                "seasonBonuses": [
+                    {
+                        "milestone": "Rank 1",
+                        "text": "One guaranteed Candy XL when trading Pokémon for Trainers level 31 and above",
+                        "image": "https://cdn.leekduck.com/assets/img/events/bonuses/candyxl.png"
+                    },
+                    {
+                        "milestone": "Rank 1",
+                        "text": "One additional Candy for trading Pokémon",
+                        "image": "https://cdn.leekduck.com/assets/img/events/bonuses/candy.png"
+                    },
+                    {
+                        "milestone": "Rank 25",
+                        "text": "Increased limits on opening Gifts, receiving Gifts from PokéStop and Gym Photo Discs, and storing Gifts",
+                        "image": "https://cdn.leekduck.com/assets/img/events/bonuses/friendgift.png"
+                    },
+                    {
+                        "milestone": "Rank 50",
+                        "text": "2× Daily Adventure Incense duration",
+                        "image": "https://cdn.leekduck.com/assets/img/events/bonuses/dailyincense.png"
+                    },
+                    {
+                        "milestone": "Rank 75",
+                        "text": "Increased XP and Stardust from hatching Eggs",
+                        "image": "https://cdn.leekduck.com/assets/img/events/bonuses/stardust2xhatch.png"
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "eventID": "gbl-twilight-trails_master-league_mega-catch-cup-great-league-edition",
+        "name": "Master League and Mega Catch Cup: Great League Edition | Twilight Trails",
+        "eventType": "go-battle-league",
+        "eventTypes": [
+            "go-battle-league"
+        ],
+        "heading": "GO Battle League",
+        "link": "https://leekduck.com/events/gbl-twilight-trails_master-league_mega-catch-cup-great-league-edition/",
+        "image": "https://cdn.leekduck.com/assets/img/events/gobattleleague-master-key.jpg",
+        "start": "2026-11-24T21:00:00.000Z",
+        "end": "2026-12-01T21:00:00.000Z",
+        "extraData": {
+            "generic": {
+                "hasSpawns": false,
+                "hasFieldResearchTasks": false
+            },
+            "bonuses": []
+        }
+    },
+    {
+        "eventID": "minior-showers-geminids-2026",
+        "name": "Minior Showers: Geminids 2026",
+        "eventType": "event",
+        "eventTypes": [
+            "event"
+        ],
+        "heading": "Event",
+        "link": "https://leekduck.com/events/minior-showers-geminids-2026/",
+        "image": "https://cdn.leekduck.com/assets/img/events/minior-showers-2026.jpg",
+        "start": "2026-12-11T17:00:00.000",
+        "end": "2026-12-16T23:59:00.000",
+        "extraData": {
+            "raidSchedule": [],
+            "raidbattles": {
+                "bosses": [],
+                "shinies": []
+            },
+            "spotlightSchedule": [],
+            "generic": {
+                "hasSpawns": true,
+                "hasFieldResearchTasks": false
+            },
+            "bonuses": [
+                {
+                    "title": null,
+                    "description": null,
+                    "startTime": null,
+                    "endTime": null,
+                    "items": [
+                        {
+                            "text": "Increased Stardust for catching Minior",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/stardust.png"
+                        },
+                        {
+                            "text": "Increased chance to encounter Minior from 5:00 p.m. to 9:00 p.m. local time each day",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/wildgrass.png"
+                        }
+                    ],
+                    "notes": []
+                }
+            ]
+        }
+    },
+    {
+        "eventID": "pokemon-x-adidas-2026",
+        "name": "adidas × Pokémon Timed Research",
+        "eventType": "research",
+        "eventTypes": [
+            "research"
+        ],
+        "heading": "Research",
+        "link": "https://leekduck.com/events/pokemon-x-adidas-2026/",
+        "image": "https://cdn.leekduck.com/assets/img/events/pokemon-x-adidas-2026.jpg",
+        "start": "2026-09-25T10:00:00.000",
+        "end": "2027-01-15T20:00:00.000",
+        "extraData": {
+            "promocodes": [
+                "ADIDASxPOKEMON"
+            ],
+            "generic": {
+                "hasSpawns": false,
+                "hasFieldResearchTasks": false
+            },
+            "bonuses": []
+        }
+    },
+    {
+        "eventID": "pokemon-go-tour-alola-kaohsiung-2027",
+        "name": "Pokémon GO Tour: Alola - Kaohsiung 2027",
+        "eventType": "pokemon-go-tour",
+        "eventTypes": [
+            "pokemon-go-tour",
+            "location-specific"
+        ],
+        "heading": "Pokémon GO Tour",
+        "link": "https://leekduck.com/events/pokemon-go-tour-alola-kaohsiung-2027/",
+        "image": "https://cdn.leekduck.com/assets/img/events/events-default-img.jpg",
+        "start": "2027-02-18T16:00:00.000Z",
+        "end": "2027-02-21T15:59:59.000Z",
+        "extraData": {
+            "raidSchedule": [],
+            "raidbattles": {
+                "bosses": [],
+                "shinies": []
+            },
+            "spotlightSchedule": [],
+            "generic": {
+                "hasSpawns": false,
+                "hasFieldResearchTasks": false
+            },
+            "bonuses": []
+        }
+    },
+    {
+        "eventID": "pokemon-go-tour-alola-los-angeles-2027",
+        "name": "Pokémon GO Tour: Alola - Los Angeles 2027",
+        "eventType": "pokemon-go-tour",
+        "eventTypes": [
+            "pokemon-go-tour",
+            "location-specific"
+        ],
+        "heading": "Pokémon GO Tour",
+        "link": "https://leekduck.com/events/pokemon-go-tour-alola-los-angeles-2027/",
+        "image": "https://cdn.leekduck.com/assets/img/events/events-default-img.jpg",
+        "start": "2027-02-19T08:00:00.000Z",
+        "end": "2027-02-22T07:59:59.000Z",
+        "extraData": {
+            "raidSchedule": [],
+            "raidbattles": {
+                "bosses": [],
+                "shinies": []
+            },
+            "spotlightSchedule": [],
+            "generic": {
+                "hasSpawns": false,
+                "hasFieldResearchTasks": false
+            },
+            "bonuses": []
+        }
+    },
+    {
+        "eventID": "pokemon-go-tour-alola-global-2027",
+        "name": "Pokémon GO Tour: Alola - Global 2027",
+        "eventType": "pokemon-go-tour",
+        "eventTypes": [
+            "pokemon-go-tour"
+        ],
+        "heading": "Pokémon GO Tour",
+        "link": "https://leekduck.com/events/pokemon-go-tour-alola-global-2027/",
+        "image": "https://cdn.leekduck.com/assets/img/events/events-default-img.jpg",
+        "start": "2027-02-27T00:00:00.000",
+        "end": "2027-02-28T23:59:59.000",
+        "extraData": {
+            "raidSchedule": [],
+            "raidbattles": {
+                "bosses": [],
+                "shinies": []
+            },
+            "spotlightSchedule": [],
+            "generic": {
+                "hasSpawns": false,
+                "hasFieldResearchTasks": false
+            },
+            "bonuses": []
+        }
+    },
+    {
+        "eventID": "minior-showers-eta-aquariids-2027",
+        "name": "Minior Showers: Eta Aquariids 2027",
+        "eventType": "event",
+        "eventTypes": [
+            "event"
+        ],
+        "heading": "Event",
+        "link": "https://leekduck.com/events/minior-showers-eta-aquariids-2027/",
+        "image": "https://cdn.leekduck.com/assets/img/events/minior-showers-2026.jpg",
+        "start": "2027-05-03T17:00:00.000",
+        "end": "2027-05-08T23:59:00.000",
+        "extraData": {
+            "raidSchedule": [],
+            "raidbattles": {
+                "bosses": [],
+                "shinies": []
+            },
+            "spotlightSchedule": [],
+            "generic": {
+                "hasSpawns": true,
+                "hasFieldResearchTasks": false
+            },
+            "bonuses": [
+                {
+                    "title": null,
+                    "description": null,
+                    "startTime": null,
+                    "endTime": null,
+                    "items": [
+                        {
+                            "text": "Increased Stardust for catching Minior",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/stardust.png"
+                        },
+                        {
+                            "text": "Increased chance to encounter Minior from 5:00 p.m. to 9:00 p.m. local time each day",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/wildgrass.png"
+                        }
+                    ],
+                    "notes": []
+                }
+            ]
+        }
+    },
+    {
+        "eventID": "minior-showers-southern-delta-aquariids-2027",
+        "name": "Minior Showers: Southern Delta Aquariids 2027",
+        "eventType": "event",
+        "eventTypes": [
+            "event"
+        ],
+        "heading": "Event",
+        "link": "https://leekduck.com/events/minior-showers-southern-delta-aquariids-2027/",
+        "image": "https://cdn.leekduck.com/assets/img/events/minior-showers-2026.jpg",
+        "start": "2027-07-28T17:00:00.000",
+        "end": "2027-08-02T23:59:00.000",
+        "extraData": {
+            "raidSchedule": [],
+            "raidbattles": {
+                "bosses": [],
+                "shinies": []
+            },
+            "spotlightSchedule": [],
+            "generic": {
+                "hasSpawns": true,
+                "hasFieldResearchTasks": false
+            },
+            "bonuses": [
+                {
+                    "title": null,
+                    "description": null,
+                    "startTime": null,
+                    "endTime": null,
+                    "items": [
+                        {
+                            "text": "Increased Stardust for catching Minior",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/stardust.png"
+                        },
+                        {
+                            "text": "Increased chance to encounter Minior from 5:00 p.m. to 9:00 p.m. local time each day",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/wildgrass.png"
+                        }
+                    ],
+                    "notes": []
+                }
+            ]
+        }
+    },
+    {
+        "eventID": "minior-showers-perseids-2027",
+        "name": "Minior Showers: Perseids 2027",
+        "eventType": "event",
+        "eventTypes": [
+            "event"
+        ],
+        "heading": "Event",
+        "link": "https://leekduck.com/events/minior-showers-perseids-2027/",
+        "image": "https://cdn.leekduck.com/assets/img/events/minior-showers-2026.jpg",
+        "start": "2027-08-10T17:00:00.000",
+        "end": "2027-08-15T23:59:00.000",
+        "extraData": {
+            "raidSchedule": [],
+            "raidbattles": {
+                "bosses": [],
+                "shinies": []
+            },
+            "spotlightSchedule": [],
+            "generic": {
+                "hasSpawns": true,
+                "hasFieldResearchTasks": false
+            },
+            "bonuses": [
+                {
+                    "title": null,
+                    "description": null,
+                    "startTime": null,
+                    "endTime": null,
+                    "items": [
+                        {
+                            "text": "Increased Stardust for catching Minior",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/stardust.png"
+                        },
+                        {
+                            "text": "Increased chance to encounter Minior from 5:00 p.m. to 9:00 p.m. local time each day",
+                            "image": "https://cdn.leekduck.com/assets/img/events/bonuses/wildgrass.png"
+                        }
+                    ],
+                    "notes": []
+                }
+            ]
+        }
+    }
+]

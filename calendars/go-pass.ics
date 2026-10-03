@@ -1,0 +1,60 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ScrapedDuck//Scraped LeekDuck Events//EN
+NAME:Pokémon Go — GO Pass
+X-WR-CALNAME:Pokémon Go — GO Pass
+X-WR-CALDESC:All PogoCalendar.com events sourced from LeekDuck.com.
+BEGIN:VEVENT
+UID:scraped-duck-go-pass-september-2026
+SEQUENCE:0
+DTSTAMP:20261003T085557Z
+DTSTART:20260908T100000
+DTEND:20261006T100000
+SUMMARY:GO Pass — GO Pass: September
+DESCRIPTION:Event: GO Pass: September\nhttps://leekduck.com/events/go-pass
+ -september-2026/
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE html><html><body>Event: <a href="ht
+ tps://leekduck.com/events/go-pass-september-2026/">GO Pass: September</a><
+ /body></html>
+CATEGORIES:GO Pass
+URL;VALUE=URI:https://leekduck.com/events/go-pass-september-2026/
+CONTACT:PogoCalendar.com c/o LeekDuck
+IMAGE:https://cdn.leekduck.com/assets/img/events/article-images/2026/2026-
+ 09-08-go-pass-september-2026/go-pass-september-2026.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:GO Pass — GO Pass: September
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/a
+ rticle-images/2026/2026-09-08-go-pass-september-2026/go-pass-september-202
+ 6.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-go-pass-october-2026
+SEQUENCE:0
+DTSTAMP:20261003T085557Z
+DTSTART:20261006T100000
+DTEND:20261103T100000
+SUMMARY:GO Pass — GO Pass: October
+DESCRIPTION:Event: GO Pass: October\nhttps://leekduck.com/events/go-pass-o
+ ctober-2026/
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE html><html><body>Event: <a href="ht
+ tps://leekduck.com/events/go-pass-october-2026/">GO Pass: October</a></bod
+ y></html>
+CATEGORIES:GO Pass
+URL;VALUE=URI:https://leekduck.com/events/go-pass-october-2026/
+CONTACT:PogoCalendar.com c/o LeekDuck
+IMAGE:https://cdn.leekduck.com/assets/img/events/article-images/2026/2026-
+ 10-06-go-pass-october-2026/go-pass-october-2026.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:GO Pass — GO Pass: October
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/a
+ rticle-images/2026/2026-10-06-go-pass-october-2026/go-pass-october-2026.jp
+ g
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+X-ORIGIN:https://leekduck.com/events/
+X-GENERATOR:ScrapedDuck
+X-GENERATOR-URL:https://github.com/bigfoott/ScrapedDuck
+END:VCALENDAR

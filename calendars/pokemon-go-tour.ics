@@ -1,0 +1,85 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ScrapedDuck//Scraped LeekDuck Events//EN
+NAME:Pokémon Go — Pokémon GO Tour
+X-WR-CALNAME:Pokémon Go — Pokémon GO Tour
+X-WR-CALDESC:All PogoCalendar.com events sourced from LeekDuck.com.
+BEGIN:VEVENT
+UID:scraped-duck-pokemon-go-tour-alola-kaohsiung-2027
+SEQUENCE:0
+DTSTAMP:20261003T085557Z
+DTSTART:20270218T160000Z
+DTEND:20270221T155959Z
+SUMMARY:Pokémon GO Tour — Pokémon GO Tour: Alola - Kaohsiung 2027
+DESCRIPTION:Event: Pokémon GO Tour: Alola - Kaohsiung 2027\nhttps://leekd
+ uck.com/events/pokemon-go-tour-alola-kaohsiung-2027/
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE html><html><body>Event: <a href="ht
+ tps://leekduck.com/events/pokemon-go-tour-alola-kaohsiung-2027/">Pokémon 
+ GO Tour: Alola - Kaohsiung 2027</a></body></html>
+CATEGORIES:Pokémon GO Tour
+URL;VALUE=URI:https://leekduck.com/events/pokemon-go-tour-alola-kaohsiung-
+ 2027/
+CONTACT:PogoCalendar.com c/o LeekDuck
+IMAGE:https://cdn.leekduck.com/assets/img/events/events-default-img.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Pokémon GO Tour — Pokémon GO Tour: Alo
+ la - Kaohsiung 2027
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/e
+ vents-default-img.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-pokemon-go-tour-alola-los-angeles-2027
+SEQUENCE:0
+DTSTAMP:20261003T085557Z
+DTSTART:20270219T080000Z
+DTEND:20270222T075959Z
+SUMMARY:Pokémon GO Tour — Pokémon GO Tour: Alola - Los Angeles 2027
+DESCRIPTION:Event: Pokémon GO Tour: Alola - Los Angeles 2027\nhttps://lee
+ kduck.com/events/pokemon-go-tour-alola-los-angeles-2027/
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE html><html><body>Event: <a href="ht
+ tps://leekduck.com/events/pokemon-go-tour-alola-los-angeles-2027/">Pokémo
+ n GO Tour: Alola - Los Angeles 2027</a></body></html>
+CATEGORIES:Pokémon GO Tour
+URL;VALUE=URI:https://leekduck.com/events/pokemon-go-tour-alola-los-angele
+ s-2027/
+CONTACT:PogoCalendar.com c/o LeekDuck
+IMAGE:https://cdn.leekduck.com/assets/img/events/events-default-img.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Pokémon GO Tour — Pokémon GO Tour: Alo
+ la - Los Angeles 2027
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/e
+ vents-default-img.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-pokemon-go-tour-alola-global-2027
+SEQUENCE:0
+DTSTAMP:20261003T085557Z
+DTSTART:20270227T000000
+DTEND:20270228T235959
+SUMMARY:Pokémon GO Tour — Pokémon GO Tour: Alola - Global 2027
+DESCRIPTION:Event: Pokémon GO Tour: Alola - Global 2027\nhttps://leekduck
+ .com/events/pokemon-go-tour-alola-global-2027/
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE html><html><body>Event: <a href="ht
+ tps://leekduck.com/events/pokemon-go-tour-alola-global-2027/">Pokémon GO 
+ Tour: Alola - Global 2027</a></body></html>
+CATEGORIES:Pokémon GO Tour
+URL;VALUE=URI:https://leekduck.com/events/pokemon-go-tour-alola-global-202
+ 7/
+CONTACT:PogoCalendar.com c/o LeekDuck
+IMAGE:https://cdn.leekduck.com/assets/img/events/events-default-img.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Pokémon GO Tour — Pokémon GO Tour: Alo
+ la - Global 2027
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/e
+ vents-default-img.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+X-ORIGIN:https://leekduck.com/events/
+X-GENERATOR:ScrapedDuck
+X-GENERATOR-URL:https://github.com/bigfoott/ScrapedDuck
+END:VCALENDAR

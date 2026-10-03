@@ -1,0 +1,34 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ScrapedDuck//Scraped LeekDuck Events//EN
+NAME:Pokémon Go — Research
+X-WR-CALNAME:Pokémon Go — Research
+X-WR-CALDESC:All PogoCalendar.com events sourced from LeekDuck.com.
+BEGIN:VEVENT
+UID:scraped-duck-pokemon-x-adidas-2026
+SEQUENCE:0
+DTSTAMP:20261003T085557Z
+DTSTART:20260925T100000
+DTEND:20270115T200000
+SUMMARY:Research — adidas × Pokémon Timed Research
+DESCRIPTION:Event: adidas × Pokémon Timed Research\nhttps://leekduck.com
+ /events/pokemon-x-adidas-2026/
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE html><html><body>Event: <a href="ht
+ tps://leekduck.com/events/pokemon-x-adidas-2026/">adidas × Pokémon Timed
+  Research</a></body></html>
+CATEGORIES:Research
+URL;VALUE=URI:https://leekduck.com/events/pokemon-x-adidas-2026/
+CONTACT:PogoCalendar.com c/o LeekDuck
+IMAGE:https://cdn.leekduck.com/assets/img/events/pokemon-x-adidas-2026.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Research — adidas × Pokémon Timed Rese
+ arch
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/p
+ okemon-x-adidas-2026.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+X-ORIGIN:https://leekduck.com/events/
+X-GENERATOR:ScrapedDuck
+X-GENERATOR-URL:https://github.com/bigfoott/ScrapedDuck
+END:VCALENDAR
