@@ -240,16 +240,20 @@ function isSingleDayEvent(dom) {
 }
 
 /**
- * Determine tier from raid label data
+ * Determine tier from raid label data. bossName is optional; a Gigantamax boss
+ * listed under a generic Max Battle header (e.g. "Six-Star Max Battles") is
+ * still typed as Gigantamax.
  */
-function getTierFromRaidType(raidType) {
+function getTierFromRaidType(raidType, bossName) {
   if (!raidType) return null;
 
   var raidTypeLower = raidType.toLowerCase();
 
   // Max Battles are their own battle mode, not a raid tier
   if (raidTypeLower.includes('gigantamax')) return 'Gigantamax';
-  if (raidTypeLower.includes('max battle') || raidTypeLower.includes('dynamax')) return 'Max Battle';
+  if (raidTypeLower.includes('max battle') || raidTypeLower.includes('dynamax')) {
+    return /^gigantamax\b/i.test(bossName || '') ? 'Gigantamax' : 'Max Battle';
+  }
 
   // Extract tier regardless of shadow/regular
   if (raidTypeLower.includes('one-star') || raidTypeLower.includes('1-star')) return 'Tier 1';
@@ -334,6 +338,13 @@ function parseRaidHeader(headerText, contextRaidType) {
 }
 
 /**
+ * Shiny markers on a .pkmn-list-item: the classic sibling icon
+ * (<img class="shiny-icon">) and the newer "pokemon-cutout" badge nested in
+ * the image wrapper (<span class="pokemon-cutout-shiny">).
+ */
+var SHINY_MARKER_SELECTOR = ':scope > .shiny-icon, :scope > .pkmn-list-img > .pokemon-cutout-shiny';
+
+/**
  * Parse all bosses from a pokemon list element
  */
 function parseBossesFromList(pokemonList, raidType) {
@@ -385,8 +396,8 @@ function parseBossFromElement(bossElement, raidType) {
   return {
     name: finalName,
     image: imageElement.src,
-    canBeShiny: bossElement.querySelector(':scope > .shiny-icon') !== null,
-    raidType: getTierFromRaidType(raidType)
+    canBeShiny: bossElement.querySelector(SHINY_MARKER_SELECTOR) !== null,
+    raidType: getTierFromRaidType(raidType, finalName)
   };
 }
 
@@ -402,7 +413,7 @@ function parsePokemonFromElement(pokemonElement) {
   return {
     name: nameElement.textContent.trim(),
     image: imageElement.src,
-    canBeShiny: pokemonElement.querySelector(':scope > .shiny-icon') !== null
+    canBeShiny: pokemonElement.querySelector(SHINY_MARKER_SELECTOR) !== null
   };
 }
 
@@ -447,8 +458,8 @@ function parseBossesFromSimpleList(listElement, raidType) {
       return {
         name: name,
         image: imageSrc,
-        canBeShiny: listItem.querySelector('.shiny-icon, img[alt="shiny" i], img[title="shiny" i]') !== null,
-        raidType: getTierFromRaidType(raidType)
+        canBeShiny: listItem.querySelector('.shiny-icon, .pokemon-cutout-shiny, img[alt="shiny" i], img[title="shiny" i]') !== null,
+        raidType: getTierFromRaidType(raidType, name)
       };
     })
     .filter(boss => boss !== null);
