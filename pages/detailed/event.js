@@ -475,19 +475,43 @@ function isHabitatRaidSectionId(id) {
 }
 
 /**
- * Extract the day names mentioned in a tier-announcement paragraph, e.g.
+ * Extract the days mentioned in a tier-announcement paragraph, e.g.
  * "will appear in five-star raids on both Saturday and Sunday" -> ["Saturday", "Sunday"].
+ * Keeps the full date when the text gives one ("on both Saturday, November 14, and
+ * Sunday, November 15" -> ["Saturday, November 14", "Sunday, November 15"]) so it
+ * lines up with raidSchedule entries created from dated headers.
  */
 function extractDayNamesFromText(text) {
-  var dayRegex = /\b(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)\b/gi;
+  var dayRegex = /\b(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)\b(?:,\s+(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{1,2})\b)?/gi;
+  var capitalize = word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
   var seen = [];
   Array.from((text || '').matchAll(dayRegex)).forEach(match => {
-    var dayName = match[1].charAt(0).toUpperCase() + match[1].slice(1).toLowerCase();
+    var dayName = capitalize(match[1]);
+    if (match[2]) {
+      dayName += ', ' + capitalize(match[2]) + ' ' + match[3];
+    }
     if (!seen.includes(dayName)) {
       seen.push(dayName);
     }
   });
   return seen;
+}
+
+/**
+ * Find the raidSchedule entry for a day, creating it if needed. A bare day name
+ * ("Saturday") reuses an existing dated entry for that day ("Saturday, November 14")
+ * rather than adding a second entry for the same day.
+ */
+function findOrCreateDayEntry(eventData, day) {
+  var dayEntry = eventData.raidSchedule.find(entry => entry.date === day);
+  if (!dayEntry && !day.includes(',')) {
+    dayEntry = eventData.raidSchedule.find(entry => !entry.time && entry.date.startsWith(day + ','));
+  }
+  if (!dayEntry) {
+    dayEntry = { date: day, bosses: [], raidHours: [], bonuses: [] };
+    eventData.raidSchedule.push(dayEntry);
+  }
+  return dayEntry;
 }
 
 function inferRaidTypeFromText(text) {
@@ -1102,11 +1126,7 @@ function processRaidsSection(elements, sectionId, eventData, globalInfo, fallbac
         // Mewtwo appearing in five-star raids "on both Saturday and Sunday".
         if (pendingStaticDays.length > 0) {
           pendingStaticDays.forEach(day => {
-            var dayEntry = eventData.raidSchedule.find(entry => entry.date === day);
-            if (!dayEntry) {
-              dayEntry = { date: day, bosses: [], raidHours: [], bonuses: [] };
-              eventData.raidSchedule.push(dayEntry);
-            }
+            var dayEntry = findOrCreateDayEntry(eventData, day);
             bosses.forEach(bossData => {
               if (!dayEntry.bosses.some(existing => existing.name === bossData.name)) {
                 dayEntry.bosses.push(bossData);
