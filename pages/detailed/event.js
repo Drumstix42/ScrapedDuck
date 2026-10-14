@@ -681,6 +681,24 @@ function bossMatchesRaidHourType(boss, raidHourType) {
 }
 
 /**
+ * Add bosses to a day's raidHours entry for the given time window, creating it if needed.
+ */
+function addRaidHourBosses(dayEntry, time, bosses) {
+  var raidHour = dayEntry.raidHours.find(hour => hour.time === time);
+  if (!raidHour) {
+    raidHour = { time: time, bosses: [] };
+    dayEntry.raidHours.push(raidHour);
+  }
+
+  bosses.forEach(boss => {
+    var dayBoss = dayEntry.bosses.find(existing => existing.name === boss.name) || boss;
+    if (!raidHour.bosses.some(existing => existing.name === dayBoss.name)) {
+      raidHour.bosses.push(dayBoss);
+    }
+  });
+}
+
+/**
  * Collect all elements between an H2 and the next H2
  */
 function collectSectionElements(startH2) {
@@ -990,6 +1008,13 @@ function processRaidsSection(elements, sectionId, eventData, globalInfo, fallbac
   // Saturday and Sunday" followed directly by a single static boss list) -- lets that
   // static list still land in raidSchedule instead of only the raidbattles aggregate.
   var pendingStaticDays = [];
+  // Daily one-hour windows announced by an intro paragraph and then listed under
+  // dated headers, e.g. "Raid Hour: Monday, November 9" (time from the "Raid Hours
+  // from 6:00 p.m. to 7:00 p.m." paragraph) or "Five-Star Max Battles: Wednesday,
+  // November 11" (time from "featured in Max Battles from 6:00 p.m. to 7:00 p.m.").
+  var maxBattleHourTime = null;
+  var currentIsRaidHour = false;
+  var currentHourTime = null;
 
   elements.forEach(element => {
     // Handle raid sub-section headers. LeekDuck uses H3 on some pages and H2 on
@@ -1004,7 +1029,23 @@ function processRaidsSection(elements, sectionId, eventData, globalInfo, fallbac
         // This is a daily schedule header
         currentDate = parsedHeader.date;
         currentRaidType = parsedHeader.raidType;
-        
+
+        // "Raid Hour: <date>" names that day's Raid Hour boss rather than a tier.
+        // Raid Hours feature five-star bosses; the boss's own tier list (parsed
+        // above it) takes precedence when it has one.
+        currentIsRaidHour = /^raid hours?$/i.test(currentRaidType);
+        if (currentIsRaidHour) {
+          currentRaidType = 'Five-Star Raids';
+        }
+        var headerTier = getTierFromRaidType(currentRaidType);
+        if (currentIsRaidHour) {
+          currentHourTime = globalInfo.raidHourTime;
+        } else if (headerTier === 'Max Battle' || headerTier === 'Gigantamax') {
+          currentHourTime = maxBattleHourTime;
+        } else {
+          currentHourTime = null;
+        }
+
         // Find or create entry for this date
         currentDateEntry = eventData.raidSchedule.find(entry => entry.date === currentDate);
         if (!currentDateEntry) {
@@ -1021,6 +1062,8 @@ function processRaidsSection(elements, sectionId, eventData, globalInfo, fallbac
         currentDate = null;
         currentRaidType = null;
         currentDateEntry = null;
+        currentIsRaidHour = false;
+        currentHourTime = null;
 
         // Update context if it's a raid type header
         var h3Lower = h3Text.toLowerCase();
@@ -1102,6 +1145,13 @@ function processRaidsSection(elements, sectionId, eventData, globalInfo, fallbac
         // This list is part of a daily schedule
         var bossData = parseBossesFromList(element, currentRaidType);
         bossData.forEach(boss => {
+          if (currentIsRaidHour) {
+            var listedBoss = eventData.raidbattles.bosses.find(existing => existing.name === boss.name);
+            if (listedBoss && listedBoss.raidType) {
+              boss.raidType = listedBoss.raidType;
+            }
+          }
+
           // Add boss if not already in the date entry (avoid duplicates)
           if (!currentDateEntry.bosses.some(existing => existing.name === boss.name)) {
             currentDateEntry.bosses.push(boss);
@@ -1112,6 +1162,10 @@ function processRaidsSection(elements, sectionId, eventData, globalInfo, fallbac
             eventData.raidbattles.bosses.push(boss);
           }
         });
+
+        if (currentHourTime && bossData.length > 0) {
+          addRaidHourBosses(currentDateEntry, currentHourTime, bossData);
+        }
       } else {
         // This is a static raid list
         var bosses = parseBossesFromList(element, contextRaidType);
@@ -1175,6 +1229,16 @@ function processRaidsSection(elements, sectionId, eventData, globalInfo, fallbac
         }
       }
       // Add more raid types as needed
+    }
+
+    // Max Battle equivalent of a Raid Hour, e.g. "Pokémon appearing in five-star Max
+    // Battles will also be featured in Max Battles from 6:00 p.m. to 7:00 p.m. local
+    // time for one day each on the following schedule."
+    if (element.tagName === 'P') {
+      var maxHourMatch = element.textContent.match(/max battles\s+from\s+([\d:]+\s+[ap]\.m\.\s+to\s+[\d:]+\s+[ap]\.m\.)/i);
+      if (maxHourMatch) {
+        maxBattleHourTime = maxHourMatch[1] + ' local time';
+      }
     }
 
     // Learn raid type context from paragraph text for list-based layouts. Skip the

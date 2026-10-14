@@ -74,7 +74,10 @@ to the orphan `data` branch, which external apps consume. Fork of
   `pokemon-go-tour` and `wild-area` use the event-style scraper
   [pages/detailed/event.js](pages/detailed/event.js). Max Battles on those pages land in
   `raidSchedule` / `raidbattles` with `raidType` `"Max Battle"` (or `"Gigantamax"`) and a
-  `Dynamax` / `Gigantamax` name prefix. All other types still receive `generic` extraData.
+  `Dynamax` / `Gigantamax` name prefix. Daily one-hour windows listed under dated headers
+  ("Raid Hour: Monday, November 9", or "Five-Star Max Battles: Wednesday, November 11" after a
+  "featured in Max Battles from …" paragraph) fill that day's `raidHours`. All other types still
+  receive `generic` extraData.
 
 ## Adding a new event-type scraper
 

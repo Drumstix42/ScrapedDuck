@@ -61,8 +61,10 @@ Scrape Pokémon GO event data from LeekDuck.com, generate JSON/iCal outputs. For
   `raid-battles`, `research`, `season`. `event`, `raid-day`, `raid-hour`, `pokemon-go-fest`,
   `pokemon-go-tour` and `wild-area` use the event-style scraper `pages/detailed/event.js`. Max
   Battles on those pages land in `raidSchedule` / `raidbattles` with `raidType` `"Max Battle"` (or
-  `"Gigantamax"`) and a `Dynamax` / `Gigantamax` name prefix. All other types still receive
-  `generic` extraData.
+  `"Gigantamax"`) and a `Dynamax` / `Gigantamax` name prefix. Daily one-hour windows listed under
+  dated headers ("Raid Hour: Monday, November 9", or "Five-Star Max Battles: Wednesday, November 11"
+  after a "featured in Max Battles from …" paragraph) fill that day's `raidHours`. All other types
+  still receive `generic` extraData.
 
 ## Adding New Event Type Scraper
 
