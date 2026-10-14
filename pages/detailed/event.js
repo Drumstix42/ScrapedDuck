@@ -1300,6 +1300,8 @@ function processRaidsSection(elements, sectionId, eventData, globalInfo, fallbac
         noteTextLower.includes('fusion energy') ||
         noteTextLower.includes('mega energy') ||
         noteTextLower.includes('primal energy') ||
+        noteTextLower.includes('crowned sword energy') ||
+        noteTextLower.includes('crowned shield energy') ||
         noteTextLower.includes('adventure effect move')
       ) {
         var noteText = element.textContent.trim();
