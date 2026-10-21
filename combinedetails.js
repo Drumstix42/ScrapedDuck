@@ -12,6 +12,8 @@ function main()
         }
 
         var eventsByID = new Map(events.map(e => [e.eventID, e]));
+        // event-wide raid notes, appended to bonuses once every temp file (incl. generic) is merged
+        var raidBonusesByID = new Map();
 
         files.forEach(f =>
         {
@@ -67,6 +69,9 @@ function main()
                 if (data.data.spotlightSchedule) {
                     e.extraData.spotlightSchedule = data.data.spotlightSchedule;
                 }
+                if (data.data.raidBonuses) {
+                    raidBonusesByID.set(data.id, data.data.raidBonuses);
+                }
             }
             else if (data.type == "promo-codes")
             {
@@ -95,6 +100,18 @@ function main()
                     items: [{ text: e.extraData.spotlight.bonus, image: "", schedule: [] }],
                     notes: []
                 }];
+            }
+
+            // Notes about bosses raided all event long (e.g. Crowned Sword Energy from Crowned
+            // Zacian), skipping any already listed (such as in backup bonuses that include them)
+            var raidBonuses = raidBonusesByID.get(e.eventID);
+            if (raidBonuses) {
+                e.extraData.bonuses = e.extraData.bonuses || [];
+                var listedTexts = e.extraData.bonuses.flatMap(g => g.items.map(item => item.text));
+                var items = raidBonuses.items.filter(item => !listedTexts.includes(item.text));
+                if (items.length > 0) {
+                    e.extraData.bonuses.push({ ...raidBonuses, items: items });
+                }
             }
         });
 

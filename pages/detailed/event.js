@@ -2,6 +2,7 @@ const fs = require('fs');
 const jsd = require('jsdom');
 const { JSDOM } = jsd;
 const raidtype = require('../raidtype');
+const schedule = require('../schedule');
 
 /**
  * Collect event raid battles and/or raid schedule data from leekduck event page.
@@ -109,23 +110,33 @@ function get(url, id, bkp) {
         // Distribute special bonuses to relevant raid days. Attach a bonus to a
         // day if the note explicitly references a matching boss appearing that day
         globalInfo.specialNotes.forEach(note => {
-          var noteLower = note.toLowerCase();
           eventData.raidSchedule.forEach(day => {
             // Check if any boss name from this day (or its Raid Hours) appears in the bonus text
             var dayBosses = day.bosses.concat(...day.raidHours.map(hour => hour.bosses));
-            var relevantBonus = dayBosses.some(boss => {
-              var bossNameVariants = [
-                boss.name.toLowerCase(),
-                boss.name.replace(/\s*\(.*\)/, '').toLowerCase()
-              ];
-              return bossNameVariants.some(variant => noteLower.includes(variant));
-            });
-
-            if (relevantBonus) {
+            if (dayBosses.some(boss => noteMentionsBoss(note, boss))) {
               day.bonuses.push(note);
             }
           });
         });
+
+        // A note about a boss that appears all event long (not tied to a single day's
+        // boss list, e.g. Crowned Zacian in "Five-Star Raids" all week) is an event-wide
+        // bonus too; combinedetails.js appends it to extraData.bonuses
+        var dailyBossNames = eventData.raidSchedule.flatMap(day => day.bosses.map(boss => boss.name));
+        var eventWideBosses = eventData.raidbattles.bosses.filter(boss => !dailyBossNames.includes(boss.name));
+        var eventWideNotes = globalInfo.specialNotes.filter(note =>
+          eventWideBosses.some(boss => noteMentionsBoss(note, boss))
+        );
+        if (eventWideNotes.length > 0) {
+          eventData.raidBonuses = {
+            title: 'Raids',
+            description: null,
+            startTime: null,
+            endTime: null,
+            items: eventWideNotes.map(note => ({ text: note, image: '', schedule: schedule.parse(note) })),
+            notes: []
+          };
+        }
 
         fs.writeFile(`files/temp/${id}.json`, JSON.stringify({ id: id, type: 'event', data: eventData }), err => {
           if (err) {
@@ -236,6 +247,19 @@ function isSingleDayEvent(dom) {
   if (!startEl || !endEl) return false;
 
   return startEl.textContent.trim() === endEl.textContent.trim();
+}
+
+/**
+ * Whether a raid note names the boss, with or without its form qualifier
+ * (e.g. "Crowned Sword Zacian" matches "Zacian (Crowned Sword)").
+ */
+function noteMentionsBoss(note, boss) {
+  var noteLower = note.toLowerCase();
+  var bossNameVariants = [
+    boss.name.toLowerCase(),
+    boss.name.replace(/\s*\(.*\)/, '').toLowerCase()
+  ];
+  return bossNameVariants.some(variant => noteLower.includes(variant));
 }
 
 /**

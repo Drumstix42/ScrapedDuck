@@ -56,8 +56,10 @@ Scrape Pokémon GO event data from LeekDuck.com, generate JSON/iCal outputs. For
 - `bonuses` is parsed for every event by `pages/detailed/generic.js` via `pages/bonuses.js`, from the
   page's "Bonuses" section only (one group per `.bonus-list`; `[]` when there is none). Spotlight
   Hours have no such section, so `combinedetails.js` mirrors `spotlight.bonus` into it as a single
-  item (empty `image`). `spotlight.bonus` and `communityday.bonuses` / `bonusDisclaimers` are kept
-  as-is for compatibility.
+  item (empty `image`). Event-style pages also append a `"Raids"` group for raid notes (e.g.
+  Crowned Sword Energy) about a boss raided all event long; a note about a day-specific boss only
+  goes on that day's `raidSchedule` `bonuses`. `spotlight.bonus` and `communityday.bonuses` /
+  `bonusDisclaimers` are kept as-is for compatibility.
 - `spawns` is parsed for every event the same way, via `pages/spawns.js`, from the "Spawns" section
   (one group per `.pkmn-list-flex`; `[]` when there is none). `title` is the outermost sub-heading
   (the topic, e.g. "Mighty Pokémon"); a label heading nested under it ("Solid as Steel Hour") is the
