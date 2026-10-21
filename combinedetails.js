@@ -35,6 +35,8 @@ function main()
                 }
                 // bonus groups from the page's "Bonuses" section, for every event type
                 e.extraData.bonuses = data.bonuses || [];
+                // spawn groups from the page's "Spawns" section, for every event type
+                e.extraData.spawns = data.spawns || [];
             }
             // add event specific extra data. Block named as event type name
             else if (data.type == "research-breakthrough")
@@ -90,7 +92,7 @@ function main()
                     description: null,
                     startTime: null,
                     endTime: null,
-                    items: [{ text: e.extraData.spotlight.bonus, image: "" }],
+                    items: [{ text: e.extraData.spotlight.bonus, image: "", schedule: [] }],
                     notes: []
                 }];
             }

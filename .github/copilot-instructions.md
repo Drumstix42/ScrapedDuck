@@ -34,7 +34,8 @@ Scrape Pokémon GO event data from LeekDuck.com, generate JSON/iCal outputs. For
   eventID, name, eventType, eventTypes, heading, link, image, start, end,
   extraData: {
     generic: { hasSpawns, hasFieldResearchTasks },  // ALL events
-    bonuses: [{ title, description, startTime, endTime, items: [{ text, image }], notes }],  // ALL events
+    bonuses: [{ title, description, startTime, endTime, items: [{ text, image, schedule }], notes }],  // ALL events
+    spawns: [{ title, subtitle, description, schedule, pokemon: [{ name, image, canBeShiny }], notes }],  // ALL events
     spotlight: {...},      // pokemon-spotlight-hour
     communityday: {...},   // community-day
     raidbattles: {...},    // raid-battles (and event-style pages with raids)
@@ -57,6 +58,21 @@ Scrape Pokémon GO event data from LeekDuck.com, generate JSON/iCal outputs. For
   Hours have no such section, so `combinedetails.js` mirrors `spotlight.bonus` into it as a single
   item (empty `image`). `spotlight.bonus` and `communityday.bonuses` / `bonusDisclaimers` are kept
   as-is for compatibility.
+- `spawns` is parsed for every event the same way, via `pages/spawns.js`, from the "Spawns" section
+  (one group per `.pkmn-list-flex`; `[]` when there is none). `title` is the outermost sub-heading
+  (the topic, e.g. "Mighty Pokémon"); a label heading nested under it ("Solid as Steel Hour") is the
+  `subtitle`, while a nested date heading ("Saturday, November 14") goes into `schedule`.
+  Consecutive lists with the same `title`, `subtitle` and `schedule` (e.g. a "You might also
+  encounter Skarmory!" follow-up) are merged into one group, joining their descriptions/notes.
+  `communityday.spawns` is kept as-is for compatibility.
+- `schedule` (on spawn groups and bonus items) is a list of windows parsed by `pages/schedule.js`:
+  `[{ startDate, startTime, endDate, endTime, allDay, everyDay }]`. Dates/times keep the page's
+  wording; `null` means no limit on that side. Minior's "from 5:00 p.m. to 9:00 p.m. local time each
+  day" → `{ startDate: null, startTime: "5:00 p.m.", endDate: null, endTime: "9:00 p.m.", allDay: false,
+  everyDay: true }` (`everyDay` is set on every undated window: it repeats on each event day); a
+  "Saturday, November 14" heading → that date with null times, `allDay: true`, `everyDay: false`.
+  `[]` means the whole event. A bonus item only gets a schedule when
+  its own text states one; a group-wide window stays in the group's `startTime` / `endTime`.
 - Dedicated detail scrapers: `research-breakthrough`, `pokemon-spotlight-hour`, `community-day`,
   `raid-battles`, `research`, `season`. `event`, `raid-day`, `raid-hour`, `pokemon-go-fest`,
   `pokemon-go-tour` and `wild-area` use the event-style scraper `pages/detailed/event.js`. Max
