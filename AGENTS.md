@@ -76,8 +76,10 @@ to the orphan `data` branch, which external apps consume. Fork of
   `raidSchedule` / `raidbattles` with `raidType` `"Max Battle"` (or `"Gigantamax"`) and a
   `Dynamax` / `Gigantamax` name prefix. Daily one-hour windows listed under dated headers
   ("Raid Hour: Monday, November 9", or "Five-Star Max Battles: Wednesday, November 11" after a
-  "featured in Max Battles from …" paragraph) fill that day's `raidHours`. All other types still
-  receive `generic` extraData.
+  "featured in Max Battles from …" paragraph) fill that day's `raidHours`. A Raid Hour boss that
+  is already in an event-wide tier list (e.g. "Five-Star Raids") goes only in `raidHours`, not
+  that day's `bosses`, since it isn't exclusive to that day. All other types still receive
+  `generic` extraData.
 
 ## Adding a new event-type scraper
 

@@ -113,8 +113,9 @@ function get(url, id, bkp) {
         globalInfo.specialNotes.forEach(note => {
           var noteLower = note.toLowerCase();
           eventData.raidSchedule.forEach(day => {
-            // Check if any boss name from this day appears in the bonus text
-            var relevantBonus = day.bosses.some(boss => {
+            // Check if any boss name from this day (or its Raid Hours) appears in the bonus text
+            var dayBosses = day.bosses.concat(...day.raidHours.map(hour => hour.bosses));
+            var relevantBonus = dayBosses.some(boss => {
               var bossNameVariants = [
                 boss.name.toLowerCase(),
                 boss.name.replace(/\s*\(.*\)/, '').toLowerCase()
@@ -1147,8 +1148,14 @@ function processRaidsSection(elements, sectionId, eventData, globalInfo, fallbac
         bossData.forEach(boss => {
           if (currentIsRaidHour) {
             var listedBoss = eventData.raidbattles.bosses.find(existing => existing.name === boss.name);
-            if (listedBoss && listedBoss.raidType) {
-              boss.raidType = listedBoss.raidType;
+            if (listedBoss) {
+              if (listedBoss.raidType) {
+                boss.raidType = listedBoss.raidType;
+              }
+              // Already in an event-wide tier list (e.g. Crowned Zacian in "Five-Star
+              // Raids" all week), so the Raid Hour is the only day-specific part --
+              // it goes in raidHours below, not the day's boss pool.
+              return;
             }
           }
 
