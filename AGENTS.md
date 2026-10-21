@@ -92,7 +92,8 @@ to the orphan `data` branch, which external apps consume. Fork of
   [pages/detailed/event.js](pages/detailed/event.js). Each boss there has a `raidType` category
   (`"Raid"`, `"Shadow"`, `"Mega"`, `"Super Mega"`, `"Primal"`, `"Max Battle"`, `"Gigantamax"`)
   and a numeric `tier` (star count from the heading, e.g. "Two-Star Max Battles" → `2`; `null`
-  when the page names none; Gigantamax defaults to `6`). Max Battles on those pages land in
+  when the page names none; Gigantamax defaults to `6`), parsed by
+  [pages/raidtype.js](pages/raidtype.js); `files/raids.json` uses the same two fields. Max Battles on those pages land in
   `raidSchedule` / `raidbattles` with a `Dynamax` / `Gigantamax` name prefix. Daily one-hour windows listed under dated headers
   ("Raid Hour: Monday, November 9", or "Five-Star Max Battles: Wednesday, November 11" after a
   "featured in Max Battles from …" paragraph) fill that day's `raidHours`. A Raid Hour boss that

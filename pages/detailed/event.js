@@ -1,6 +1,7 @@
 const fs = require('fs');
 const jsd = require('jsdom');
 const { JSDOM } = jsd;
+const raidtype = require('../raidtype');
 
 /**
  * Collect event raid battles and/or raid schedule data from leekduck event page.
@@ -237,39 +238,6 @@ function isSingleDayEvent(dom) {
   return startEl.textContent.trim() === endEl.textContent.trim();
 }
 
-var STAR_WORDS = { one: 1, two: 2, three: 3, four: 4, five: 5, six: 6 };
-
-/**
- * Split a raid label (e.g. "Five-Star Shadow Raids", "Two-Star Max Battles") into
- * the boss's battle category and its star tier: { raidType, tier }. tier is null
- * when the label names no star count. bossName is optional; a Gigantamax boss
- * listed under a generic Max Battle header is still typed as Gigantamax.
- */
-function getRaidTypeAndTier(raidType, bossName) {
-  if (!raidType) return { raidType: null, tier: null };
-
-  var raidTypeLower = raidType.toLowerCase();
-  var starMatch = raidTypeLower.match(/\b(one|two|three|four|five|six|[1-6])[\s-]*star\b/);
-  var tier = starMatch ? (STAR_WORDS[starMatch[1]] || Number(starMatch[1])) : null;
-
-  // Max Battles are their own battle mode; Gigantamax battles are always six-star
-  if (raidTypeLower.includes('gigantamax') ||
-      ((raidTypeLower.includes('max battle') || raidTypeLower.includes('dynamax')) && /^gigantamax\b/i.test(bossName || ''))) {
-    return { raidType: 'Gigantamax', tier: tier || 6 };
-  }
-  if (raidTypeLower.includes('max battle') || raidTypeLower.includes('dynamax')) {
-    return { raidType: 'Max Battle', tier: tier };
-  }
-
-  if (raidTypeLower.includes('super mega')) return { raidType: 'Super Mega', tier: tier };
-  if (raidTypeLower.includes('mega')) return { raidType: 'Mega', tier: tier };
-  if (raidTypeLower.includes('primal')) return { raidType: 'Primal', tier: tier };
-  if (raidTypeLower.includes('shadow')) return { raidType: 'Shadow', tier: tier };
-  if (tier) return { raidType: 'Raid', tier: tier };
-
-  return { raidType: null, tier: null }; // Unknown type
-}
-
 /**
  * Whether a parsed boss is in a five-star raid (regular or Shadow), the tier that
  * Raid Hours feature.
@@ -403,7 +371,7 @@ function parseBossFromElement(bossElement, raidType) {
     }
   }
 
-  var typeAndTier = getRaidTypeAndTier(raidType, finalName);
+  var typeAndTier = raidtype.parse(raidType, finalName);
   return {
     name: finalName,
     image: imageElement.src,
@@ -467,7 +435,7 @@ function parseBossesFromSimpleList(listElement, raidType) {
       var looksLikePokemonImage = /pokemon_icons|poke_capture|pm\d+/i.test(imageSrc);
       if (!looksLikePokemonImage) return null;
 
-      var typeAndTier = getRaidTypeAndTier(raidType, name);
+      var typeAndTier = raidtype.parse(raidType, name);
       return {
         name: name,
         image: imageSrc,
@@ -1051,7 +1019,7 @@ function processRaidsSection(elements, sectionId, eventData, globalInfo, fallbac
         if (currentIsRaidHour) {
           currentRaidType = 'Five-Star Raids';
         }
-        var headerType = getRaidTypeAndTier(currentRaidType).raidType;
+        var headerType = raidtype.parse(currentRaidType).raidType;
         if (currentIsRaidHour) {
           currentHourTime = globalInfo.raidHourTime;
         } else if (headerType === 'Max Battle' || headerType === 'Gigantamax') {

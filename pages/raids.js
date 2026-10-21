@@ -2,6 +2,7 @@ const fs = require('fs');
 const jsd = require('jsdom');
 const { JSDOM } = jsd;
 const https = require('https');
+const raidtype = require('./raidtype');
 
 function get() {
     return new Promise(resolve => {
@@ -23,12 +24,18 @@ function get() {
                         const tierMap = { '1': '1-Star Raids', '3': '3-Star Raids', '5': '5-Star Raids', 'mega': 'Mega Raids' };
                         currentTier = tierMap[dataTier.toLowerCase()] || dataTier;
                     }
+                    // Shadow raids repeat the "1-Star Raids" etc. headers inside their own section
+                    if (grid.closest('.shadow-raid-bosses')) {
+                        currentTier = "Shadow " + currentTier;
+                    }
+                    const { raidType, tier } = raidtype.parse(currentTier);
 
                     const cards = grid.querySelectorAll('div.card');
                     cards.forEach((card) => {
                             let boss = {
                                 name: "",
-                                tier: currentTier,
+                                raidType: raidType,
+                                tier: tier,
                                 canBeShiny: false,
                                 types: [],
                                 combatPower: {
