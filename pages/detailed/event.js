@@ -93,10 +93,7 @@ function get(url, id, bkp) {
           eventData.raidSchedule.forEach(day => {
             if (day.raidHours.length === 0) {
               // Apply to all 5-star bosses
-              var fiveStarBosses = day.bosses.filter(boss => {
-                var typeLower = boss.raidType ? boss.raidType.toLowerCase() : '';
-                return typeLower.includes('tier 5') || typeLower.includes('five');
-              });
+              var fiveStarBosses = day.bosses.filter(isFiveStarRaidBoss);
               
               if (fiveStarBosses.length > 0) {
                 day.raidHours.push({
@@ -240,33 +237,45 @@ function isSingleDayEvent(dom) {
   return startEl.textContent.trim() === endEl.textContent.trim();
 }
 
+var STAR_WORDS = { one: 1, two: 2, three: 3, four: 4, five: 5, six: 6 };
+
 /**
- * Determine tier from raid label data. bossName is optional; a Gigantamax boss
- * listed under a generic Max Battle header (e.g. "Six-Star Max Battles") is
- * still typed as Gigantamax.
+ * Split a raid label (e.g. "Five-Star Shadow Raids", "Two-Star Max Battles") into
+ * the boss's battle category and its star tier: { raidType, tier }. tier is null
+ * when the label names no star count. bossName is optional; a Gigantamax boss
+ * listed under a generic Max Battle header is still typed as Gigantamax.
  */
-function getTierFromRaidType(raidType, bossName) {
-  if (!raidType) return null;
+function getRaidTypeAndTier(raidType, bossName) {
+  if (!raidType) return { raidType: null, tier: null };
 
   var raidTypeLower = raidType.toLowerCase();
+  var starMatch = raidTypeLower.match(/\b(one|two|three|four|five|six|[1-6])[\s-]*star\b/);
+  var tier = starMatch ? (STAR_WORDS[starMatch[1]] || Number(starMatch[1])) : null;
 
-  // Max Battles are their own battle mode, not a raid tier
-  if (raidTypeLower.includes('gigantamax')) return 'Gigantamax';
+  // Max Battles are their own battle mode; Gigantamax battles are always six-star
+  if (raidTypeLower.includes('gigantamax') ||
+      ((raidTypeLower.includes('max battle') || raidTypeLower.includes('dynamax')) && /^gigantamax\b/i.test(bossName || ''))) {
+    return { raidType: 'Gigantamax', tier: tier || 6 };
+  }
   if (raidTypeLower.includes('max battle') || raidTypeLower.includes('dynamax')) {
-    return /^gigantamax\b/i.test(bossName || '') ? 'Gigantamax' : 'Max Battle';
+    return { raidType: 'Max Battle', tier: tier };
   }
 
-  // Extract tier regardless of shadow/regular
-  if (raidTypeLower.includes('one-star') || raidTypeLower.includes('1-star')) return 'Tier 1';
-  if (raidTypeLower.includes('three-star') || raidTypeLower.includes('3-star')) return 'Tier 3';
-  if (raidTypeLower.includes('five-star') || raidTypeLower.includes('5-star')) return 'Tier 5';
-  if (raidTypeLower.includes('six-star') || raidTypeLower.includes('6-star')) return 'Tier 6';
-  if (raidTypeLower.includes('super mega')) return 'Super Mega';
-  if (raidTypeLower.includes('mega')) return 'Mega';
-  if (raidTypeLower.includes('primal')) return 'Primal';
-  if (raidTypeLower.includes('shadow') && !raidTypeLower.includes('star')) return 'Shadow';
+  if (raidTypeLower.includes('super mega')) return { raidType: 'Super Mega', tier: tier };
+  if (raidTypeLower.includes('mega')) return { raidType: 'Mega', tier: tier };
+  if (raidTypeLower.includes('primal')) return { raidType: 'Primal', tier: tier };
+  if (raidTypeLower.includes('shadow')) return { raidType: 'Shadow', tier: tier };
+  if (tier) return { raidType: 'Raid', tier: tier };
 
-  return null; // Unknown tier
+  return { raidType: null, tier: null }; // Unknown type
+}
+
+/**
+ * Whether a parsed boss is in a five-star raid (regular or Shadow), the tier that
+ * Raid Hours feature.
+ */
+function isFiveStarRaidBoss(boss) {
+  return boss.tier === 5 && (boss.raidType === 'Raid' || boss.raidType === 'Shadow');
 }
 
 /**
@@ -394,11 +403,13 @@ function parseBossFromElement(bossElement, raidType) {
     }
   }
 
+  var typeAndTier = getRaidTypeAndTier(raidType, finalName);
   return {
     name: finalName,
     image: imageElement.src,
     canBeShiny: bossElement.querySelector(SHINY_MARKER_SELECTOR) !== null,
-    raidType: getTierFromRaidType(raidType, finalName)
+    raidType: typeAndTier.raidType,
+    tier: typeAndTier.tier
   };
 }
 
@@ -456,11 +467,13 @@ function parseBossesFromSimpleList(listElement, raidType) {
       var looksLikePokemonImage = /pokemon_icons|poke_capture|pm\d+/i.test(imageSrc);
       if (!looksLikePokemonImage) return null;
 
+      var typeAndTier = getRaidTypeAndTier(raidType, name);
       return {
         name: name,
         image: imageSrc,
         canBeShiny: listItem.querySelector('.shiny-icon, .pokemon-cutout-shiny, img[alt="shiny" i], img[title="shiny" i]') !== null,
-        raidType: getTierFromRaidType(raidType, name)
+        raidType: typeAndTier.raidType,
+        tier: typeAndTier.tier
       };
     })
     .filter(boss => boss !== null);
@@ -666,7 +679,7 @@ function bossMatchesRaidHourType(boss, raidHourType) {
   var raidHourTypeLower = raidHourType.toLowerCase();
 
   if (raidHourTypeLower === 'five-star' || raidHourTypeLower === '5-star') {
-    return bossTypeLower.includes('tier 5') || bossTypeLower.includes('five');
+    return isFiveStarRaidBoss(boss);
   }
   if (raidHourTypeLower === 'mega') {
     return bossTypeLower.includes('mega') || bossTypeLower.includes('super mega');
@@ -1038,10 +1051,10 @@ function processRaidsSection(elements, sectionId, eventData, globalInfo, fallbac
         if (currentIsRaidHour) {
           currentRaidType = 'Five-Star Raids';
         }
-        var headerTier = getTierFromRaidType(currentRaidType);
+        var headerType = getRaidTypeAndTier(currentRaidType).raidType;
         if (currentIsRaidHour) {
           currentHourTime = globalInfo.raidHourTime;
-        } else if (headerTier === 'Max Battle' || headerTier === 'Gigantamax') {
+        } else if (headerType === 'Max Battle' || headerType === 'Gigantamax') {
           currentHourTime = maxBattleHourTime;
         } else {
           currentHourTime = null;
@@ -1107,12 +1120,13 @@ function processRaidsSection(elements, sectionId, eventData, globalInfo, fallbac
         else if (h3Lower.includes('shadow') && h3Lower.includes('raids') && !h3Lower.includes('star')) {
           matchedRaidType = 'Shadow Raids';
         }
-        // Check for Max Battles (e.g. "Max Battles", "Gigantamax Battles")
+        // Check for Max Battles (e.g. "Max Battles", "Gigantamax Battles"), keeping
+        // any star count ("Two-Star Max Battles") for the boss tier
         else if (h3Lower.includes('gigantamax') && h3Lower.includes('battles')) {
-          matchedRaidType = 'Gigantamax Battles';
+          matchedRaidType = h3Text;
         }
         else if (h3Lower.includes('max battles')) {
-          matchedRaidType = 'Max Battles';
+          matchedRaidType = h3Text;
         }
 
         if (matchedRaidType) {
@@ -1151,6 +1165,7 @@ function processRaidsSection(elements, sectionId, eventData, globalInfo, fallbac
             if (listedBoss) {
               if (listedBoss.raidType) {
                 boss.raidType = listedBoss.raidType;
+                boss.tier = listedBoss.tier;
               }
               // Already in an event-wide tier list (e.g. Crowned Zacian in "Five-Star
               // Raids" all week), so the Raid Hour is the only day-specific part --
@@ -1327,10 +1342,8 @@ function processRaidsSection(elements, sectionId, eventData, globalInfo, fallbac
         var raidHourBosses = entry.bosses.filter(boss => {
           var bossTypeLower = boss.raidType ? boss.raidType.toLowerCase() : '';
           return globalInfo.raidTypesWithRaidHour.some(keyword => {
-            // Map keywords to tier patterns
-            // "five-star" or "5-star" should match "Tier 5"
             if (keyword === 'five-star') {
-              return bossTypeLower.includes('tier 5') || bossTypeLower.includes('five');
+              return isFiveStarRaidBoss(boss);
             }
             if (keyword === 'shadow') {
               return bossTypeLower.includes('shadow');

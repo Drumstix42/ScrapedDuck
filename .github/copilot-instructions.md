@@ -75,9 +75,12 @@ Scrape Pokémon GO event data from LeekDuck.com, generate JSON/iCal outputs. For
   its own text states one; a group-wide window stays in the group's `startTime` / `endTime`.
 - Dedicated detail scrapers: `research-breakthrough`, `pokemon-spotlight-hour`, `community-day`,
   `raid-battles`, `research`, `season`. `event`, `raid-day`, `raid-hour`, `pokemon-go-fest`,
-  `pokemon-go-tour` and `wild-area` use the event-style scraper `pages/detailed/event.js`. Max
-  Battles on those pages land in `raidSchedule` / `raidbattles` with `raidType` `"Max Battle"` (or
-  `"Gigantamax"`) and a `Dynamax` / `Gigantamax` name prefix. Daily one-hour windows listed under
+  `pokemon-go-tour` and `wild-area` use the event-style scraper `pages/detailed/event.js`. Each
+  boss there has a `raidType` category (`"Raid"`, `"Shadow"`, `"Mega"`, `"Super Mega"`,
+  `"Primal"`, `"Max Battle"`, `"Gigantamax"`) and a numeric `tier` (star count from the heading,
+  e.g. "Two-Star Max Battles" → `2`; `null` when the page names none; Gigantamax defaults to `6`).
+  Max Battles on those pages land in `raidSchedule` / `raidbattles` with a `Dynamax` /
+  `Gigantamax` name prefix. Daily one-hour windows listed under
   dated headers ("Raid Hour: Monday, November 9", or "Five-Star Max Battles: Wednesday, November 11"
   after a "featured in Max Battles from …" paragraph) fill that day's `raidHours`. A Raid Hour boss
   that is already in an event-wide tier list (e.g. "Five-Star Raids") goes only in `raidHours`,
