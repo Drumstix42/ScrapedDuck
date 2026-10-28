@@ -23,7 +23,7 @@ jobs:
           node-version-file: .nvmrc
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Run scrape.js
         run: npm run scrape
