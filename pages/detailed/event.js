@@ -69,6 +69,12 @@ function get(url, id, bkp) {
           processHabitatRaidSection(habitatElements, habitatDayName, eventData, sectionRaidType);
         });
 
+        // Max Battle bosses listed outside the Raids section, e.g. under a Features
+        // sub-heading on "max-battles" pages ("Eternamax Eternatus in Max Battles")
+        pageContent.querySelectorAll('h2[id$="max-battles"]').forEach(maxBattlesH2 => {
+          processMaxBattlesSection(maxBattlesH2, eventData);
+        });
+
         var spotlightH2 = pageContent.querySelector('h2#spotlight-hours');
         if (spotlightH2) {
           var spotlightElements = collectSectionElements(spotlightH2);
@@ -386,11 +392,12 @@ function parseBossFromElement(bossElement, raidType) {
       finalName = 'Primal ' + baseName;
     }
     // Add "Gigantamax" / "Dynamax" prefix for Max Battles if not already present
-    else if (raidTypeLower.includes('gigantamax') && !baseName.toLowerCase().startsWith('gigantamax')) {
+    // (an "Eternamax" name already says which form it is)
+    else if (raidTypeLower.includes('gigantamax') && !/^(gigantamax|eternamax)\b/i.test(baseName)) {
       finalName = 'Gigantamax ' + baseName;
     }
     else if ((raidTypeLower.includes('max battle') || raidTypeLower.includes('dynamax')) &&
-             !/^(dynamax|gigantamax)\b/i.test(baseName)) {
+             !/^(dynamax|gigantamax|eternamax)\b/i.test(baseName)) {
       finalName = 'Dynamax ' + baseName;
     }
   }
@@ -999,6 +1006,44 @@ function processHabitatRaidSection(elements, dayName, eventData, sectionRaidType
       }
     }
   });
+}
+
+/**
+ * Add the bosses listed under a Max Battles sub-heading (id ending in "max-battles")
+ * to the raidbattles aggregate. Bosses a raids section already parsed (h2#max-battles
+ * inside "Raids", with its day schedule) are left as they are.
+ */
+function processMaxBattlesSection(startH2, eventData) {
+  var raidType = maxBattleLabel(startH2.textContent);
+
+  for (var element = startH2.nextElementSibling; element && element.tagName !== 'H2'; element = element.nextElementSibling) {
+    if (element.tagName === 'H3' || element.tagName === 'H4') {
+      // A tier sub-heading ("Five-Star Max Battles") applies to the lists below it;
+      // any other sub-heading ("Special Background") ends the boss lists
+      if (!/max battles?/i.test(element.textContent)) {
+        break;
+      }
+      raidType = maxBattleLabel(element.textContent);
+    }
+    else if (element.className === 'pkmn-list-flex') {
+      parseBossesFromList(element, raidType).forEach(boss => {
+        if (!eventData.raidbattles.bosses.some(existing => existing.name === boss.name)) {
+          eventData.raidbattles.bosses.push(boss);
+        }
+      });
+    }
+  }
+}
+
+/**
+ * Raid type label for a Max Battles heading, keeping only the battle kind and star
+ * tier: headings often name the boss too ("Dynamax Meganium in Max Battles"), which
+ * parseBossFromElement would otherwise read as a Mega raid.
+ */
+function maxBattleLabel(text) {
+  if (/gigantamax battles?/i.test(text)) return 'Gigantamax Battles';
+  var starMatch = text.match(/\b(one|two|three|four|five|six|[1-6])[\s-]*star\b/i);
+  return (starMatch ? starMatch[0] + ' ' : '') + 'Max Battles';
 }
 
 /**

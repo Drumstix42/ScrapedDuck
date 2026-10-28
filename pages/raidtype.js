@@ -5,8 +5,8 @@ const STAR_WORDS = { one: 1, two: 2, three: 3, four: 4, five: 5, six: 6 };
  * the boss's battle category and its star tier.
  *
  * @param {string} label raid heading text naming the battle type and/or star count.
- * @param {string} bossName optional; a Gigantamax boss listed under a generic Max
- *   Battle header is still typed as Gigantamax.
+ * @param {string} bossName optional; a Gigantamax (or Eternamax) boss listed under a
+ *   generic Max Battle header is still typed as Gigantamax.
  * @return {{raidType: ?string, tier: ?number}} raidType is one of "Raid", "Shadow",
  *   "Mega", "Super Mega", "Primal", "Max Battle" or "Gigantamax"; tier is null when
  *   the label names no star count.
@@ -19,10 +19,12 @@ function parse(label, bossName)
     const starMatch = labelLower.match(/\b(one|two|three|four|five|six|[1-6])[\s-]*star\b/);
     const tier = starMatch ? (STAR_WORDS[starMatch[1]] || Number(starMatch[1])) : null;
 
-    // Max Battles are their own battle mode; Gigantamax battles are always six-star
+    // Max Battles are their own battle mode; Gigantamax battles are always six-star.
+    // Eternamax battles play like Gigantamax ones but have no star tier of their own.
     const isMaxBattle = labelLower.includes('max battle') || labelLower.includes('dynamax');
-    if (labelLower.includes('gigantamax') || (isMaxBattle && /^gigantamax\b/i.test(bossName || ''))) {
-        return { raidType: 'Gigantamax', tier: tier || 6 };
+    const isEternamax = /^eternamax\b/i.test(bossName || '');
+    if (labelLower.includes('gigantamax') || (isMaxBattle && (isEternamax || /^gigantamax\b/i.test(bossName || '')))) {
+        return { raidType: 'Gigantamax', tier: tier || (isEternamax ? null : 6) };
     }
     if (isMaxBattle) return { raidType: 'Max Battle', tier: tier };
 

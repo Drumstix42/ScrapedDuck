@@ -36,6 +36,8 @@ Scrape Pokémon GO event data from LeekDuck.com, generate JSON/iCal outputs. For
     generic: { hasSpawns, hasFieldResearchTasks },  // ALL events
     bonuses: [{ title, description, startTime, endTime, items: [{ text, image, schedule }], notes }],  // ALL events
     spawns: [{ title, subtitle, description, schedule, pokemon: [{ name, image, canBeShiny }], notes }],  // ALL events
+    maxbattles: { description },  // ALL events (only when the page has an h2#max-battles with text)
+    spawnsDescription,     // ALL events (only when "Wild Encounters" has text but no Pokémon list)
     spotlight: {...},      // pokemon-spotlight-hour
     communityday: {...},   // community-day
     raidbattles: {...},    // raid-battles (and event-style pages with raids)
@@ -67,6 +69,12 @@ Scrape Pokémon GO event data from LeekDuck.com, generate JSON/iCal outputs. For
   Consecutive lists with the same `title`, `subtitle` and `schedule` (e.g. a "You might also
   encounter Skarmory!" follow-up) are merged into one group, joining their descriptions/notes.
   `communityday.spawns` is kept as-is for compatibility.
+- `maxbattles.description` and `spawnsDescription` hold pools the page describes in words instead of
+  listing ("All Dynamax Pokémon that have previously appeared … may appear in Max Battles"). Also
+  parsed by `pages/detailed/generic.js`: the `<p>`s right under `h2#max-battles` /
+  `h2#wild-encounters`, up to the next heading or HR, joined with a space. Both keys are omitted
+  when there's no text. `spawnsDescription` is also omitted when Wild Encounters lists Pokémon,
+  since its text is then already in that spawn group.
 - `schedule` (on spawn groups and bonus items) is a list of windows parsed by `pages/schedule.js`:
   `[{ startDate, startTime, endDate, endTime, allDay, everyDay }]`. Dates/times keep the page's
   wording; `null` means no limit on that side. Minior's "from 5:00 p.m. to 9:00 p.m. local time each
@@ -77,12 +85,16 @@ Scrape Pokémon GO event data from LeekDuck.com, generate JSON/iCal outputs. For
   its own text states one; a group-wide window stays in the group's `startTime` / `endTime`.
 - Dedicated detail scrapers: `research-breakthrough`, `pokemon-spotlight-hour`, `community-day`,
   `raid-battles`, `research`, `season`. `event`, `raid-day`, `raid-hour`, `pokemon-go-fest`,
-  `pokemon-go-tour` and `wild-area` use the event-style scraper `pages/detailed/event.js`. Each
+  `pokemon-go-tour`, `wild-area` and `max-battles` use the event-style scraper
+  `pages/detailed/event.js`. Each
   boss there has a `raidType` category (`"Raid"`, `"Shadow"`, `"Mega"`, `"Super Mega"`,
   `"Primal"`, `"Max Battle"`, `"Gigantamax"`) and a numeric `tier` (star count from the heading,
-  e.g. "Two-Star Max Battles" → `2`; `null` when the page names none; Gigantamax defaults to `6`),
+  e.g. "Two-Star Max Battles" → `2`; `null` when the page names none; Gigantamax defaults to `6`;
+  Eternamax bosses are `"Gigantamax"` with no default tier),
   parsed by `pages/raidtype.js`; `files/raids.json` uses the same two fields. Max Battles on those pages land in `raidSchedule` / `raidbattles` with a `Dynamax` /
-  `Gigantamax` name prefix. Daily one-hour windows listed under
+  `Gigantamax` name prefix (an `Eternamax` name is kept as-is). Lists under any other H2 whose id
+  ends in `max-battles` (e.g. a Features "Eternamax Eternatus in Max Battles" on `max-battles`
+  pages) are added to `raidbattles` too. Daily one-hour windows listed under
   dated headers ("Raid Hour: Monday, November 9", or "Five-Star Max Battles: Wednesday, November 11"
   after a "featured in Max Battles from …" paragraph) fill that day's `raidHours`. A Raid Hour boss
   that is already in an event-wide tier list (e.g. "Five-Star Raids") goes only in `raidHours`,

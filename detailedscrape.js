@@ -67,6 +67,12 @@ function main()
                         // event-style raid / Max Battle / Spotlight sections as regular events
                         event.get(e.link, e.eventID, bkp);
                     }
+                    else if (e.eventType == "max-battles")
+                    {
+                        // Max Battle pages (e.g. Eternamax Eternatus) list their bosses under a
+                        // Features sub-heading, which the event scraper's Max Battles pass reads
+                        event.get(e.link, e.eventID, bkp);
+                    }
                     else if (e.eventType == "season")
                     {
                         // Seasons carry Daily Discovery bonuses and season-long bonuses

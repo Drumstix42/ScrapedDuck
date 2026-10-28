@@ -39,6 +39,13 @@ function main()
                 e.extraData.bonuses = data.bonuses || [];
                 // spawn groups from the page's "Spawns" section, for every event type
                 e.extraData.spawns = data.spawns || [];
+                // pools the page describes in words instead of listing; omitted when it has none
+                if (data.maxbattles) {
+                    e.extraData.maxbattles = data.maxbattles;
+                }
+                if (data.spawnsDescription) {
+                    e.extraData.spawnsDescription = data.spawnsDescription;
+                }
             }
             // add event specific extra data. Block named as event type name
             else if (data.type == "research-breakthrough")
