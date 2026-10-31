@@ -1,0 +1,276 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ScrapedDuck//Scraped LeekDuck Events//EN
+NAME:Pokémon Go — Event
+X-WR-CALNAME:Pokémon Go — Event
+X-WR-CALDESC:All PogoCalendar.com events sourced from LeekDuck.com.
+BEGIN:VEVENT
+UID:scraped-duck-halloween-2026-part-1
+SEQUENCE:0
+DTSTAMP:20261031T092140Z
+DTSTART:20261027T100000
+DTEND:20261101T100000
+SUMMARY:Event — Pokémon GO Halloween 2026 Part I
+DESCRIPTION:Event: Pokémon GO Halloween 2026 Part I\nhttps://leekduck.com
+ /events/halloween-2026-part-1/
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE html><html><body>Event: <a href="ht
+ tps://leekduck.com/events/halloween-2026-part-1/">Pokémon GO Halloween 20
+ 26 Part I</a></body></html>
+CATEGORIES:Event
+URL;VALUE=URI:https://leekduck.com/events/halloween-2026-part-1/
+CONTACT:PogoCalendar.com c/o LeekDuck
+IMAGE:https://cdn.leekduck.com/assets/img/events/article-images/2026/2026-
+ 10-27-halloween-2026-part-1/halloween-2026-part-1.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Event — Pokémon GO Halloween 2026 Part 
+ I
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/a
+ rticle-images/2026/2026-10-27-halloween-2026-part-1/halloween-2026-part-1.
+ jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-halloween-2026-part-2
+SEQUENCE:0
+DTSTAMP:20261031T092140Z
+DTSTART:20261101T100000
+DTEND:20261105T200000
+SUMMARY:Event — Pokémon GO Halloween 2026 Part II
+DESCRIPTION:Event: Pokémon GO Halloween 2026 Part II\nhttps://leekduck.co
+ m/events/halloween-2026-part-2/
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE html><html><body>Event: <a href="ht
+ tps://leekduck.com/events/halloween-2026-part-2/">Pokémon GO Halloween 20
+ 26 Part II</a></body></html>
+CATEGORIES:Event
+URL;VALUE=URI:https://leekduck.com/events/halloween-2026-part-2/
+CONTACT:PogoCalendar.com c/o LeekDuck
+IMAGE:https://cdn.leekduck.com/assets/img/events/article-images/2026/2026-
+ 11-01-halloween-2026-part-2/halloween-2026-part-2.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Event — Pokémon GO Halloween 2026 Part 
+ II
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/a
+ rticle-images/2026/2026-11-01-halloween-2026-part-2/halloween-2026-part-2.
+ jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-pokemon-night-out-london-2026
+SEQUENCE:0
+DTSTAMP:20261031T092140Z
+DTSTART:20261110T180000Z
+DTEND:20261110T223000Z
+SUMMARY:Event — Pokémon Night Out 2026 - London
+DESCRIPTION:Event: Pokémon Night Out 2026 - London\nhttps://leekduck.com/
+ events/pokemon-night-out-london-2026/
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE html><html><body>Event: <a href="ht
+ tps://leekduck.com/events/pokemon-night-out-london-2026/">Pokémon Night O
+ ut 2026 - London</a></body></html>
+CATEGORIES:Event
+URL;VALUE=URI:https://leekduck.com/events/pokemon-night-out-london-2026/
+CONTACT:PogoCalendar.com c/o LeekDuck
+IMAGE:https://cdn.leekduck.com/assets/img/events/pokemon-night-out-2026.jp
+ g
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Event — Pokémon Night Out 2026 - London
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/p
+ okemon-night-out-2026.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-into-the-wild-2026
+SEQUENCE:0
+DTSTAMP:20261031T092140Z
+DTSTART:20261109T100000
+DTEND:20261113T200000
+SUMMARY:Event — Into the Wild
+DESCRIPTION:Event: Into the Wild\nhttps://leekduck.com/events/into-the-wil
+ d-2026/
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE html><html><body>Event: <a href="ht
+ tps://leekduck.com/events/into-the-wild-2026/">Into the Wild</a></body></h
+ tml>
+CATEGORIES:Event
+URL;VALUE=URI:https://leekduck.com/events/into-the-wild-2026/
+CONTACT:PogoCalendar.com c/o LeekDuck
+IMAGE:https://cdn.leekduck.com/assets/img/events/article-images/2026/2026-
+ 11-09-into-the-wild-2026/into-the-wild-2026.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Event — Into the Wild
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/a
+ rticle-images/2026/2026-11-09-into-the-wild-2026/into-the-wild-2026.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-minior-showers-leonids-2026
+SEQUENCE:0
+DTSTAMP:20261031T092140Z
+DTSTART:20261114T170000
+DTEND:20261119T235900
+SUMMARY:Event — Minior Showers: Leonids 2026
+DESCRIPTION:Event: Minior Showers: Leonids 2026\nhttps://leekduck.com/even
+ ts/minior-showers-leonids-2026/
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE html><html><body>Event: <a href="ht
+ tps://leekduck.com/events/minior-showers-leonids-2026/">Minior Showers: Le
+ onids 2026</a></body></html>
+CATEGORIES:Event
+URL;VALUE=URI:https://leekduck.com/events/minior-showers-leonids-2026/
+CONTACT:PogoCalendar.com c/o LeekDuck
+IMAGE:https://cdn.leekduck.com/assets/img/events/minior-showers-2026.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Event — Minior Showers: Leonids 2026
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/m
+ inior-showers-2026.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-dynamax-trails-2026
+SEQUENCE:0
+DTSTAMP:20261031T092140Z
+DTSTART:20261116T100000
+DTEND:20261123T200000
+SUMMARY:Event — Dynamax Trails
+DESCRIPTION:Event: Dynamax Trails\nhttps://leekduck.com/events/dynamax-tra
+ ils-2026/
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE html><html><body>Event: <a href="ht
+ tps://leekduck.com/events/dynamax-trails-2026/">Dynamax Trails</a></body><
+ /html>
+CATEGORIES:Event
+URL;VALUE=URI:https://leekduck.com/events/dynamax-trails-2026/
+CONTACT:PogoCalendar.com c/o LeekDuck
+IMAGE:https://cdn.leekduck.com/assets/img/events/article-images/2026/2026-
+ 11-16-dynamax-trails-2026/dynamax-trails-2026.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Event — Dynamax Trails
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/a
+ rticle-images/2026/2026-11-16-dynamax-trails-2026/dynamax-trails-2026.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-twilight-wishes-2026
+SEQUENCE:0
+DTSTAMP:20261031T092140Z
+DTSTART:20261124T100000
+DTEND:20261130T200000
+SUMMARY:Event — Twilight Wishes
+DESCRIPTION:Event: Twilight Wishes\nhttps://leekduck.com/events/twilight-w
+ ishes-2026/
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE html><html><body>Event: <a href="ht
+ tps://leekduck.com/events/twilight-wishes-2026/">Twilight Wishes</a></body
+ ></html>
+CATEGORIES:Event
+URL;VALUE=URI:https://leekduck.com/events/twilight-wishes-2026/
+CONTACT:PogoCalendar.com c/o LeekDuck
+IMAGE:https://cdn.leekduck.com/assets/img/events/events-default-img.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Event — Twilight Wishes
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/e
+ vents-default-img.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-minior-showers-geminids-2026
+SEQUENCE:0
+DTSTAMP:20261031T092140Z
+DTSTART:20261211T170000
+DTEND:20261216T235900
+SUMMARY:Event — Minior Showers: Geminids 2026
+DESCRIPTION:Event: Minior Showers: Geminids 2026\nhttps://leekduck.com/eve
+ nts/minior-showers-geminids-2026/
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE html><html><body>Event: <a href="ht
+ tps://leekduck.com/events/minior-showers-geminids-2026/">Minior Showers: G
+ eminids 2026</a></body></html>
+CATEGORIES:Event
+URL;VALUE=URI:https://leekduck.com/events/minior-showers-geminids-2026/
+CONTACT:PogoCalendar.com c/o LeekDuck
+IMAGE:https://cdn.leekduck.com/assets/img/events/minior-showers-2026.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Event — Minior Showers: Geminids 2026
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/m
+ inior-showers-2026.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-minior-showers-eta-aquariids-2027
+SEQUENCE:0
+DTSTAMP:20261031T092140Z
+DTSTART:20270503T170000
+DTEND:20270508T235900
+SUMMARY:Event — Minior Showers: Eta Aquariids 2027
+DESCRIPTION:Event: Minior Showers: Eta Aquariids 2027\nhttps://leekduck.co
+ m/events/minior-showers-eta-aquariids-2027/
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE html><html><body>Event: <a href="ht
+ tps://leekduck.com/events/minior-showers-eta-aquariids-2027/">Minior Showe
+ rs: Eta Aquariids 2027</a></body></html>
+CATEGORIES:Event
+URL;VALUE=URI:https://leekduck.com/events/minior-showers-eta-aquariids-202
+ 7/
+CONTACT:PogoCalendar.com c/o LeekDuck
+IMAGE:https://cdn.leekduck.com/assets/img/events/minior-showers-2026.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Event — Minior Showers: Eta Aquariids 20
+ 27
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/m
+ inior-showers-2026.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-minior-showers-southern-delta-aquariids-2027
+SEQUENCE:0
+DTSTAMP:20261031T092140Z
+DTSTART:20270728T170000
+DTEND:20270802T235900
+SUMMARY:Event — Minior Showers: Southern Delta Aquariids 2027
+DESCRIPTION:Event: Minior Showers: Southern Delta Aquariids 2027\nhttps://
+ leekduck.com/events/minior-showers-southern-delta-aquariids-2027/
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE html><html><body>Event: <a href="ht
+ tps://leekduck.com/events/minior-showers-southern-delta-aquariids-2027/">M
+ inior Showers: Southern Delta Aquariids 2027</a></body></html>
+CATEGORIES:Event
+URL;VALUE=URI:https://leekduck.com/events/minior-showers-southern-delta-aq
+ uariids-2027/
+CONTACT:PogoCalendar.com c/o LeekDuck
+IMAGE:https://cdn.leekduck.com/assets/img/events/minior-showers-2026.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Event — Minior Showers: Southern Delta A
+ quariids 2027
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/m
+ inior-showers-2026.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-minior-showers-perseids-2027
+SEQUENCE:0
+DTSTAMP:20261031T092140Z
+DTSTART:20270810T170000
+DTEND:20270815T235900
+SUMMARY:Event — Minior Showers: Perseids 2027
+DESCRIPTION:Event: Minior Showers: Perseids 2027\nhttps://leekduck.com/eve
+ nts/minior-showers-perseids-2027/
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE html><html><body>Event: <a href="ht
+ tps://leekduck.com/events/minior-showers-perseids-2027/">Minior Showers: P
+ erseids 2027</a></body></html>
+CATEGORIES:Event
+URL;VALUE=URI:https://leekduck.com/events/minior-showers-perseids-2027/
+CONTACT:PogoCalendar.com c/o LeekDuck
+IMAGE:https://cdn.leekduck.com/assets/img/events/minior-showers-2026.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Event — Minior Showers: Perseids 2027
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/m
+ inior-showers-2026.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+X-ORIGIN:https://leekduck.com/events/
+X-GENERATOR:ScrapedDuck
+X-GENERATOR-URL:https://github.com/bigfoott/ScrapedDuck
+END:VCALENDAR

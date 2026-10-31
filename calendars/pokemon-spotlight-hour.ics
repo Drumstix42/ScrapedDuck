@@ -1,0 +1,108 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ScrapedDuck//Scraped LeekDuck Events//EN
+NAME:Pokémon Go — Pokémon Spotlight Hour
+X-WR-CALNAME:Pokémon Go — Pokémon Spotlight Hour
+X-WR-CALDESC:All PogoCalendar.com events sourced from LeekDuck.com.
+BEGIN:VEVENT
+UID:scraped-duck-pokemonspotlighthour2026-10-29
+SEQUENCE:0
+DTSTAMP:20261031T092140Z
+DTSTART:20261029T180000
+DTEND:20261029T190000
+SUMMARY:Pokémon Spotlight Hour — Gastly Spotlight Hour
+DESCRIPTION:Event: Gastly Spotlight Hour\nhttps://leekduck.com/events/poke
+ monspotlighthour2026-10-29/
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE html><html><body>Event: <a href="ht
+ tps://leekduck.com/events/pokemonspotlighthour2026-10-29/">Gastly Spotligh
+ t Hour</a></body></html>
+CATEGORIES:Pokémon Spotlight Hour
+URL;VALUE=URI:https://leekduck.com/events/pokemonspotlighthour2026-10-29/
+CONTACT:PogoCalendar.com c/o LeekDuck
+IMAGE:https://cdn.leekduck.com/assets/img/events/pokemonspotlighthour.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Pokémon Spotlight Hour — Gastly Spotlig
+ ht Hour
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/p
+ okemonspotlighthour.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-pokemonspotlighthour2026-11-05
+SEQUENCE:0
+DTSTAMP:20261031T092140Z
+DTSTART:20261105T180000
+DTEND:20261105T190000
+SUMMARY:Pokémon Spotlight Hour — Teddiursa wearing a witch hat Spotligh
+ t Hour
+DESCRIPTION:Event: Teddiursa wearing a witch hat Spotlight Hour\nhttps://l
+ eekduck.com/events/pokemonspotlighthour2026-11-05/
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE html><html><body>Event: <a href="ht
+ tps://leekduck.com/events/pokemonspotlighthour2026-11-05/">Teddiursa weari
+ ng a witch hat Spotlight Hour</a></body></html>
+CATEGORIES:Pokémon Spotlight Hour
+URL;VALUE=URI:https://leekduck.com/events/pokemonspotlighthour2026-11-05/
+CONTACT:PogoCalendar.com c/o LeekDuck
+IMAGE:https://cdn.leekduck.com/assets/img/events/pokemonspotlighthour.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Pokémon Spotlight Hour — Teddiursa wear
+ ing a witch hat Spotlight Hour
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/p
+ okemonspotlighthour.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-pokemonspotlighthour2026-11-19
+SEQUENCE:0
+DTSTAMP:20261031T092140Z
+DTSTART:20261119T180000
+DTEND:20261119T190000
+SUMMARY:Pokémon Spotlight Hour — Grookey\, Scorbunny\, and Sobble Spotl
+ ight Hour
+DESCRIPTION:Event: Grookey\, Scorbunny\, and Sobble Spotlight Hour\nhttps:
+ //leekduck.com/events/pokemonspotlighthour2026-11-19/
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE html><html><body>Event: <a href="ht
+ tps://leekduck.com/events/pokemonspotlighthour2026-11-19/">Grookey\, Scorb
+ unny\, and Sobble Spotlight Hour</a></body></html>
+CATEGORIES:Pokémon Spotlight Hour
+URL;VALUE=URI:https://leekduck.com/events/pokemonspotlighthour2026-11-19/
+CONTACT:PogoCalendar.com c/o LeekDuck
+IMAGE:https://cdn.leekduck.com/assets/img/events/pokemonspotlighthour.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Pokémon Spotlight Hour — Grookey\, Scor
+ bunny\, and Sobble Spotlight Hour
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/p
+ okemonspotlighthour.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-pokemonspotlighthour2026-11-26
+SEQUENCE:0
+DTSTAMP:20261031T092140Z
+DTSTART:20261126T180000
+DTEND:20261126T190000
+SUMMARY:Pokémon Spotlight Hour — Noibat Spotlight Hour
+DESCRIPTION:Event: Noibat Spotlight Hour\nhttps://leekduck.com/events/poke
+ monspotlighthour2026-11-26/
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE html><html><body>Event: <a href="ht
+ tps://leekduck.com/events/pokemonspotlighthour2026-11-26/">Noibat Spotligh
+ t Hour</a></body></html>
+CATEGORIES:Pokémon Spotlight Hour
+URL;VALUE=URI:https://leekduck.com/events/pokemonspotlighthour2026-11-26/
+CONTACT:PogoCalendar.com c/o LeekDuck
+IMAGE:https://cdn.leekduck.com/assets/img/events/pokemonspotlighthour.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Pokémon Spotlight Hour — Noibat Spotlig
+ ht Hour
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/p
+ okemonspotlighthour.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+X-ORIGIN:https://leekduck.com/events/
+X-GENERATOR:ScrapedDuck
+X-GENERATOR-URL:https://github.com/bigfoott/ScrapedDuck
+END:VCALENDAR
