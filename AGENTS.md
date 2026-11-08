@@ -107,13 +107,14 @@ to the orphan `data` branch, which external apps consume. Fork of
   no default tier), parsed by
   [pages/raidtype.js](pages/raidtype.js); `files/raids.json` uses the same two fields. Max Battles on those pages land in
   `raidSchedule` / `raidbattles` with a `Dynamax` / `Gigantamax` name prefix (an `Eternamax` name
-  is kept as-is). Lists under any other H2 whose id ends in `max-battles` (e.g. a Features
-  "Eternamax Eternatus in Max Battles" on `max-battles` pages) are added to `raidbattles` too.
-  Daily one-hour windows listed under dated headers
+  is kept as-is). A top-level `h2#max-battles` section (outside "Raids") is parsed the same way as
+  "Raids", so its dated days land in `raidSchedule`. Lists under any other H2 whose id ends in
+  `max-battles` (e.g. a Features "Eternamax Eternatus in Max Battles" on `max-battles` pages) are
+  added to `raidbattles` too. Daily one-hour windows listed under dated headers
   ("Raid Hour: Monday, November 9", or "Five-Star Max Battles: Wednesday, November 11" after a
-  "featured in Max Battles from …" paragraph) fill that day's `raidHours`. A Raid Hour boss that
-  is already in an event-wide tier list (e.g. "Five-Star Raids") goes only in `raidHours`, not
-  that day's `bosses`, since it isn't exclusive to that day. All other types still receive
+  "featured in Max Battles from …" paragraph) fill that day's `bosses` and `raidHours`. A Raid
+  Hour boss also in an all-event tier list (e.g. "Five-Star Raids") keeps that list's tier and
+  still counts as event-wide for the `"Raids"` bonus group. All other types still receive
   `generic` extraData.
 
 ## Adding a new event-type scraper
@@ -126,6 +127,9 @@ to the orphan `data` branch, which external apps consume. Fork of
 ## Key patterns
 
 - Use `JSDOM.fromURL()` for scraping.
+- Detect Pokémon lists with `classList.contains('pkmn-list-flex')`, never `className ===`:
+  LeekDuck adds modifier classes (`pkmn-list-flex -cp`, `-dmax`). A shiny icon may sit beside
+  `.pkmn-list-img` or inside it.
 - Temp file naming: `{eventID}_generic.json` or `{eventID}.json`.
 - Always fall back to backup data in `.catch()` so a single failed page doesn't drop existing data.
 - Normalize CDN image URLs to `cdn.leekduck.com/assets/`.

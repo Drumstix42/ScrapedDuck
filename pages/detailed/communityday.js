@@ -28,7 +28,7 @@ function get(url, id, bkp)
                     lastHeader = n.id;
                 }
                 
-                if (lastHeader == "spawns" && n.className == "pkmn-list-flex")
+                if (lastHeader == "spawns" && n.classList && n.classList.contains("pkmn-list-flex"))
                 {
                     var spawns = n.querySelectorAll(":scope > .pkmn-list-item");
                     
@@ -41,7 +41,7 @@ function get(url, id, bkp)
                     });
                 }
 
-                else if (lastHeader == "shiny" && n.className == "pkmn-list-flex")
+                else if (lastHeader == "shiny" && n.classList && n.classList.contains("pkmn-list-flex"))
                 {
                     var fam = n.querySelectorAll(":scope > .pkmn-list-item");
 

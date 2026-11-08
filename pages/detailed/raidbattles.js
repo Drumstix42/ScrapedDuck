@@ -25,7 +25,7 @@ function get(url, id, bkp)
                     lastHeader = n.id;
                 }
                 
-                if (lastHeader == "raids" && n.className == "pkmn-list-flex")
+                if (lastHeader == "raids" && n.classList && n.classList.contains("pkmn-list-flex"))
                 {
                     var bosses = n.querySelectorAll(":scope > .pkmn-list-item");
                     
@@ -38,7 +38,7 @@ function get(url, id, bkp)
                         raidboss.bosses.push(temp);
                     });
                 }
-                else if (lastHeader == "shiny" && n.className == "pkmn-list-flex")
+                else if (lastHeader == "shiny" && n.classList && n.classList.contains("pkmn-list-flex"))
                 {
                     var shinies = n.querySelectorAll(":scope > .pkmn-list-item");
 

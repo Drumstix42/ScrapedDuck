@@ -29,7 +29,8 @@ function get(url, id, bkp) {
           raidHourTime: null,
           raidHourSectionId: null, // Track which section had raid hour text
           raidTypesWithRaidHour: [],
-          specialNotes: []
+          specialNotes: [],
+          eventWideBossNames: [] // Raid Hour bosses also listed in an all-event tier list
         };
 
         // On single-day events, raid-type headers like "Super Mega Raids" or "1-Star Raids"
@@ -43,6 +44,15 @@ function get(url, id, bkp) {
         if (raidsH2) {
           var raidElements = collectSectionElementsThroughSubheadings(raidsH2);
           processRaidsSection(raidElements, 'raids', eventData, globalInfo, fallbackScheduleDay);
+        }
+
+        // Max Battles can be their own top-level section instead of a sub-heading inside
+        // "Raids" (which collectSectionElementsThroughSubheadings would already include),
+        // with dated five-star days ("Five-Star Max Battles: Wednesday, November 11")
+        var maxBattlesSectionH2 = pageContent.querySelector('h2#max-battles.event-section-header');
+        if (maxBattlesSectionH2) {
+          var maxBattleElements = collectSectionElementsThroughSubheadings(maxBattlesSectionH2);
+          processRaidsSection(maxBattleElements, 'max-battles', eventData, globalInfo, fallbackScheduleDay);
         }
 
         var fiveStarH2 = pageContent.querySelector('h2#appearing-in-5-star-raids');
@@ -128,7 +138,9 @@ function get(url, id, bkp) {
         // A note about a boss that appears all event long (not tied to a single day's
         // boss list, e.g. Crowned Zacian in "Five-Star Raids" all week) is an event-wide
         // bonus too; combinedetails.js appends it to extraData.bonuses
-        var dailyBossNames = eventData.raidSchedule.flatMap(day => day.bosses.map(boss => boss.name));
+        var dailyBossNames = eventData.raidSchedule
+          .flatMap(day => day.bosses.map(boss => boss.name))
+          .filter(name => !globalInfo.eventWideBossNames.includes(name));
         var eventWideBosses = eventData.raidbattles.bosses.filter(boss => !dailyBossNames.includes(boss.name));
         var eventWideNotes = globalInfo.specialNotes.filter(note =>
           eventWideBosses.some(boss => noteMentionsBoss(note, boss))
@@ -347,10 +359,11 @@ function parseRaidHeader(headerText, contextRaidType) {
 
 /**
  * Shiny markers on a .pkmn-list-item: the classic sibling icon
- * (<img class="shiny-icon">) and the newer "pokemon-cutout" badge nested in
- * the image wrapper (<span class="pokemon-cutout-shiny">).
+ * (<img class="shiny-icon">), the same icon nested in the image wrapper (Max
+ * Battle frames), and the newer "pokemon-cutout" badge nested in the image
+ * wrapper (<span class="pokemon-cutout-shiny">).
  */
-var SHINY_MARKER_SELECTOR = ':scope > .shiny-icon, :scope > .pkmn-list-img > .pokemon-cutout-shiny';
+var SHINY_MARKER_SELECTOR = ':scope > .shiny-icon, :scope > .pkmn-list-img > .shiny-icon, :scope > .pkmn-list-img > .pokemon-cutout-shiny';
 
 /**
  * Parse all bosses from a pokemon list element
@@ -600,7 +613,7 @@ function processSpotlightSection(elements, eventData) {
       }
     }
 
-    if (element.className === 'pkmn-list-flex') {
+    if (element.classList.contains('pkmn-list-flex')) {
       var pokemonItems = element.querySelectorAll(':scope > .pkmn-list-item');
       pokemonItems.forEach(item => {
         var pokemon = parsePokemonFromElement(item);
@@ -819,7 +832,7 @@ function processDayRaidSection(elements, dayHeader, eventData, globalInfo) {
     }
     
     // Handle Pokemon lists for scheduled raids
-    if (element.className === 'pkmn-list-flex' && currentRaidType && !inRaidHourSection) {
+    if (element.classList.contains('pkmn-list-flex') && currentRaidType && !inRaidHourSection) {
       var bosses = parseBossesFromList(element, currentRaidType);
       if (bosses.length > 0) {
         var entry = getOrCreateDateEntry();
@@ -965,7 +978,7 @@ function processHabitatRaidSection(elements, dayName, eventData, sectionRaidType
     }
 
     // Parse habitat boss lists and attach them to both the day and each time window
-    if (element.className === 'pkmn-list-flex' && currentTimeWindows.length > 0) {
+    if (element.classList.contains('pkmn-list-flex') && currentTimeWindows.length > 0) {
       var effectiveRaidType = currentRaidType || sectionRaidType;
       var bosses = parseBossesFromList(element, effectiveRaidType);
 
@@ -1025,7 +1038,7 @@ function processMaxBattlesSection(startH2, eventData) {
       }
       raidType = maxBattleLabel(element.textContent);
     }
-    else if (element.className === 'pkmn-list-flex') {
+    else if (element.classList.contains('pkmn-list-flex')) {
       parseBossesFromList(element, raidType).forEach(boss => {
         if (!eventData.raidbattles.bosses.some(existing => existing.name === boss.name)) {
           eventData.raidbattles.bosses.push(boss);
@@ -1192,7 +1205,7 @@ function processRaidsSection(elements, sectionId, eventData, globalInfo, fallbac
     }
     
     // Handle Pokemon lists
-    if (element.className === 'pkmn-list-flex') {
+    if (element.classList.contains('pkmn-list-flex')) {
       if (currentDate && currentDateEntry) {
         // This list is part of a daily schedule
         var bossData = parseBossesFromList(element, currentRaidType);
@@ -1205,9 +1218,11 @@ function processRaidsSection(elements, sectionId, eventData, globalInfo, fallbac
                 boss.tier = listedBoss.tier;
               }
               // Already in an event-wide tier list (e.g. Crowned Zacian in "Five-Star
-              // Raids" all week), so the Raid Hour is the only day-specific part --
-              // it goes in raidHours below, not the day's boss pool.
-              return;
+              // Raids" all week): it's still that day's featured boss, but remember it
+              // so its raid notes count as event-wide too
+              if (!globalInfo.eventWideBossNames.includes(boss.name)) {
+                globalInfo.eventWideBossNames.push(boss.name);
+              }
             }
           }
 
@@ -1330,7 +1345,7 @@ function processRaidsSection(elements, sectionId, eventData, globalInfo, fallbac
     // Handle simple list-based raid layouts (UL/OL) used by some Raid Day pages.
     // pkmn-list-flex lists can be ULs too, but they're already handled above.
     if ((element.tagName === 'UL' || element.tagName === 'OL') &&
-        element.className !== 'bonus-list' && element.className !== 'pkmn-list-flex') {
+        !element.classList.contains('bonus-list') && !element.classList.contains('pkmn-list-flex')) {
       var listBosses = parseBossesFromSimpleList(element, currentRaidType || contextRaidType);
       if (listBosses.length > 0) {
         if (currentDate && currentDateEntry) {
