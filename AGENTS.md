@@ -1,19 +1,4 @@
-# AGENTS.md
-
-Guidance for AI coding agents (Claude Code, etc.) working in this repo. See also
-[.github/copilot-instructions.md](.github/copilot-instructions.md), which mostly mirrors this file
-(it's auto-consumed by GitHub Copilot). Keep the two in sync when you change project conventions.
-
-## Keep these docs current
-
-While working, if you notice anything in this file or
-[.github/copilot-instructions.md](.github/copilot-instructions.md) that is outdated, inaccurate, or
-incomplete — a renamed/removed file, a changed pipeline step, a new event type, a different CI
-schedule, a stale command, etc. — proactively flag it and suggest the fix. When a code change alters
-behavior these docs describe, propose the matching doc update in the same change, and update **both**
-files so they stay in sync.
-
-## What this is
+# ScrapedDuck
 
 ScrapedDuck scrapes Pokémon GO data from [LeekDuck.com](https://leekduck.com) (with permission) and
 emits JSON + iCal files. A GitHub Actions job runs the pipeline and force-pushes the generated output
@@ -151,9 +136,19 @@ branch, which the Actions job force-pushes. The `.catch()` fallbacks fetch backu
 
 ## CI
 
-[.github/workflows/scrape.yml](.github/workflows/scrape.yml) runs daily (cron `0 3 * * *`), on push to
-`master`, and via manual dispatch. It uses the Node version from [.nvmrc](.nvmrc), runs all three scripts, then force-pushes only the generated files
-to the orphan `data` branch. Do not depend on the `data` branch having normal repo history.
+[.github/workflows/scrape.yml](.github/workflows/scrape.yml) runs twice a day (cron `0 3,15 * * *`), on
+push to `master`, and via manual dispatch. It uses the Node version from [.nvmrc](.nvmrc), runs all three scripts, then:
+
+- **Snapshots:** saves the `files/*.json` output (not calendars) as a `YYYY-MM-DD_HHMMZ` (UTC) folder
+  on the `snapshots` branch, keeping the newest 20. That branch has normal history, one commit per
+  snapshot, listing the changed files. It's skipped, with a `Snapshot skipped` notice, when the
+  output is identical to the latest snapshot. A run in the same minute as an existing snapshot
+  overwrites that folder (`Snapshot replaced` notice). It's for inspecting how the data changed,
+  not a restore mechanism.
+- **`data` branch:** force-pushes only the generated files to the orphan `data` branch. It's skipped,
+  with a `Data branch unchanged` notice, when the output matches the current `data` branch (ignoring
+  the calendars' per-run `DTSTAMP` lines). Do not depend on the `data` branch having normal repo
+  history.
 
 ## Commit messages
 
@@ -162,3 +157,11 @@ to the orphan `data` branch. Do not depend on the `data` branch having normal re
 - Body: bullet points covering high-level functional changes and why they matter; a single concise
   bullet is fine for small changes. Avoid low-level implementation detail in the body.
 - Do not add a `Co-Authored-By` trailer or any AI attribution footer to commit messages.
+
+## Maintaining this file
+
+- This is the only agent-instructions file: `CLAUDE.md` imports it and Copilot reads it directly.
+  Add guidance here; don't create tool-specific copies (e.g. `.github/copilot-instructions.md`).
+- If anything here is outdated, inaccurate, or incomplete (renamed/removed file, changed pipeline
+  step, new event type, different CI schedule, stale command), flag it and suggest the fix.
+- When a code change alters behavior described here, update this file in the same change (or suggest an update if uncertain).

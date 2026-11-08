@@ -2,7 +2,7 @@ name: Scrape LeekDuck
 
 on:
   schedule:
-    - cron: '0 3 * * *'
+    - cron: '0 3,15 * * *'
   push:
     branches:
       - master
@@ -34,7 +34,83 @@ jobs:
       - name: Run combinedetails.js
         run: npm run combinedetails
 
+      - name: Configure git
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+
+      # Keep the newest 20 distinct JSON outputs as timestamped folders on the
+      # `snapshots` branch, for inspecting how the data changed over time.
+      - name: Save JSON snapshot
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          stamp=$(date -u +%Y-%m-%d_%H%MZ)
+          new="$RUNNER_TEMP/snapshot"
+          mkdir -p "$new"
+          cp files/*.json "$new"/
+
+          if git rev-parse --verify --quiet origin/snapshots >/dev/null; then
+            git worktree add -B snapshots ../snapshots origin/snapshots
+          else
+            git worktree add --orphan -b snapshots ../snapshots
+          fi
+          cd ../snapshots
+
+          latest=$(ls -1d */ 2>/dev/null | sort | tail -n 1 || true)
+          latest=${latest%/}
+          if [ -n "$latest" ] && diff -rq "$latest" "$new" >/dev/null; then
+            echo "::notice title=Snapshot skipped::JSON output is identical to the latest snapshot ($latest); no new snapshot saved."
+            exit 0
+          fi
+
+          changed=()
+          if [ -n "$latest" ]; then
+            for f in "$new"/*.json; do
+              n=$(basename "$f")
+              cmp -s "$f" "$latest/$n" || changed+=("$n")
+            done
+            for f in "$latest"/*.json; do
+              n=$(basename "$f")
+              [ -e "$new/$n" ] || changed+=("$n (removed)")
+            done
+            body="Changed: $(IFS=,; echo "${changed[*]}" | sed 's/,/, /g')"
+          else
+            body="First snapshot."
+          fi
+
+          # Two runs in the same minute: the newer output replaces the older folder.
+          if [ -e "$stamp" ]; then
+            echo "::notice title=Snapshot replaced::A snapshot named $stamp already exists; overwriting it with this run's output."
+            rm -rf "$stamp"
+          fi
+          mv "$new" "$stamp"
+          ls -1d */ | sort | head -n -20 | xargs -r git rm -rq --
+          git add -A
+          git commit -q -m "Snapshot $stamp" -m "$body"
+          git push "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" snapshots
+          echo "::notice title=Snapshot saved::$stamp — $body"
+
+      # Calendars restamp DTSTAMP on every run, so ignore those lines when comparing.
+      - name: Check data branch for changes
+        id: data
+        run: |
+          if ! git rev-parse --verify --quiet origin/data >/dev/null; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          live="$RUNNER_TEMP/live-data"
+          mkdir -p "$live"
+          git archive origin/data | tar -x -C "$live"
+          if diff -r -I '^DTSTAMP:' "$live" files >/dev/null; then
+            echo "::notice title=Data branch unchanged::Output matches the current data branch; skipping the data branch update."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Delete repo files
+        if: steps.data.outputs.changed == 'true'
         run: |
           mv files ..
           rm -r .github
@@ -42,16 +118,16 @@ jobs:
           rm -rf *
           cp -a ../files/. .
           rm -r ../files
-  
+
       - name: Commit
+        if: steps.data.outputs.changed == 'true'
         run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
           git switch --orphan data
           git add --all
           git commit -m 'Data updated'
 
       - name: Push
+        if: steps.data.outputs.changed == 'true'
         uses: ad-m/github-push-action@v1.1.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
