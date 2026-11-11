@@ -98,7 +98,8 @@ to the orphan `data` branch, which external apps consume. Fork of
   added to `raidbattles` too. Daily one-hour windows listed under dated headers
   ("Raid Hour: Monday, November 9", or "Five-Star Max Battles: Wednesday, November 11" after a
   "featured in Max Battles from …" paragraph) fill that day's `bosses` and `raidHours`. A Raid
-  Hour boss also in an all-event tier list (e.g. "Five-Star Raids") keeps that list's tier and
+  Hour boss also in an all-event tier list (e.g. "Five-Star Raids") keeps that list's tier, goes
+  only in that day's `raidHours` (not its `bosses`, since it isn't limited to that day), and
   still counts as event-wide for the `"Raids"` bonus group. All other types still receive
   `generic` extraData.
 

@@ -1210,6 +1210,7 @@ function processRaidsSection(elements, sectionId, eventData, globalInfo, fallbac
         // This list is part of a daily schedule
         var bossData = parseBossesFromList(element, currentRaidType);
         bossData.forEach(boss => {
+          var isEventWideBoss = false;
           if (currentIsRaidHour) {
             var listedBoss = eventData.raidbattles.bosses.find(existing => existing.name === boss.name);
             if (listedBoss) {
@@ -1218,8 +1219,10 @@ function processRaidsSection(elements, sectionId, eventData, globalInfo, fallbac
                 boss.tier = listedBoss.tier;
               }
               // Already in an event-wide tier list (e.g. Crowned Zacian in "Five-Star
-              // Raids" all week): it's still that day's featured boss, but remember it
-              // so its raid notes count as event-wide too
+              // Raids" all week): it's that day's Raid Hour boss, but not a boss for
+              // that day only, so it goes in raidHours and not the day's bosses.
+              // Remember it so its raid notes count as event-wide too
+              isEventWideBoss = true;
               if (!globalInfo.eventWideBossNames.includes(boss.name)) {
                 globalInfo.eventWideBossNames.push(boss.name);
               }
@@ -1227,7 +1230,7 @@ function processRaidsSection(elements, sectionId, eventData, globalInfo, fallbac
           }
 
           // Add boss if not already in the date entry (avoid duplicates)
-          if (!currentDateEntry.bosses.some(existing => existing.name === boss.name)) {
+          if (!isEventWideBoss && !currentDateEntry.bosses.some(existing => existing.name === boss.name)) {
             currentDateEntry.bosses.push(boss);
           }
 
