@@ -93,7 +93,9 @@ to the orphan `data` branch, which external apps consume. Fork of
   [pages/raidtype.js](pages/raidtype.js); `files/raids.json` uses the same two fields. Max Battles on those pages land in
   `raidSchedule` / `raidbattles` with a `Dynamax` / `Gigantamax` name prefix (an `Eternamax` name
   is kept as-is). A top-level `h2#max-battles` section (outside "Raids") is parsed the same way as
-  "Raids", so its dated days land in `raidSchedule`. Lists under any other H2 whose id ends in
+  "Raids", so its dated days land in `raidSchedule`; an H2 sub-section in it that links to
+  another event's page (e.g. "Eternatus Returns" on Dynamax Trails) is skipped, since those bosses
+  belong to that event. Lists under any other H2 whose id ends in
   `max-battles` (e.g. a Features "Eternamax Eternatus in Max Battles" on `max-battles` pages) are
   added to `raidbattles` too. Daily one-hour windows listed under dated headers
   ("Raid Hour: Monday, November 9", or "Five-Star Max Battles: Wednesday, November 11" after a

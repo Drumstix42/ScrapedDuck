@@ -51,7 +51,7 @@ function get(url, id, bkp) {
         // with dated five-star days ("Five-Star Max Battles: Wednesday, November 11")
         var maxBattlesSectionH2 = pageContent.querySelector('h2#max-battles.event-section-header');
         if (maxBattlesSectionH2) {
-          var maxBattleElements = collectSectionElementsThroughSubheadings(maxBattlesSectionH2);
+          var maxBattleElements = dropSubsectionsForOtherEvents(collectSectionElementsThroughSubheadings(maxBattlesSectionH2), id);
           processRaidsSection(maxBattleElements, 'max-battles', eventData, globalInfo, fallbackScheduleDay);
         }
 
@@ -767,6 +767,36 @@ function collectSectionElementsThroughSubheadings(startH2) {
   }
 
   return elements;
+}
+
+/**
+ * Drop H2 sub-sections that defer to another event's page, e.g. "Eternatus Returns"
+ * under Dynamax Trails' Max Battles ("View the Eternamax Eternatus event details"):
+ * those bosses belong to that other event, not this one's Max Battle pool.
+ */
+function dropSubsectionsForOtherEvents(elements, eventId) {
+  var linksOtherEvent = el => Array.from(el.querySelectorAll ? el.querySelectorAll('a[href*="/events/"]') : [])
+    .some(a => {
+      var slug = (a.getAttribute('href').split('/events/')[1] || '').replace(/\/.*$/, '');
+      return slug && slug !== eventId;
+    });
+
+  var result = [];
+  var block = [];
+  var flush = () => {
+    if (!block.some(linksOtherEvent)) {
+      result.push(...block);
+    }
+    block = [];
+  };
+  elements.forEach(el => {
+    if (el.tagName === 'H2') {
+      flush();
+    }
+    block.push(el);
+  });
+  flush();
+  return result;
 }
 
 /**
