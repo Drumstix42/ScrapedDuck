@@ -125,5 +125,41 @@
                 "image": "https://cdn.leekduck.com/assets/img/events/bonuses/stardust2xhatch.png"
             }
         ]
+    },
+    {
+        "name": "Daydream Destinations",
+        "eventID": "season-25-daydream-destinations",
+        "link": "https://leekduck.com/events/season-25-daydream-destinations/",
+        "start": "2026-12-01T10:00:00.000",
+        "end": "2027-03-01T10:00:00.000",
+        "note": null,
+        "dailyBonuses": [],
+        "seasonBonuses": [
+            {
+                "milestone": "Rank 1",
+                "text": "Increased XP from going up a Friendship level",
+                "image": "https://cdn.leekduck.com/assets/img/events/bonuses/friendship.png"
+            },
+            {
+                "milestone": "Rank 1",
+                "text": "2× Friendship bonus damage in raids",
+                "image": "https://cdn.leekduck.com/assets/img/events/bonuses/friendship.png"
+            },
+            {
+                "milestone": "Rank 25",
+                "text": "Increased limits on opening Gifts, receiving Gifts from PokéStop and Gym Photo Discs, and storing Gifts",
+                "image": "https://cdn.leekduck.com/assets/img/events/bonuses/friendgift.png"
+            },
+            {
+                "milestone": "Rank 50",
+                "text": "2× Daily Adventure Incense duration",
+                "image": "https://cdn.leekduck.com/assets/img/events/bonuses/dailyincense.png"
+            },
+            {
+                "milestone": "Rank 75",
+                "text": "Increased XP and Stardust from hatching Eggs",
+                "image": "https://cdn.leekduck.com/assets/img/events/bonuses/stardust2xhatch.png"
+            }
+        ]
     }
 ]

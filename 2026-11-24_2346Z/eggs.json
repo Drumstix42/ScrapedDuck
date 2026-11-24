@@ -326,7 +326,7 @@
         "eggType": "1 km",
         "isAdventureSync": false,
         "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm816.icon.png",
-        "canBeShiny": false,
+        "canBeShiny": true,
         "combatPower": {
             "min": 627,
             "max": 627
@@ -1040,7 +1040,7 @@
         "eggType": "12 km",
         "isAdventureSync": false,
         "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm944.icon.png",
-        "canBeShiny": false,
+        "canBeShiny": true,
         "combatPower": {
             "min": 531,
             "max": 531
