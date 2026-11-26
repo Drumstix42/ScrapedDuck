@@ -1,0 +1,154 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ScrapedDuck//Scraped LeekDuck Events//EN
+NAME:Pokémon Go — Raid Hour
+X-WR-CALNAME:Pokémon Go — Raid Hour
+X-WR-CALDESC:All PogoCalendar.com events sourced from LeekDuck.com.
+BEGIN:VEVENT
+UID:scraped-duck-raidhour20261125
+SEQUENCE:0
+DTSTAMP:20261126T115708Z
+DTSTART:19700101T000000Z
+DTEND:19700101T000000Z
+SUMMARY:Raid Hour — Deoxys (Normal\, Defense\, Attack\, and Speed Formes
+ ) Raid Hour
+DESCRIPTION:Event: Deoxys (Normal\, Defense\, Attack\, and Speed Formes) R
+ aid Hour\nhttps://leekduck.com/events/raidhour20261125/
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE html><html><body>Event: <a href="ht
+ tps://leekduck.com/events/raidhour20261125/">Deoxys (Normal\, Defense\, At
+ tack\, and Speed Formes) Raid Hour</a></body></html>
+CATEGORIES:Raid Hour
+URL;VALUE=URI:https://leekduck.com/events/raidhour20261125/
+CONTACT:PogoCalendar.com c/o LeekDuck
+IMAGE:https://cdn.leekduck.com/assets/img/events/raidhour.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Raid Hour — Deoxys (Normal\, Defense\, A
+ ttack\, and Speed Formes) Raid Hour
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/r
+ aidhour.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-raidhour20261202
+SEQUENCE:0
+DTSTAMP:20261126T115708Z
+DTSTART:20261202T180000
+DTEND:20261202T190000
+SUMMARY:Raid Hour — Regidrago Raid Hour
+DESCRIPTION:Event: Regidrago Raid Hour\nhttps://leekduck.com/events/raidho
+ ur20261202/
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE html><html><body>Event: <a href="ht
+ tps://leekduck.com/events/raidhour20261202/">Regidrago Raid Hour</a></body
+ ></html>
+CATEGORIES:Raid Hour
+URL;VALUE=URI:https://leekduck.com/events/raidhour20261202/
+CONTACT:PogoCalendar.com c/o LeekDuck
+IMAGE:https://cdn.leekduck.com/assets/img/events/raidhour.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Raid Hour — Regidrago Raid Hour
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/r
+ aidhour.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-raidhour20261209
+SEQUENCE:0
+DTSTAMP:20261126T115708Z
+DTSTART:20261209T180000
+DTEND:20261209T190000
+SUMMARY:Raid Hour — Unannounced Raid Hour
+DESCRIPTION:Event: Unannounced Raid Hour\nhttps://leekduck.com/events/raid
+ hour20261209/
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE html><html><body>Event: <a href="ht
+ tps://leekduck.com/events/raidhour20261209/">Unannounced Raid Hour</a></bo
+ dy></html>
+CATEGORIES:Raid Hour
+URL;VALUE=URI:https://leekduck.com/events/raidhour20261209/
+CONTACT:PogoCalendar.com c/o LeekDuck
+IMAGE:https://cdn.leekduck.com/assets/img/events/raidhour.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Raid Hour — Unannounced Raid Hour
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/r
+ aidhour.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-raidhour20261216
+SEQUENCE:0
+DTSTAMP:20261126T115708Z
+DTSTART:20261216T180000
+DTEND:20261216T190000
+SUMMARY:Raid Hour — Ho-Oh Raid Hour
+DESCRIPTION:Event: Ho-Oh Raid Hour\nhttps://leekduck.com/events/raidhour20
+ 261216/
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE html><html><body>Event: <a href="ht
+ tps://leekduck.com/events/raidhour20261216/">Ho-Oh Raid Hour</a></body></h
+ tml>
+CATEGORIES:Raid Hour
+URL;VALUE=URI:https://leekduck.com/events/raidhour20261216/
+CONTACT:PogoCalendar.com c/o LeekDuck
+IMAGE:https://cdn.leekduck.com/assets/img/events/raidhour.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Raid Hour — Ho-Oh Raid Hour
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/r
+ aidhour.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-raidhour20261223
+SEQUENCE:0
+DTSTAMP:20261126T115708Z
+DTSTART:20261223T180000
+DTEND:20261223T190000
+SUMMARY:Raid Hour — Lugia Raid Hour
+DESCRIPTION:Event: Lugia Raid Hour\nhttps://leekduck.com/events/raidhour20
+ 261223/
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE html><html><body>Event: <a href="ht
+ tps://leekduck.com/events/raidhour20261223/">Lugia Raid Hour</a></body></h
+ tml>
+CATEGORIES:Raid Hour
+URL;VALUE=URI:https://leekduck.com/events/raidhour20261223/
+CONTACT:PogoCalendar.com c/o LeekDuck
+IMAGE:https://cdn.leekduck.com/assets/img/events/raidhour.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Raid Hour — Lugia Raid Hour
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/r
+ aidhour.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+BEGIN:VEVENT
+UID:scraped-duck-raidhour20261230
+SEQUENCE:0
+DTSTAMP:20261126T115708Z
+DTSTART:20261230T180000
+DTEND:20261230T190000
+SUMMARY:Raid Hour — Tornadus (Therian Forme)\, Thundurus (Therian Forme)
+ \, and Landorus (Therian Forme) Raid Hour
+DESCRIPTION:Event: Tornadus (Therian Forme)\, Thundurus (Therian Forme)\, 
+ and Landorus (Therian Forme) Raid Hour\nhttps://leekduck.com/events/raidho
+ ur20261230/
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE html><html><body>Event: <a href="ht
+ tps://leekduck.com/events/raidhour20261230/">Tornadus (Therian Forme)\, Th
+ undurus (Therian Forme)\, and Landorus (Therian Forme) Raid Hour</a></body
+ ></html>
+CATEGORIES:Raid Hour
+URL;VALUE=URI:https://leekduck.com/events/raidhour20261230/
+CONTACT:PogoCalendar.com c/o LeekDuck
+IMAGE:https://cdn.leekduck.com/assets/img/events/raidhour.jpg
+X-GOOGLE-CALENDAR-CONTENT-TITLE:Raid Hour — Tornadus (Therian Forme)\, T
+ hundurus (Therian Forme)\, and Landorus (Therian Forme) Raid Hour
+X-GOOGLE-CALENDAR-CONTENT-ICON:https://leekduck.com/assets/img/favicon/fav
+ icon-16x16.png
+X-GOOGLE-CALENDAR-CONTENT-URL:https://cdn.leekduck.com/assets/img/events/r
+ aidhour.jpg
+X-GOOGLE-CALENDAR-CONTENT-TYPE:image/*
+END:VEVENT
+X-ORIGIN:https://leekduck.com/events/
+X-GENERATOR:ScrapedDuck
+X-GENERATOR-URL:https://github.com/bigfoott/ScrapedDuck
+END:VCALENDAR
