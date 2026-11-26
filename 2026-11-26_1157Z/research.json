@@ -1,69 +1,87 @@
 [
     {
-        "text": "<span>Power up Steel-type Pokémon 5 times</span>",
+        "text": "<span>Catch 10 Pokémon</span>",
         "rewards": [
             {
-                "name": "Galarian Meowth",
-                "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm52.fGALARIAN.icon.png",
+                "name": "Electrike",
+                "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm309.icon.png",
                 "canBeShiny": false,
                 "combatPower": {
-                    "min": 409,
-                    "max": 443
+                    "min": 380,
+                    "max": 413
                 }
             },
             {
-                "name": "Magnemite",
-                "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm81.icon.png",
+                "name": "Cottonee wearing a flower crown",
+                "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm546.cSPRING_2024.icon.png",
                 "canBeShiny": false,
                 "combatPower": {
-                    "min": 544,
-                    "max": 583
+                    "min": 271,
+                    "max": 300
                 }
             },
             {
-                "name": "Aron",
-                "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm304.icon.png",
+                "name": "Greavard",
+                "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm971.icon.png",
                 "canBeShiny": false,
                 "combatPower": {
-                    "min": 522,
-                    "max": 560
+                    "min": 402,
+                    "max": 435
                 }
             },
             {
-                "name": "Togedemaru",
-                "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm777.icon.png",
+                "name": "Flamigo",
+                "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm973.icon.png",
                 "canBeShiny": false,
                 "combatPower": {
-                    "min": 876,
-                    "max": 926
+                    "min": 1125,
+                    "max": 1181
+                }
+            },
+            {
+                "name": "Electrike",
+                "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm309.icon.png",
+                "canBeShiny": false,
+                "combatPower": {
+                    "min": 380,
+                    "max": 413
+                }
+            },
+            {
+                "name": "Cottonee wearing a flower crown",
+                "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm546.cSPRING_2024.icon.png",
+                "canBeShiny": false,
+                "combatPower": {
+                    "min": 271,
+                    "max": 300
+                }
+            },
+            {
+                "name": "Greavard",
+                "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm971.icon.png",
+                "canBeShiny": false,
+                "combatPower": {
+                    "min": 402,
+                    "max": 435
+                }
+            },
+            {
+                "name": "Flamigo",
+                "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm973.icon.png",
+                "canBeShiny": false,
+                "combatPower": {
+                    "min": 1125,
+                    "max": 1181
                 }
             }
         ]
     },
     {
-        "text": "<span>Power up Dragon-type Pokémon 5 times</span>",
+        "text": "<span>Explore 1 km</span>",
         "rewards": [
             {
-                "name": "Horsea",
-                "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm116.icon.png",
-                "canBeShiny": false,
-                "combatPower": {
-                    "min": 418,
-                    "max": 452
-                }
-            },
-            {
-                "name": "Dratini",
-                "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm147.icon.png",
-                "canBeShiny": false,
-                "combatPower": {
-                    "min": 397,
-                    "max": 430
-                }
-            },
-            {
-                "name": "Bagon",
-                "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm371.icon.png",
+                "name": "Staryu",
+                "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm120.icon.png",
                 "canBeShiny": false,
                 "combatPower": {
                     "min": 459,
@@ -71,12 +89,72 @@
                 }
             },
             {
-                "name": "Skrelp",
-                "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm690.icon.png",
+                "name": "Elgyem",
+                "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm605.icon.png",
                 "canBeShiny": false,
                 "combatPower": {
-                    "min": 421,
-                    "max": 455
+                    "min": 554,
+                    "max": 593
+                }
+            },
+            {
+                "name": "Staryu",
+                "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm120.icon.png",
+                "canBeShiny": false,
+                "combatPower": {
+                    "min": 459,
+                    "max": 495
+                }
+            },
+            {
+                "name": "Elgyem",
+                "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm605.icon.png",
+                "canBeShiny": false,
+                "combatPower": {
+                    "min": 554,
+                    "max": 593
+                }
+            }
+        ]
+    },
+    {
+        "text": "<span>Hatch an Egg</span>",
+        "rewards": [
+            {
+                "name": "Maschiff",
+                "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm942.icon.png",
+                "canBeShiny": false,
+                "combatPower": {
+                    "min": 560,
+                    "max": 600
+                }
+            }
+        ]
+    },
+    {
+        "text": "<span>Use a Lure Module at a PokéStop</span>",
+        "rewards": [
+            {
+                "name": "Applin",
+                "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm840.icon.png",
+                "canBeShiny": false,
+                "combatPower": {
+                    "min": 277,
+                    "max": 306
+                }
+            }
+        ]
+    },
+    {
+        "text": "<span>Use an Incense</span>",
+        "rewards": [
+            {
+                "name": "Bramblin",
+                "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm946.icon.png",
+                "canBeShiny": false,
+                "combatPower": {
+                    "min": 343,
+                    "max": 375
                 }
             }
         ]
@@ -85,85 +163,21 @@
         "text": "<span>Win a raid</span>",
         "rewards": [
             {
-                "name": "Scyther",
-                "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm123.icon.png",
+                "name": "Gengar wearing a Spooky Festival costume",
+                "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm94.cFALL_2022_NOEVOLVE.icon.png",
                 "canBeShiny": false,
                 "combatPower": {
-                    "min": 1104,
-                    "max": 1160
+                    "min": 1175,
+                    "max": 1233
                 }
             },
             {
-                "name": "Dratini",
-                "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm147.icon.png",
+                "name": "Drifblim wearing a Halloween Mischief costume",
+                "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm426.cHALLOWEEN_2021_NOEVOLVE.icon.png",
                 "canBeShiny": false,
                 "combatPower": {
-                    "min": 397,
-                    "max": 430
-                }
-            }
-        ]
-    },
-    {
-        "text": "<span>Catch 10 Pokémon</span>",
-        "rewards": [
-            {
-                "name": "Magnemite",
-                "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm81.icon.png",
-                "canBeShiny": false,
-                "combatPower": {
-                    "min": 544,
-                    "max": 583
-                }
-            },
-            {
-                "name": "Horsea",
-                "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm116.icon.png",
-                "canBeShiny": false,
-                "combatPower": {
-                    "min": 418,
-                    "max": 452
-                }
-            },
-            {
-                "name": "Aron",
-                "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm304.icon.png",
-                "canBeShiny": false,
-                "combatPower": {
-                    "min": 522,
-                    "max": 560
-                }
-            },
-            {
-                "name": "Skrelp",
-                "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm690.icon.png",
-                "canBeShiny": false,
-                "combatPower": {
-                    "min": 421,
-                    "max": 455
-                }
-            }
-        ]
-    },
-    {
-        "text": "<span>Win a Max Battle</span>",
-        "rewards": [
-            {
-                "name": "Mawile",
-                "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm303.icon.png",
-                "canBeShiny": false,
-                "combatPower": {
-                    "min": 658,
-                    "max": 700
-                }
-            },
-            {
-                "name": "Bagon",
-                "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm371.icon.png",
-                "canBeShiny": false,
-                "combatPower": {
-                    "min": 459,
-                    "max": 495
+                    "min": 965,
+                    "max": 1021
                 }
             }
         ]
